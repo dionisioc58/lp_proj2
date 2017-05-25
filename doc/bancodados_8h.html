@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Laboratorio 6: Referência do Arquivo include/tarefa3/bancodados.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio 6
+   </div>
+   <div id="projectbrief">Laboratório 6 de Linguagem de Programação I</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a802c90beec2d083103add5cb3c8cf2e.html">tarefa3</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo bancodados.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Arquivo de cabeçalho com a definição de funções para o controle dos dados.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="turma_8h_source.html">turma.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="aluno_8h_source.html">aluno.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="funcoes_8h_source.html">funcoes.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para bancodados.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="bancodados_8h__incl.png" border="0" usemap="#include_2tarefa3_2bancodados_8h" alt=""/></div>
+<map name="include_2tarefa3_2bancodados_8h" id="include_2tarefa3_2bancodados_8h">
+<area shape="rect" id="node5" href="turma_8h.html" title="Definição da classe Turma. " alt="" coords="237,80,303,107"/><area shape="rect" id="node7" href="aluno_8h.html" title="Definição da classe Aluno. " alt="" coords="70,155,134,181"/><area shape="rect" id="node10" href="funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="385,155,464,181"/><area shape="rect" id="node9" href="lista_8h.html" title="Definição da classe Lista. " alt="" coords="259,155,361,181"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="bancodados_8h__dep__incl.png" border="0" usemap="#include_2tarefa3_2bancodados_8hdep" alt=""/></div>
+<map name="include_2tarefa3_2bancodados_8hdep" id="include_2tarefa3_2bancodados_8hdep">
+<area shape="rect" id="node2" href="bancodados_8cpp.html" title="Arquivo de corpo com a definição de funções para o controle dos dados. " alt="" coords="5,80,188,107"/><area shape="rect" id="node3" href="tarefa3main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="213,80,394,107"/></map>
+</div>
+</div>
+<p><a href="bancodados_8h_source.html">Vá para o código-fonte deste arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a4d27b242b4b01274ffb7df00d5a3dfc9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a4d27b242b4b01274ffb7df00d5a3dfc9">inputTurma</a> ()</td></tr>
+<tr class="memdesc:a4d27b242b4b01274ffb7df00d5a3dfc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta o nome para o cadastro de uma turma.  <a href="#a4d27b242b4b01274ffb7df00d5a3dfc9">Mais...</a><br /></td></tr>
+<tr class="separator:a4d27b242b4b01274ffb7df00d5a3dfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a1615d1a89c5e1e0b0dacdab14f0391"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAluno.html">Aluno</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a3a1615d1a89c5e1e0b0dacdab14f0391">inputAluno</a> ()</td></tr>
+<tr class="memdesc:a3a1615d1a89c5e1e0b0dacdab14f0391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta os dados para cadastro de um aluno.  <a href="#a3a1615d1a89c5e1e0b0dacdab14f0391">Mais...</a><br /></td></tr>
+<tr class="separator:a3a1615d1a89c5e1e0b0dacdab14f0391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695e240beb9fa6e72e5975986334661d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a695e240beb9fa6e72e5975986334661d">existeTurma</a> (<a class="el" href="classTurma.html">Turma</a> *e, int n, string nome)</td></tr>
+<tr class="memdesc:a695e240beb9fa6e72e5975986334661d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que verifica se uma turma já existe no cadastro.  <a href="#a695e240beb9fa6e72e5975986334661d">Mais...</a><br /></td></tr>
+<tr class="separator:a695e240beb9fa6e72e5975986334661d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cd3e2e87ab2cce88799a0bccb18965"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTurma.html">Turma</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a69cd3e2e87ab2cce88799a0bccb18965">cadTurma</a> (<a class="el" href="classTurma.html">Turma</a> *e, int &amp;n)</td></tr>
+<tr class="memdesc:a69cd3e2e87ab2cce88799a0bccb18965"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que realiza o cadastro uma turma.  <a href="#a69cd3e2e87ab2cce88799a0bccb18965">Mais...</a><br /></td></tr>
+<tr class="separator:a69cd3e2e87ab2cce88799a0bccb18965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac42c090625d66952bf56118aee6e4eb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTurma.html">Turma</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#ac42c090625d66952bf56118aee6e4eb8">delTurma</a> (<a class="el" href="classTurma.html">Turma</a> *e, int &amp;n)</td></tr>
+<tr class="memdesc:ac42c090625d66952bf56118aee6e4eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que remove uma turma do cadastro.  <a href="#ac42c090625d66952bf56118aee6e4eb8">Mais...</a><br /></td></tr>
+<tr class="separator:ac42c090625d66952bf56118aee6e4eb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55d824a717da97b616cbac80b7f35d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTurma.html">Turma</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#aa55d824a717da97b616cbac80b7f35d3">addAl</a> (<a class="el" href="classTurma.html">Turma</a> *e, int n)</td></tr>
+<tr class="memdesc:aa55d824a717da97b616cbac80b7f35d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que adiciona um aluno à uma turma (apresenta escolha)  <a href="#aa55d824a717da97b616cbac80b7f35d3">Mais...</a><br /></td></tr>
+<tr class="separator:aa55d824a717da97b616cbac80b7f35d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3e17460b1f2a36e3b717474feb1011"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTurma.html">Turma</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#aeb3e17460b1f2a36e3b717474feb1011">addAlArq</a> (<a class="el" href="classTurma.html">Turma</a> *e, int n, bool pausa=true)</td></tr>
+<tr class="memdesc:aeb3e17460b1f2a36e3b717474feb1011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que adiciona alunos à uma turma (apresenta escolha), carregando-os apartir de um arquivo CSV.  <a href="#aeb3e17460b1f2a36e3b717474feb1011">Mais...</a><br /></td></tr>
+<tr class="separator:aeb3e17460b1f2a36e3b717474feb1011"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1483d4c9bcbfcfd79536d46af1c35b5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTurma.html">Turma</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a1483d4c9bcbfcfd79536d46af1c35b5d">delAl</a> (<a class="el" href="classTurma.html">Turma</a> *e, int n)</td></tr>
+<tr class="memdesc:a1483d4c9bcbfcfd79536d46af1c35b5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que remove um aluno de uma turma (apresenta escolha)  <a href="#a1483d4c9bcbfcfd79536d46af1c35b5d">Mais...</a><br /></td></tr>
+<tr class="separator:a1483d4c9bcbfcfd79536d46af1c35b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ee6263a122e08c30b9f5818cf7062b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#ac0ee6263a122e08c30b9f5818cf7062b">impTurmas</a> (<a class="el" href="classTurma.html">Turma</a> *e, int n, bool pausa=true)</td></tr>
+<tr class="memdesc:ac0ee6263a122e08c30b9f5818cf7062b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que imprime as turmas no cadastro.  <a href="#ac0ee6263a122e08c30b9f5818cf7062b">Mais...</a><br /></td></tr>
+<tr class="separator:ac0ee6263a122e08c30b9f5818cf7062b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5df8de8d5dd023b1693a13a0b305ae10"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a5df8de8d5dd023b1693a13a0b305ae10">impAl</a> (<a class="el" href="classTurma.html">Turma</a> *e, int n, bool all=true, bool pausa=true)</td></tr>
+<tr class="memdesc:a5df8de8d5dd023b1693a13a0b305ae10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que imprime a lista de alunos de uma ou todas as turmas do cadastro.  <a href="#a5df8de8d5dd023b1693a13a0b305ae10">Mais...</a><br /></td></tr>
+<tr class="separator:a5df8de8d5dd023b1693a13a0b305ae10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af60e896e26bea9c82bfbe1a0050cabeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#af60e896e26bea9c82bfbe1a0050cabeb">salvarBD</a> (string nome, <a class="el" href="classTurma.html">Turma</a> *e, int n)</td></tr>
+<tr class="memdesc:af60e896e26bea9c82bfbe1a0050cabeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que salva o cadastro completo em arquivo.  <a href="#af60e896e26bea9c82bfbe1a0050cabeb">Mais...</a><br /></td></tr>
+<tr class="separator:af60e896e26bea9c82bfbe1a0050cabeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c1f07c1571d00ecc43a9a459193eee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTurma.html">Turma</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a67c1f07c1571d00ecc43a9a459193eee">abrirBD</a> (string nome, <a class="el" href="classTurma.html">Turma</a> *e, int &amp;n)</td></tr>
+<tr class="memdesc:a67c1f07c1571d00ecc43a9a459193eee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que recupera o cadastro completo a partir de um arquivo.  <a href="#a67c1f07c1571d00ecc43a9a459193eee">Mais...</a><br /></td></tr>
+<tr class="separator:a67c1f07c1571d00ecc43a9a459193eee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Arquivo de cabeçalho com a definição de funções para o controle dos dados. </p>
+<dl class="section author"><dt>Autor</dt><dd>Dionísio Carvalho (<a href="#" onclick="location.href='mai'+'lto:'+'dio'+'ni'+'sio'+'@n'+'ara'+'co'+'sta'+'.c'+'om.'+'br'; return false;">dioni<span style="display: none;">.nosp@m.</span>sio@<span style="display: none;">.nosp@m.</span>narac<span style="display: none;">.nosp@m.</span>osta<span style="display: none;">.nosp@m.</span>.com.<span style="display: none;">.nosp@m.</span>br</a>) </dd></dl>
+<dl class="section since"><dt>Desde</dt><dd>29/04/2017 </dd></dl>
+<dl class="section date"><dt>Data</dt><dd>07/05/2017 </dd></dl>
+</div><h2 class="groupheader">Funções</h2>
+<a class="anchor" id="a67c1f07c1571d00ecc43a9a459193eee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTurma.html">Turma</a>* abrirBD </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que recupera o cadastro completo a partir de um arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>Caminho/nome do arquivo de dados </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após a importação</dd></dl>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>Caminho/nome do arquivo de dados </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após o cadastro </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa55d824a717da97b616cbac80b7f35d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTurma.html">Turma</a>* addAl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que adiciona um aluno à uma turma (apresenta escolha) </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após o cadastro </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aeb3e17460b1f2a36e3b717474feb1011"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTurma.html">Turma</a>* addAlArq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pausa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que adiciona alunos à uma turma (apresenta escolha), carregando-os apartir de um arquivo CSV. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão do relatório de importação </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após o cadastro </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a69cd3e2e87ab2cce88799a0bccb18965"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTurma.html">Turma</a>* cadTurma </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que realiza o cadastro uma turma. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após o cadastro </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1483d4c9bcbfcfd79536d46af1c35b5d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTurma.html">Turma</a>* delAl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que remove um aluno de uma turma (apresenta escolha) </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após o cadastro </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac42c090625d66952bf56118aee6e4eb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classTurma.html">Turma</a>* delTurma </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que remove uma turma do cadastro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna o novo vetor de turmas após a exclusão </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a695e240beb9fa6e72e5975986334661d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool existeTurma </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nome</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que verifica se uma turma já existe no cadastro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>Nome da turma a ser verificada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna true caso já exista </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5df8de8d5dd023b1693a13a0b305ae10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int impAl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>all</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pausa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que imprime a lista de alunos de uma ou todas as turmas do cadastro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">all</td><td>"true" imprime todos os alunos de todas as turmas "false" imprime apenas os alunos de uma turma (apresenta escolha) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>-1 ou o número da turma selecionada</dd></dl>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">all</td><td>"true" imprime todos os alunos de todas as turmas "false" imprime apenas os alunos de uma turma (apresenta escolha) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>-1 ou o número da turma selecionada </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac0ee6263a122e08c30b9f5818cf7062b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void impTurmas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pausa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que imprime as turmas no cadastro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a3a1615d1a89c5e1e0b0dacdab14f0391"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAluno.html">Aluno</a> inputAluno </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que coleta os dados para cadastro de um aluno. </p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classAluno.html" title="Classe que representa um aluno. ">Aluno</a> coletado</dd>
+<dd>
+Funcionário coletado </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4d27b242b4b01274ffb7df00d5a3dfc9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string inputTurma </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que coleta o nome para o cadastro de uma turma. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Nome da turma </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af60e896e26bea9c82bfbe1a0050cabeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void salvarBD </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>nome</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classTurma.html">Turma</a> *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que salva o cadastro completo em arquivo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nome</td><td>Caminho/nome do arquivo de dados </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td>Vetor de turmas do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Número de turmas no cadastro </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 19 de Maio de 2017 16:15:30 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

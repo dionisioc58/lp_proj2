@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Laboratorio 6: Código-Fonte de include/tarefa1/pilha.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio 6
+   </div>
+   <div id="projectbrief">Laboratório 6 de Linguagem de Programação I</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ad5759b797f82f191555df26dd5932b0.html">tarefa1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pilha.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pilha_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef PILHA_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">    #define PILHA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classPilha.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classPilha.html">Pilha</a> {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        T *dados;                           </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordtype">int</span> qtde;                           </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">int</span> max;                            </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classPilha.html#a64acb3d52c0f321cc6d2b836b78a84e2">Pilha</a>(<span class="keywordtype">int</span> tam);                     </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="classPilha.html#a0c931f49acc17ce09b29c2d589d4fd0b">~Pilha</a>();                           </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPilha.html#affcb00de6044bfdf089bb475a1af569f">Push</a>(T val);                   </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        T <a class="code" href="classPilha.html#a853f85b93b29eefbee9087d37741d517">Pop</a>();                            </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPilha.html#a3ad2f8b9eec1a541924ef4d37070f97d">Vazio</a>();                       </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPilha.html#ae387ce38fed3a5f528e2f1fc555f82b0">Cheio</a>();                       </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classPilha.html#a64acb3d52c0f321cc6d2b836b78a84e2">   37</a></span>&#160;    <a class="code" href="classPilha.html#a64acb3d52c0f321cc6d2b836b78a84e2">Pilha&lt;T&gt;::Pilha</a>(<span class="keywordtype">int</span> tam) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        dados = <span class="keyword">new</span> T[tam];</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        max = tam;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        qtde = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classPilha.html#a0c931f49acc17ce09b29c2d589d4fd0b">   47</a></span>&#160;    <a class="code" href="classPilha.html#a0c931f49acc17ce09b29c2d589d4fd0b">Pilha&lt;T&gt;::~Pilha</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">delete</span>[] dados;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classPilha.html#affcb00de6044bfdf089bb475a1af569f">   55</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPilha.html#affcb00de6044bfdf089bb475a1af569f">Pilha&lt;T&gt;::Push</a>(T val) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">if</span>(!Cheio())</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            dados[qtde++] = val;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classPilha.html#a853f85b93b29eefbee9087d37741d517">   64</a></span>&#160;    T <a class="code" href="classPilha.html#a853f85b93b29eefbee9087d37741d517">Pilha&lt;T&gt;::Pop</a>() {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span>(!Vazio())</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">return</span> dados[--qtde];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">return</span> dados[0];</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classPilha.html#a3ad2f8b9eec1a541924ef4d37070f97d">   75</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPilha.html#a3ad2f8b9eec1a541924ef4d37070f97d">Pilha&lt;T&gt;::Vazio</a>() {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> (qtde == 0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="classPilha.html#ae387ce38fed3a5f528e2f1fc555f82b0">   83</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classPilha.html#ae387ce38fed3a5f528e2f1fc555f82b0">Pilha&lt;T&gt;::Cheio</a>() {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">return</span> (qtde == max);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classPilha_html_a853f85b93b29eefbee9087d37741d517"><div class="ttname"><a href="classPilha.html#a853f85b93b29eefbee9087d37741d517">Pilha::Pop</a></div><div class="ttdeci">T Pop()</div><div class="ttdef"><b>Definition:</b> pilha.h:64</div></div>
+<div class="ttc" id="classPilha_html"><div class="ttname"><a href="classPilha.html">Pilha</a></div><div class="ttdoc">Classe que representa uma pilha. </div><div class="ttdef"><b>Definition:</b> pilha.h:18</div></div>
+<div class="ttc" id="classPilha_html_a3ad2f8b9eec1a541924ef4d37070f97d"><div class="ttname"><a href="classPilha.html#a3ad2f8b9eec1a541924ef4d37070f97d">Pilha::Vazio</a></div><div class="ttdeci">bool Vazio()</div><div class="ttdef"><b>Definition:</b> pilha.h:75</div></div>
+<div class="ttc" id="classPilha_html_ae387ce38fed3a5f528e2f1fc555f82b0"><div class="ttname"><a href="classPilha.html#ae387ce38fed3a5f528e2f1fc555f82b0">Pilha::Cheio</a></div><div class="ttdeci">bool Cheio()</div><div class="ttdef"><b>Definition:</b> pilha.h:83</div></div>
+<div class="ttc" id="classPilha_html_a64acb3d52c0f321cc6d2b836b78a84e2"><div class="ttname"><a href="classPilha.html#a64acb3d52c0f321cc6d2b836b78a84e2">Pilha::Pilha</a></div><div class="ttdeci">Pilha(int tam)</div><div class="ttdef"><b>Definition:</b> pilha.h:37</div></div>
+<div class="ttc" id="classPilha_html_affcb00de6044bfdf089bb475a1af569f"><div class="ttname"><a href="classPilha.html#affcb00de6044bfdf089bb475a1af569f">Pilha::Push</a></div><div class="ttdeci">void Push(T val)</div><div class="ttdef"><b>Definition:</b> pilha.h:55</div></div>
+<div class="ttc" id="classPilha_html_a0c931f49acc17ce09b29c2d589d4fd0b"><div class="ttname"><a href="classPilha.html#a0c931f49acc17ce09b29c2d589d4fd0b">Pilha::~Pilha</a></div><div class="ttdeci">~Pilha()</div><div class="ttdef"><b>Definition:</b> pilha.h:47</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 19 de Maio de 2017 16:15:30 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>
