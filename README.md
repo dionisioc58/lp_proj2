@@ -1,5 +1,5 @@
 
-Projeto 2                         {#mainpage}
+Projeto 2
 ============
 
 OBJETIVO
