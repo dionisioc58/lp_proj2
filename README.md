@@ -1,7 +1,7 @@
 
-Laboratório 06                         {#mainpage}
+Projeto 2                         {#mainpage}
 ============
 
 OBJETIVO
 
-Laboratório 6 de Linguagem de Programação I
+Projeto 2 de Linguagem de Programação I

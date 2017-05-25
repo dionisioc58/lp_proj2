@@ -1,5 +1,5 @@
-#Makefile for "Laboratorio 06" C++ aplication
-#Created by Dionísio Carvalho
+#Makefile for "Projeto 2 de LP 1" C++ aplication
+#Created by Dionísio Carvalho & Luís Eduardo Rique
 
 # Comandos do sistema operacional
 # Linux: rm -rf
@@ -25,48 +25,13 @@ CFLAGS = -Wall -pedantic -ansi -std=c++11 -I $(INC_DIR)
 
 # Define o alvo (target) para a compilacao completa.
 # Ao final da compilacao, remove os arquivos objeto.
-all: clean tarefa1 tarefa2 tarefa3 doxy
+all: clean tarefa doxy
 debug: CFLAGS += -g -O0
-debug: clean tarefa1 tarefa2 tarefa3
+debug: clean tarefa
 
-# Alvo (target) para a construcao do executavel tarefa1
-# Define os arquivos tratastring.o e tarefa1main.o como dependencias
-tarefa1: $(OBJ_DIR)/tratastring.o $(OBJ_DIR)/tarefa1main.o
-	@echo "============="
-	@echo "Ligando o alvo $@"
-	@echo "============="
-	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
-	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
-	@echo "============="
-
-# Alvo (target) para a construcao do objeto tratastring.o
-# Define os arquivos tratastring.cpp e tratastring.h como dependencias.
-$(OBJ_DIR)/tratastring.o: $(SRC_DIR)/tarefa1/tratastring.cpp $(INC_DIR)/tarefa1/tratastring.h
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-# Alvo (target) para a construcao do objeto tarefa1main.o
-# Define o arquivo tarefa1main.cpp como dependencia.
-$(OBJ_DIR)/tarefa1main.o: $(SRC_DIR)/tarefa1/tarefa1main.cpp
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-# Alvo (target) para a construcao do executavel tarefa2
-# Define os arquivos lista.o e tarefa2.o como dependencias
-tarefa2: $(OBJ_DIR)/tarefa2main.o
-	@echo "============="
-	@echo "Ligando o alvo $@"
-	@echo "============="
-	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
-	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
-	@echo "============="
-
-# Alvo (target) para a construcao do objeto tarefa2main.o
-# Define o arquivo tarefa2main.cpp como dependencia.
-$(OBJ_DIR)/tarefa2main.o: $(SRC_DIR)/tarefa2/tarefa2main.cpp $(INC_DIR)/tarefa2/lista.h
-	$(CC) -c $(CFLAGS) -o $@ $<
-
-# Alvo (target) para a construcao do executavel tarefa3
+# Alvo (target) para a construcao do executavel tarefa
 # Define os arquivos turma.o, aluno.o, funcoes.o, menu.o e tarefa3main.o como dependencias
-tarefa3: $(OBJ_DIR)/turma.o $(OBJ_DIR)/aluno.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/tarefa3main.o
+tarefa: $(OBJ_DIR)/turma.o $(OBJ_DIR)/aluno.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/tarefa3main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
