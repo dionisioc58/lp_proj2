@@ -1,8 +1,0 @@
-<map id="include/tarefa2/lista.h" name="include/tarefa2/lista.h">
-<area shape="rect" id="node2" href="$turma_8h.html" title="Definição da classe Turma. " alt="" coords="226,80,381,107"/>
-<area shape="rect" id="node7" href="$tarefa2main_8cpp.html" title="Arquivo fonte para teste da classe lista. " alt="" coords="405,80,586,107"/>
-<area shape="rect" id="node3" href="$bancodados_8h.html" title="Arquivo de cabeçalho com a definição de funções para o controle dos dados. " alt="" coords="74,155,266,181"/>
-<area shape="rect" id="node5" href="$tarefa3main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="213,229,394,256"/>
-<area shape="rect" id="node6" href="$turma_8cpp.html" title="Implementação da classe Turma. " alt="" coords="341,155,487,181"/>
-<area shape="rect" id="node4" href="$bancodados_8cpp.html" title="Arquivo de corpo com a definição de funções para o controle dos dados. " alt="" coords="5,229,188,256"/>
-</map>

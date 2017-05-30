@@ -8,20 +8,19 @@
 
 #include "tarefa3/menu.h"
 
-#define itens 12                 /**< Quantidade de opções no menu */
+#define itens 11                 /**< Quantidade de opções no menu */
 
 string opcoes[itens] = {
-    "Cadastrar uma turma                         ",
-    "Excluir uma turma                           ",
-    "Listar as turmas                            ",
-    "Cadastrar um aluno                          ",
-    "Cadastrar alunos através de um arquivo      ",
-    "Excluir um aluno                            ",
-    "Listar alunos                               ",
-    "Listar alunos de todas as turmas            ",
-    "Listar as médias de todas as turmas         ",
-    "Salvar o cadastro em um arquivo             ",
-    "Recuperar o cadastro em um arquivo          ",
+    "Cadastrar um produto                        ",
+    "Remover um produto                          ",
+    "Editar um produto                           ",
+    "Consultar por tipo                          ",
+    "Consultar por produto                       ",
+    "Consultar por fornecedor                    ",
+    "Cadastrar um fornecedor                     ",
+    "Vender                                      ",
+    "Emitir nota fiscal                          ",
+    "Controle de estoque                         ",
     "Sair                                        "
 };                /**< Opções do menu */
 
@@ -36,7 +35,7 @@ int showMenu() {
     while(true) {
         cout << string(50, '\n'); //Limpa a tela
         cout << "\t\t|**********************************************|" << endl;
-        cout << "\t\t|             DDA - Turmas e Alunos            |" << endl;
+        cout << "\t\t|       Q Leve Tudo - A Sua Conveniência       |" << endl;
         cout << "\t\t|                                              |" << endl;
         for(int i = 0; i < itens; i++) {        
             if(realce == i)
