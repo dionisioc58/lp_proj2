@@ -1,49 +1,71 @@
 /**
- * @file	aluno.h
- * @brief	Definição da classe Aluno
+ * @file	produto.h
+ * @brief	Definição da classe Produto
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
- * @since	06/05/2017
- * @date	28/04/2017
+ * @author	Eduardo Rique (luiseduardorique@gmail.com)
+ * @since	30/05/2017
+ * @date	30/05/2017
  */
 
-#ifndef ALUNO_H
-    #define ALUNO_H
+#ifndef PRODUTO_H
+#define PRODUTO_H
 
-    #include <iostream>
-    #include <string>
-    #include <sstream>
-    using std::string;
-    using std::ostream;
-    using std::istream;
-    using std::stringstream;
-    #include <ctime>
+#include <iostream>
+#include <string>
+#include <sstream>
+using std::string;
+using std::ostream;
+using std::istream;
+using std::stringstream;
+#include <ctime>
     
     /**
-    * @class   Aluno aluno.h
-    * @brief   Classe que representa um aluno
+    * @class   Perecivel produto.h
+    * @brief   Classe que representa um produto perecivel
+    * @details Os atributos de um perecivel são: validade
+    */  
+    class Perecivel {
+    protected:
+    public:
+    };
+
+    /**
+    * @class   Produto Produto.h
+    * @brief   Classe que representa um Produto
     * @details Os atributos de um funcionário são: nome, matricula, faltas e nota
     */  
-    class Aluno {
-    private:
-        string nome;                                            /**< Nome */
-        string matricula;                                       /**< Matricula */
-        int faltas;                                             /**< Faltas */
-        float nota;                                             /**< Nota */
+    class Produto {
+    protected:
+        string cb;         /**< codigo de barras */
+        string descricao;            /**< descricao */
+        string tipo;            /**< tipo do produto */
+        double preco;           /**< preco */
+        int qntd;           /**< quantidade em estoque */
     public:
-        Aluno();                                                /**< Construtor padrão */
-        ~Aluno();                                               /**< Destrutor padrão */
-        string getNome();                                       /**< Retorna o nome */
-        void setNome(string n);                                 /**< Modifica o nome */
-        string getMatricula();                                  /**< Retorna a matricula */
-        void setMatricula(string n);                            /**< Modifica a matricula */
-        int getFaltas();                                        /**< Retorna o número de faltas */
-        void setFaltas(int s);                                  /**< Modifica o número de faltas */
-        float getNota();                                        /**< Retorna a nota */
-        void setNota(float s);                                  /**< Modifica a nota */
+        Produto();                                                /**< Construtor padrão */
+        ~Produto();                                               /**< Destrutor padrão */
+        
+        string getcb();                                       /**< Retorna o codigo de barras */
+        void setcb(string r);                                 /**< Modifica o codigo de barras */
+        
+        string getdescricao();                                  /**< Retorna o descricao */
+        void setdescricao(string c);                            /**< Modifica o descricao */
+        
+        string gettipo();                                       /**< Retorna o tipo */
+        void settipo(string t);                                 /**< Modifica o tipo */
+        
+        double getpreco();                                       /**< Retorna o preco */
+        void setpreco(double p);                                 /**< Modifica o preco */
+        
+        int getqntd();                                  /**< Retorna a quantidade em estoque */
+        void setqntd(int c);                            /**< Modifica a quantidade em estoque */
+        
+        
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
-        bool operator>(Aluno &a);                               /** @brief Sobrecarga do operador de comparação > */
-        friend ostream& operator<<(ostream& os, Aluno &f);      /** @brief Sobrecarga do operador de inserção em stream */
-        friend istream& operator>>(istream& is, Aluno &f);      /** @brief Sobrecarga do operador de extração de stream */
+        
+        bool operator>(Produto &p);                               /** @brief Sobrecarga do operador de comparação > */
+        friend ostream& operator<<(ostream& os, Produto &p);      /** @brief Sobrecarga do operador de inserção em stream */
+        friend istream& operator>>(istream& is, Produto &p);      /** @brief Sobrecarga do operador de extração de stream */
     };
 
 #endif

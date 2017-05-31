@@ -53,6 +53,9 @@
 Produto() {
     cb = "";
     descricao = "";
+    tipo = "";
+    preco = 0.00;
+    qntd = 0;
 }
 
 /**
@@ -75,6 +78,66 @@ string getcb() {
 */
 void setcb(string r) {
     cb = r;
+}
+
+/**
+* @return Matrícula do Produto
+*/
+string getdescricao() {
+    return descricao;
+}
+
+/**
+* @details O método modifica a matrícula do Produto
+* @param   n descricao
+*/
+void setdescricao(string c) {
+    descricao = c;
+}
+
+/**
+* @return Matrícula do Produto
+*/
+string gettipo() {
+    return tipo;
+}
+
+/**
+* @details O método modifica a matrícula do Produto
+* @param   n descricao
+*/
+void settipo(string t) {
+    tipo = t;
+}
+
+/**
+* @return Matrícula do Produto
+*/
+Fornecedor getfornecedor() {
+    return fornecedor;
+}
+
+/**
+* @details O método modifica a matrícula do Produto
+* @param   n descricao
+*/
+void setfornecedor(Fornecedor f) {
+    Fornecedor = f;
+}
+
+/**
+* @return Matrícula do Produto
+*/
+string getdescricao() {
+    return descricao;
+}
+
+/**
+* @details O método modifica a matrícula do Produto
+* @param   n descricao
+*/
+void setdescricao(string c) {
+    descricao = c;
 }
 
 /**

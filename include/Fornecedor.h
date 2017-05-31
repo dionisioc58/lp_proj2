@@ -21,6 +21,7 @@
             string CNPJ;            /**< CNPJ */
         public:
         Fornecedor();                                                /**< Construtor padrão */
+        Fornecedor(string r, string c);                              /**< Construtor parametrizado */
         ~Fornecedor();                                               /**< Destrutor padrão */
         string getRSocial();                                       /**< Retorna a razao social */
         void setRSocial(string r);                                 /**< Modifica a razao social */
@@ -28,12 +29,20 @@
         void setCNPJ(string c);                            /**< Modifica o CNPJ */
     };
 
-    /**
+/**
 * @details Os valores de RSocial e CNPJ são inicializados com vazio
 */
 Fornecedor() {
     RSocial = "";
     CNPJ = "";
+}
+
+/**
+* @details Os valores de RSocial e CNPJ são inicializados com vazio
+*/
+Fornecedor(string r, string c) {
+    RSocial = r;
+    CNPJ = c;
 }
 
 /**

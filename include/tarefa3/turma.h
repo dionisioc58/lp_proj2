@@ -1,47 +1,59 @@
 /**
- * @file	turma.h
- * @brief	Definição da classe Turma
+ * @file	fornecedor.h
+ * @brief	Definição da classe Fornecedor
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
- * @since	06/05/2017
- * @date	15/05/2017
+ * @author	Eduardo Rique (luiseduardorique@gmail.com)
+ * @since	30/05/2017
+ * @date	30/05/2017
  */
 
-#ifndef TURMA_H
-    #define TURMA_H
+#ifndef FORNECEDOR_H
+#define FORNECEDOR_H
 
-    #include <iostream>
-    #include <ctime>
-    #include <string>
-    using std::string;
-    using std::endl;
+#include <iostream>
+#include <ctime>
+#include <string>
+using std::string;
+using std::endl;
 
-    #include "aluno.h"
-    #include "tarefa2/lista.h"
+#include "aluno.h"
+#include "tarefa2/lista.h"
 
-    /**
-    * @class   Turma turma.h
-    * @brief   Classe que representa uma turma
-    * @details Os atributos de um funcionário são: nome, alunos e a qtde deles
+    
+
+/**
+    * @class   Fornecedor Fornecedor.h
+    * @brief   Classe que representa um Fornecedor
+    * @details Os atributos da QLeveTudo são: RSocial, CNPJ
     */  
-    class Turma {
-    private:
-        string nome;                                        /**< Nome */
-        Lista<Aluno> *alunos;	                            /**< Cria uma lista de alunos duplamente ligada vazia */
+    class Fornecedor {
+        private:
+            string RSocial;         /**< Razao social */
+            string CNPJ;            /**< CNPJ */
+            Lista<Produto> *produtos;         /**< Cria uma lista de produtos duplamente ligada vazia */
     public:
-        Turma();                                            /**< Construtor padrão */
-        ~Turma();                                           /**< Destrutor padrão */
-        string getNome();                                   /**< Retorna o nome */
-        void setNome(string n);                             /**< Modifica o nome */
-        int getQtde();                                      /**< Retorna a quantidade de alunos */
-        float getMedia();                                   /**< Retorna a média das notas dos alunos */
-        Lista<Aluno> *getAlunos();                          /**< Retorna a lista de alunos */
-        void setAlunos(Lista<Aluno> *f);                    /**< Modifica a lista de alunos */
-        bool addAluno(Aluno f);                             /**< Adiciona um aluno */
-        bool delAluno(int f);                               /**< Remove um aluno */
-        bool pertenceTurma(string n);                       /**< Verifica se uma matrícula pertence à lista de aluno */
+        Fornecedor();                                       /**< Construtor padrão */
+        ~Fornecedor();                                      /**< Destrutor padrão */
+        
+        string getRSocial();                                   /**< Retorna o RSocial */
+        void setRSocial(string n);                             /**< Modifica o RSocial */
+
+        string getCNPJ();                                   /**< Retorna o CNPJ */
+        void setCNPJ(string c);                             /**< Modifica o CNPJ */
+        
+        int getQtde();                                      /**< Retorna a quantidade de Produtos */
+        
+        Lista<Produto> *getProdutos();                          /**< Retorna a lista de Produtos */
+        void setProdutos(Lista<Produto> *p);                    /**< Modifica a lista de Produtos */
+        
+        bool addProduto(Produto p);                             /**< Adiciona um Produto */
+        bool delProduto(int p);                               /**< Remove um Produto */
+        
+        bool pertenceFornecedor(string n);                       /**< Verifica se um codigo de barra pertence à lista de Produto */
+        
         string exportar();                                  /**< Retorna uma string com os dados para exportação CSV */
-		friend ostream& operator<<(ostream& os, Turma &e);  /** @brief Sobrecarga do operador de inserção em stream */
-		friend istream& operator>>(istream& is, Turma &e);  /** @brief Sobrecarga do operador de extração de stream */
+		friend ostream& operator<<(ostream& os, Fornecedor &f);  /** @brief Sobrecarga do operador de inserção em stream */
+		friend istream& operator>>(istream& is, Fornecedor &f);  /** @brief Sobrecarga do operador de extração de stream */
     };
 
 #endif
