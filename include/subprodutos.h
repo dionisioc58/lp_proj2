@@ -66,19 +66,19 @@ using std::stringstream;
     */  
     class Doce : public Produto, Perecivel {
     protected:
-        string acucar;
-        string gluten;
-        string glicose;
+        int acucar;
+        bool gluten;
+        bool glicose;
     public:
         Doce();
         ~Doce();
         
-        void setAcucar(string a);
-        string getAcucar();
-        void setGluten(string gt);
-        string getGluten();
-        void setGlicose(string gc);
-        string getGlicose();
+        void setAcucar(int a);
+        int getAcucar();
+        void setGluten(bool g);
+        bool getGluten();
+        void setLactose(bool l);
+        bool getLactose();
     
     };
 
@@ -89,19 +89,19 @@ using std::stringstream;
     */  
     class Salgado : public Produto, Perecivel {
     protected:
-        string sodio;
-        string gluten;
-        string lactose;
+        int sodio;
+        bool gluten;
+        bool lactose;
     public:
         Salgado();
         ~Salgado();
         
-        void setSodio(string s;
-        string getSodio();
-        void setGluten(string g);
-        string getGluten();
-        void setLactose(string l);
-        string getLactose();
+        void setSodio(int s);
+        int getSodio();
+        void setGluten(bool g);
+        bool getGluten();
+        void setLactose(bool l);
+        bool getLactose();
     
     };
 

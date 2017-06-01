@@ -10,7 +10,7 @@
 #include "produto.h"
 
 /**
-* @details Os valores de cb e descricao são inicializados com vazio
+* @details Os valores de cb, descricao, tipo, preco e qntd são inicializados com vazio
 */
 Produto::Produto() {
     cb = "";
