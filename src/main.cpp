@@ -11,8 +11,8 @@ using std::cout;
 using std::cerr;
 using std::endl;
 
-#include "aluno.h"
-#include "turma.h"
+#include "produto.h"
+#include "fornecedor.h"
 #include "menu.h"
 #include "bancodados.h"
 
@@ -35,33 +35,33 @@ int main(int argc, char* argv[]) {
                 break;
                 
             case 1:              //Cadastrar uma Turma
-                tur = cadTurma(tur, qtdt);
+                tur = cadFornecedor(tur, qtdt);
                 break;
             case 2:              //Excluir uma Turma
-                tur = delTurma(tur, qtdt);
+                tur = delFornecedor(tur, qtdt);
                 break;
             case 3:              //Listar as Turma
-                impTurmas(tur, qtdt);
+                impFornecedores(tur, qtdt);
                 break;
 
             case 4:              //Adicionar um aluno
-                tur = addAl(tur, qtdt);
+                tur = addPr(tur, qtdt);
                 break;
             case 5:              //Adicionar alunos através de um arquivo
-                tur = addAlArq(tur, qtdt);
+                tur = addPrArq(tur, qtdt);
                 break;
             case 6:              //Excluir um aluno
-                tur = delAl(tur, qtdt);
+                tur = delPr(tur, qtdt);
                 break;
             
             case 7:              //Listar os alunos de uma turma
-                impAl(tur, qtdt, false);
+                impPr(tur, qtdt, false);
                 break;
             case 8:             //Listar todos os alunos de todas as turmas
-                impAl(tur, qtdt, true);
+                impPr(tur, qtdt, true);
                 break;
             case 9:
-                impTurmas(tur, qtdt, true);
+                impFornecedores(tur, qtdt, true);
                 break;
             
             case 10:            //Salvar o banco de dados

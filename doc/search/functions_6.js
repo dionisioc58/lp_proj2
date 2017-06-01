@@ -1,8 +1,16 @@
 var searchData=
 [
-  ['impal',['impAl',['../bancodados_8h.html#a5df8de8d5dd023b1693a13a0b305ae10',1,'impAl(Turma *e, int n, bool all=true, bool pausa=true):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a03fe22a06de286f0df115be91f990063',1,'impAl(Turma *e, int n, bool all, bool pausa):&#160;bancodados.cpp']]],
-  ['impturmas',['impTurmas',['../bancodados_8h.html#ac0ee6263a122e08c30b9f5818cf7062b',1,'impTurmas(Turma *e, int n, bool pausa=true):&#160;bancodados.cpp'],['../bancodados_8cpp.html#ac24a4a5e13000bf84ee08cabe166fa7c',1,'impTurmas(Turma *e, int n, bool pausa):&#160;bancodados.cpp']]],
-  ['inputaluno',['inputAluno',['../bancodados_8h.html#a3a1615d1a89c5e1e0b0dacdab14f0391',1,'inputAluno():&#160;bancodados.cpp'],['../bancodados_8cpp.html#a3a1615d1a89c5e1e0b0dacdab14f0391',1,'inputAluno():&#160;bancodados.cpp']]],
-  ['inputturma',['inputTurma',['../bancodados_8h.html#a4d27b242b4b01274ffb7df00d5a3dfc9',1,'inputTurma():&#160;bancodados.cpp'],['../bancodados_8cpp.html#a4d27b242b4b01274ffb7df00d5a3dfc9',1,'inputTurma():&#160;bancodados.cpp']]],
-  ['insere',['Insere',['../classLista.html#ae26be7a19ebae8ee436f8472dd4a7c69',1,'Lista']]]
+  ['getanterior',['getAnterior',['../classLista.html#a3c02fab58168322983a94a3a6f85fa18',1,'Lista']]],
+  ['getcb',['getcb',['../classProduto.html#ab242994bf7cce8b078358d944c80c4b1',1,'Produto']]],
+  ['getcnpj',['getCNPJ',['../classFornecedor.html#abaadea228e4e8b8874aa7521415aca3e',1,'Fornecedor']]],
+  ['getdescricao',['getdescricao',['../classProduto.html#ab0aebd9f5038f5d3db2e91a5ce4c1368',1,'Produto']]],
+  ['getpreco',['getpreco',['../classProduto.html#a312b5742c68480f837b971255111bd2b',1,'Produto']]],
+  ['getprodutos',['getProdutos',['../classFornecedor.html#a3f97fec38029b79f2212ca6c335a2c80',1,'Fornecedor']]],
+  ['getproximo',['getProximo',['../classLista.html#a5360feacbcc0f09d813f49fcde15a6cc',1,'Lista']]],
+  ['getqntd',['getqntd',['../classProduto.html#a16687f5217e38666d69705da0a97a3a8',1,'Produto']]],
+  ['getqtde',['getQtde',['../classFornecedor.html#a69e725256294debcd9b75337ce0f9e21',1,'Fornecedor']]],
+  ['getrsocial',['getRSocial',['../classFornecedor.html#ae56ac8b42e36991fc20325facf754055',1,'Fornecedor']]],
+  ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista']]],
+  ['gettipo',['gettipo',['../classProduto.html#ac2df433e55756f63627f17fe3aa61bba',1,'Produto']]],
+  ['getvalor',['getValor',['../classLista.html#a94177c722231097e27a7ca950a689c1f',1,'Lista']]]
 ];

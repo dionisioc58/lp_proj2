@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['operator_3c_3c',['operator&lt;&lt;',['../classAluno.html#afa1911f367b1d9c9295ee086d50ebe9e',1,'Aluno::operator&lt;&lt;()'],['../classTurma.html#a7e70940046e1ab7872a2d603949da068',1,'Turma::operator&lt;&lt;()']]],
-  ['operator_3e_3e',['operator&gt;&gt;',['../classAluno.html#acb828c73f8e22b5dc12f6e1dce773660',1,'Aluno::operator&gt;&gt;()'],['../classTurma.html#a02b6419a8c1a520c79ed24139252a709',1,'Turma::operator&gt;&gt;()']]]
+  ['operator_3c_3c',['operator&lt;&lt;',['../classFornecedor.html#a51cace47ee37359be96b60de1a42ab62',1,'Fornecedor::operator&lt;&lt;()'],['../classProduto.html#a82123cf97bbea8211914f014eb49952c',1,'Produto::operator&lt;&lt;()']]],
+  ['operator_3e_3e',['operator&gt;&gt;',['../classFornecedor.html#a8d29f886a9d6f994795537b23211008f',1,'Fornecedor::operator&gt;&gt;()'],['../classProduto.html#ab56e78b5f533529330c9956c47825bf3',1,'Produto::operator&gt;&gt;()']]]
 ];

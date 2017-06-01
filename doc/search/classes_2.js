@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pilha',['Pilha',['../classPilha.html',1,'']]]
+  ['doce',['Doce',['../classDoce.html',1,'']]],
+  ['dvd',['DVD',['../classDVD.html',1,'']]]
 ];

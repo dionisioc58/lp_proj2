@@ -10,14 +10,22 @@
 #include "bancodados.h"
 
 /**
-* @brief        Função que coleta a Razão Social para o cadastro de um fornecedor
-* @return       RSocial do fornecedor
+* @brief        Função que coleta os dados para o cadastro de um fornecedor
+* @return       Fornecedor coletado
 */
-string inputFornecedor() {
-    string nome;
+Fornecedor inputFornecedor() {
+    string input;
+    Fornecedor novo;
+
     cout << "Digite a razão social do fornecedor: ";
-    getline(cin, nome);
-    return nome;
+    getline(cin, input);
+    novo.setRSocial(input);
+
+    cout << "Digite o CNPJ do fornecedor: ";
+    getline(cin, input);
+    novo.setCNPJ(input);
+
+    return novo;
 }
 
 /**
@@ -29,19 +37,20 @@ Produto inputProduto() {
     string input;
     Produto novo;
 
-    cout << "Digite o nome do produto: ";
+    cout << "Digite o código do produto: ";
     getline(cin, input);
-    novo.setNome(input);
+    novo.setcb(input);
 
-    cout << "Digite a matrícula do produto: ";
+    cout << "Digite a descrição do produto: ";
     getline(cin, input);
-    novo.setMatricula(input);
+    novo.setdescricao(input);
 
-    int faltas = recebeInt("Digite a quantidade de faltas: ", 0);
-    novo.setFaltas(faltas);
+    cout << "Digite o tipo do produto: ";
+    getline(cin, input);
+    novo.settipo(input);
 
-    float nota = recebeFloat("Digite a nota: ", 0);
-    novo.setNota(nota);
+    float preco = recebeFloat("Digite o preço: ", 0);
+    novo.setpreco(preco);
     
     return novo;
 }
@@ -56,8 +65,8 @@ Produto inputProduto() {
 bool existeFornecedor(Fornecedor *e, int n, string nome) {
     //Testa se já existe no cadastro
     for(int i = 0; i < n; i++) {
-        if(e[i].getNome() == nome) {
-            cout << "Turma já cadastrada!" << endl;
+        if(e[i].getRSocial() == nome) {
+            cout << "Fornecedor já cadastrado!" << endl;
             return true;
         }
     }
@@ -65,45 +74,48 @@ bool existeFornecedor(Fornecedor *e, int n, string nome) {
 }
 
 /**
-* @brief        Função que realiza o cadastro uma turma
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[inout] n Número de turmas no cadastro
-* @return       Retorna o novo vetor de turmas após o cadastro
+* @brief        Função que realiza o cadastro de um fornecedor
+* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[inout] n Número de fornecedores no cadastro
+* @return       Retorna o novo vetor de fornecedores após o cadastro
 */
-Turma *cadTurma(Turma *e, int &n) {
-    string nome = inputTurma();
-    if(existeTurma(e, n, nome))
+Fornecedor *cadFornecedor(Fornecedor *e, int &n) {
+    Fornecedor novo = inputFornecedor();
+    if(existeFornecedor(e, n, novo.getRSocial()))
         return e;
 
-    Turma *r = new Turma[n + 1];
+    Fornecedor *r = new Fornecedor[n + 1];
     
-    //Se já tem Turmas, aumenta o vetor, copia a antiga lista para um novo maior
+    //Se já tem Fornecedores, aumenta o vetor, copia a antiga lista para um novo maior
     int j = 0;
     for(int i = 0; i < n; i++) {
-        r[j].setNome(e[i].getNome());
-        r[j].setAlunos(e[i].getAlunos());
+        r[j].setRSocial(e[i].getRSocial());
+        r[j].setCNPJ(e[i].getCNPJ());
+        r[j].setProdutos(e[i].getProdutos());
         j++;
     }
     if(n > 0)
         delete[] e;
 
-    r[n++].setNome(nome); //Guarda a nova turma informada
+    r[n++] = novo;
+    //r[n].setCNPJ(nome); //Guarda a nova turma informada
+    //n++;
     
     return r;
 }
 
 /**
-* @brief        Função que remove uma turma do cadastro
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[inout] n Número de turmas no cadastro
-* @return       Retorna o novo vetor de turmas após a exclusão
+* @brief        Função que remove um fornecedor do cadastro
+* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[inout] n Número de fornecedores no cadastro
+* @return       Retorna o novo vetor de fornecedores após a exclusão
 */
-Turma *delTurma(Turma *e, int &n) {
+Fornecedor *delFornecedor(Fornecedor *e, int &n) {
     if(n == 0)
         return e;
 
-    impTurmas(e, n, false);
-    int selecao = recebeInt("Digite o número da turma para a remoção (0 para cancelar): ", 0);
+    impFornecedores(e, n, false);
+    int selecao = recebeInt("Digite o número do fornecedor para a remoção (0 para cancelar): ", 0);
     if(selecao == 0)
         return e;
     selecao--;  //O usuário vai digitar o número com base em 1
@@ -113,14 +125,15 @@ Turma *delTurma(Turma *e, int &n) {
         return e;
     }
 
-    Turma *r = new Turma[n - 1];
+    Fornecedor *r = new Fornecedor[n - 1];
 
-    //Se já tem turmas, diminui o vetor, copia a antiga lista para uma nova menor
+    //Se já tem fornecedores, diminui o vetor, copia a antiga lista para uma nova menor
     int j = 0;
     for(int i = 0; i < n; i++)
         if(i != selecao) {
-            r[j].setNome(e[i].getNome());
-            r[j].setAlunos(e[i].getAlunos());
+            r[j].setRSocial(e[i].getRSocial());
+            r[j].setCNPJ(e[i].getCNPJ());
+            r[j].setProdutos(e[i].getProdutos());
             j++;
         }
 
@@ -130,41 +143,41 @@ Turma *delTurma(Turma *e, int &n) {
 }
 
 /**
-* @brief        Função que adiciona um aluno à uma turma (apresenta escolha)
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
-* @return       Retorna o novo vetor de turmas após o cadastro
+* @brief        Função que adiciona um produto à um fornecedor (apresenta escolha)
+* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[in]    n Número de fornecedores no cadastro
+* @return       Retorna o novo vetor de fornecedores após o cadastro
 */
-Turma *addAl(Turma *e, int n) {
+Fornecedor *addPr(Fornecedor *e, int n) {
     if(n == 0)
         return e;
 
-    impTurmas(e, n, false);
-    int selecao = recebeInt("Digite o número da turma para a adição (0 para cancelar): ", 0);
+    impFornecedores(e, n, false);
+    int selecao = recebeInt("Digite o número do fornecedor para a adição (0 para cancelar): ", 0);
     if(selecao == 0)
         return e;
     selecao--;  //O usuário vai digitar o número com base em 1
 
-    Aluno f;
-    f = inputAluno();
-    e[selecao].addAluno(f);
+    Produto f;
+    f = inputProduto();
+    e[selecao].addProduto(f);
     return e;
 }
 
 /**
-* @brief        Função que adiciona alunos à uma turma (apresenta escolha),
+* @brief        Função que adiciona produtos à um fornecedor (apresenta escolha),
 *               carregando-os apartir de um arquivo CSV
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
+* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[in]    n Número de fornecedores no cadastro
 * @param[in]    pausa True para apresentar uma pausa após a impressão do relatório de importação
-* @return       Retorna o novo vetor de turmas após o cadastro
+* @return       Retorna o novo vetor de fornecedores após o cadastro
 */
-Turma *addAlArq(Turma *e, int n, bool pausa) {
+Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa) {
     if(n == 0)
         return e;
 
-    impTurmas(e, n, false);
-    int selecao = recebeInt("Digite o número da turma para a adição (0 para cancelar): ", 0);
+    impFornecedores(e, n, false);
+    int selecao = recebeInt("Digite o número do fornecedor para a adição (0 para cancelar): ", 0);
     if(selecao == 0)
         return e;
     selecao--;  //O usuário vai digitar o número com base em 1
@@ -179,19 +192,19 @@ Turma *addAlArq(Turma *e, int n, bool pausa) {
     }
 
     int linhas = 0, funcs = 0;
-    Aluno f;
+    Produto f;
     while(!lista.eof()) {
         lista >> f;
         linhas++;
-        if(f.getNome() != "\n") {
-            e[selecao].addAluno(f);
+        if(f.getdescricao() != "\n") {
+            e[selecao].addProduto(f);
             funcs++;
         }
     }
     lista.close();
     cout << "Importação concluída com sucesso! " << endl;
     cout << linhas << " linhas no arquivo." << endl;
-    cout << funcs << " alunos cadastrados." << endl;
+    cout << funcs << " produtos cadastrados." << endl;
 
     if(pausa) {
         cin.ignore();
@@ -204,34 +217,34 @@ Turma *addAlArq(Turma *e, int n, bool pausa) {
 }
 
 /**
-* @brief        Função que remove um aluno de uma turma (apresenta escolha)
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
-* @return       Retorna o novo vetor de turmas após o cadastro
+* @brief        Função que remove um produto de um Fornecedor (apresenta escolha)
+* @param[in]    *e Vetor de Fornecedores do cadastro
+* @param[in]    n Número de Fornecedores no cadastro
+* @return       Retorna o novo vetor de Fornecedores após o cadastro
 */
-Turma *delAl(Turma *e, int n) {
+Fornecedor *delPr(Fornecedor *e, int n) {
     if(n == 0)
         return e;
 
-    int empsel = impAl(e, n, false, false); //Captura a turma selecionada
+    int empsel = impPr(e, n, false, false); //Captura o fornecedor selecionado
     int selecao = recebeInt("Digite o número do aluno à remover (0 para cancelar): ", 0);
     if(selecao == 0)
         return e;
     selecao--;  //O usuário vai digitar o número com base em 1
 
-    if(!e[empsel].delAluno(selecao))
+    if(!e[empsel].delProduto(selecao))
         cout << "Não foi possível remover!" << endl;
     return e;
 }
 
 /**
-* @brief        Função que imprime as turmas no cadastro
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
+* @brief        Função que imprime os fornecedores no cadastro
+* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[in]    n Número de fornecedores no cadastro
 * @param[in]    pausa True para apresentar uma pausa após a impressão
 */
-void impTurmas(Turma *e, int n, bool pausa) {
-    cout << "Lista de turmas cadastradas: " << endl;
+void impFornecedores(Fornecedor *e, int n, bool pausa) {
+    cout << "Lista de fornecedores cadastradas: " << endl;
     for(int i = 0; i < n; i++)
         cout << "-- (" << (i + 1) << ") " << e[i] << endl;
     cout << endl;
@@ -243,38 +256,38 @@ void impTurmas(Turma *e, int n, bool pausa) {
 }
 
 /**
-* @brief        Função que imprime a lista de alunos de uma ou todas 
-                as turmas do cadastro
-* @param[inout] *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
-* @param[in]    all "true" imprime todos os alunos de todas as turmas
-                "false" imprime apenas os alunos de uma turma (apresenta escolha)
+* @brief        Função que imprime a lista de produtos de um ou todos 
+                os fornecedores do cadastro
+* @param[inout] *e Vetor de Fornecedores do cadastro
+* @param[in]    n Número de Fornecedor no cadastro
+* @param[in]    all "true" imprime todos os produtos de todos os fornecedores
+                "false" imprime apenas os produtos de um fornecedor (apresenta escolha)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
-* @return       -1 ou o número da turma selecionada
+* @return       -1 ou o número do fornecedor selecionada
 */
-int impAl(Turma *e, int n, bool all, bool pausa) {
+int impPr(Fornecedor *e, int n, bool all, bool pausa) {
     if(n == 0)
         return -1;
-    if(!all) {      //Imprime todos os alunos de uma turma
-        impTurmas(e, n, false);
-        int selecao = recebeInt("Digite o número da turma (0 para cancelar): ", 0);
+    if(!all) {      //Imprime todos os produtos de um fornecedor
+        impFornecedores(e, n, false);
+        int selecao = recebeInt("Digite o número do fornecedor (0 para cancelar): ", 0);
         if(selecao == 0)
             return -1;
         selecao--;  //O usuário vai digitar o número com base em 1
 
         if(e[selecao].getQtde() > 0) {
-            cout << "Alunos da turma " << e[selecao].getNome() << endl;
-            Lista<Aluno> *f = e[selecao].getAlunos();
-            Aluno alun;
+            cout << "Produtos do fornecedor " << e[selecao].getRSocial() << endl;
+            Lista<Produto> *f = e[selecao].getProdutos();
+            Produto produt;
             //for(int i = 0; i < e[selecao].getQtde(); i++) {
             for(int i = 0; i < e[selecao].getQtde(); i++) {
                 f = f->getProximo();
-                alun = f->getValor();
-                cout << "   (" << (i + 1) << ") " << alun << endl;
+                produt = f->getValor();
+                cout << "   (" << (i + 1) << ") " << produt << endl;
             }
 
         } else
-            cout << "Nenhum aluno na turma selecionada." << endl;
+            cout << "Nenhum produto no fornecedor selecionado." << endl;
         
         if(pausa) {
             cout << "Pressione ENTER para continuar...";
@@ -285,13 +298,13 @@ int impAl(Turma *e, int n, bool all, bool pausa) {
     } else {        //Imprime todos os funcionários de todas as empresas
         for(int j = 0; j < n; j++) {
             if(e[j].getQtde() > 0) {
-                cout << "Alunos da turma " << e[j].getNome() << endl;
-                Lista<Aluno> *f = e[j].getAlunos();
-                Aluno alun;
+                cout << "Produtos do fornecedor " << e[j].getRSocial() << endl;
+                Lista<Produto> *f = e[j].getProdutos();
+                Produto produt;
                 for(int i = 0; i < e[j].getQtde(); i++) {
                     f = f->getProximo();
-                    alun = f->getValor();
-                    cout << "   (" << (i + 1) << ") " << alun << endl;
+                    produt = f->getValor();
+                    cout << "   (" << (i + 1) << ") " << produt << endl;
                 }
             }
         }
@@ -308,10 +321,10 @@ int impAl(Turma *e, int n, bool all, bool pausa) {
 /**
 * @brief        Função que salva o cadastro completo em arquivo
 * @param[in]    nome Caminho/nome do arquivo de dados
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
+* @param[in]    *e Vetor de Fornecedores do cadastro
+* @param[in]    n Número de Fornecedores no cadastro
 */
-void salvarBD(string nome, Turma *e, int n) {
+void salvarBD(string nome, Fornecedor *e, int n) {
     ofstream saida(nome);
     if(!saida) {
         cout << "Não foi possível abrir o arquivo para salvar." << endl;
@@ -319,7 +332,7 @@ void salvarBD(string nome, Turma *e, int n) {
     }
     for(int i = 0; i < n; i++) {
         saida << e[i].exportar() << endl;
-        Lista<Aluno> *aa = e[i].getAlunos();
+        Lista<Produto> *aa = e[i].getProdutos();
         for(int j = 0; j < e[i].getQtde(); j++) {            
             aa = aa->getProximo();
             saida << aa->getValor().exportar() << endl;
@@ -333,11 +346,11 @@ void salvarBD(string nome, Turma *e, int n) {
 /**
 * @brief        Função que recupera o cadastro completo a partir de um arquivo
 * @param[in]    nome Caminho/nome do arquivo de dados
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[inout] n Número de turmas no cadastro
-* @return       Retorna o novo vetor de turmas após o cadastro
+* @param[in]    *e Vetor de Fornecedores do cadastro
+* @param[inout] n Número de Fornecedores no cadastro
+* @return       Retorna o novo vetor de Fornecedores após o cadastro
 */
-Turma *abrirBD(string nome, Turma *e, int &n) {
+Fornecedor *abrirBD(string nome, Fornecedor *e, int &n) {
     ifstream entrada(nome);
     if(!entrada) {
         cout << "Não foi possível abrir o arquivo de dados." << endl;
@@ -348,29 +361,29 @@ Turma *abrirBD(string nome, Turma *e, int &n) {
     n = 0;
     while(!entrada.eof()) {
         getline(entrada, texto);
-        if(texto.substr(0, 5) == "turma")
+        if(texto.substr(0, 6) == "fornec")
             n++;
     }
-    Turma *r = new Turma[n];
+    Fornecedor *r = new Fornecedor[n];
     
     int conta = -1;
     entrada.clear();
     entrada.seekg(0);
     
-    Aluno f;
+    Produto f;
     while(!entrada.eof()) {
         getline(entrada, texto);
         if(texto != "") {
             info.clear();
-            info << texto.substr(6);
+            info << texto.substr(7);
 
-            if(texto.substr(0, 6) == "turma;")
+            if(texto.substr(0, 7) == "fornec;")
                 info >> r[++conta];
 
-            if(texto.substr(0, 6) == "aluno;") {
+            if(texto.substr(0, 7) == "produt;") {
                 if(conta > -1) {
                     info >> f;
-                    r[conta].addAluno(f);
+                    r[conta].addProduto(f);
                 }
             }
         }   
