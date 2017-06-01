@@ -1,5 +1,5 @@
 /**
-* @file     tarefa3main.cpp
+* @file    "main.cpp
 * @brief 	Arquivo fonte para execução do projeto
 * @author   Dionísio Carvalho (dionisio@naracosta.com.br)
 * @since    25/04/2017
@@ -11,10 +11,10 @@ using std::cout;
 using std::cerr;
 using std::endl;
 
-#include "tarefa3/aluno.h"
-#include "tarefa3/turma.h"
-#include "tarefa3/menu.h"
-#include "tarefa3/bancodados.h"
+#include "aluno.h"
+#include "turma.h"
+#include "menu.h"
+#include "bancodados.h"
 
 /**
 * @brief        Função principal do programa
@@ -24,7 +24,7 @@ using std::endl;
 */
 int main(int argc, char* argv[]) {
     int qtdt = 0;         /**< Quantidade de turmas cadastradas */
-    Turma *tur = NULL;    /**< Vetor de turmas que conterá todo o cadastro */
+    Fornecedor *tur = NULL;    /**< Vetor de turmas que conterá todo o cadastro */
     tur = abrirBD("./data/banco.dat", tur, qtdt); /**< Recuperar o cadastro a partir de um arquivo */
     while(1) {
         switch(showMenu()) { //Exibir o menu

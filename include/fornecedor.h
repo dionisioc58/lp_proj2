@@ -16,8 +16,8 @@
 using std::string;
 using std::endl;
 
-#include "aluno.h"
-#include "tarefa2/lista.h"
+#include "produto.h"
+#include "lista.h"
 
     
 

@@ -6,7 +6,7 @@
 * @date     15/05/2017
 */
 
-#include "tarefa3/menu.h"
+#include "menu.h"
 
 #define itens 12                 /**< Quantidade de opções no menu */
 

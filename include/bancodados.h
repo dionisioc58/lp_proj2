@@ -21,8 +21,8 @@
     #include <string>
     using std::string;
 
-    #include "turma.h"
-    #include "aluno.h"
+    #include "fornecedor.h"
+    #include "produto.h"
     #include "funcoes.h"
 
     /**

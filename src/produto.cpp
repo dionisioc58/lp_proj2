@@ -7,7 +7,7 @@
  * @date	30/05/2017
  */
 
-#include "tarefa3/Produto.h"
+#include "produto.h"
 
 /**
 * @details Os valores de cb e descricao são inicializados com vazio

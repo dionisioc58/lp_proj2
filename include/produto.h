@@ -26,7 +26,14 @@ using std::stringstream;
     */  
     class Perecivel {
     protected:
+        std::time_t validade;
     public:
+        std::time_t getValidade() {
+            return validade;
+        }
+        void setValidade(std::time_t v) {
+            validade = v;
+        }
     };
 
     /**

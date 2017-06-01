@@ -15,7 +15,6 @@ OBJ_DIR = ./build
 DOC_DIR = ./doc
 INC_DIR = ./include
 SRC_DIR = ./src
-TST_DIR = ./test
 
 # Opcoes de compilacao
 CFLAGS = -Wall -pedantic -ansi -std=c++11 -I $(INC_DIR)
@@ -25,13 +24,13 @@ CFLAGS = -Wall -pedantic -ansi -std=c++11 -I $(INC_DIR)
 
 # Define o alvo (target) para a compilacao completa.
 # Ao final da compilacao, remove os arquivos objeto.
-all: clean tarefa doxy
+all: clean loja doxy
 debug: CFLAGS += -g -O0
-debug: clean tarefa
+debug: clean loja
 
-# Alvo (target) para a construcao do executavel tarefa
-# Define os arquivos turma.o, aluno.o, funcoes.o, menu.o e tarefa3main.o como dependencias
-tarefa: $(OBJ_DIR)/turma.o $(OBJ_DIR)/aluno.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/tarefa3main.o
+# Alvo (target) para a construcao do executavel main
+# Define os arquivos fornecedor.o, produto.o, funcoes.o, menu.o e main.o como dependencias
+loja: $(OBJ_DIR)/fornecedor.o $(OBJ_DIR)/produto.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
@@ -39,34 +38,34 @@ tarefa: $(OBJ_DIR)/turma.o $(OBJ_DIR)/aluno.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)
 	@echo "+++ [Executavel $@ criado em $(BIN_DIR)] +++"
 	@echo "============="
 
-# Alvo (target) para a construcao do objeto turma.o
-# Define os arquivos turma.cpp e turma.h como dependencias.
-$(OBJ_DIR)/turma.o: $(SRC_DIR)/tarefa3/turma.cpp $(INC_DIR)/tarefa3/turma.h
+# Alvo (target) para a construcao do objeto fornecedor.o
+# Define os arquivos fornecedor.cpp e fornecedor.h como dependencias.
+$(OBJ_DIR)/fornecedor.o: $(SRC_DIR)/fornecedor.cpp $(INC_DIR)/fornecedor.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-# Alvo (target) para a construcao do objeto aluno.o
-# Define os arquivos aluno.cpp e aluno.h como dependencias.
-$(OBJ_DIR)/aluno.o: $(SRC_DIR)/tarefa3/aluno.cpp $(INC_DIR)/tarefa3/aluno.h
+# Alvo (target) para a construcao do objeto produto.o
+# Define os arquivos produto.cpp e produto.h como dependencias.
+$(OBJ_DIR)/aluno.o: $(SRC_DIR)/produto.cpp $(INC_DIR)/produto.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto menu.o
 # Define os arquivos menu.cpp e menu.h como dependencias.
-$(OBJ_DIR)/menu.o: $(SRC_DIR)/tarefa3/menu.cpp $(INC_DIR)/tarefa3/menu.h
+$(OBJ_DIR)/menu.o: $(SRC_DIR)/menu.cpp $(INC_DIR)/menu.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto bancodados.o
 # Define os arquivos bancodados.cpp e bancodados.h como dependencias.
-$(OBJ_DIR)/bancodados.o: $(SRC_DIR)/tarefa3/bancodados.cpp $(INC_DIR)/tarefa3/bancodados.h
+$(OBJ_DIR)/bancodados.o: $(SRC_DIR)/bancodados.cpp $(INC_DIR)/bancodados.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto funcoes.o
 # Define os arquivos funcoes.cpp e funcoes.h como dependencias.
-$(OBJ_DIR)/funcoes.o: $(SRC_DIR)/tarefa3/funcoes.cpp $(INC_DIR)/tarefa3/funcoes.h
+$(OBJ_DIR)/funcoes.o: $(SRC_DIR)/funcoes.cpp $(INC_DIR)/funcoes.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-# Alvo (target) para a construcao do objeto tarefa3main.o
-# Define o arquivo tarefa3main.cpp como dependencia.
-$(OBJ_DIR)/tarefa3main.o: $(SRC_DIR)/tarefa3/tarefa3main.cpp $(INC_DIR)/tarefa2/lista.h
+# Alvo (target) para a construcao do objeto main.o
+# Define o arquivo main.cpp como dependencia.
+$(OBJ_DIR)/main.o: $(SRC_DIR)/main.cpp $(INC_DIR)/lista.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a geração automatica de documentacao usando o Doxygen.
