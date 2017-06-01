@@ -2,37 +2,38 @@
 * @file 	bancodados.cpp
 * @brief	Arquivo de corpo com a definição de funções para o controle dos dados
 * @author   Dionísio Carvalho (dionisio@naracosta.com.br)
-* @since    29/04/2017
-* @date     15/05/2017
+* @author	Eduardo Rique (luiseduardorique@gmail.com)
+* @since    30/05/2017
+* @date     30/05/2017
 */
 
 #include "bancodados.h"
 
 /**
-* @brief        Função que coleta o nome para o cadastro de uma turma
-* @return       Nome da turma
+* @brief        Função que coleta a Razão Social para o cadastro de um fornecedor
+* @return       RSocial do fornecedor
 */
-string inputTurma() {
+string inputFornecedor() {
     string nome;
-    cout << "Digite o nome da turma: ";
+    cout << "Digite a razão social do fornecedor: ";
     getline(cin, nome);
     return nome;
 }
 
 /**
-* @brief        Função que coleta os dados para cadastro de um aluno
-* @return       Funcionário coletado
+* @brief        Função que coleta os dados para cadastro de um produto
+* @return       Produto coletado
 */
-Aluno inputAluno() {
-    //Coleta dados do aluno
+Produto inputProduto() {
+    //Coleta dados do produto
     string input;
-    Aluno novo;
+    Produto novo;
 
-    cout << "Digite o nome do aluno: ";
+    cout << "Digite o nome do produto: ";
     getline(cin, input);
     novo.setNome(input);
 
-    cout << "Digite a matrícula do aluno: ";
+    cout << "Digite a matrícula do produto: ";
     getline(cin, input);
     novo.setMatricula(input);
 
@@ -46,13 +47,13 @@ Aluno inputAluno() {
 }
 
 /**
-* @brief        Função que verifica se uma turma já existe no cadastro
-* @param[in]    *e Vetor de turmas do cadastro
-* @param[in]    n Número de turmas no cadastro
-* @param[in]    nome Nome da turma a ser verificada
+* @brief        Função que verifica se um fornecedor já existe no cadastro
+* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[in]    n Número de fornecedores no cadastro
+* @param[in]    nome Razão social do fornecedor a ser verificado
 * @return       Retorna true caso já exista
 */
-bool existeTurma(Turma *e, int n, string nome) {
+bool existeFornecedor(Fornecedor *e, int n, string nome) {
     //Testa se já existe no cadastro
     for(int i = 0; i < n; i++) {
         if(e[i].getNome() == nome) {
