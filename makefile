@@ -45,7 +45,7 @@ $(OBJ_DIR)/fornecedor.o: $(SRC_DIR)/fornecedor.cpp $(INC_DIR)/fornecedor.h
 
 # Alvo (target) para a construcao do objeto produto.o
 # Define os arquivos produto.cpp e produto.h como dependencias.
-$(OBJ_DIR)/aluno.o: $(SRC_DIR)/produto.cpp $(INC_DIR)/produto.h
+$(OBJ_DIR)/produto.o: $(SRC_DIR)/produto.cpp $(INC_DIR)/produto.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto menu.o

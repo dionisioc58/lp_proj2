@@ -2,8 +2,9 @@
 * @file 	bancodados.cpp
 * @brief	Arquivo de corpo com a definição de funções para o controle dos dados
 * @author   Dionísio Carvalho (dionisio@naracosta.com.br)
-* @since    29/04/2017
-* @date     15/05/2017
+* @author	Eduardo Rique (luiseduardorique@gmail.com)
+* @since    30/05/2017
+* @date     30/05/2017
 */
 
 #include "bancodados.h"

@@ -2,18 +2,19 @@
  * @file	fornecedor.cpp
  * @brief	Implementação da classe Fornecedor
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
- * @since	06/05/2017
- * @date	28/04/2017
+ * @author	Eduardo Rique (luiseduardorique@gmail.com)
+ * @since	30/05/2017
+ * @date	30/05/2017
  */
 
 #include "fornecedor.h"
 
 /**
-* @details O valor de nome é inicializados com vazio
-*		   e a quantidade com zero
+* @details O valor de RSocial e CNPJ são inicializados com vazio
 */
 Fornecedor::Fornecedor() {
-    nome = "";
+    RSocial = "";
+    CNPJ = "";
     produtos = new Lista<Produto>();
 }
 /**
@@ -25,49 +26,46 @@ Fornecedor::~Fornecedor() {
 }
 
 /**
-* @return Nome da Fornecedor
+* @return RSocial do Fornecedor
 */
-string Fornecedor::getNome() {
-    return nome;
+string Fornecedor::getRSocial() {
+    return RSocial;
 }
 
 /**
-* @details O método modifica o nome da Fornecedor
-* @param   n Nome
+* @details O método modifica o CNPJ do Fornecedor
+* @param   n RSocial
 */
-void Fornecedor::setNome(string n) {
-    nome = n;
+void Fornecedor::setRSocial(string n) {
+    RSocial = n;
 }
 
 /**
-* @return Quantidade de produtos
+* @return CNPJ do Fornecedor
+*/
+string Fornecedor::getCNPJ() {
+    return CNPJ;
+}
+
+/**
+* @details O método modifica o CNPJ do Fornecedor
+* @param   n RSocial
+*/
+void Fornecedor::setCNPJ(string n) {
+    CNPJ = n;
+}
+
+/**
+* @return Quantidade de alunos
 */
 int Fornecedor::getQtde() {
     return produtos->getTamanho();
 }
 
 /**
-* @return Média das notas dos produtos
-*/
-float Fornecedor::getMedia() {
-    float media = 0;
-    int qtde = produtos->getTamanho();
-    if(qtde == 0)
-        return qtde;
-
-    Lista<Produto> *tmp = produtos->getProximo();
-    for(int i = 0; i < qtde; i++) {
-        media += tmp->getValor().getNota();
-        tmp = tmp->getProximo();
-    }
-    
-    return (media / qtde);
-}
-
-/**
 * @return A lista com os produtos da Fornecedor
 */
-Lista<Produto> *Fornecedor::getprodutos() {
+Lista<Produto> *Fornecedor::getProdutos() {
     return produtos;
 }
 
@@ -75,24 +73,24 @@ Lista<Produto> *Fornecedor::getprodutos() {
 * @details O método modifica todos os produtos da Fornecedor
 * @param   *f Ponteiro para a lista de produtos
 */
-void Fornecedor::setprodutos(Lista<Produto> *f) {
+void Fornecedor::setProdutos(Lista<Produto> *f) {
     while(produtos->getTamanho() > 0)
         produtos->RemovePos(0);
 
     int qtde = f->getTamanho();
     for(int i = 0; i < qtde; i++) {
         f = f->getProximo();
-        produtos->Insere((Aluno)f->getValor());
+        produtos->Insere((Produto)f->getValor());
     }
 }
 
 /**
-* @details O método modifica adiciona um aluno
-* @param   f Aluno à incluir
+* @details O método modifica adiciona um produto
+* @param   f Produto à incluir
 * @return  True se adicionou
 */
-bool Fornecedor::addAluno(Aluno f) {
-    if(Fornecedor(f.getMatricula())) 
+bool Fornecedor::addProduto(Produto f) {
+    if(pertenceFornecedor(f.getcb())) 
         return false;
 
     produtos->Insere(f);
@@ -101,11 +99,11 @@ bool Fornecedor::addAluno(Aluno f) {
 }
 
 /**
-* @details O método remove um aluno
-* @param   f Número zero-based do aluno na lista de produtos
+* @details O método remove um produto
+* @param   f Número zero-based do produto na lista de produtos
 * @return  True se conseguiu remover
 */
-bool Fornecedor::delAluno(int f) {
+bool Fornecedor::delProduto(int f) {
     if((f < 0) || (f >= produtos->getTamanho()))
         return false;
 
@@ -115,15 +113,15 @@ bool Fornecedor::delAluno(int f) {
 }
 
 /**
-* @details O método verifica se um nome pertence à lista de produtos
-* @param   n Matrícula do aluno à procurar
+* @details O método verifica se um RSocial pertence à lista de produtos
+* @param   n Código do produto à procurar
 * @return  True se pertence ao quadro de produtos
 */
-bool Fornecedor::Fornecedor(string n) {
+bool Fornecedor::pertenceFornecedor(string n) {
     Lista<Produto> *tmp = produtos->getProximo();
     int qtde = produtos->getTamanho();
     for(int i = 0; i < qtde; i++) {
-        if(produtos->getValor().getMatricula() == n)
+        if(produtos->getValor().getcb() == n)
             return true;
         tmp = tmp->getProximo();
     }
@@ -134,7 +132,7 @@ bool Fornecedor::Fornecedor(string n) {
 * @return String com os dados para exportação CSV
 */
 string Fornecedor::exportar() {
-    return "Fornecedor;" + nome;
+    return "Fornecedor;" + RSocial;
 }
 
 /** 
@@ -144,7 +142,7 @@ string Fornecedor::exportar() {
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Fornecedor &e) {
-	os << "Nome: " << e.nome << "\t | produtos: " << e.produtos->getTamanho() << "\t | Média: " << e.getMedia();
+	os << "RSocial: " << e.RSocial << "\t | produtos: " << e.produtos->getTamanho();
 	return os;
 }
 
@@ -155,6 +153,6 @@ ostream& operator<<(ostream& os, Fornecedor &e) {
 * @return	Referência para stream de entrada
 */
 istream& operator>>(istream& is, Fornecedor &e) {
-	is >> e.nome;
+	is >> e.RSocial;
 	return is;
 }
