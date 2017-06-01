@@ -6,7 +6,7 @@
 * @date     15/05/2017
 */
 
-#include "tarefa3/bancodados.h"
+#include "bancodados.h"
 
 /**
 * @brief        Função que coleta o nome para o cadastro de uma turma
