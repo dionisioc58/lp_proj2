@@ -6,7 +6,7 @@
 * @date     02/04/2017
 */
 
-#include "tarefa3/funcoes.h"
+#include "funcoes.h"
 
 /**
 * @brief        Função que coleta um valor float maior que zero pela entrada validando-o
@@ -47,6 +47,28 @@ int recebeInt(string msg, int min) {
 			while (cin.get() != '\n') ; /**< receber todos dados digitados até o fim da linha para esvaziar */
 			valor = -1;
 		} else if(valor < min)
+				cout << "Valor inválido!" << endl;
+	}
+	return valor;
+}
+
+/**
+* @brief        Função que coleta um valor string pela entrada validando-o
+* @param[in]    msg String com a mensagem à exibir
+* @return       String capturada
+*/
+string recebeString(string msg) {
+	int teste = -1;
+	string valor = "";
+	while(teste < 0) {
+		cout << msg;
+		cin >> valor;
+		if (cin.fail() || cin.get() != '\n') {
+			cout << "Valor inválido!" << endl;
+			cin.clear(); /**< impar o bit de falha do cin */
+			while (cin.get() != '\n') ; /**< receber todos dados digitados até o fim da linha para esvaziar */
+			teste = -1;
+		} else if(teste < 0)
 				cout << "Valor inválido!" << endl;
 	}
 	return valor;

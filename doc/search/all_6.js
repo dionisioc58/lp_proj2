@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['getalunos',['getAlunos',['../classTurma.html#a1bcbee076a8feebf4c420f738f209946',1,'Turma']]],
   ['getanterior',['getAnterior',['../classLista.html#a3c02fab58168322983a94a3a6f85fa18',1,'Lista']]],
-  ['getfaltas',['getFaltas',['../classAluno.html#a82d8adfeac016e8a0797f38dd661bb8a',1,'Aluno']]],
-  ['getmatricula',['getMatricula',['../classAluno.html#a4e6b3cb66a06ac974c5e197c10a4f33c',1,'Aluno']]],
-  ['getmedia',['getMedia',['../classTurma.html#a7a894cd68949b05a6b0d7bd6b465bdea',1,'Turma']]],
-  ['getnome',['getNome',['../classAluno.html#a75ca576e335d4678e6777de92a218b99',1,'Aluno::getNome()'],['../classTurma.html#adbf47bc105866a24268db6ccb8559d70',1,'Turma::getNome()']]],
-  ['getnota',['getNota',['../classAluno.html#a593f6d0af763646e7deb6bcac3250604',1,'Aluno']]],
+  ['getcb',['getcb',['../classProduto.html#ab242994bf7cce8b078358d944c80c4b1',1,'Produto']]],
+  ['getcnpj',['getCNPJ',['../classFornecedor.html#abaadea228e4e8b8874aa7521415aca3e',1,'Fornecedor']]],
+  ['getdescricao',['getdescricao',['../classProduto.html#ab0aebd9f5038f5d3db2e91a5ce4c1368',1,'Produto']]],
+  ['getpreco',['getpreco',['../classProduto.html#a312b5742c68480f837b971255111bd2b',1,'Produto']]],
+  ['getprodutos',['getProdutos',['../classFornecedor.html#a3f97fec38029b79f2212ca6c335a2c80',1,'Fornecedor']]],
   ['getproximo',['getProximo',['../classLista.html#a5360feacbcc0f09d813f49fcde15a6cc',1,'Lista']]],
-  ['getqtde',['getQtde',['../classTurma.html#a5771c7419f25f57c07d0226a8cd69625',1,'Turma']]],
+  ['getqntd',['getqntd',['../classProduto.html#a16687f5217e38666d69705da0a97a3a8',1,'Produto']]],
+  ['getqtde',['getQtde',['../classFornecedor.html#a69e725256294debcd9b75337ce0f9e21',1,'Fornecedor']]],
+  ['getrsocial',['getRSocial',['../classFornecedor.html#ae56ac8b42e36991fc20325facf754055',1,'Fornecedor']]],
   ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista']]],
+  ['gettipo',['gettipo',['../classProduto.html#ac2df433e55756f63627f17fe3aa61bba',1,'Produto']]],
   ['getvalor',['getValor',['../classLista.html#a94177c722231097e27a7ca950a689c1f',1,'Lista']]]
 ];

@@ -2,8 +2,9 @@
 * @file 	bancodados.h
 * @brief	Arquivo de cabeçalho com a definição de funções para o controle dos dados
 * @author   Dionísio Carvalho (dionisio@naracosta.com.br)
-* @since    29/04/2017
-* @date     07/05/2017
+* @author	Eduardo Rique (luiseduardorique@gmail.com)
+* @since    30/05/2017
+* @date     30/05/2017
 */
 
 #ifndef BANCODADOS_H
@@ -26,41 +27,41 @@
     #include "funcoes.h"
 
     /**
-    * @brief        Função que coleta o nome para o cadastro de uma turma
-    * @return       Nome da turma
+    * @brief        Função que coleta os dados para o cadastro de um fornecedor
+    * @return       Fornecedor coletado
     */
-    string inputTurma();
+    Fornecedor inputFornecedor();
 
     /**
     * @brief        Função que coleta os dados para cadastro de um aluno
     * @return       Aluno coletado
     */
-    Aluno inputAluno();
+    Produto inputProduto();
 
     /**
     * @brief        Função que verifica se uma turma já existe no cadastro
-    * @param[in]    *e Vetor de turmas do cadastro
-    * @param[in]    n Número de turmas no cadastro
-    * @param[in]    nome Nome da turma a ser verificada
+    * @param[in]    *e Vetor de Fornecedores do cadastro
+    * @param[in]    n Número de Fornecedores no cadastro
+    * @param[in]    nome Nome da Fornecedor a ser verificada
     * @return       Retorna true caso já exista
     */
-    bool existeTurma(Turma *e, int n, string nome);
+    bool existeFornecedor(Fornecedor *e, int n, string nome);
 
     /**
-    * @brief        Função que realiza o cadastro uma turma
-    * @param[in]    *e Vetor de turmas do cadastro
-    * @param[inout] n Número de turmas no cadastro
-    * @return       Retorna o novo vetor de turmas após o cadastro
+    * @brief        Função que realiza o cadastro um Fornecedor
+    * @param[in]    *e Vetor de Fornecedores do cadastro
+    * @param[inout] n Número de Fornecedores no cadastro
+    * @return       Retorna o novo vetor de Fornecedores após o cadastro
     */
-    Turma *cadTurma(Turma *e, int &n);
+    Fornecedor *cadFornecedor(Fornecedor *e, int &n);
 
     /**
-    * @brief        Função que remove uma turma do cadastro
-    * @param[in]    *e Vetor de turmas do cadastro
-    * @param[inout] n Número de turmas no cadastro
-    * @return       Retorna o novo vetor de turmas após a exclusão
+    * @brief        Função que remove uma Fornecedor do cadastro
+    * @param[in]    *e Vetor de Fornecedores do cadastro
+    * @param[inout] n Número de Fornecedores no cadastro
+    * @return       Retorna o novo vetor de Fornecedores após a exclusão
     */
-    Turma *delTurma(Turma *e, int &n);
+    Fornecedor *delFornecedor(Fornecedor *e, int &n);
 
     /**
     * @brief        Função que adiciona um aluno à uma turma (apresenta escolha)
@@ -68,7 +69,7 @@
     * @param[in]    n Número de turmas no cadastro
     * @return       Retorna o novo vetor de turmas após o cadastro
     */
-    Turma *addAl(Turma *e, int n);
+    Fornecedor *addPr(Fornecedor *e, int n);
 
     /**
     * @brief        Função que adiciona alunos à uma turma (apresenta escolha),
@@ -78,7 +79,7 @@
     * @param[in]    pausa True para apresentar uma pausa após a impressão do relatório de importação
     * @return       Retorna o novo vetor de turmas após o cadastro
     */
-    Turma *addAlArq(Turma *e, int n, bool pausa = true);
+    Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa = true);
 
     /**
     * @brief        Função que remove um aluno de uma turma (apresenta escolha)
@@ -86,7 +87,7 @@
     * @param[in]    n Número de turmas no cadastro
     * @return       Retorna o novo vetor de turmas após o cadastro
     */
-    Turma *delAl(Turma *e, int n);
+    Fornecedor *delPr(Fornecedor *e, int n);
 
     /**
     * @brief        Função que imprime as turmas no cadastro
@@ -94,7 +95,7 @@
     * @param[in]    pausa True para apresentar uma pausa após a impressão
     * @param[in]    n Número de turmas no cadastro
     */
-    void impTurmas(Turma *e, int n, bool pausa = true);
+    void impFornecedores(Fornecedor *e, int n, bool pausa = true);
 
     /**
     * @brief        Função que imprime a lista de alunos de uma ou todas 
@@ -106,7 +107,7 @@
     * @param[in]    pausa True para apresentar uma pausa após a impressão
     * @return       -1 ou o número da turma selecionada
     */
-    int impAl(Turma *e, int n, bool all = true, bool pausa = true);
+    int impPr(Fornecedor *e, int n, bool all = true, bool pausa = true);
 
     /**
     * @brief        Função que salva o cadastro completo em arquivo
@@ -114,7 +115,7 @@
     * @param[in]    *e Vetor de turmas do cadastro
     * @param[in]    n Número de turmas no cadastro
     */
-    void salvarBD(string nome, Turma *e, int n);
+    void salvarBD(string nome, Fornecedor *e, int n);
 
     /**
     * @brief        Função que recupera o cadastro completo a partir de um arquivo
@@ -123,6 +124,6 @@
     * @param[inout] n Número de turmas no cadastro
     * @return       Retorna o novo vetor de turmas após a importação
     */
-    Turma *abrirBD(string nome, Turma *e, int &n);
+    Fornecedor *abrirBD(string nome, Fornecedor *e, int &n);
 
 #endif

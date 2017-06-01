@@ -1,6 +1,6 @@
 var searchData=
 [
   ['exibe',['Exibe',['../classLista.html#a3140b03892f5fbeeac0bbb704650aa93',1,'Lista']]],
-  ['existeturma',['existeTurma',['../bancodados_8h.html#a695e240beb9fa6e72e5975986334661d',1,'existeTurma(Turma *e, int n, string nome):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a695e240beb9fa6e72e5975986334661d',1,'existeTurma(Turma *e, int n, string nome):&#160;bancodados.cpp']]],
-  ['exportar',['exportar',['../classAluno.html#afd9744bd19277537269b3faba340fa6f',1,'Aluno::exportar()'],['../classTurma.html#a3ebacde94a269959e9e6b310c45c86b5',1,'Turma::exportar()']]]
+  ['existefornecedor',['existeFornecedor',['../bancodados_8h.html#af70137bb75750d0015044d6ed1f87e44',1,'existeFornecedor(Fornecedor *e, int n, string nome):&#160;bancodados.cpp'],['../bancodados_8cpp.html#af70137bb75750d0015044d6ed1f87e44',1,'existeFornecedor(Fornecedor *e, int n, string nome):&#160;bancodados.cpp']]],
+  ['exportar',['exportar',['../classFornecedor.html#ace508c29d93a600c96344c7874353446',1,'Fornecedor::exportar()'],['../classProduto.html#aaaf877acc9f6368c24f93b98a0e77841',1,'Produto::exportar()']]]
 ];

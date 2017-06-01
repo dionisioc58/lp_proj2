@@ -1,0 +1,4 @@
+<map id="Salgado" name="Salgado">
+<area shape="rect" id="node2" href="$classProduto.html" title="Classe que representa um Produto. " alt="" coords="74,133,141,159"/>
+<area shape="rect" id="node4" href="$classPerecivel.html" title="Classe que representa um produto perecivel. " alt="" coords="166,133,242,159"/>
+</map>

@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['abrirbd',['abrirBD',['../bancodados_8h.html#a67c1f07c1571d00ecc43a9a459193eee',1,'abrirBD(string nome, Turma *e, int &amp;n):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a67c1f07c1571d00ecc43a9a459193eee',1,'abrirBD(string nome, Turma *e, int &amp;n):&#160;bancodados.cpp']]],
-  ['addal',['addAl',['../bancodados_8h.html#aa55d824a717da97b616cbac80b7f35d3',1,'addAl(Turma *e, int n):&#160;bancodados.cpp'],['../bancodados_8cpp.html#aa55d824a717da97b616cbac80b7f35d3',1,'addAl(Turma *e, int n):&#160;bancodados.cpp']]],
-  ['addalarq',['addAlArq',['../bancodados_8h.html#aeb3e17460b1f2a36e3b717474feb1011',1,'addAlArq(Turma *e, int n, bool pausa=true):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a0c760083f25503bf226b2f1e1688d9d2',1,'addAlArq(Turma *e, int n, bool pausa):&#160;bancodados.cpp']]],
-  ['addaluno',['addAluno',['../classTurma.html#ab8b5545ac7997ffcb38e0da52f8c7058',1,'Turma']]],
-  ['aluno',['Aluno',['../classAluno.html#ad5106d0f7834762fbe5f71f908144336',1,'Aluno']]]
+  ['abrirbd',['abrirBD',['../bancodados_8h.html#ad9b3b367b071bba9e2464da3447efe03',1,'abrirBD(string nome, Fornecedor *e, int &amp;n):&#160;bancodados.cpp'],['../bancodados_8cpp.html#ad9b3b367b071bba9e2464da3447efe03',1,'abrirBD(string nome, Fornecedor *e, int &amp;n):&#160;bancodados.cpp']]],
+  ['addpr',['addPr',['../bancodados_8h.html#a51a47eaa41f823efb186e3ecc3766d75',1,'addPr(Fornecedor *e, int n):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a51a47eaa41f823efb186e3ecc3766d75',1,'addPr(Fornecedor *e, int n):&#160;bancodados.cpp']]],
+  ['addprarq',['addPrArq',['../bancodados_8h.html#afbbf2eed3f5772c2806879ec3ea94221',1,'addPrArq(Fornecedor *e, int n, bool pausa=true):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a42a7ddcc5cb4632b231c698435993f7b',1,'addPrArq(Fornecedor *e, int n, bool pausa):&#160;bancodados.cpp']]],
+  ['addproduto',['addProduto',['../classFornecedor.html#abcaf79e7631ac39aafabe7b810cd067b',1,'Fornecedor']]]
 ];
