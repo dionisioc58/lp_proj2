@@ -1,146 +1,165 @@
 /**
- * @file	aluno.cpp
- * @brief	Implementacao dos métodos da classe Aluno
+ * @file	produto.cpp
+ * @brief	Implementacao dos métodos da classe Produto
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
- * @since	06/05/2017
- * @date	28/04/2017
+ * @author	Eduardo Rique (luiseduardorique@gmail.com)
+ * @since	30/05/2017
+ * @date	30/05/2017
  */
 
-#include "tarefa3/aluno.h"
+#include "tarefa3/Produto.h"
 
 /**
-* @details Os valores de nome e matricula são inicializados com vazio,
-*          faltas e nota com zero
+* @details Os valores de cb e descricao são inicializados com vazio
 */
-Aluno::Aluno() {
-    nome = "";
-    matricula = "";
-    faltas = 0;
-    nota = 0;
+Produto::Produto() {
+    cb = "";
+    descricao = "";
+    tipo = "";
+    preco = 0.00;
+    qntd = 0;
 }
 
 /**
 * @details Destrutor padrão
 */
-Aluno::~Aluno() {
+Produto::~Produto() {
     //VAZIO
 }
 
 /**
-* @return Nome do aluno
+* @return cb do Produto
 */
-string Aluno::getNome() {
-    return nome;
+string Produto::getcb() {
+    return cb;
 }
 
 /**
-* @details O método modifica o nome do Aluno
-* @param   n Nome
+* @details O método modifica o cb do Produto
+* @param   n cb
 */
-void Aluno::setNome(string n) {
-    nome = n;
+void Produto::setcb(string r) {
+    cb = r;
 }
 
 /**
-* @return Matrícula do aluno
+* @return Matrícula do Produto
 */
-string Aluno::getMatricula() {
-    return matricula;
+string Produto::getdescricao() {
+    return descricao;
 }
 
 /**
-* @details O método modifica a matrícula do Aluno
-* @param   n Matricula
+* @details O método modifica a matrícula do Produto
+* @param   n descricao
 */
-void Aluno::setMatricula(string n) {
-    matricula = n;
+void Produto::setdescricao(string c) {
+    descricao = c;
 }
 
 /**
-* @return Faltas do aluno
+* @return Matrícula do Produto
 */
-int Aluno::getFaltas() {
-    return faltas;
+string Produto::gettipo() {
+    return tipo;
 }
 
 /**
-* @details O método modifica a quantidade de faltas do aluno
-* @param   a Faltas
+* @details O método modifica a matrícula do Produto
+* @param   n descricao
 */
-void Aluno::setFaltas(int a) {
-    faltas = a;
+void Produto::settipo(string t) {
+    tipo = t;
 }
 
 /**
-* @return Nota do aluno
+* @return Preco do Produto
 */
-float Aluno::getNota() {
-    return nota;
+double Produto::getpreco() {
+    return preco;
 }
 
 /**
-* @details O método modifica a nota do aluno
-* @param   s Nota
+* @details O método modifica o preco do Produto
+* @param   p preco
 */
-void Aluno::setNota(float s) {
-    nota = s;
+void Produto::setpreco(double p) {
+    preco = p;
+}
+
+/**
+* @return quantidade do Produto
+*/
+int Produto::getqntd() {
+    return qntd;
+}
+
+/**
+* @details O método modifica a quantidade do Produto
+* @param   q quantidade
+*/
+void Produto::setqntd(int q) {
+    qntd = q;
 }
 
 /**
 * @return String com os dados para exportação CSV
 */
-string Aluno::exportar() {
+string Produto::exportar() {
     stringstream ss;
-    ss << "aluno;" << nome << ";" << matricula << ";" << faltas << ";" << nota;
+    ss << "produto;" << cb << ";" << descricao << ";" << tipo << ";" << preco << ";" << qntd;
     string retorno;
     getline(ss, retorno);
     return retorno;
 }
 
 /** 
-* @details O operador é sobrecarregado para representar o aluno
-* @param	a Referência para o objeto aluno a ser comparado
+* @details O operador é sobrecarregado para representar o Produto
+* @param	a Referência para o objeto Produto a ser comparado
 * @return	True se > que 'a'
 */
-bool Aluno::operator>(Aluno &a) {
-    if(matricula > a.getMatricula())
+bool Produto::operator>(Produto &p) {
+    if(preco > p.getpreco())
         return true;
     return false;
 }
 
 /** 
-* @details O operador é sobrecarregado para representar o aluno
+* @details O operador é sobrecarregado para representar o Produto
 * @param	os Referência para stream de saída
-* @param	f Referência para o objeto aluno a ser impresso
+* @param	f Referência para o objeto Produto a ser impresso
 * @return	Referência para stream de saída
 */
-ostream& operator<<(ostream& os, Aluno &f) {
-	os <<  f.nome << "\t| ";
-	os << "Mat.: " << f.matricula << "\t| ";
-    os << "Falt.: " << f.faltas << "\t| ";
-    os << "Not.: " << f.nota;
+ostream& operator<<(ostream& os, Produto &p) {
+	os <<  p.cb << "\t| ";
+	os << "Desc.: " << p.descricao << "\t| ";
+    os << "Tipo.: " << p.tipo << "\t| ";
+    os << "Prec.: " << p.preco << "\t| ";
+    os << "Qntd.: " << p.qntd;
     
     return os;
 }
 
 /** 
 * @param	is Referência para stream de entrada
-* @param	f Referência para o objeto aluno a ser criado com base nos 
+* @param	f Referência para o objeto Produto a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */
-istream& operator>>(istream& is, Aluno &f) {
+istream& operator>>(istream& is, Produto &p) {
     string lido;
-    getline(is, f.nome, ';');
-    if(f.nome == "\n")
+    getline(is, p.cb, ';');
+    if(p.cb == "\n")
         return is;
-    getline(is, f.matricula, ';');
+    getline(is, p.descricao, ';');
+
+    getline(is, p.tipo, ';');
 
     getline(is, lido, ';');
-    f.faltas = stoi(lido);
+    p.preco = stod(lido);
 
     getline(is, lido);
-    f.nota = stof(lido);
+    p.qntd = stoi(lido);
 
     return is;
 }
