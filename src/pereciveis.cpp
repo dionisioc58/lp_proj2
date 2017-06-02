@@ -8,7 +8,7 @@
  */
 
 #include "produto.h"
-#include "subprodutos.h"
+#include "subproduto.h"
 
 /**
 * @details Os valores de acucar e alcool são inicializados com vazio
@@ -83,6 +83,7 @@ int Fruta::getNum() {
 void Fruta::setNum(int n) {
     num = n;
 }
+
 /**
 * @return dp do Produto
 */
@@ -94,7 +95,7 @@ string Fruta::getDp() {
 * @details O método modifica o dp do Produto
 * @param   d dp
 */
-void Fruta::setAlcool(string d) {
+void Fruta::setDp(string d) {
     dp = d;
 }
 
@@ -130,18 +131,18 @@ void Doce::setAcucar(int a) {
 }
 
 /**
-* @return lactose do Produto
+* @return glicose do Produto
 */
-bool Doce::getLactose() {
-    return lactose;
+bool Doce::getGlicose() {
+    return glicose;
 }
 
 /**
-* @details O método modifica a lactose do Produto
-* @param   gc lactose
+* @details O método modifica a glicose do Produto
+* @param   gc glicose
 */
-void Doce::setLactose(bool l) {
-    lactose = l;
+void Doce::setGlicose(bool l) {
+    glicose = l;
 }
 /**
 * @return gluten do Produto
