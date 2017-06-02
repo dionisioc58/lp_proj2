@@ -8,7 +8,7 @@
  */
 
 #include "produto.h"
-#include "subprodutos.h"
+#include "subproduto.h"
 
 /**
 * @details Os valores de estilo, artista e nome album são inicializados com vazio

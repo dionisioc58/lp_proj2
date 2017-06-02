@@ -1,5 +1,5 @@
 /**
- * @file	subprodutos.h
+ * @file	subproduto.h
  * @brief	Definição das classe derivadas de Produto
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
  * @author	Eduardo Rique (luiseduardorique@gmail.com)
@@ -7,8 +7,8 @@
  * @date	30/05/2017
  */
 
-#ifndef SUBPRODUTOS_H
-#define SUBPRODUTOS_H
+#ifndef SUBPRODUTO_H
+#define SUBPRODUTO_H
 
 #include <iostream>
 #include <string>
@@ -20,7 +20,7 @@ using std::istream;
 using std::stringstream;
 
 /**
-    * @class   Bebida subprodutos.h
+    * @class   Bebida subproduto.h
     * @brief   Classe derivada que representa uma bebida
     * @details Os atributos de uma bebida são: acucar, alcool
     */  
@@ -40,7 +40,7 @@ using std::stringstream;
     };
 
     /**
-    * @class   Fruta subprodutos.h
+    * @class   Fruta subproduto.h
     * @brief   Classe derivada que representa uma Fruta
     * @details Os atributos de uma bebida são: numero e data de producao
     */  
@@ -60,7 +60,7 @@ using std::stringstream;
     };
 
     /**
-    * @class   Doce subprodutos.h
+    * @class   Doce subproduto.h
     * @brief   Classe derivada que representa um Doce
     * @details Os atributos de uma Doce são: acucar, gluten e glicose
     */  
@@ -77,13 +77,13 @@ using std::stringstream;
         int getAcucar();
         void setGluten(bool g);
         bool getGluten();
-        void setLactose(bool l);
-        bool getLactose();
+        void setGlicose(bool l);
+        bool getGlicose();
     
     };
 
     /**
-    * @class   Salgado subprodutos.h
+    * @class   Salgado subproduto.h
     * @brief   Classe derivada que representa um Salgado
     * @details Os atributos de um Salgado são: sodio, gluten e lactose
     */  
@@ -106,7 +106,7 @@ using std::stringstream;
     };
 
     /**
-    * @class   CD subprodutos.h
+    * @class   CD subproduto.h
     * @brief   Classe derivada que representa um CD
     * @details Os atributos de um CD são: estilo, arista e nome do album
     */  
@@ -129,7 +129,7 @@ using std::stringstream;
     };
 
     /**
-    * @class   DVD subprodutos.h
+    * @class   DVD subproduto.h
     * @brief   Classe derivada que representa um DVD
     * @details Os atributos de um DVD são: titulo, genero e duracao
     */  
@@ -142,7 +142,7 @@ using std::stringstream;
         DVD();
         ~DVD();
         
-        void setTitulo(string t;
+        void setTitulo(string t);
         string getTitulo();
         void setGenero(string g);
         string getGenero();
@@ -152,7 +152,7 @@ using std::stringstream;
     };
 
     /**
-    * @class   Livro subprodutos.h
+    * @class   Livro subproduto.h
     * @brief   Classe derivada que representa um Livro
     * @details Os atributos de um Livro são: Ano de publicacao, editora, titulo e autor
     */  
@@ -166,7 +166,7 @@ using std::stringstream;
         Livro();
         ~Livro();
         
-        void setAutor(string a;
+        void setAutor(string a);
         string getAutor();
         void setTitulo(string t);
         string getTitulo();
@@ -176,3 +176,4 @@ using std::stringstream;
         string getAnopub();
     
     };
+#endif
