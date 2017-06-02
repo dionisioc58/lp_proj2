@@ -90,7 +90,7 @@ void Fornecedor::setProdutos(Lista<Produto> *f) {
 * @return  True se adicionou
 */
 bool Fornecedor::addProduto(Produto f) {
-    if(pertenceFornecedor(f.getcb())) 
+    if(pertenceFornecedor(f.getCb())) 
         return false;
 
     produtos->Insere(f);
@@ -121,7 +121,7 @@ bool Fornecedor::pertenceFornecedor(string n) {
     Lista<Produto> *tmp = produtos->getProximo();
     int qtde = produtos->getTamanho();
     for(int i = 0; i < qtde; i++) {
-        if(produtos->getValor().getcb() == n)
+        if(produtos->getValor().getCb() == n)
             return true;
         tmp = tmp->getProximo();
     }

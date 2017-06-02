@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Laboratorio 6: Código-Fonte de include/loja.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio 6
+   </div>
+   <div id="projectbrief">Laboratório 6 de Linguagem de Programação I</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">loja.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="loja_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef LOJA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define LOJA_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::endl;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="produto_8h.html">produto.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="subproduto_8h.html">subproduto.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lista_8h.html">lista.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fornecedor_8h.html">fornecedor.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classLoja.html">   30</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLoja.html">Loja</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="classLista.html">Lista&lt;Produto&gt;</a> *estoque;         </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <a class="code" href="classLista.html">Lista&lt;Fornecedor&gt;</a> *fornecedores;      </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <a class="code" href="classLoja.html#a87cbcca2d690ffb63347f51a6166b876">Loja</a>();                                       </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="classLoja.html#aff6a74821832abddf6a46c6c9761cc68">~Loja</a>();                                      </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classLoja.html#abeaf5cd27e4b6a9b49decf50add89b39">addProduto</a>(<a class="code" href="classProduto.html">Produto</a> p);                             </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classLoja.html#ab23414f91472f725775f726a1d88e14d">delProduto</a>(<span class="keywordtype">int</span> p);                               </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classLoja.html#aa37c02f941f0aea724d75a12440b212b">addFornecedor</a>(<a class="code" href="classFornecedor.html">Fornecedor</a> f);                             </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classLoja.html#adf7a591a15c9e869f9ce04abe3d78da8">delFornecedor</a>(<span class="keywordtype">int</span> f);                               </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <a class="code" href="classLista.html">Lista&lt;Produto&gt;</a> *<a class="code" href="classLoja.html#afd0db42d64fbfec6683a4e70ba78b29c">getProdutos</a>();                          </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classLoja.html#a6f8d55ffde55f3cab3bbbf518b0398e4">setProdutos</a>(<a class="code" href="classLista.html">Lista&lt;Produto&gt;</a> *p);                    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordtype">int</span> <a class="code" href="classLoja.html#a12be2e12d5a3e052175f10538a2e6071">getQtde</a>();                                      </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordtype">string</span> <a class="code" href="classLoja.html#ac6d1a6b02cfdb2ef1fe8ffe23c988fd1">exportar</a>();                                  </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">friend</span> ostream&amp; <a class="code" href="classLoja.html#a51cace47ee37359be96b60de1a42ab62">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="classFornecedor.html">Fornecedor</a> &amp;f);  </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keyword">friend</span> istream&amp; <a class="code" href="classLoja.html#a8d29f886a9d6f994795537b23211008f">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classFornecedor.html">Fornecedor</a> &amp;f);  </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classLoja_html_a87cbcca2d690ffb63347f51a6166b876"><div class="ttname"><a href="classLoja.html#a87cbcca2d690ffb63347f51a6166b876">Loja::Loja</a></div><div class="ttdeci">Loja()</div></div>
+<div class="ttc" id="classProduto_html"><div class="ttname"><a href="classProduto.html">Produto</a></div><div class="ttdoc">Classe que representa um Produto. </div><div class="ttdef"><b>Definition:</b> produto.h:45</div></div>
+<div class="ttc" id="produto_8h_html"><div class="ttname"><a href="produto_8h.html">produto.h</a></div><div class="ttdoc">Definição da classe Produto. </div></div>
+<div class="ttc" id="classLoja_html"><div class="ttname"><a href="classLoja.html">Loja</a></div><div class="ttdoc">Classe que representa um Loja. </div><div class="ttdef"><b>Definition:</b> loja.h:30</div></div>
+<div class="ttc" id="classLoja_html_a8d29f886a9d6f994795537b23211008f"><div class="ttname"><a href="classLoja.html#a8d29f886a9d6f994795537b23211008f">Loja::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Fornecedor &amp;f)</div><div class="ttdoc">Sobrecarga do operador de inserção em stream. </div><div class="ttdef"><b>Definition:</b> fornecedor.cpp:155</div></div>
+<div class="ttc" id="classFornecedor_html"><div class="ttname"><a href="classFornecedor.html">Fornecedor</a></div><div class="ttdoc">Classe que representa um Fornecedor. </div><div class="ttdef"><b>Definition:</b> fornecedor.h:29</div></div>
+<div class="ttc" id="classLoja_html_adf7a591a15c9e869f9ce04abe3d78da8"><div class="ttname"><a href="classLoja.html#adf7a591a15c9e869f9ce04abe3d78da8">Loja::delFornecedor</a></div><div class="ttdeci">bool delFornecedor(int f)</div></div>
+<div class="ttc" id="classLoja_html_a6f8d55ffde55f3cab3bbbf518b0398e4"><div class="ttname"><a href="classLoja.html#a6f8d55ffde55f3cab3bbbf518b0398e4">Loja::setProdutos</a></div><div class="ttdeci">void setProdutos(Lista&lt; Produto &gt; *p)</div></div>
+<div class="ttc" id="classLoja_html_ab23414f91472f725775f726a1d88e14d"><div class="ttname"><a href="classLoja.html#ab23414f91472f725775f726a1d88e14d">Loja::delProduto</a></div><div class="ttdeci">bool delProduto(int p)</div></div>
+<div class="ttc" id="classLoja_html_a51cace47ee37359be96b60de1a42ab62"><div class="ttname"><a href="classLoja.html#a51cace47ee37359be96b60de1a42ab62">Loja::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Fornecedor &amp;f)</div><div class="ttdef"><b>Definition:</b> fornecedor.cpp:144</div></div>
+<div class="ttc" id="classLista_html"><div class="ttname"><a href="classLista.html">Lista&lt; Produto &gt;</a></div></div>
+<div class="ttc" id="classLoja_html_aa37c02f941f0aea724d75a12440b212b"><div class="ttname"><a href="classLoja.html#aa37c02f941f0aea724d75a12440b212b">Loja::addFornecedor</a></div><div class="ttdeci">bool addFornecedor(Fornecedor f)</div></div>
+<div class="ttc" id="classLoja_html_a12be2e12d5a3e052175f10538a2e6071"><div class="ttname"><a href="classLoja.html#a12be2e12d5a3e052175f10538a2e6071">Loja::getQtde</a></div><div class="ttdeci">int getQtde()</div></div>
+<div class="ttc" id="fornecedor_8h_html"><div class="ttname"><a href="fornecedor_8h.html">fornecedor.h</a></div><div class="ttdoc">Definição da classe Fornecedor. </div></div>
+<div class="ttc" id="lista_8h_html"><div class="ttname"><a href="lista_8h.html">lista.h</a></div><div class="ttdoc">Definição da classe Lista. </div></div>
+<div class="ttc" id="subproduto_8h_html"><div class="ttname"><a href="subproduto_8h.html">subproduto.h</a></div><div class="ttdoc">Definição das classe derivadas de Produto. </div></div>
+<div class="ttc" id="classLoja_html_ac6d1a6b02cfdb2ef1fe8ffe23c988fd1"><div class="ttname"><a href="classLoja.html#ac6d1a6b02cfdb2ef1fe8ffe23c988fd1">Loja::exportar</a></div><div class="ttdeci">string exportar()</div></div>
+<div class="ttc" id="classLoja_html_abeaf5cd27e4b6a9b49decf50add89b39"><div class="ttname"><a href="classLoja.html#abeaf5cd27e4b6a9b49decf50add89b39">Loja::addProduto</a></div><div class="ttdeci">bool addProduto(Produto p)</div></div>
+<div class="ttc" id="classLoja_html_aff6a74821832abddf6a46c6c9761cc68"><div class="ttname"><a href="classLoja.html#aff6a74821832abddf6a46c6c9761cc68">Loja::~Loja</a></div><div class="ttdeci">~Loja()</div></div>
+<div class="ttc" id="classLoja_html_afd0db42d64fbfec6683a4e70ba78b29c"><div class="ttname"><a href="classLoja.html#afd0db42d64fbfec6683a4e70ba78b29c">Loja::getProdutos</a></div><div class="ttdeci">Lista&lt; Produto &gt; * getProdutos()</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 2 de Junho de 2017 17:28:44 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

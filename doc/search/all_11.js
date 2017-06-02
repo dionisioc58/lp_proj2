@@ -8,6 +8,7 @@ var searchData=
   ['_7efruta',['~Fruta',['../classFruta.html#a634920474b757127cb86443d402f84dd',1,'Fruta']]],
   ['_7elista',['~Lista',['../classLista.html#af297975e278b0c92cbf67d14b2f08366',1,'Lista']]],
   ['_7elivro',['~Livro',['../classLivro.html#a1f3b49a5fbaf89727b0d0317e128655f',1,'Livro']]],
+  ['_7eloja',['~Loja',['../classLoja.html#aff6a74821832abddf6a46c6c9761cc68',1,'Loja']]],
   ['_7eproduto',['~Produto',['../classProduto.html#a84a8b28176b743e8c74bfd89aee9a9b2',1,'Produto']]],
   ['_7esalgado',['~Salgado',['../classSalgado.html#a4071a6743c5edf6ebed4a92cbad9fd08',1,'Salgado']]]
 ];

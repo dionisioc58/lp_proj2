@@ -1,0 +1,20 @@
+digraph "Produto"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Produto",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Bebida",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBebida.html",tooltip="Classe derivada que representa uma bebida. "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCD.html",tooltip="Classe derivada que representa um CD. "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Doce",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDoce.html",tooltip="Classe derivada que representa um Doce. "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="DVD",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDVD.html",tooltip="Classe derivada que representa um DVD. "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Fruta",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classFruta.html",tooltip="Classe derivada que representa uma Fruta. "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Livro",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classLivro.html",tooltip="Classe derivada que representa um Livro. "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Salgado",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSalgado.html",tooltip="Classe derivada que representa um Salgado. "];
+}

@@ -10,6 +10,7 @@
 #ifndef PRODUTO_H
 #define PRODUTO_H
 
+//#include "fornecedor.h"
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -46,26 +47,30 @@ using std::stringstream;
         string cb;         /**< codigo de barras */
         string descricao;            /**< descricao */
         string tipo;            /**< tipo do produto */
+        //Fornecedor fornecedor;            /**< fornecedor do produto */
         double preco;           /**< preco */
         int qntd;           /**< quantidade em estoque */
     public:
         Produto();                                                /**< Construtor padrão */
         ~Produto();                                               /**< Destrutor padrão */
         
-        string getcb();                                       /**< Retorna o codigo de barras */
-        void setcb(string r);                                 /**< Modifica o codigo de barras */
+        string getCb();                                       /**< Retorna o codigo de barras */
+        void setCb(string r);                                 /**< Modifica o codigo de barras */
         
-        string getdescricao();                                  /**< Retorna o descricao */
-        void setdescricao(string c);                            /**< Modifica o descricao */
+        string getDescricao();                                  /**< Retorna o descricao */
+        void setDescricao(string c);                            /**< Modifica o descricao */
+
+        //Fornecedor getFornecedor();                                  /**< Retorna o fornecedor */
+        //void setFornecedor(Fornecedor f);                            /**< Modifica o fornecedor */
         
-        string gettipo();                                       /**< Retorna o tipo */
-        void settipo(string t);                                 /**< Modifica o tipo */
+        string getTipo();                                       /**< Retorna o tipo */
+        void setTipo(string t);                                 /**< Modifica o tipo */
         
-        double getpreco();                                       /**< Retorna o preco */
-        void setpreco(double p);                                 /**< Modifica o preco */
+        double getPreco();                                       /**< Retorna o preco */
+        void setPreco(double p);                                 /**< Modifica o preco */
         
-        int getqntd();                                  /**< Retorna a quantidade em estoque */
-        void setqntd(int c);                            /**< Modifica a quantidade em estoque */
+        int getQntd();                                  /**< Retorna a quantidade em estoque */
+        void setQntd(int c);                            /**< Modifica a quantidade em estoque */
         
         
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */

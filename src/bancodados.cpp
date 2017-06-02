@@ -39,18 +39,18 @@ Produto inputProduto() {
 
     cout << "Digite o código do produto: ";
     getline(cin, input);
-    novo.setcb(input);
+    novo.setCb(input);
 
     cout << "Digite a descrição do produto: ";
     getline(cin, input);
-    novo.setdescricao(input);
+    novo.setDescricao(input);
 
     cout << "Digite o tipo do produto: ";
     getline(cin, input);
-    novo.settipo(input);
+    novo.setTipo(input);
 
     float preco = recebeFloat("Digite o preço: ", 0);
-    novo.setpreco(preco);
+    novo.setPreco(preco);
     
     return novo;
 }
@@ -196,7 +196,7 @@ Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa) {
     while(!lista.eof()) {
         lista >> f;
         linhas++;
-        if(f.getdescricao() != "\n") {
+        if(f.getDescricao() != "\n") {
             e[selecao].addProduto(f);
             funcs++;
         }

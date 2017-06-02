@@ -8,6 +8,7 @@
  */
 
 #include "produto.h"
+#include "fornecedor.h"
 
 /**
 * @details Os valores de cb, descricao, tipo, preco e qntd são inicializados com vazio
@@ -30,7 +31,7 @@ Produto::~Produto() {
 /**
 * @return cb do Produto
 */
-string Produto::getcb() {
+string Produto::getCb() {
     return cb;
 }
 
@@ -38,14 +39,14 @@ string Produto::getcb() {
 * @details O método modifica o cb do Produto
 * @param   n cb
 */
-void Produto::setcb(string r) {
+void Produto::setCb(string r) {
     cb = r;
 }
 
 /**
 * @return Matrícula do Produto
 */
-string Produto::getdescricao() {
+string Produto::getDescricao() {
     return descricao;
 }
 
@@ -53,14 +54,14 @@ string Produto::getdescricao() {
 * @details O método modifica a matrícula do Produto
 * @param   n descricao
 */
-void Produto::setdescricao(string c) {
+void Produto::setDescricao(string c) {
     descricao = c;
 }
 
 /**
 * @return Matrícula do Produto
 */
-string Produto::gettipo() {
+string Produto::getTipo() {
     return tipo;
 }
 
@@ -68,14 +69,29 @@ string Produto::gettipo() {
 * @details O método modifica a matrícula do Produto
 * @param   n descricao
 */
-void Produto::settipo(string t) {
+void Produto::setTipo(string t) {
     tipo = t;
 }
 
 /**
+* @return Fornecedor do Produto
+*/
+//Fornecedor Produto::getFornecedor() {
+//    return fornecedor;
+//}
+
+/**
+* @details O método modifica o fornecedor do Produto
+* @param   f fornecedor
+*/
+//void Produto::setFornecedor(Fornecedor f) {
+//    fornecedor = f;
+//}
+
+/**
 * @return Preco do Produto
 */
-double Produto::getpreco() {
+double Produto::getPreco() {
     return preco;
 }
 
@@ -83,14 +99,14 @@ double Produto::getpreco() {
 * @details O método modifica o preco do Produto
 * @param   p preco
 */
-void Produto::setpreco(double p) {
+void Produto::setPreco(double p) {
     preco = p;
 }
 
 /**
 * @return quantidade do Produto
 */
-int Produto::getqntd() {
+int Produto::getQntd() {
     return qntd;
 }
 
@@ -98,7 +114,7 @@ int Produto::getqntd() {
 * @details O método modifica a quantidade do Produto
 * @param   q quantidade
 */
-void Produto::setqntd(int q) {
+void Produto::setQntd(int q) {
     qntd = q;
 }
 
@@ -119,7 +135,7 @@ string Produto::exportar() {
 * @return	True se > que 'a'
 */
 bool Produto::operator>(Produto &p) {
-    if(preco > p.getpreco())
+    if(preco > p.getPreco())
         return true;
     return false;
 }
