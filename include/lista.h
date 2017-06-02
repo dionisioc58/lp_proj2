@@ -2,6 +2,7 @@
  * @file	lista.h
  * @brief	Definição da classe Lista
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
+ * @author	Eduardo Rique (luiseduardorique@gmail.com)
  * @since	06/05/2017
  * @date	14/05/2017
  */
