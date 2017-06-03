@@ -1,7 +1,8 @@
 var searchData=
 [
   ['salgado',['Salgado',['../classSalgado.html',1,'Salgado'],['../classSalgado.html#a0b6e0ad1df4b10f77396a5b10f7eca7c',1,'Salgado::Salgado()']]],
-  ['salvarbd',['salvarBD',['../bancodados_8h.html#a39e42fcea15debc71760f2ec5670d181',1,'salvarBD(string nome, Fornecedor *e, int n):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a39e42fcea15debc71760f2ec5670d181',1,'salvarBD(string nome, Fornecedor *e, int n):&#160;bancodados.cpp']]],
+  ['salvarbd',['salvarBD',['../bancodados_8h.html#a999591c48798c36fb94a53bd97ce759c',1,'salvarBD(string nome, Lista&lt; Fornecedor &gt; *e):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a999591c48798c36fb94a53bd97ce759c',1,'salvarBD(string nome, Lista&lt; Fornecedor &gt; *e):&#160;bancodados.cpp']]],
+  ['selecionaobjeto',['selecionaObjeto',['../bancodados_8h.html#a03d10b770c72c7c536c63f975a2bcbdd',1,'selecionaObjeto(Lista&lt; T &gt; *e, string msg):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a03d10b770c72c7c536c63f975a2bcbdd',1,'selecionaObjeto(Lista&lt; T &gt; *e, string msg):&#160;bancodados.cpp']]],
   ['setacucar',['setAcucar',['../classBebida.html#ab1e5cfbed14dc0c8c057c9e6ef94eeea',1,'Bebida::setAcucar()'],['../classDoce.html#a519fb447f293cd8ca93a6bbb8ce594eb',1,'Doce::setAcucar()']]],
   ['setalcool',['setAlcool',['../classBebida.html#a6ca387d10c5b489aa677ddb0a0987232',1,'Bebida']]],
   ['setanopub',['setAnopub',['../classLivro.html#af3a8320b743022c91c4aa70b0b346031',1,'Livro']]],

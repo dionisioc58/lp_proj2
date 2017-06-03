@@ -123,10 +123,17 @@ Métodos Públicos</h2></td></tr>
 <tr class="separator:a3b762b874aa1c6dbff37a2a64644041c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace508c29d93a600c96344c7874353446"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#ace508c29d93a600c96344c7874353446">exportar</a> ()</td></tr>
 <tr class="separator:ace508c29d93a600c96344c7874353446"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f28418e8e7e824858b2abb0268d8d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a93f28418e8e7e824858b2abb0268d8d7">operator&gt;</a> (<a class="el" href="classFornecedor.html">Fornecedor</a> &amp;p)</td></tr>
+<tr class="separator:a93f28418e8e7e824858b2abb0268d8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99464812ed7c926f069375b87fa03cd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99464812ed7c926f069375b87fa03cd5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a99464812ed7c926f069375b87fa03cd5">operator!=</a> (<a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
+<tr class="memdesc:a99464812ed7c926f069375b87fa03cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt; <br /></td></tr>
+<tr class="separator:a99464812ed7c926f069375b87fa03cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
 <tr class="memitem:a51cace47ee37359be96b60de1a42ab62"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a51cace47ee37359be96b60de1a42ab62">operator&lt;&lt;</a> (ostream &amp;os, <a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
+<tr class="memdesc:a51cace47ee37359be96b60de1a42ab62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt;  <a href="#a51cace47ee37359be96b60de1a42ab62">Mais...</a><br /></td></tr>
 <tr class="separator:a51cace47ee37359be96b60de1a42ab62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d29f886a9d6f994795537b23211008f"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a8d29f886a9d6f994795537b23211008f">operator&gt;&gt;</a> (istream &amp;is, <a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
 <tr class="memdesc:a8d29f886a9d6f994795537b23211008f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de inserção em stream.  <a href="#a8d29f886a9d6f994795537b23211008f">Mais...</a><br /></td></tr>
@@ -303,6 +310,29 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a93f28418e8e7e824858b2abb0268d8d7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Fornecedor::operator&gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFornecedor.html">Fornecedor</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>O operador é sobrecarregado para representar o <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser comparado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>True se &gt; que 'p' </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a3b762b874aa1c6dbff37a2a64644041c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -428,6 +458,8 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sobrecarga do operador de comparação &gt; </p>
 <p>O operador é sobrecarregado para representar a <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> e seus produtos </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>Referência para stream de saída </td></tr>
@@ -490,7 +522,7 @@ Amigas</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sexta, 2 de Junho de 2017 21:23:35 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 3 de Junho de 2017 13:03:15 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

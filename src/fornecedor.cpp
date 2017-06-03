@@ -132,7 +132,17 @@ bool Fornecedor::pertenceFornecedor(string n) {
 * @return String com os dados para exportação CSV
 */
 string Fornecedor::exportar() {
-    return "fornec;" + RSocial + ";" + CNPJ;
+    //return "fornec;" + RSocial + ";" + CNPJ;
+
+    string ret = "fornec;" + RSocial + ";" + CNPJ + "\n";
+
+    Lista<Produto> *aa = produtos;
+    int tam = aa->getTamanho();
+    for(int j = 0; j < tam; j++) {            
+        aa = aa->getProximo();
+        ret += aa->getValor().exportar() + "\n";
+    }
+    return ret;
 }
 
 /** 
@@ -171,6 +181,11 @@ ostream& operator<<(ostream& os, Fornecedor &e) {
 * @return	Referência para stream de entrada
 */
 istream& operator>>(istream& is, Fornecedor &e) {
-	is >> e.RSocial;
-	return is;
+	string lido;
+    getline(is, e.RSocial, ';');
+    if(e.RSocial == "\n")
+        return is;
+    getline(is, e.CNPJ);
+
+    return is;
 }

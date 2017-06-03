@@ -74,7 +74,7 @@ void cadFornecedor(Lista<Fornecedor> *e) {
 * @param[in]    *e Vetor de fornecedores do cadastro
 */
 void delFornecedor(Lista<Fornecedor> *e) {
-    int selecao = selecionaFornecedor(e, "Digite o número do fornecedor para a remoção (0 para cancelar): ");
+    int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a remoção (0 para cancelar): ");
     if(selecao >= 0)
         e->RemovePos(selecao);
 }
@@ -84,7 +84,7 @@ void delFornecedor(Lista<Fornecedor> *e) {
 * @param[in]    *e Vetor de fornecedores do cadastro
 */
 void addPr(Lista<Fornecedor> *e) {
-    int selecao = selecionaFornecedor(e, "Digite o número do fornecedor para a adição (0 para cancelar): ");
+    int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a adição (0 para cancelar): ");
     if(selecao >= 0) {
         Fornecedor *tmp = e->Posiciona(selecao);
         Produto p;
@@ -94,87 +94,63 @@ void addPr(Lista<Fornecedor> *e) {
 }
 
 /**
-* @brief        Função que adiciona produtos à um fornecedor (apresenta escolha),
-*               carregando-os apartir de um arquivo CSV
-* @param[in]    *e Vetor de fornecedores do cadastro
-* @param[in]    n Número de fornecedores no cadastro
-* @param[in]    pausa True para apresentar uma pausa após a impressão do relatório de importação
-* @return       Retorna o novo vetor de fornecedores após o cadastro
-*/
-Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa) {
-   /* if(n == 0)
-        return e;
-
-    impFornecedores(e, n, false);
-    int selecao = recebeInt("Digite o número do fornecedor para a adição (0 para cancelar): ", 0);
-    if(selecao == 0)
-        return e;
-    selecao--;  //O usuário vai digitar o número com base em 1
-
-    string arquivo;
-    cout << "Digite o caminho/nome do arquivo à ser lido: ";
-    cin >> arquivo;
-    ifstream lista(arquivo);
-    if(!lista) {
-        cout << "Arquivo inválido/não encontrado!" << endl;
-        return e;
-    }
-
-    int linhas = 0, funcs = 0;
-    Produto f;
-    while(!lista.eof()) {
-        lista >> f;
-        linhas++;
-        if(f.getdescricao() != "\n") {
-            e[selecao].addProduto(f);
-            funcs++;
-        }
-    }
-    lista.close();
-    cout << "Importação concluída com sucesso! " << endl;
-    cout << linhas << " linhas no arquivo." << endl;
-    cout << funcs << " produtos cadastrados." << endl;
-
-    if(pausa) {
-        cin.ignore();
-        cout << "Pressione ENTER para continuar...";
-        string pausa;
-        getline(cin, pausa);
-    }
-
-    return e;*/
-    return NULL;
-}
-
-/**
 * @brief        Função que remove um produto de um Fornecedor (apresenta escolha)
-* @param[in]    *e Vetor de Fornecedores do cadastro
-* @param[in]    n Número de Fornecedores no cadastro
-* @return       Retorna o novo vetor de Fornecedores após o cadastro
+* @param[in]    *e Lista de Fornecedores do cadastro
 */
-Fornecedor *delPr(Fornecedor *e, int n) {
-    /*if(n == 0)
-        return e;
-
-    int empsel = impPr(e, n, false, false); //Captura o fornecedor selecionado
-    int selecao = recebeInt("Digite o número do aluno à remover (0 para cancelar): ", 0);
-    if(selecao == 0)
-        return e;
-    selecao--;  //O usuário vai digitar o número com base em 1
-
-    if(!e[empsel].delProduto(selecao))
-        cout << "Não foi possível remover!" << endl;
-    return e;*/
-    return NULL;
+void delPr(Lista<Fornecedor> *e) {
+    int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a remoção do produto (0 para cancelar): ");
+    if(selecao >= 0) {
+        Fornecedor *f = e->Posiciona(selecao);
+        selecao = selecionaObjeto(f->getProdutos(), "Selecione o número do produto para a remoção (0 para cancelar): ");
+        f->delProduto(selecao);
+    }
 }
 
 /**
-* @brief        Função que imprime os fornecedores no cadastro
+* @brief        Função que edita um produto de um Fornecedor (apresenta escolha)
+* @param[in]    *e Lista de Fornecedores do cadastro
+*/
+void editPr(Lista<Fornecedor> *e) {
+    int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a edição do produto (0 para cancelar): ");
+    if(selecao >= 0) {
+        Fornecedor *f = e->Posiciona(selecao);
+        selecao = selecionaObjeto(f->getProdutos(), "Selecione o número do produto para a edição (0 para cancelar): ");
+        Produto *p = f->getProdutos()->Posiciona(selecao);
+        
+        string input;
+        
+        cout << "O código é: " << p->getcb() << " (ENTER para continuar)";
+        getline(cin, input);
+        if(input != "")
+            p->setcb(input);
+
+        cout << "A descrição é: " << p->getdescricao() << " (ENTER para continuar)";
+        getline(cin, input);
+        if(input != "")
+            p->setdescricao(input);
+
+        cout << "O tipo é: " << p->gettipo() << " (ENTER para continuar)";
+        getline(cin, input);
+        if(input != "")
+            p->settipo(input);
+
+        stringstream ss;
+        ss << "O preço é: " << p->getpreco() << "(0 para continuar)";
+        ss >> input;
+        float preco = recebeFloat(input, 0);
+        if(preco > 0)
+            p->setpreco(preco);
+    }
+}
+
+/**
+* @brief        Função que imprime os objetos na lista
 * @param[in]    *e Vetor de fornecedores do cadastro
 * @param[in]    n Número de fornecedores no cadastro
 * @param[in]    pausa True para apresentar uma pausa após a impressão
 */
-void impFornecedores(Lista<Fornecedor> *e, bool pausa) {
+template<typename T>
+void impLista(Lista<T> *e, bool pausa) {
     e->Exibe(true);
     if(pausa)
         parar();
@@ -183,7 +159,7 @@ void impFornecedores(Lista<Fornecedor> *e, bool pausa) {
 /**
 * @brief        Função que imprime a lista de produtos de um ou todos 
                 os fornecedores do cadastro
-* @param[inout] *e Vetor de Fornecedores do cadastro
+* @param[inout] *e Lista de Fornecedores do cadastro
 * @param[in]    all "true" imprime todos os produtos de todos os fornecedores
                 "false" imprime apenas os produtos de um fornecedor (apresenta escolha)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
@@ -191,8 +167,8 @@ void impFornecedores(Lista<Fornecedor> *e, bool pausa) {
 */
 int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
     if(!all) {      //Imprime todos os produtos de um fornecedor
-        int selecao = selecionaFornecedor(e, "Digite o número do fornecedor (0 para cancelar): ");
-        if(selecao <= 0)
+        int selecao = selecionaObjeto(e, "Digite o número do fornecedor (0 para cancelar): ");
+        if(selecao < 0)
             return -1;
         
         Fornecedor *tmp = e->Posiciona(selecao);
@@ -235,90 +211,136 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
 }
 
 /**
+* @brief        Função que imprime a lista de produtos
+* @param[inout] *e Lista de Fornecedores do cadastro
+* @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo)
+* @param[in]    pausa True para apresentar uma pausa após a impressão
+* @return       -1 ou o número do fornecedor selecionada
+*/
+int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
+    string ftipo = "", fcod = "";
+    if(filtro == 1) {
+        cout << "Digite o tipo que você quer listar: ";
+        getline(cin, ftipo);
+    }
+    if(filtro == 2) {
+        cout << "Digite o código que você quer procurar: ";
+        getline(cin, fcod);
+    }
+    
+    Lista<Fornecedor> *tmp = e;
+    while(tmp) {
+        Lista<Produto> *f = tmp->getValor().getProdutos();
+        Produto produt;
+        for(int i = 0; i < tmp->getValor().getQtde(); i++) {
+            f = f->getProximo();
+            produt = f->getValor();
+            switch(filtro) {
+                case 1:
+                    if(produt.gettipo() == ftipo)
+                        cout << "   (" << (i + 1) << ") " << produt << endl;
+                    break;
+                case 2:
+                    if(produt.getcb() == fcod)
+                        cout << "   (" << (i + 1) << ") " << produt << endl;
+                    break;
+                default:
+                    cout << "   (" << (i + 1) << ") " << produt << endl;
+            }
+        }
+        tmp = tmp->getProximo();
+    }
+        
+    if(pausa)
+        parar();
+    return -1;
+
+}
+
+/**
 * @brief        Função que salva o cadastro completo em arquivo
 * @param[in]    nome Caminho/nome do arquivo de dados
-* @param[in]    *e Vetor de Fornecedores do cadastro
-* @param[in]    n Número de Fornecedores no cadastro
+* @param[in]    *e Lista de Fornecedores do cadastro
 */
-void salvarBD(string nome, Fornecedor *e, int n) {
-    /*ofstream saida(nome);
+void salvarBD(string nome, Lista<Fornecedor> *e) {
+    ofstream saida(nome);
     if(!saida) {
         cout << "Não foi possível abrir o arquivo para salvar." << endl;
         return;
     }
-    for(int i = 0; i < n; i++) {
-        saida << e[i].exportar() << endl;
-        Lista<Produto> *aa = e[i].getProdutos();
-        for(int j = 0; j < e[i].getQtde(); j++) {            
-            aa = aa->getProximo();
-            saida << aa->getValor().exportar() << endl;
-        }
+    Lista<Fornecedor> *tmp = e->getProximo();
+    while(tmp) {
+        saida << tmp->getValor().exportar() << endl;
+        tmp = tmp->getProximo();
     }
 
     saida.close();
-    cout << "Banco de dados salvo com sucesso!" << endl;*/
+    cout << "Banco de dados salvo com sucesso!" << endl;
 }
 
 /**
 * @brief        Função que recupera o cadastro completo a partir de um arquivo
 * @param[in]    nome Caminho/nome do arquivo de dados
-* @param[in]    *e Vetor de Fornecedores do cadastro
-* @param[inout] n Número de Fornecedores no cadastro
-* @return       Retorna o novo vetor de Fornecedores após o cadastro
+* @param[in]    *e Lista de Fornecedores do cadastro
 */
-Fornecedor *abrirBD(string nome, Fornecedor *e, int &n) {
-    /*ifstream entrada(nome);
+void abrirBD(string nome, Lista<Fornecedor> *e) {
+    ifstream entrada(nome);
     if(!entrada) {
         cout << "Não foi possível abrir o arquivo de dados." << endl;
-        return e;
+        return;
     }
     string texto;
     stringstream info;
-    n = 0;
-    while(!entrada.eof()) {
-        getline(entrada, texto);
-        if(texto.substr(0, 6) == "fornec")
-            n++;
-    }
-    Fornecedor *r = new Fornecedor[n];
+    bool tem_forn = false;
+    Fornecedor tmp;
+    Produto p;
     
-    int conta = -1;
     entrada.clear();
     entrada.seekg(0);
     
-    Produto f;
     while(!entrada.eof()) {
         getline(entrada, texto);
         if(texto != "") {
             info.clear();
             info << texto.substr(7);
 
-            if(texto.substr(0, 7) == "fornec;")
-                info >> r[++conta];
+            if(texto.substr(0, 7) == "fornec;") {
+                info >> tmp;
+                e->Insere(tmp);
+                tem_forn = true;
+            }
 
             if(texto.substr(0, 7) == "produt;") {
-                if(conta > -1) {
-                    info >> f;
-                    r[conta].addProduto(f);
+                if(tem_forn) {
+                    info >> p;
+                    tmp.addProduto(p);
                 }
             }
-        }   
+        }
     }
     entrada.close();
-    cout << "Recuperação concluída com sucesso!" << endl;
-
-    return r;*/
-    return NULL;
+    cout << "Banco de dados aberto com sucesso!" << endl;
 }
 
+/**
+* @brief        Função que exibe uma mensagem para manter a tela congelada
+*/
 void parar() {
+    cin.clear();
+    fflush(stdin);
     cout << "Pressione ENTER para continuar...";
     string p;
     getline(cin, p);
 }
 
-int selecionaFornecedor(Lista<Fornecedor> *e, string msg) {
-    impFornecedores(e, false);
+/**
+* @brief        Função que exibe uma mensagem e uma lista numerada para a escolha de um objeto
+* @param[in]    *e Lista de objeto
+* @param[in]    msg Mensagem à exibir
+*/
+template<typename T>
+int selecionaObjeto(Lista<T> *e, string msg) {
+    impLista(e, false);
     int selecao = recebeInt(msg, 0);
     if(selecao <= 0)
         return -1;

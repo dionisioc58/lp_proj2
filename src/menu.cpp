@@ -9,24 +9,22 @@
 
 #include "menu.h"
 
-#define itens 15                 /**< Quantidade de opções no menu */
+#define itens 13                 /**< Quantidade de opções no menu */
 
 string opcoes[itens] = {
-    "Cadastrar um fornecedor                     ",
-    "Remover um fornecedor                       ",
-    "Listar os fornecedores                      ",
-    "Cadastrar um produto                        ",
-    "Remover um produto                          ",
-    "Alterar um produto                          ",
-    "Consultar um produto                        ",
-    "Consultar um produto de um fornecedor       ",
-    "Consultar por tipo                          ",
-    "Consultar por produto                       ",
-    "Consultar por fornecedor                    ",
-    "Cadastrar um fornecedor                     ",
-    "Vender                                      ",
-    "Controle de estoque                         ",
-    "Sair                                        "
+    "Cadastrar um fornecedor                     ", //1  - ok
+    "Remover um fornecedor                       ", //2  - ok
+    "Listar os fornecedores                      ", //3  - ok
+    "Cadastrar um produto                        ", //4  - ok (faltam os subtipos)
+    "Remover um produto                          ", //5  - ok
+    "Alterar um produto                          ", //6  - ok
+    "Listar todos os produtos por fornecedor     ", //7  - ok
+    "Listar todos os produtos de um fornecedor   ", //8  - ok
+    "Listar produtos por tipo                    ", //9  - ok
+    "Listar produtos por codigo                  ", //10 - ok
+    "Vender                                      ", //11
+    "Controle de estoque                         ", //12
+    "Sair                                        "  //0  - ok
 };                /**< Opções do menu */
 
 /**
@@ -40,7 +38,7 @@ int showMenu() {
     while(true) {
         cout << string(50, '\n'); //Limpa a tela
         cout << "\t\t|**********************************************|" << endl;
-        cout << "\t\t|       Q Leve Tudo - A Sua Conveniência       |" << endl;
+        cout << "\t\t|\x1b[43m       Q Leve Tudo - A Sua Conveniência       \x1b[0m|" << endl;
         cout << "\t\t|                                              |" << endl;
         for(int i = 0; i < itens; i++) {        
             if(realce == i)

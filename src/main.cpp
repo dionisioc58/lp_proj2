@@ -30,11 +30,12 @@ int main(int argc, char* argv[]) {
     //Lista<Item> *estoque = NULL;                        /**< Lista de itens que conterá todo o estoque */
     Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro de fornecedores */
     
-    //estoque = abrirBD("./data/banco.dat", estoque, qtd_est); /**< Recuperar o cadastro a partir de um arquivo */
+    abrirBD("./data/banco.dat", fornecs); /**< Recuperar o cadastro a partir de um arquivo */
     while(1) {
         switch(showMenu()) { //Exibir o menu
             case 0:             //Sair
                 cout << endl;
+                salvarBD("./data/banco.dat", fornecs); 
       //          delete[] estoque;
                 //delete fornecs;
                 //delete prods;
@@ -47,40 +48,38 @@ int main(int argc, char* argv[]) {
                 delFornecedor(fornecs);
                 break;
             case 3:              //Listar os fornecedores
-                impFornecedores(fornecs, true);
+                impLista(fornecs, true);
                 break;
 
             case 4:              //Adicionar um produto
                 addPr(fornecs);
                 break;
-            /*case 5:              //Adicionar produtos através de um arquivo
-                estoque = addPrArq(estoque, qtd_est);
+            case 5:              //Excluir um produto
+                delPr(fornecs);
                 break;
-            case 6:              //Excluir um produto
-                estoque = delPr(estoque, qtd_est);
-                break;*/
+            case 6:              //Alterar um produto
+                editPr(fornecs);
+                break;
             
-            case 7:              //Listar os produtos de um fornecedor
+            case 7:              //Listar todos os produtos de todos os fornecedores
                 impPr(fornecs);
                 break;
-            case 8:             //Listar todos os produtos de todas os fornecedores
+            case 8:             //Listar todos os produtos de um fornecedor
                 impPr(fornecs, false);
                 break;
-            /*case 9:
-                impFornecedores(estoque, qtd_est, true);
+            case 9:             //Listar produtos por tipo
+                impPrLista(fornecs, 1);
+                break;
+            case 10:             //Listar produtos por codigo
+                impPrLista(fornecs, 2);
                 break;
             
-            case 10:            //Salvar o banco de dados
-                salvarBD("./data/banco.dat", estoque, qtd_est); 
+            case 11:            //Salvar o banco de dados
+                
                 break;
-            case 11:            //Recuperar o banco
-                estoque = abrirBD("./data/banco.dat", estoque, qtd_est); 
-                break;*/
         }
     }
     cout << endl;
- //   delete[] estoque;
-//    delete[] fornecs;
-    //delete prods;
+    salvarBD("./data/banco.dat", fornecs); 
     return 0;
 }

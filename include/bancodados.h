@@ -57,29 +57,24 @@
     void addPr(Lista<Fornecedor> *e);
 
     /**
-    * @brief        Função que adiciona alunos à uma turma (apresenta escolha),
-    *               carregando-os apartir de um arquivo CSV
-    * @param[in]    *e Vetor de turmas do cadastro
-    * @param[in]    n Número de turmas no cadastro
-    * @param[in]    pausa True para apresentar uma pausa após a impressão do relatório de importação
-    * @return       Retorna o novo vetor de turmas após o cadastro
-    */
-    Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa = true);
-
-    /**
     * @brief        Função que remove um aluno de uma turma (apresenta escolha)
     * @param[in]    *e Vetor de turmas do cadastro
-    * @param[in]    n Número de turmas no cadastro
-    * @return       Retorna o novo vetor de turmas após o cadastro
     */
-    Fornecedor *delPr(Fornecedor *e, int n);
+    void delPr(Lista<Fornecedor> *e);
 
     /**
-    * @brief        Função que imprime os fornecedores no cadastro
+    * @brief        Função que edita um produto de um Fornecedor (apresenta escolha)
+    * @param[in]    *e Lista de Fornecedores do cadastro
+    */
+    void editPr(Lista<Fornecedor> *e);
+
+    /**
+    * @brief        Função que imprime os objetos na lista
     * @param[in]    *e Lista de fornecedores do cadastro
     * @param[in]    pausa True para apresentar uma pausa após a impressão
     */
-    void impFornecedores(Lista<Fornecedor> *e, bool pausa = true);
+    template<typename T>
+    void impLista(Lista<T> *e, bool pausa = true);
 
     /**
     * @brief        Função que imprime a lista de alunos de uma ou todas 
@@ -93,24 +88,39 @@
     int impPr(Lista<Fornecedor> *e, bool all = true, bool pausa = true);
 
     /**
+    * @brief        Função que imprime a lista de produtos
+    * @param[inout] *e Lista de Fornecedores do cadastro
+    * @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo)
+    * @param[in]    pausa True para apresentar uma pausa após a impressão
+    * @return       -1 ou o número do fornecedor selecionada
+    */
+    int impPrLista(Lista<Fornecedor> *e, int filtro = 0, bool pausa = true);
+
+    /**
     * @brief        Função que salva o cadastro completo em arquivo
     * @param[in]    nome Caminho/nome do arquivo de dados
-    * @param[in]    *e Vetor de turmas do cadastro
-    * @param[in]    n Número de turmas no cadastro
+    * @param[in]    *e Lista de fornecedores do cadastro
     */
-    void salvarBD(string nome, Fornecedor *e, int n);
+    void salvarBD(string nome, Lista<Fornecedor> *e);
 
     /**
     * @brief        Função que recupera o cadastro completo a partir de um arquivo
     * @param[in]    nome Caminho/nome do arquivo de dados
-    * @param[in]    *e Vetor de turmas do cadastro
-    * @param[inout] n Número de turmas no cadastro
-    * @return       Retorna o novo vetor de turmas após a importação
+    * @param[in]    *e Lista de Fornecedores do cadastro
     */
-    Fornecedor *abrirBD(string nome, Fornecedor *e, int &n);
+    void abrirBD(string nome, Lista<Fornecedor> *e);
 
+    /**
+    * @brief        Função que exibe uma mensagem para manter a tela congelada
+    */
     void parar();
 
-    int selecionaFornecedor(Lista<Fornecedor> *e, string msg);
+    /**
+    * @brief        Função que exibe uma mensagem e uma lista numerada para a escolha de um objeto
+    * @param[in]    *e Lista de objeto
+    * @param[in]    msg Mensagem à exibir
+    */
+    template<typename T>
+    int selecionaObjeto(Lista<T> *e, string msg);
 
 #endif
