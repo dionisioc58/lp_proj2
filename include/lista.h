@@ -36,9 +36,10 @@
         void RemovePos(int pos);                            /**< Remove um valor na posição informada */
         void RemoveVal(T valor);                            /**< Remove um valor específico */
         Lista *Busca(T valor);                              /**< Procura um valor e retorna o nó */
+        T *Posiciona(int pos);                              /**< Retorna o elemento na posição dada */
         Lista *getAnterior();                               /**< Retorna o nó anterior */
         Lista *getProximo();                                /**< Retorna o próximo nó */
-        void Exibe();                                       /**< Imprime a lista */
+        void Exibe(bool comNumeros = false);                /**< Imprime a lista */
     };
 
     /**
@@ -162,6 +163,21 @@
     }
 
     /**
+    * @details Retorna o elemento da posição desejada
+    */
+    template<typename T>
+    T *Lista<T>::Posiciona(int pos) {
+        Lista *retorna = prox;
+        for(int i = 0; i < pos; i++) {
+            if(retorna)
+                retorna = retorna->prox;
+            else
+                return NULL;
+        }
+        return &retorna->dado;
+    }
+
+    /**
     * @details Retorna o nó anterior
     */
     template<typename T>
@@ -183,7 +199,7 @@
     * @details Imprime a lista completa
     */
     template<typename T>
-    void Lista<T>::Exibe() {
+    void Lista<T>::Exibe(bool comNumeros) {
         if(!prox){
             cout << "Lista vazia!\n\n";
         }
@@ -191,11 +207,21 @@
         Lista *tmp;
         tmp = prox;
         
-        while( tmp != NULL){
-            cout << tmp->dado << "  ";
-            tmp = tmp->prox;
+        if(!comNumeros) {
+            while( tmp != NULL){
+                cout << tmp->dado << endl;
+                tmp = tmp->prox;
+            }
+            cout << ("\n\n");
+        } else {
+            int i = 1;
+            while( tmp != NULL){
+                cout << "(" << i << ") " << tmp->dado << endl;
+                tmp = tmp->prox;
+                i++;
+            }
+            cout << endl;
         }
-        cout << ("\n\n");
     }
 
 #endif

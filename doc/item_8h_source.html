@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Laboratorio 6: Código-Fonte de include/item.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio 6
+   </div>
+   <div id="projectbrief">Laboratório 6 de Linguagem de Programação I</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">item.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="item_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef ITEM_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define ITEM_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::ostream;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::istream;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::stringstream;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fornecedor_8h.html">fornecedor.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="produto_8h.html">produto.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classItem.html">   29</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classItem.html">Item</a> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classItem.html#a0d6670a3d11bf1b958fe904c5022dc42">   31</a></span>&#160;        <a class="code" href="classProduto.html">Produto</a> <a class="code" href="classItem.html#a0d6670a3d11bf1b958fe904c5022dc42">produto</a>;        </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classItem.html#a227dd381a059fddee682bdfee9cf6d81">   32</a></span>&#160;        <a class="code" href="classFornecedor.html">Fornecedor</a> <a class="code" href="classItem.html#a227dd381a059fddee682bdfee9cf6d81">fornecedor</a>;  </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classItem.html#a6a32ca29f5dedf5df1773be70800bba6">   33</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classItem.html#a6a32ca29f5dedf5df1773be70800bba6">qtde</a>;               </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classItem.html#a6cb525a37a13d97267b7ef5bf48764bb">   34</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classItem.html#a6cb525a37a13d97267b7ef5bf48764bb">preco</a>;           </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classItem.html#a297720c02984eab37332ae795d22189d">Item</a>();                                              </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="classItem.html#a11663c84075b78c3ae5e30fdfcd7c458">~Item</a>();                                             </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="classProduto.html">Produto</a> <a class="code" href="classItem.html#a54ecbc11f04f092e9b5c90413ca8cabc">getProduto</a>();                                </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classItem.html#aa69fca7acb8687df2a5782aa30ec1c34">setProduto</a>(<a class="code" href="classProduto.html">Produto</a> p);                          </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classFornecedor.html">Fornecedor</a> <a class="code" href="classItem.html#a60926accad4955daa3215dac6bbda54e">getFornecedor</a>();                          </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classItem.html#a532a7f468998fe4d53c18324b0606848">setFornecedor</a>(<a class="code" href="classFornecedor.html">Fornecedor</a> f);                    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classItem.html#a45b13585d1216b54b02aa0bb3c3e1a3d">getQtde</a>();                                       </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classItem.html#a51514b70815286b3e0cfdcbf5264fb42">setQtde</a>(<span class="keywordtype">int</span> q);                                 </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classItem.html#af2a47df46197bb97b6c63e411b3f8fa4">getPreco</a>();                                   </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classItem.html#a36d6bf763c63c4d1355d88679994e951">setPreco</a>(<span class="keywordtype">double</span> p);                             </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classItem.html#a2959a9b99214e4848626d887ff23256b">exportar</a>();                                  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">friend</span> ostream&amp; <a class="code" href="classItem.html#a496f3d71e2df2efe2517e93ed0c2b598">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="classItem.html">Item</a> &amp;p);      </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classItem_html_a6cb525a37a13d97267b7ef5bf48764bb"><div class="ttname"><a href="classItem.html#a6cb525a37a13d97267b7ef5bf48764bb">Item::preco</a></div><div class="ttdeci">double preco</div><div class="ttdef"><b>Definition:</b> item.h:34</div></div>
+<div class="ttc" id="classItem_html_a0d6670a3d11bf1b958fe904c5022dc42"><div class="ttname"><a href="classItem.html#a0d6670a3d11bf1b958fe904c5022dc42">Item::produto</a></div><div class="ttdeci">Produto produto</div><div class="ttdef"><b>Definition:</b> item.h:31</div></div>
+<div class="ttc" id="classItem_html_af2a47df46197bb97b6c63e411b3f8fa4"><div class="ttname"><a href="classItem.html#af2a47df46197bb97b6c63e411b3f8fa4">Item::getPreco</a></div><div class="ttdeci">double getPreco()</div><div class="ttdef"><b>Definition:</b> item.cpp:75</div></div>
+<div class="ttc" id="classProduto_html"><div class="ttname"><a href="classProduto.html">Produto</a></div><div class="ttdoc">Classe que representa um Produto. </div><div class="ttdef"><b>Definition:</b> produto.h:26</div></div>
+<div class="ttc" id="classItem_html_aa69fca7acb8687df2a5782aa30ec1c34"><div class="ttname"><a href="classItem.html#aa69fca7acb8687df2a5782aa30ec1c34">Item::setProduto</a></div><div class="ttdeci">void setProduto(Produto p)</div><div class="ttdef"><b>Definition:</b> item.cpp:38</div></div>
+<div class="ttc" id="classItem_html_a297720c02984eab37332ae795d22189d"><div class="ttname"><a href="classItem.html#a297720c02984eab37332ae795d22189d">Item::Item</a></div><div class="ttdeci">Item()</div><div class="ttdef"><b>Definition:</b> item.cpp:15</div></div>
+<div class="ttc" id="classItem_html_a6a32ca29f5dedf5df1773be70800bba6"><div class="ttname"><a href="classItem.html#a6a32ca29f5dedf5df1773be70800bba6">Item::qtde</a></div><div class="ttdeci">int qtde</div><div class="ttdef"><b>Definition:</b> item.h:33</div></div>
+<div class="ttc" id="produto_8h_html"><div class="ttname"><a href="produto_8h.html">produto.h</a></div><div class="ttdoc">Definição da classe Produto. </div></div>
+<div class="ttc" id="classItem_html_a51514b70815286b3e0cfdcbf5264fb42"><div class="ttname"><a href="classItem.html#a51514b70815286b3e0cfdcbf5264fb42">Item::setQtde</a></div><div class="ttdeci">void setQtde(int q)</div><div class="ttdef"><b>Definition:</b> item.cpp:68</div></div>
+<div class="ttc" id="classItem_html_a54ecbc11f04f092e9b5c90413ca8cabc"><div class="ttname"><a href="classItem.html#a54ecbc11f04f092e9b5c90413ca8cabc">Item::getProduto</a></div><div class="ttdeci">Produto getProduto()</div><div class="ttdef"><b>Definition:</b> item.cpp:30</div></div>
+<div class="ttc" id="classItem_html_a496f3d71e2df2efe2517e93ed0c2b598"><div class="ttname"><a href="classItem.html#a496f3d71e2df2efe2517e93ed0c2b598">Item::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Item &amp;p)</div><div class="ttdef"><b>Definition:</b> item.cpp:104</div></div>
+<div class="ttc" id="classFornecedor_html"><div class="ttname"><a href="classFornecedor.html">Fornecedor</a></div><div class="ttdoc">Classe que representa um Fornecedor. </div><div class="ttdef"><b>Definition:</b> fornecedor.h:29</div></div>
+<div class="ttc" id="classItem_html_a2959a9b99214e4848626d887ff23256b"><div class="ttname"><a href="classItem.html#a2959a9b99214e4848626d887ff23256b">Item::exportar</a></div><div class="ttdeci">string exportar()</div><div class="ttdef"><b>Definition:</b> item.cpp:90</div></div>
+<div class="ttc" id="classItem_html_a11663c84075b78c3ae5e30fdfcd7c458"><div class="ttname"><a href="classItem.html#a11663c84075b78c3ae5e30fdfcd7c458">Item::~Item</a></div><div class="ttdeci">~Item()</div><div class="ttdef"><b>Definition:</b> item.cpp:23</div></div>
+<div class="ttc" id="classItem_html"><div class="ttname"><a href="classItem.html">Item</a></div><div class="ttdoc">Classe que representa um item para o estoque. </div><div class="ttdef"><b>Definition:</b> item.h:29</div></div>
+<div class="ttc" id="classItem_html_a60926accad4955daa3215dac6bbda54e"><div class="ttname"><a href="classItem.html#a60926accad4955daa3215dac6bbda54e">Item::getFornecedor</a></div><div class="ttdeci">Fornecedor getFornecedor()</div><div class="ttdef"><b>Definition:</b> item.cpp:45</div></div>
+<div class="ttc" id="classItem_html_a45b13585d1216b54b02aa0bb3c3e1a3d"><div class="ttname"><a href="classItem.html#a45b13585d1216b54b02aa0bb3c3e1a3d">Item::getQtde</a></div><div class="ttdeci">int getQtde()</div><div class="ttdef"><b>Definition:</b> item.cpp:60</div></div>
+<div class="ttc" id="fornecedor_8h_html"><div class="ttname"><a href="fornecedor_8h.html">fornecedor.h</a></div><div class="ttdoc">Definição da classe Fornecedor. </div></div>
+<div class="ttc" id="classItem_html_a532a7f468998fe4d53c18324b0606848"><div class="ttname"><a href="classItem.html#a532a7f468998fe4d53c18324b0606848">Item::setFornecedor</a></div><div class="ttdeci">void setFornecedor(Fornecedor f)</div><div class="ttdef"><b>Definition:</b> item.cpp:53</div></div>
+<div class="ttc" id="classItem_html_a227dd381a059fddee682bdfee9cf6d81"><div class="ttname"><a href="classItem.html#a227dd381a059fddee682bdfee9cf6d81">Item::fornecedor</a></div><div class="ttdeci">Fornecedor fornecedor</div><div class="ttdef"><b>Definition:</b> item.h:32</div></div>
+<div class="ttc" id="classItem_html_a36d6bf763c63c4d1355d88679994e951"><div class="ttname"><a href="classItem.html#a36d6bf763c63c4d1355d88679994e951">Item::setPreco</a></div><div class="ttdeci">void setPreco(double p)</div><div class="ttdef"><b>Definition:</b> item.cpp:83</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sábado, 3 de Junho de 2017 14:55:33 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

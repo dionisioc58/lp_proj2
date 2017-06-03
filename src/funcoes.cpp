@@ -74,3 +74,13 @@ string recebeString(string msg) {
 	}
 	return valor;
 }
+
+/**
+ * @brief Funcao que converte todos os caracteres para letra minuscula
+ * @param s String a ser convertida
+ */
+void minusculas(string& s) {
+	for (int i = 0; i < (int)s.length(); i++) {
+		s[i] = tolower(s[i]);
+	}
+}

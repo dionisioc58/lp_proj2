@@ -14,6 +14,7 @@
 #include <string>
 #include <sstream>
 #include "produto.h"
+#include "perecivel.h"
 using std::string;
 using std::ostream;
 using std::istream;
@@ -24,7 +25,7 @@ using std::stringstream;
     * @brief   Classe derivada que representa uma bebida
     * @details Os atributos de uma bebida são: acucar, alcool
     */  
-    class Bebida : public Produto, Perecivel {
+    class Bebida : public Produto, public Perecivel {
     protected:
         int acucar;
         float alcool;
@@ -36,7 +37,7 @@ using std::stringstream;
         int getAcucar();
         void setAlcool(float al);
         float getAlcool();
-    
+        
     };
 
     /**
@@ -44,7 +45,7 @@ using std::stringstream;
     * @brief   Classe derivada que representa uma Fruta
     * @details Os atributos de uma bebida são: numero e data de producao
     */  
-    class Fruta : public Produto, Perecivel {
+    class Fruta : public Produto, public Perecivel {
     protected:
         int num;
         string dp;
@@ -64,7 +65,7 @@ using std::stringstream;
     * @brief   Classe derivada que representa um Doce
     * @details Os atributos de uma Doce são: acucar, gluten e glicose
     */  
-    class Doce : public Produto, Perecivel {
+    class Doce : public Produto, public Perecivel {
     protected:
         int acucar;
         bool gluten;
@@ -87,7 +88,7 @@ using std::stringstream;
     * @brief   Classe derivada que representa um Salgado
     * @details Os atributos de um Salgado são: sodio, gluten e lactose
     */  
-    class Salgado : public Produto, Perecivel {
+    class Salgado : public Produto, public Perecivel {
     protected:
         int sodio;
         bool gluten;
