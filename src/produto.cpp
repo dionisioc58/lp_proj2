@@ -87,6 +87,21 @@ void Produto::setpreco(double p) {
 }
 
 /**
+* @return Quantidade do Produto
+*/
+int Produto::getQtde() {
+    return qtde;
+}
+
+/**
+* @details O método modifica a quantidade do Produto
+* @param   q Quantidade
+*/
+void Produto::setQtde(int q) {
+    qtde = q;
+}
+
+/**
 * @return String com os dados para exportação CSV
 */
 string Produto::exportar() {

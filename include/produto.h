@@ -25,16 +25,17 @@ using std::stringstream;
     */  
     class Produto {
     protected:
-        string cb;         /**< codigo de barras */
-        string descricao;            /**< descricao */
-        string tipo;            /**< tipo do produto */
-        double preco;           /**< preco */
+        string cb;                                              /**< codigo de barras */
+        string descricao;                                       /**< descricao */
+        string tipo;                                            /**< tipo do produto */
+        double preco;                                           /**< preco */
+        int qtde;                                               /**< Quantidade */
     public:
-        Produto();                                                /**< Construtor padrão */
-        ~Produto();                                               /**< Destrutor padrão */
+        Produto();                                              /**< Construtor padrão */
+        ~Produto();                                             /**< Destrutor padrão */
         
-        string getcb();                                       /**< Retorna o codigo de barras */
-        void setcb(string r);                                 /**< Modifica o codigo de barras */
+        string getcb();                                         /**< Retorna o codigo de barras */
+        void setcb(string r);                                   /**< Modifica o codigo de barras */
         
         string getdescricao();                                  /**< Retorna o descricao */
         void setdescricao(string c);                            /**< Modifica o descricao */
@@ -42,8 +43,11 @@ using std::stringstream;
         string gettipo();                                       /**< Retorna o tipo */
         void settipo(string t);                                 /**< Modifica o tipo */
         
-        double getpreco();                                       /**< Retorna o preco */
-        void setpreco(double p);                                 /**< Modifica o preco */
+        double getpreco();                                      /**< Retorna o preco */
+        void setpreco(double p);                                /**< Modifica o preco */
+
+        int getQtde();                                          /**< Retorna a quantidade */
+        void setQtde(int q);                                    /**< Modifica a quantidade */
                 
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
         bool operator>(Produto &p);                             /** @brief Sobrecarga do operador de comparação > */

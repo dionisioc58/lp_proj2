@@ -22,6 +22,8 @@
     #include <string>
     using std::string;
 
+    #include <sstream>
+    
     #include "fornecedor.h"
     #include "produto.h"
     #include "subproduto.h"

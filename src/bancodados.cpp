@@ -164,9 +164,11 @@ Produto *inputProduto() {
     getline(cin, input);
     novo->setdescricao(input);
     
-    float preco = recebeFloat("Digite o preço: ", 0);
-    novo->setpreco(preco);
+    floats = recebeFloat("Digite o preço: ", 0);
+    novo->setpreco(floats);
 
+    ints = recebeInt("Digite a quantidade: ", 0);
+    novo->setQtde(ints);
     
     return novo;
 }
@@ -239,27 +241,34 @@ void editPr(Lista<Fornecedor> *e) {
         
         string input;
         
-        cout << "O código é: " << p->getcb() << " (ENTER para continuar)";
+        cout << "O código é: " << p->getcb() << " (ENTER para manter): ";
         getline(cin, input);
         if(input != "")
             p->setcb(input);
 
-        cout << "A descrição é: " << p->getdescricao() << " (ENTER para continuar)";
+        cout << "A descrição é: " << p->getdescricao() << " (ENTER para manter): ";
         getline(cin, input);
         if(input != "")
             p->setdescricao(input);
 
-        cout << "O tipo é: " << p->gettipo() << " (ENTER para continuar)";
+        cout << "O tipo é: " << p->gettipo() << " (ENTER para manter): ";
         getline(cin, input);
         if(input != "")
             p->settipo(input);
 
         stringstream ss;
-        ss << "O preço é: " << p->getpreco() << "(0 para continuar)";
-        ss >> input;
+        ss << "O preço é: " << p->getpreco() << " (0 para manter): ";
+        input = ss.str();
         float preco = recebeFloat(input, 0);
         if(preco > 0)
             p->setpreco(preco);
+
+        ss.clear();
+        ss << "A quantidade é: " << p->getQtde() << " (0 para manter): ";
+        input = ss.str();
+        float qtde = recebeInt(input, 0);
+        if(qtde > 0)
+            p->setQtde(qtde);
     }
 }
 

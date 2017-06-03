@@ -24,7 +24,7 @@ var searchData=
   ['getproduto',['getProduto',['../classItem.html#a54ecbc11f04f092e9b5c90413ca8cabc',1,'Item']]],
   ['getprodutos',['getProdutos',['../classFornecedor.html#a3f97fec38029b79f2212ca6c335a2c80',1,'Fornecedor']]],
   ['getproximo',['getProximo',['../classLista.html#a5360feacbcc0f09d813f49fcde15a6cc',1,'Lista']]],
-  ['getqtde',['getQtde',['../classFornecedor.html#a69e725256294debcd9b75337ce0f9e21',1,'Fornecedor::getQtde()'],['../classItem.html#a45b13585d1216b54b02aa0bb3c3e1a3d',1,'Item::getQtde()']]],
+  ['getqtde',['getQtde',['../classFornecedor.html#a69e725256294debcd9b75337ce0f9e21',1,'Fornecedor::getQtde()'],['../classItem.html#a45b13585d1216b54b02aa0bb3c3e1a3d',1,'Item::getQtde()'],['../classProduto.html#a6946a9b51c9f90635df6aaa772c1bf9b',1,'Produto::getQtde()']]],
   ['getrsocial',['getRSocial',['../classFornecedor.html#ae56ac8b42e36991fc20325facf754055',1,'Fornecedor']]],
   ['getsodio',['getSodio',['../classSalgado.html#a5dcd6ae9d790fc5b18518c82d5292e47',1,'Salgado']]],
   ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista']]],

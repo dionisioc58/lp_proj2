@@ -25,10 +25,7 @@ using std::endl;
 * @return		Retorno
 */
 int main(int argc, char* argv[]) {
-    //int qtd_est = 0, qtd_forn = 0, qtd_prods = 0;       /**< Quantidades */
-    //int qtd_forn = 0;
-    //Lista<Item> *estoque = NULL;                        /**< Lista de itens que conterá todo o estoque */
-    Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro de fornecedores */
+    Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro */
     
     abrirBD("./data/banco.dat", fornecs); /**< Recuperar o cadastro a partir de um arquivo */
     while(1) {
@@ -36,9 +33,6 @@ int main(int argc, char* argv[]) {
             case 0:             //Sair
                 cout << endl;
                 salvarBD("./data/banco.dat", fornecs); 
-      //          delete[] estoque;
-                //delete fornecs;
-                //delete prods;
                 return 0;
 
             case 1:              //Cadastrar um fornecedor
