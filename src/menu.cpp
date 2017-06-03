@@ -15,7 +15,7 @@ string opcoes[itens] = {
     "Cadastrar um fornecedor                     ", //1  - ok
     "Remover um fornecedor                       ", //2  - ok
     "Listar os fornecedores                      ", //3  - ok
-    "Cadastrar um produto                        ", //4  - ok (faltam os subtipos)
+    "Cadastrar um produto                        ", //4  - ok
     "Remover um produto                          ", //5  - ok
     "Alterar um produto                          ", //6  - ok
     "Listar todos os produtos por fornecedor     ", //7  - ok
