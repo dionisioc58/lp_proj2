@@ -481,3 +481,43 @@ int selecionaObjeto(Lista<T> *e, string msg) {
     }
     return selecao;
 }
+
+/**
+* @brief        Função que realiza uma venda
+* @param[in]    *e Lista de fornecedores com seus produtos
+* @param[in]    *v Lista de venda com seus itens
+*/
+void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
+    //Lista todos os itens do cadastro
+    impPrLista(e);
+    //Seleciona um deles
+    int selecao = selecionaObjeto(e, "Digite o número do fornecedor (0 para cancelar): ");
+    if(selecao < 0)
+        return;
+    //v.Insere(e)
+}
+
+/**
+* @brief        Função que imprime a lista de estoque
+* @param[inout] *e Lista de Fornecedores do cadastro
+* @param[in]    pausa True para apresentar uma pausa após a impressão
+* @return       -1 ou o número do fornecedor selecionada
+*/
+int impPrListaEstoque(Lista<Fornecedor> *e, bool pausa) {
+    Lista<Fornecedor> *tmp = e;
+    while(tmp) {
+        Lista<Produto> *f = tmp->getValor().getProdutos();
+        Produto produt;
+        for(int i = 0; i < tmp->getValor().getQtde(); i++) {
+            f = f->getProximo();
+            produt = f->getValor();
+            cout << "   (" << (i + 1) << ") " << produt.getEstoque() << endl;
+        }
+        tmp = tmp->getProximo();
+    }
+        
+    if(pausa)
+        parar();
+    return -1;
+
+}

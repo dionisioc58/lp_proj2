@@ -16,7 +16,7 @@ using std::endl;
 #include "fornecedor.h"
 #include "menu.h"
 #include "bancodados.h"
-#include "item.h"
+#include "venda.h"
 
 /**
 * @brief        Função principal do programa
@@ -26,6 +26,7 @@ using std::endl;
 */
 int main(int argc, char* argv[]) {
     Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro */
+    Lista<Venda> *itens = new Lista<Venda>();             /**< Lista de itens da venda */
     
     abrirBD("./data/banco.dat", fornecs); /**< Recuperar o cadastro a partir de um arquivo */
     while(1) {
@@ -68,8 +69,11 @@ int main(int argc, char* argv[]) {
                 impPrLista(fornecs, 2);
                 break;
             
-            case 11:            //Salvar o banco de dados
-                
+            case 11:            //Realizar uma venda
+                venda(fornecs, itens);              
+                break;
+            case 12:            //Controle de estoque
+                impPrListaEstoque(fornecs);
                 break;
         }
     }

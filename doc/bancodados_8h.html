@@ -101,13 +101,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <code>#include &quot;<a class="el" href="fornecedor_8h_source.html">fornecedor.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="produto_8h_source.html">produto.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="subproduto_8h_source.html">subproduto.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="venda_8h_source.html">venda.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="funcoes_8h_source.html">funcoes.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para bancodados.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="bancodados_8h__incl.png" border="0" usemap="#include_2bancodados_8h" alt=""/></div>
 <map name="include_2bancodados_8h" id="include_2bancodados_8h">
-<area shape="rect" id="node6" href="fornecedor_8h.html" title="Definição da classe Fornecedor. " alt="" coords="465,80,559,107"/><area shape="rect" id="node8" href="produto_8h.html" title="Definição da classe Produto. " alt="" coords="389,155,465,181"/><area shape="rect" id="node10" href="subproduto_8h.html" title="Definição das classe derivadas de Produto. " alt="" coords="291,80,389,107"/><area shape="rect" id="node12" href="funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="803,155,882,181"/><area shape="rect" id="node9" href="lista_8h.html" title="Definição da classe Lista. " alt="" coords="591,155,649,181"/><area shape="rect" id="node11" href="perecivel_8h.html" title="Definição da classe Perecivel. " alt="" coords="177,155,263,181"/></map>
+<area shape="rect" id="node6" href="fornecedor_8h.html" title="Definição da classe Fornecedor. " alt="" coords="293,80,388,107"/><area shape="rect" id="node8" href="produto_8h.html" title="Definição da classe Produto. " alt="" coords="507,155,583,181"/><area shape="rect" id="node10" href="subproduto_8h.html" title="Definição das classe derivadas de Produto. " alt="" coords="603,80,700,107"/><area shape="rect" id="node12" href="venda_8h.html" title="Definição da classe Venda. " alt="" coords="436,80,504,107"/><area shape="rect" id="node13" href="funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="40,155,119,181"/><area shape="rect" id="node9" href="lista_8h.html" title="Definição da classe Lista. " alt="" coords="221,155,279,181"/><area shape="rect" id="node11" href="perecivel_8h.html" title="Definição da classe Perecivel. " alt="" coords="759,155,845,181"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
@@ -166,6 +167,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="banc
 <tr class="memitem:a03d10b770c72c7c536c63f975a2bcbdd"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a03d10b770c72c7c536c63f975a2bcbdd">selecionaObjeto</a> (<a class="el" href="classLista.html">Lista</a>&lt; T &gt; *e, string msg)</td></tr>
 <tr class="memdesc:a03d10b770c72c7c536c63f975a2bcbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que exibe uma mensagem e uma lista numerada para a escolha de um objeto.  <a href="#a03d10b770c72c7c536c63f975a2bcbdd">Mais...</a><br /></td></tr>
 <tr class="separator:a03d10b770c72c7c536c63f975a2bcbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a2f5e6fbd88a1178100e2cdf8b2d8ddf8">venda</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, <a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v)</td></tr>
+<tr class="memdesc:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que realiza uma venda.  <a href="#a2f5e6fbd88a1178100e2cdf8b2d8ddf8">Mais...</a><br /></td></tr>
+<tr class="separator:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20cbfadbdefb1c6e676a32cd4a600264"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a20cbfadbdefb1c6e676a32cd4a600264">impPrListaEstoque</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, bool pausa=true)</td></tr>
+<tr class="memdesc:a20cbfadbdefb1c6e676a32cd4a600264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que imprime a lista de estoque.  <a href="#a20cbfadbdefb1c6e676a32cd4a600264">Mais...</a><br /></td></tr>
+<tr class="separator:a20cbfadbdefb1c6e676a32cd4a600264"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
 <div class="textblock"><p>Arquivo de cabeçalho com a definição de funções para o controle dos dados. </p>
@@ -494,6 +501,42 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a20cbfadbdefb1c6e676a32cd4a600264"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int impPrListaEstoque </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>pausa</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que imprime a lista de estoque. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*e</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de Fornecedores do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>-1 ou o número do fornecedor selecionada </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aeb71b9efe90b613b347f2af2a221b0f1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -606,10 +649,45 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2f5e6fbd88a1178100e2cdf8b2d8ddf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void venda </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *&#160;</td>
+          <td class="paramname"><em>v</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que realiza uma venda. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de fornecedores com seus produtos </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*v</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de venda com seus itens </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 3 de Junho de 2017 19:18:20 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 3 de Junho de 2017 20:28:54 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -48,6 +48,8 @@ using std::stringstream;
 
         int getQtde();                                          /**< Retorna a quantidade */
         void setQtde(int q);                                    /**< Modifica a quantidade */
+
+        string getEstoque();                                    /**< Retorna o código, a descrição e a quantidade */
                 
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
         bool operator>(Produto &p);                             /** @brief Sobrecarga do operador de comparação > */

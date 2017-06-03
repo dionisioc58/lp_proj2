@@ -102,6 +102,16 @@ void Produto::setQtde(int q) {
 }
 
 /**
+* @details O método retorna o código, a descrição e a quantidade do Produto
+*/
+string Produto::getEstoque() {
+    stringstream ss;
+    ss << cb << "\t" << descricao << "\t" << qtde;
+    string ret = ss.str();
+    return ret;
+}
+
+/**
 * @return String com os dados para exportação CSV
 */
 string Produto::exportar() {

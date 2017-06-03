@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
+<title>Laboratorio 6: Código-Fonte de include/venda.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Laboratorio 6
+   </div>
+   <div id="projectbrief">Laboratório 6 de Linguagem de Programação I</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.8 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Arquivos&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Arquivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Definições e Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">venda.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="venda_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef VENDA_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define VENDA_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::ostream;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::istream;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::stringstream;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="produto_8h.html">produto.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classVenda.html">   28</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classVenda.html">Venda</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classVenda.html#a759f8d9a2c6604859dbe396b3ca814f9">   30</a></span>&#160;        <a class="code" href="classProduto.html">Produto</a> <a class="code" href="classVenda.html#a759f8d9a2c6604859dbe396b3ca814f9">produto</a>;                                        </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classVenda.html#a8c278bb109d8ec08b58274bb49abdd4a">   31</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classVenda.html#a8c278bb109d8ec08b58274bb49abdd4a">qtde</a>;                                               </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classVenda.html#a80246070290a58d69d7b332134a16c53">Venda</a>();                                              </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classVenda.html#af7c9b4716b4c26765030439202bd038a">~Venda</a>();                                             </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classProduto.html">Produto</a> <a class="code" href="classVenda.html#ac99a55c1aafd105ef354706f2fd3af4f">getProduto</a>();                                   </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classVenda.html#a8087ccd34622de7d3badc92466d164e0">setProduto</a>(<a class="code" href="classProduto.html">Produto</a> p);                             </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classVenda.html#a198b9538b70061ac5ff460711b7316da">getQtde</a>();                                          </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classVenda.html#ad73bf49cb773a0aefaa6adfd7dba5e04">setQtde</a>(<span class="keywordtype">int</span> q);                                    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classVenda.html#a273a94348f49a9471cfc4105fe9c70c3">operator&gt;</a>(<a class="code" href="classVenda.html">Venda</a> &amp;v);                             </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classVenda.html#afdab5958696017cf8a0795415691c3c7">operator!=</a>(<a class="code" href="classVenda.html">Venda</a> &amp;v);                            </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">friend</span> ostream&amp; <a class="code" href="classVenda.html#a52ddfca03003ccfe02f7169ad249a29a">operator&lt;&lt;</a>(ostream&amp; os, <a class="code" href="classVenda.html">Venda</a> &amp;v);    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classVenda_html_ad73bf49cb773a0aefaa6adfd7dba5e04"><div class="ttname"><a href="classVenda.html#ad73bf49cb773a0aefaa6adfd7dba5e04">Venda::setQtde</a></div><div class="ttdeci">void setQtde(int q)</div><div class="ttdef"><b>Definition:</b> venda.cpp:52</div></div>
+<div class="ttc" id="classVenda_html_a198b9538b70061ac5ff460711b7316da"><div class="ttname"><a href="classVenda.html#a198b9538b70061ac5ff460711b7316da">Venda::getQtde</a></div><div class="ttdeci">int getQtde()</div><div class="ttdef"><b>Definition:</b> venda.cpp:44</div></div>
+<div class="ttc" id="classProduto_html"><div class="ttname"><a href="classProduto.html">Produto</a></div><div class="ttdoc">Classe que representa um Produto. </div><div class="ttdef"><b>Definition:</b> produto.h:26</div></div>
+<div class="ttc" id="produto_8h_html"><div class="ttname"><a href="produto_8h.html">produto.h</a></div><div class="ttdoc">Definição da classe Produto. </div></div>
+<div class="ttc" id="classVenda_html_a273a94348f49a9471cfc4105fe9c70c3"><div class="ttname"><a href="classVenda.html#a273a94348f49a9471cfc4105fe9c70c3">Venda::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(Venda &amp;v)</div><div class="ttdef"><b>Definition:</b> venda.cpp:61</div></div>
+<div class="ttc" id="classVenda_html_a759f8d9a2c6604859dbe396b3ca814f9"><div class="ttname"><a href="classVenda.html#a759f8d9a2c6604859dbe396b3ca814f9">Venda::produto</a></div><div class="ttdeci">Produto produto</div><div class="ttdef"><b>Definition:</b> venda.h:30</div></div>
+<div class="ttc" id="classVenda_html_a8c278bb109d8ec08b58274bb49abdd4a"><div class="ttname"><a href="classVenda.html#a8c278bb109d8ec08b58274bb49abdd4a">Venda::qtde</a></div><div class="ttdeci">int qtde</div><div class="ttdef"><b>Definition:</b> venda.h:31</div></div>
+<div class="ttc" id="classVenda_html_a80246070290a58d69d7b332134a16c53"><div class="ttname"><a href="classVenda.html#a80246070290a58d69d7b332134a16c53">Venda::Venda</a></div><div class="ttdeci">Venda()</div><div class="ttdef"><b>Definition:</b> venda.cpp:15</div></div>
+<div class="ttc" id="classVenda_html"><div class="ttname"><a href="classVenda.html">Venda</a></div><div class="ttdoc">Classe que representa uma venda. </div><div class="ttdef"><b>Definition:</b> venda.h:28</div></div>
+<div class="ttc" id="classVenda_html_af7c9b4716b4c26765030439202bd038a"><div class="ttname"><a href="classVenda.html#af7c9b4716b4c26765030439202bd038a">Venda::~Venda</a></div><div class="ttdeci">~Venda()</div><div class="ttdef"><b>Definition:</b> venda.cpp:22</div></div>
+<div class="ttc" id="classVenda_html_a8087ccd34622de7d3badc92466d164e0"><div class="ttname"><a href="classVenda.html#a8087ccd34622de7d3badc92466d164e0">Venda::setProduto</a></div><div class="ttdeci">void setProduto(Produto p)</div><div class="ttdef"><b>Definition:</b> venda.cpp:37</div></div>
+<div class="ttc" id="classVenda_html_ac99a55c1aafd105ef354706f2fd3af4f"><div class="ttname"><a href="classVenda.html#ac99a55c1aafd105ef354706f2fd3af4f">Venda::getProduto</a></div><div class="ttdeci">Produto getProduto()</div><div class="ttdef"><b>Definition:</b> venda.cpp:29</div></div>
+<div class="ttc" id="classVenda_html_afdab5958696017cf8a0795415691c3c7"><div class="ttname"><a href="classVenda.html#afdab5958696017cf8a0795415691c3c7">Venda::operator!=</a></div><div class="ttdeci">bool operator!=(Venda &amp;v)</div><div class="ttdoc">Sobrecarga do operador de comparação > </div><div class="ttdef"><b>Definition:</b> venda.cpp:68</div></div>
+<div class="ttc" id="classVenda_html_a52ddfca03003ccfe02f7169ad249a29a"><div class="ttname"><a href="classVenda.html#a52ddfca03003ccfe02f7169ad249a29a">Venda::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, Venda &amp;v)</div><div class="ttdoc">Sobrecarga do operador de comparação > </div><div class="ttdef"><b>Definition:</b> venda.cpp:80</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sábado, 3 de Junho de 2017 20:28:54 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.8
+</small></address>
+</body>
+</html>

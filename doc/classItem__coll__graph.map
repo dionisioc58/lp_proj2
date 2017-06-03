@@ -1,4 +1,0 @@
-<map id="Item" name="Item">
-<area shape="rect" id="node2" href="$classFornecedor.html" title="Classe que representa um Fornecedor. " alt="" coords="5,124,92,151"/>
-<area shape="rect" id="node3" href="$classProduto.html" title="Classe que representa um Produto. " alt="" coords="117,124,183,151"/>
-</map>

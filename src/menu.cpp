@@ -22,7 +22,7 @@ string opcoes[itens] = {
     "Listar todos os produtos de um fornecedor   ", //8  - ok
     "Listar produtos por tipo                    ", //9  - ok
     "Listar produtos por codigo                  ", //10 - ok
-    "Vender                                      ", //11
+    "Realizar uma venda                          ", //11
     "Controle de estoque                         ", //12
     "Sair                                        "  //0  - ok
 };                /**< Opções do menu */
