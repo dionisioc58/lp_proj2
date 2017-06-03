@@ -9,18 +9,22 @@
 
 #include "menu.h"
 
-#define itens 11                 /**< Quantidade de opções no menu */
+#define itens 15                 /**< Quantidade de opções no menu */
 
 string opcoes[itens] = {
+    "Cadastrar um fornecedor                     ",
+    "Remover um fornecedor                       ",
+    "Listar os fornecedores                      ",
     "Cadastrar um produto                        ",
     "Remover um produto                          ",
-    "Editar um produto                           ",
+    "Alterar um produto                          ",
+    "Consultar um produto                        ",
+    "Consultar um produto de um fornecedor       ",
     "Consultar por tipo                          ",
     "Consultar por produto                       ",
     "Consultar por fornecedor                    ",
     "Cadastrar um fornecedor                     ",
     "Vender                                      ",
-    "Emitir nota fiscal                          ",
     "Controle de estoque                         ",
     "Sair                                        "
 };                /**< Opções do menu */

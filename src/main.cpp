@@ -16,6 +16,7 @@ using std::endl;
 #include "fornecedor.h"
 #include "menu.h"
 #include "bancodados.h"
+#include "item.h"
 
 /**
 * @brief        Função principal do programa
@@ -24,56 +25,62 @@ using std::endl;
 * @return		Retorno
 */
 int main(int argc, char* argv[]) {
-    int qtdt = 0;         /**< Quantidade de fornecedores cadastrados */
-    Fornecedor *tur = NULL;    /**< Vetor de fornecedores que conterá todo o cadastro */
-    tur = abrirBD("./data/banco.dat", tur, qtdt); /**< Recuperar o cadastro a partir de um arquivo */
+    //int qtd_est = 0, qtd_forn = 0, qtd_prods = 0;       /**< Quantidades */
+    //int qtd_forn = 0;
+    //Lista<Item> *estoque = NULL;                        /**< Lista de itens que conterá todo o estoque */
+    Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro de fornecedores */
+    
+    //estoque = abrirBD("./data/banco.dat", estoque, qtd_est); /**< Recuperar o cadastro a partir de um arquivo */
     while(1) {
         switch(showMenu()) { //Exibir o menu
             case 0:             //Sair
                 cout << endl;
-                delete[] tur;
+      //          delete[] estoque;
+                //delete fornecs;
+                //delete prods;
                 return 0;
-                break;
-                
+
             case 1:              //Cadastrar um fornecedor
-                tur = cadFornecedor(tur, qtdt);
+                cadFornecedor(fornecs);
                 break;
             case 2:              //Excluir um fornecedor
-                tur = delFornecedor(tur, qtdt);
+                delFornecedor(fornecs);
                 break;
             case 3:              //Listar os fornecedores
-                impFornecedores(tur, qtdt);
+                impFornecedores(fornecs, true);
                 break;
 
             case 4:              //Adicionar um produto
-                tur = addPr(tur, qtdt);
+                addPr(fornecs);
                 break;
-            case 5:              //Adicionar produtos através de um arquivo
-                tur = addPrArq(tur, qtdt);
+            /*case 5:              //Adicionar produtos através de um arquivo
+                estoque = addPrArq(estoque, qtd_est);
                 break;
             case 6:              //Excluir um produto
-                tur = delPr(tur, qtdt);
-                break;
+                estoque = delPr(estoque, qtd_est);
+                break;*/
             
             case 7:              //Listar os produtos de um fornecedor
-                impPr(tur, qtdt, false);
+                impPr(fornecs);
                 break;
             case 8:             //Listar todos os produtos de todas os fornecedores
-                impPr(tur, qtdt, true);
+                impPr(fornecs, false);
                 break;
-            case 9:
-                impFornecedores(tur, qtdt, true);
+            /*case 9:
+                impFornecedores(estoque, qtd_est, true);
                 break;
             
             case 10:            //Salvar o banco de dados
-                salvarBD("./data/banco.dat", tur, qtdt); 
+                salvarBD("./data/banco.dat", estoque, qtd_est); 
                 break;
             case 11:            //Recuperar o banco
-                tur = abrirBD("./data/banco.dat", tur, qtdt); 
-                break;
+                estoque = abrirBD("./data/banco.dat", estoque, qtd_est); 
+                break;*/
         }
     }
     cout << endl;
-    delete[] tur;
+ //   delete[] estoque;
+//    delete[] fornecs;
+    //delete prods;
     return 0;
 }

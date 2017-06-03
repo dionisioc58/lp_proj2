@@ -5,7 +5,7 @@
             "name": "C++ Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/bin/tarefa3",
+            "program": "${workspaceRoot}/bin/loja",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
@@ -39,7 +39,7 @@
             "name": "C++ Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceRoot}/palindromo",
+            "program": "${workspaceRoot}/bin/loja",
             "processId": "${command:pickProcess}",
             "linux": {
                 "MIMode": "gdb",

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['salgado',['Salgado',['../classSalgado.html',1,'']]]
+  ['perecivel',['Perecivel',['../classPerecivel.html',1,'']]],
+  ['produto',['Produto',['../classProduto.html',1,'']]]
 ];

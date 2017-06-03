@@ -22,7 +22,7 @@ Fornecedor::Fornecedor() {
 */
 Fornecedor::~Fornecedor() {
     //if(produtos->getProximo())
-        delete produtos;
+//        delete produtos;
 }
 
 /**
@@ -132,7 +132,25 @@ bool Fornecedor::pertenceFornecedor(string n) {
 * @return String com os dados para exportação CSV
 */
 string Fornecedor::exportar() {
-    return "Fornecedor;" + RSocial;
+    return "fornec;" + RSocial + ";" + CNPJ;
+}
+
+/** 
+* @details O operador é sobrecarregado para representar o Fornecedor
+* @param	a Referência para o objeto Fornecedor a ser comparado
+* @return	True se > que 'p'
+*/
+bool Fornecedor::operator>(Fornecedor &p) {
+    if(RSocial > p.getRSocial())
+        return true;
+    return false;
+}
+
+/** @brief Sobrecarga do operador de comparação > */
+bool Fornecedor::operator!=(Fornecedor &f) {
+    if(CNPJ == f.getCNPJ())
+        return false;
+    return true;
 }
 
 /** 
@@ -142,7 +160,7 @@ string Fornecedor::exportar() {
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Fornecedor &e) {
-	os << "RSocial: " << e.RSocial << "\t | produtos: " << e.produtos->getTamanho();
+	os << "R. Social: " << e.RSocial << "\t | produtos: " << e.produtos->getTamanho();
 	return os;
 }
 

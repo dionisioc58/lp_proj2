@@ -17,7 +17,6 @@ Produto::Produto() {
     descricao = "";
     tipo = "";
     preco = 0.00;
-    qntd = 0;
 }
 
 /**
@@ -88,26 +87,11 @@ void Produto::setpreco(double p) {
 }
 
 /**
-* @return quantidade do Produto
-*/
-int Produto::getqntd() {
-    return qntd;
-}
-
-/**
-* @details O método modifica a quantidade do Produto
-* @param   q quantidade
-*/
-void Produto::setqntd(int q) {
-    qntd = q;
-}
-
-/**
 * @return String com os dados para exportação CSV
 */
 string Produto::exportar() {
     stringstream ss;
-    ss << "produto;" << cb << ";" << descricao << ";" << tipo << ";" << preco << ";" << qntd;
+    ss << "produt;" << cb << ";" << descricao << ";" << tipo << ";" << preco;
     string retorno;
     getline(ss, retorno);
     return retorno;
@@ -134,8 +118,7 @@ ostream& operator<<(ostream& os, Produto &p) {
 	os <<  p.cb << "\t| ";
 	os << "Desc.: " << p.descricao << "\t| ";
     os << "Tipo.: " << p.tipo << "\t| ";
-    os << "Prec.: " << p.preco << "\t| ";
-    os << "Qntd.: " << p.qntd;
+    os << "Prec.: " << p.preco;
     
     return os;
 }
@@ -157,9 +140,6 @@ istream& operator>>(istream& is, Produto &p) {
 
     getline(is, lido, ';');
     p.preco = stod(lido);
-
-    getline(is, lido);
-    p.qntd = stoi(lido);
 
     return is;
 }

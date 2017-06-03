@@ -47,7 +47,6 @@ using std::stringstream;
         string descricao;            /**< descricao */
         string tipo;            /**< tipo do produto */
         double preco;           /**< preco */
-        int qntd;           /**< quantidade em estoque */
     public:
         Produto();                                                /**< Construtor padrão */
         ~Produto();                                               /**< Destrutor padrão */
@@ -63,11 +62,7 @@ using std::stringstream;
         
         double getpreco();                                       /**< Retorna o preco */
         void setpreco(double p);                                 /**< Modifica o preco */
-        
-        int getqntd();                                  /**< Retorna a quantidade em estoque */
-        void setqntd(int c);                            /**< Modifica a quantidade em estoque */
-        
-        
+                
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
         
         bool operator>(Produto &p);                               /** @brief Sobrecarga do operador de comparação > */

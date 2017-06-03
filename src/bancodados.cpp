@@ -56,112 +56,41 @@ Produto inputProduto() {
 }
 
 /**
-* @brief        Função que verifica se um fornecedor já existe no cadastro
-* @param[in]    *e Vetor de fornecedores do cadastro
-* @param[in]    n Número de fornecedores no cadastro
-* @param[in]    nome Razão social do fornecedor a ser verificado
-* @return       Retorna true caso já exista
-*/
-bool existeFornecedor(Fornecedor *e, int n, string nome) {
-    //Testa se já existe no cadastro
-    for(int i = 0; i < n; i++) {
-        if(e[i].getRSocial() == nome) {
-            cout << "Fornecedor já cadastrado!" << endl;
-            return true;
-        }
-    }
-    return false;
-}
-
-/**
 * @brief        Função que realiza o cadastro de um fornecedor
 * @param[in]    *e Vetor de fornecedores do cadastro
-* @param[inout] n Número de fornecedores no cadastro
-* @return       Retorna o novo vetor de fornecedores após o cadastro
 */
-Fornecedor *cadFornecedor(Fornecedor *e, int &n) {
+void cadFornecedor(Lista<Fornecedor> *e) {
     Fornecedor novo = inputFornecedor();
-    if(existeFornecedor(e, n, novo.getRSocial()))
-        return e;
-
-    Fornecedor *r = new Fornecedor[n + 1];
+    if(e->Busca(novo)) {
+        cout << "Fornecedor já cadastrado" << endl;
+        parar();
+    } else
+        e->Insere(novo);
     
-    //Se já tem Fornecedores, aumenta o vetor, copia a antiga lista para um novo maior
-    int j = 0;
-    for(int i = 0; i < n; i++) {
-        r[j].setRSocial(e[i].getRSocial());
-        r[j].setCNPJ(e[i].getCNPJ());
-        r[j].setProdutos(e[i].getProdutos());
-        j++;
-    }
-    if(n > 0)
-        delete[] e;
-
-    r[n++] = novo;
-    //r[n].setCNPJ(nome); //Guarda a nova turma informada
-    //n++;
-    
-    return r;
 }
 
 /**
 * @brief        Função que remove um fornecedor do cadastro
 * @param[in]    *e Vetor de fornecedores do cadastro
-* @param[inout] n Número de fornecedores no cadastro
-* @return       Retorna o novo vetor de fornecedores após a exclusão
 */
-Fornecedor *delFornecedor(Fornecedor *e, int &n) {
-    if(n == 0)
-        return e;
-
-    impFornecedores(e, n, false);
-    int selecao = recebeInt("Digite o número do fornecedor para a remoção (0 para cancelar): ", 0);
-    if(selecao == 0)
-        return e;
-    selecao--;  //O usuário vai digitar o número com base em 1
-
-    if(selecao > (n - 1)) {
-        cout << "Seleção inválida!" << endl;
-        return e;
-    }
-
-    Fornecedor *r = new Fornecedor[n - 1];
-
-    //Se já tem fornecedores, diminui o vetor, copia a antiga lista para uma nova menor
-    int j = 0;
-    for(int i = 0; i < n; i++)
-        if(i != selecao) {
-            r[j].setRSocial(e[i].getRSocial());
-            r[j].setCNPJ(e[i].getCNPJ());
-            r[j].setProdutos(e[i].getProdutos());
-            j++;
-        }
-
-    delete[] e;
-    n--;
-    return r;
+void delFornecedor(Lista<Fornecedor> *e) {
+    int selecao = selecionaFornecedor(e, "Digite o número do fornecedor para a remoção (0 para cancelar): ");
+    if(selecao >= 0)
+        e->RemovePos(selecao);
 }
 
 /**
 * @brief        Função que adiciona um produto à um fornecedor (apresenta escolha)
 * @param[in]    *e Vetor de fornecedores do cadastro
-* @param[in]    n Número de fornecedores no cadastro
-* @return       Retorna o novo vetor de fornecedores após o cadastro
 */
-Fornecedor *addPr(Fornecedor *e, int n) {
-    if(n == 0)
-        return e;
-
-    impFornecedores(e, n, false);
-    int selecao = recebeInt("Digite o número do fornecedor para a adição (0 para cancelar): ", 0);
-    if(selecao == 0)
-        return e;
-    selecao--;  //O usuário vai digitar o número com base em 1
-
-    Produto f;
-    f = inputProduto();
-    e[selecao].addProduto(f);
-    return e;
+void addPr(Lista<Fornecedor> *e) {
+    int selecao = selecionaFornecedor(e, "Digite o número do fornecedor para a adição (0 para cancelar): ");
+    if(selecao >= 0) {
+        Fornecedor *tmp = e->Posiciona(selecao);
+        Produto p;
+        p = inputProduto();
+        tmp->addProduto(p);
+    }
 }
 
 /**
@@ -173,7 +102,7 @@ Fornecedor *addPr(Fornecedor *e, int n) {
 * @return       Retorna o novo vetor de fornecedores após o cadastro
 */
 Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa) {
-    if(n == 0)
+   /* if(n == 0)
         return e;
 
     impFornecedores(e, n, false);
@@ -213,7 +142,8 @@ Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa) {
         getline(cin, pausa);
     }
 
-    return e;
+    return e;*/
+    return NULL;
 }
 
 /**
@@ -223,7 +153,7 @@ Fornecedor *addPrArq(Fornecedor *e, int n, bool pausa) {
 * @return       Retorna o novo vetor de Fornecedores após o cadastro
 */
 Fornecedor *delPr(Fornecedor *e, int n) {
-    if(n == 0)
+    /*if(n == 0)
         return e;
 
     int empsel = impPr(e, n, false, false); //Captura o fornecedor selecionado
@@ -234,7 +164,8 @@ Fornecedor *delPr(Fornecedor *e, int n) {
 
     if(!e[empsel].delProduto(selecao))
         cout << "Não foi possível remover!" << endl;
-    return e;
+    return e;*/
+    return NULL;
 }
 
 /**
@@ -243,44 +174,33 @@ Fornecedor *delPr(Fornecedor *e, int n) {
 * @param[in]    n Número de fornecedores no cadastro
 * @param[in]    pausa True para apresentar uma pausa após a impressão
 */
-void impFornecedores(Fornecedor *e, int n, bool pausa) {
-    cout << "Lista de fornecedores cadastradas: " << endl;
-    for(int i = 0; i < n; i++)
-        cout << "-- (" << (i + 1) << ") " << e[i] << endl;
-    cout << endl;
-    if(pausa) {
-        cout << "Pressione ENTER para continuar...";
-        string pausa;
-        getline(cin, pausa);
-    }
+void impFornecedores(Lista<Fornecedor> *e, bool pausa) {
+    e->Exibe(true);
+    if(pausa)
+        parar();
 }
 
 /**
 * @brief        Função que imprime a lista de produtos de um ou todos 
                 os fornecedores do cadastro
 * @param[inout] *e Vetor de Fornecedores do cadastro
-* @param[in]    n Número de Fornecedor no cadastro
 * @param[in]    all "true" imprime todos os produtos de todos os fornecedores
                 "false" imprime apenas os produtos de um fornecedor (apresenta escolha)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
 * @return       -1 ou o número do fornecedor selecionada
 */
-int impPr(Fornecedor *e, int n, bool all, bool pausa) {
-    if(n == 0)
-        return -1;
+int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
     if(!all) {      //Imprime todos os produtos de um fornecedor
-        impFornecedores(e, n, false);
-        int selecao = recebeInt("Digite o número do fornecedor (0 para cancelar): ", 0);
-        if(selecao == 0)
+        int selecao = selecionaFornecedor(e, "Digite o número do fornecedor (0 para cancelar): ");
+        if(selecao <= 0)
             return -1;
-        selecao--;  //O usuário vai digitar o número com base em 1
-
-        if(e[selecao].getQtde() > 0) {
-            cout << "Produtos do fornecedor " << e[selecao].getRSocial() << endl;
-            Lista<Produto> *f = e[selecao].getProdutos();
+        
+        Fornecedor *tmp = e->Posiciona(selecao);
+        if(tmp->getQtde() > 0) {
+            cout << "Produtos do fornecedor " << tmp->getRSocial() << endl;
+            Lista<Produto> *f = tmp->getProdutos();
             Produto produt;
-            //for(int i = 0; i < e[selecao].getQtde(); i++) {
-            for(int i = 0; i < e[selecao].getQtde(); i++) {
+            for(int i = 0; i < tmp->getQtde(); i++) {
                 f = f->getProximo();
                 produt = f->getValor();
                 cout << "   (" << (i + 1) << ") " << produt << endl;
@@ -289,33 +209,29 @@ int impPr(Fornecedor *e, int n, bool all, bool pausa) {
         } else
             cout << "Nenhum produto no fornecedor selecionado." << endl;
         
-        if(pausa) {
-            cout << "Pressione ENTER para continuar...";
-            string pausa;
-            getline(cin, pausa);
-        }
+        if(pausa)
+            parar();
         return selecao;
-    } else {        //Imprime todos os funcionários de todas as empresas
-        for(int j = 0; j < n; j++) {
-            if(e[j].getQtde() > 0) {
-                cout << "Produtos do fornecedor " << e[j].getRSocial() << endl;
-                Lista<Produto> *f = e[j].getProdutos();
-                Produto produt;
-                for(int i = 0; i < e[j].getQtde(); i++) {
-                    f = f->getProximo();
-                    produt = f->getValor();
-                    cout << "   (" << (i + 1) << ") " << produt << endl;
-                }
+
+    } else {        //Imprime todos os produtos de todos os fornecedores
+        Lista<Fornecedor> *tmp = e;
+        while(tmp) {
+            cout << "Produtos do fornecedor " << tmp->getValor().getRSocial() << endl;
+            Lista<Produto> *f = tmp->getValor().getProdutos();
+            Produto produt;
+            for(int i = 0; i < tmp->getValor().getQtde(); i++) {
+                f = f->getProximo();
+                produt = f->getValor();
+                cout << "   (" << (i + 1) << ") " << produt << endl;
             }
+            tmp = tmp->getProximo();
         }
-        
-        if(pausa) {
-            cout << "Pressione ENTER para continuar...";
-            string pausa;
-            getline(cin, pausa);
-        }
-        return -1;
     }
+        
+    if(pausa)
+        parar();
+    return -1;
+
 }
 
 /**
@@ -325,7 +241,7 @@ int impPr(Fornecedor *e, int n, bool all, bool pausa) {
 * @param[in]    n Número de Fornecedores no cadastro
 */
 void salvarBD(string nome, Fornecedor *e, int n) {
-    ofstream saida(nome);
+    /*ofstream saida(nome);
     if(!saida) {
         cout << "Não foi possível abrir o arquivo para salvar." << endl;
         return;
@@ -340,7 +256,7 @@ void salvarBD(string nome, Fornecedor *e, int n) {
     }
 
     saida.close();
-    cout << "Banco de dados salvo com sucesso!" << endl;
+    cout << "Banco de dados salvo com sucesso!" << endl;*/
 }
 
 /**
@@ -351,7 +267,7 @@ void salvarBD(string nome, Fornecedor *e, int n) {
 * @return       Retorna o novo vetor de Fornecedores após o cadastro
 */
 Fornecedor *abrirBD(string nome, Fornecedor *e, int &n) {
-    ifstream entrada(nome);
+    /*ifstream entrada(nome);
     if(!entrada) {
         cout << "Não foi possível abrir o arquivo de dados." << endl;
         return e;
@@ -391,5 +307,26 @@ Fornecedor *abrirBD(string nome, Fornecedor *e, int &n) {
     entrada.close();
     cout << "Recuperação concluída com sucesso!" << endl;
 
-    return r;
+    return r;*/
+    return NULL;
+}
+
+void parar() {
+    cout << "Pressione ENTER para continuar...";
+    string p;
+    getline(cin, p);
+}
+
+int selecionaFornecedor(Lista<Fornecedor> *e, string msg) {
+    impFornecedores(e, false);
+    int selecao = recebeInt(msg, 0);
+    if(selecao <= 0)
+        return -1;
+    selecao--;  //O usuário vai digitar o número com base em 1
+
+    if(selecao > e->getTamanho()) {
+        cout << "Seleção inválida!" << endl;
+        return -1;
+    }
+    return selecao;
 }
