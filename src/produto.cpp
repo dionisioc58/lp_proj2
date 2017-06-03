@@ -108,6 +108,13 @@ bool Produto::operator>(Produto &p) {
     return false;
 }
 
+/** @brief Sobrecarga do operador de comparação > */
+bool Produto::operator!=(Produto &p) {
+    if(cb == p.getcb())
+        return false;
+    return true;
+}
+
 /** 
 * @details O operador é sobrecarregado para representar o Produto
 * @param	os Referência para stream de saída

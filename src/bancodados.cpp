@@ -32,25 +32,141 @@ Fornecedor inputFornecedor() {
 * @brief        Função que coleta os dados para cadastro de um produto
 * @return       Produto coletado
 */
-Produto inputProduto() {
+Produto *inputProduto() {
     //Coleta dados do produto
     string input;
-    Produto novo;
+    int ints;
+    float floats;
+    Produto *novo;
+    cout << "Digite o tipo do produto: ";
+    getline(cin, input);
+    minusculas(input);
+    string tipo = input;
+
+    if(tipo == "bebida") {
+        Bebida *b = new Bebida();
+
+        cout << "Digite a data de validade (dd/mm/aaaa): ";
+        getline(cin, input);
+        b->setValidade(input);
+
+        ints = recebeInt("Digite a quantidade de açúcar: ", 0);
+        b->setAcucar(ints);
+
+        floats = recebeFloat("Digite o teor alcoólico: ", 0);
+        b->setAlcool(floats);
+        novo = b;
+    }
+    if(tipo == "fruta") {
+        Fruta *f = new Fruta();
+        cout << "Digite a data de validade (dd/mm/aaaa): ";
+        getline(cin, input);
+        f->setValidade(input);
+        
+        ints = recebeInt("Digite o número de frutas: ", 0);
+        f->setNum(ints);
+
+        cout << "Digite a data de produção (dd/mm/aaaa): ";
+        getline(cin, input);
+        f->setDp(input);
+        novo = f;
+    }
+    if(tipo == "doce") {
+        Doce *b = new Doce();
+
+        cout << "Digite a data de validade (dd/mm/aaaa): ";
+        getline(cin, input);
+        b->setValidade(input);
+
+        ints = recebeInt("Digite a quantidade de açúcar: ", 0);
+        b->setAcucar(ints);
+
+        //floats = recebeInt("Tem glicose: ", 0);
+        b->setGlicose(true);
+        novo = b;
+    }
+    if(tipo == "salgado") {
+        Salgado *b = new Salgado();
+
+        cout << "Digite a data de validade (dd/mm/aaaa): ";
+        getline(cin, input);
+        b->setValidade(input);
+
+        ints = recebeInt("Digite a quantidade de sódio: ", 0);
+        b->setSodio(ints);
+
+        //floats = recebeFloat("Digite o teor alcoólico: ", 0);
+        b->setGluten(true);
+
+        b->setLactose(true);
+        novo = b;
+    }
+    if(tipo == "cd") {
+        CD *b = new CD();
+
+        cout << "Digite o estilo: ";
+        getline(cin, input);
+        b->setEstilo(input);
+
+        cout << "Digite o nome do artista: ";
+        getline(cin, input);
+        b->setArtista(input);
+
+        cout << "Digite o nome do álbum: ";
+        getline(cin, input);
+        b->setNomeAlbum(input);
+        novo = b;
+    }
+    if(tipo == "dvd") {
+        DVD *b = new DVD();
+
+        cout << "Digite o título: ";
+        getline(cin, input);
+        b->setTitulo(input);
+
+        cout << "Digite o gênero: ";
+        getline(cin, input);
+        b->setGenero(input);
+
+        cout << "Digite a duracao: ";
+        getline(cin, input);
+        b->setDuracao(input);
+        novo = b;
+    }
+    if(tipo == "livro") {
+        Livro *b = new Livro();
+
+        cout << "Digite o autor: ";
+        getline(cin, input);
+        b->setAutor(input);
+
+        cout << "Digite o título: ";
+        getline(cin, input);
+        b->setTitulo(input);
+
+        cout << "Digite a editora: ";
+        getline(cin, input);
+        b->setEditora(input);
+
+        cout << "Digite o ano de publicação: ";
+        getline(cin, input);
+        b->setAnopub(input);
+        novo = b;
+    }
+
+    novo->settipo(tipo);
 
     cout << "Digite o código do produto: ";
     getline(cin, input);
-    novo.setcb(input);
+    novo->setcb(input);
 
     cout << "Digite a descrição do produto: ";
     getline(cin, input);
-    novo.setdescricao(input);
-
-    cout << "Digite o tipo do produto: ";
-    getline(cin, input);
-    novo.settipo(input);
-
+    novo->setdescricao(input);
+    
     float preco = recebeFloat("Digite o preço: ", 0);
-    novo.setpreco(preco);
+    novo->setpreco(preco);
+
     
     return novo;
 }
@@ -87,9 +203,13 @@ void addPr(Lista<Fornecedor> *e) {
     int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a adição (0 para cancelar): ");
     if(selecao >= 0) {
         Fornecedor *tmp = e->Posiciona(selecao);
-        Produto p;
+        Produto *p;
         p = inputProduto();
-        tmp->addProduto(p);
+        if(tmp->getProdutos()->Busca(*p)) {
+            cout << "Produto já cadastrado" << endl;
+            parar();
+        }
+        tmp->addProduto(*p);
     }
 }
 

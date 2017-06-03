@@ -34,4 +34,10 @@
     */
     int recebeInt(string msg, int min);
 
+    /**
+    * @brief Funcao que converte todos os caracteres para letra minuscula
+    * @param s String a ser convertida
+    */
+    void minusculas(string& s);
+
 #endif

@@ -97,134 +97,135 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="produto_8h.html">produto.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> std::string;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::ostream;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::istream;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::stringstream;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBebida.html">   27</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classBebida.html">Bebida</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">int</span> acucar;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">float</span> alcool;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classBebida.html#afab3bc3b54a7e55049ed36fae3479dfb">Bebida</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classBebida.html#a4ed0a8b2b0b464f2b39ef81a01e297ad">~Bebida</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBebida.html#ab1e5cfbed14dc0c8c057c9e6ef94eeea">setAcucar</a>(<span class="keywordtype">int</span> ac);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classBebida.html#aa76927fe467e36ac64c6ea675cb0782a">getAcucar</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBebida.html#a6ca387d10c5b489aa677ddb0a0987232">setAlcool</a>(<span class="keywordtype">float</span> al);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classBebida.html#adf06b068c24180509f37c0b90f682a3a">getAlcool</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classFruta.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFruta.html">Fruta</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">int</span> num;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">string</span> dp;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="classFruta.html#ae1b52e5f60e121e940e9523e71b38e2d">Fruta</a>();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classFruta.html#a634920474b757127cb86443d402f84dd">~Fruta</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classFruta.html#a4b662c42674b7ab5e620ec0835c3debc">setNum</a>(<span class="keywordtype">int</span> n);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classFruta.html#aa1728d5931c6e086389f83ce1f357485">getNum</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classFruta.html#a3b40f23831895895bc8e4c269185970b">setDp</a>(<span class="keywordtype">string</span> d);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classFruta.html#aed972d07709117d0979688e1b398371e">getDp</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    };</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classDoce.html">   67</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classDoce.html">Doce</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">int</span> acucar;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">bool</span> gluten;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">bool</span> glicose;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classDoce.html#a898a5a0c789878a63aee7ae3a853d53f">Doce</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="classDoce.html#ac6f87066bc3d62a4fe2dff476a545ab3">~Doce</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDoce.html#a519fb447f293cd8ca93a6bbb8ce594eb">setAcucar</a>(<span class="keywordtype">int</span> a);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classDoce.html#ae3e0ba9ac76ff3e480fa8decaf883791">getAcucar</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDoce.html#a3de54c02c733aefaa7d4fddaebde2b0e">setGluten</a>(<span class="keywordtype">bool</span> g);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classDoce.html#a2a7c785c1fcbb366eef272a34cfd3f38">getGluten</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDoce.html#aeb4d78641a64eeddb9703e772a9b4d59">setGlicose</a>(<span class="keywordtype">bool</span> l);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classDoce.html#aa74b3588ab7636309b3591a677b2e619">getGlicose</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    };</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classSalgado.html">   90</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSalgado.html">Salgado</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">int</span> sodio;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">bool</span> gluten;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> lactose;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="classSalgado.html#a0b6e0ad1df4b10f77396a5b10f7eca7c">Salgado</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classSalgado.html#a4071a6743c5edf6ebed4a92cbad9fd08">~Salgado</a>();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSalgado.html#a10f39575129a96a1a97e02b8247d7222">setSodio</a>(<span class="keywordtype">int</span> s);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classSalgado.html#a5dcd6ae9d790fc5b18518c82d5292e47">getSodio</a>();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSalgado.html#aa38fe5d62f755f09c700378f5ca4b6e5">setGluten</a>(<span class="keywordtype">bool</span> g);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classSalgado.html#ad17c651a248db07e48ddec719a792db9">getGluten</a>();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSalgado.html#a32d5f846dd2c714ca43299db1c84bdae">setLactose</a>(<span class="keywordtype">bool</span> l);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classSalgado.html#a351d22f4c65a544757a76fbd91e02545">getLactose</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    };</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="classCD.html">  113</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCD.html">CD</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a> {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">string</span> estilo;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">string</span> artista;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">string</span> NomeAlbum;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="classCD.html#a42728f0dd399d7fdeafaef8ffdcf48e6">CD</a>();</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classCD.html#a5e0f6f328b8ffc033250e0670757fb77">~CD</a>();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classCD.html#acd67c84454a8479b38cce30126489646">setEstilo</a>(<span class="keywordtype">string</span> e);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classCD.html#ad29e19048a604dda77b3100dde77d3e8">getEstilo</a>();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classCD.html#acf47d423b3a2c3e4dc75b23aa27473bd">setArtista</a>(<span class="keywordtype">string</span> a);</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classCD.html#ac3a0b10582d97aef34a81d247dbb3a06">getArtista</a>();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classCD.html#a25c9aac028c6535d61ee03f37b3c6e47">setNomeAlbum</a>(<span class="keywordtype">string</span> n);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classCD.html#a7792e4ad4f4859f8f13cb7349483a595">getNomeAlbum</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    };</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="classDVD.html">  136</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classDVD.html">DVD</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a> {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">string</span> titulo;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">string</span> genero;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordtype">string</span> duracao;</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classDVD.html#a9dd9ea53f77c2a8ed8809271d6d02cc2">DVD</a>();</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="classDVD.html#ac930d61c8e18a1adee751e9b53e29073">~DVD</a>();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDVD.html#aba13aab50e905a00ce00cf354f067a90">setTitulo</a>(<span class="keywordtype">string</span> t);</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDVD.html#a1dd7bf7d8f0b27854dd7303f67ca84ed">getTitulo</a>();</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDVD.html#ad14568c518ee50ace90c953951801254">setGenero</a>(<span class="keywordtype">string</span> g);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDVD.html#a1c689ad539595e63f9e3b89e60c794bf">getGenero</a>();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDVD.html#a63bb80a1f9117c49c096dc561413637b">setDuracao</a>(<span class="keywordtype">string</span> d);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDVD.html#a16b8318dafe0b33ffdc30347660e0820">getDuracao</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    };</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;</div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="classLivro.html">  159</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLivro.html">Livro</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a> {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">string</span> autor;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">string</span> titulo;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">string</span> editora;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">string</span> anopub;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="classLivro.html#a4b89ad279d36589f7337083cdf006861">Livro</a>();</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="classLivro.html#a1f3b49a5fbaf89727b0d0317e128655f">~Livro</a>();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#aa5d357eef32a785227610c2c5c09c6bd">setAutor</a>(<span class="keywordtype">string</span> a);</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#a47ea912e8e6ae63aedfd7c46ddb94c1b">getAutor</a>();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#a03525ef448ba52dac31402c4101a0bba">setTitulo</a>(<span class="keywordtype">string</span> t);</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#af9521ac8f161bc215f50b0a626163105">getTitulo</a>();</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#a32373fd0322ed546352681bf1ac2d8c4">setEditora</a>(<span class="keywordtype">string</span> e);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#ae575086862269d15a4edeb45986c02d3">getEditora</a>();</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#af3a8320b743022c91c4aa70b0b346031">setAnopub</a>(<span class="keywordtype">string</span> ap);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#a3807fba9854efee335f22fbc59a4ca0b">getAnopub</a>();</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    };</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="perecivel_8h.html">perecivel.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> std::string;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> std::ostream;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::istream;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> std::stringstream;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classBebida.html">   28</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classBebida.html">Bebida</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <span class="keyword">public</span> <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">int</span> acucar;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordtype">float</span> alcool;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <a class="code" href="classBebida.html#afab3bc3b54a7e55049ed36fae3479dfb">Bebida</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="classBebida.html#a4ed0a8b2b0b464f2b39ef81a01e297ad">~Bebida</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBebida.html#ab1e5cfbed14dc0c8c057c9e6ef94eeea">setAcucar</a>(<span class="keywordtype">int</span> ac);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classBebida.html#aa76927fe467e36ac64c6ea675cb0782a">getAcucar</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBebida.html#a6ca387d10c5b489aa677ddb0a0987232">setAlcool</a>(<span class="keywordtype">float</span> al);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">float</span> <a class="code" href="classBebida.html#adf06b068c24180509f37c0b90f682a3a">getAlcool</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classFruta.html">   48</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classFruta.html">Fruta</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <span class="keyword">public</span> <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> num;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">string</span> dp;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classFruta.html#ae1b52e5f60e121e940e9523e71b38e2d">Fruta</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classFruta.html#a634920474b757127cb86443d402f84dd">~Fruta</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classFruta.html#a4b662c42674b7ab5e620ec0835c3debc">setNum</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classFruta.html#aa1728d5931c6e086389f83ce1f357485">getNum</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classFruta.html#a3b40f23831895895bc8e4c269185970b">setDp</a>(<span class="keywordtype">string</span> d);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classFruta.html#aed972d07709117d0979688e1b398371e">getDp</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    };</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classDoce.html">   68</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classDoce.html">Doce</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <span class="keyword">public</span> <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">int</span> acucar;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">bool</span> gluten;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">bool</span> glicose;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="classDoce.html#a898a5a0c789878a63aee7ae3a853d53f">Doce</a>();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="classDoce.html#ac6f87066bc3d62a4fe2dff476a545ab3">~Doce</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDoce.html#a519fb447f293cd8ca93a6bbb8ce594eb">setAcucar</a>(<span class="keywordtype">int</span> a);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classDoce.html#ae3e0ba9ac76ff3e480fa8decaf883791">getAcucar</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDoce.html#a3de54c02c733aefaa7d4fddaebde2b0e">setGluten</a>(<span class="keywordtype">bool</span> g);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classDoce.html#a2a7c785c1fcbb366eef272a34cfd3f38">getGluten</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDoce.html#aeb4d78641a64eeddb9703e772a9b4d59">setGlicose</a>(<span class="keywordtype">bool</span> l);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classDoce.html#aa74b3588ab7636309b3591a677b2e619">getGlicose</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    };</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classSalgado.html">   91</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classSalgado.html">Salgado</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a>, <span class="keyword">public</span> <a class="code" href="classPerecivel.html">Perecivel</a> {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">int</span> sodio;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">bool</span> gluten;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">bool</span> lactose;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classSalgado.html#a0b6e0ad1df4b10f77396a5b10f7eca7c">Salgado</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classSalgado.html#a4071a6743c5edf6ebed4a92cbad9fd08">~Salgado</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSalgado.html#a10f39575129a96a1a97e02b8247d7222">setSodio</a>(<span class="keywordtype">int</span> s);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classSalgado.html#a5dcd6ae9d790fc5b18518c82d5292e47">getSodio</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSalgado.html#aa38fe5d62f755f09c700378f5ca4b6e5">setGluten</a>(<span class="keywordtype">bool</span> g);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classSalgado.html#ad17c651a248db07e48ddec719a792db9">getGluten</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classSalgado.html#a32d5f846dd2c714ca43299db1c84bdae">setLactose</a>(<span class="keywordtype">bool</span> l);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classSalgado.html#a351d22f4c65a544757a76fbd91e02545">getLactose</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="classCD.html">  114</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classCD.html">CD</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a> {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">string</span> estilo;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">string</span> artista;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">string</span> NomeAlbum;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classCD.html#a42728f0dd399d7fdeafaef8ffdcf48e6">CD</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classCD.html#a5e0f6f328b8ffc033250e0670757fb77">~CD</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classCD.html#acd67c84454a8479b38cce30126489646">setEstilo</a>(<span class="keywordtype">string</span> e);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classCD.html#ad29e19048a604dda77b3100dde77d3e8">getEstilo</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classCD.html#acf47d423b3a2c3e4dc75b23aa27473bd">setArtista</a>(<span class="keywordtype">string</span> a);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classCD.html#ac3a0b10582d97aef34a81d247dbb3a06">getArtista</a>();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classCD.html#a25c9aac028c6535d61ee03f37b3c6e47">setNomeAlbum</a>(<span class="keywordtype">string</span> n);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classCD.html#a7792e4ad4f4859f8f13cb7349483a595">getNomeAlbum</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    };</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="classDVD.html">  137</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classDVD.html">DVD</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a> {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordtype">string</span> titulo;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordtype">string</span> genero;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">string</span> duracao;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="classDVD.html#a9dd9ea53f77c2a8ed8809271d6d02cc2">DVD</a>();</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <a class="code" href="classDVD.html#ac930d61c8e18a1adee751e9b53e29073">~DVD</a>();</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDVD.html#aba13aab50e905a00ce00cf354f067a90">setTitulo</a>(<span class="keywordtype">string</span> t);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDVD.html#a1dd7bf7d8f0b27854dd7303f67ca84ed">getTitulo</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDVD.html#ad14568c518ee50ace90c953951801254">setGenero</a>(<span class="keywordtype">string</span> g);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDVD.html#a1c689ad539595e63f9e3b89e60c794bf">getGenero</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classDVD.html#a63bb80a1f9117c49c096dc561413637b">setDuracao</a>(<span class="keywordtype">string</span> d);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classDVD.html#a16b8318dafe0b33ffdc30347660e0820">getDuracao</a>();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    </div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    };</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="line" href="classLivro.html">  160</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLivro.html">Livro</a> : <span class="keyword">public</span> <a class="code" href="classProduto.html">Produto</a> {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordtype">string</span> autor;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">string</span> titulo;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <span class="keywordtype">string</span> editora;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">string</span> anopub;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <a class="code" href="classLivro.html#a4b89ad279d36589f7337083cdf006861">Livro</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="classLivro.html#a1f3b49a5fbaf89727b0d0317e128655f">~Livro</a>();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#aa5d357eef32a785227610c2c5c09c6bd">setAutor</a>(<span class="keywordtype">string</span> a);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#a47ea912e8e6ae63aedfd7c46ddb94c1b">getAutor</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#a03525ef448ba52dac31402c4101a0bba">setTitulo</a>(<span class="keywordtype">string</span> t);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#af9521ac8f161bc215f50b0a626163105">getTitulo</a>();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#a32373fd0322ed546352681bf1ac2d8c4">setEditora</a>(<span class="keywordtype">string</span> e);</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#ae575086862269d15a4edeb45986c02d3">getEditora</a>();</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLivro.html#af3a8320b743022c91c4aa70b0b346031">setAnopub</a>(<span class="keywordtype">string</span> ap);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classLivro.html#a3807fba9854efee335f22fbc59a4ca0b">getAnopub</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    };</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classBebida_html_ab1e5cfbed14dc0c8c057c9e6ef94eeea"><div class="ttname"><a href="classBebida.html#ab1e5cfbed14dc0c8c057c9e6ef94eeea">Bebida::setAcucar</a></div><div class="ttdeci">void setAcucar(int ac)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:39</div></div>
 <div class="ttc" id="classCD_html_a25c9aac028c6535d61ee03f37b3c6e47"><div class="ttname"><a href="classCD.html#a25c9aac028c6535d61ee03f37b3c6e47">CD::setNomeAlbum</a></div><div class="ttdeci">void setNomeAlbum(string n)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:68</div></div>
 <div class="ttc" id="classCD_html_acd67c84454a8479b38cce30126489646"><div class="ttname"><a href="classCD.html#acd67c84454a8479b38cce30126489646">CD::setEstilo</a></div><div class="ttdeci">void setEstilo(string e)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:40</div></div>
@@ -232,14 +233,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="ttc" id="classLivro_html_a03525ef448ba52dac31402c4101a0bba"><div class="ttname"><a href="classLivro.html#a03525ef448ba52dac31402c4101a0bba">Livro::setTitulo</a></div><div class="ttdeci">void setTitulo(string t)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:159</div></div>
 <div class="ttc" id="classDoce_html_a898a5a0c789878a63aee7ae3a853d53f"><div class="ttname"><a href="classDoce.html#a898a5a0c789878a63aee7ae3a853d53f">Doce::Doce</a></div><div class="ttdeci">Doce()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:105</div></div>
 <div class="ttc" id="classDVD_html_a1dd7bf7d8f0b27854dd7303f67ca84ed"><div class="ttname"><a href="classDVD.html#a1dd7bf7d8f0b27854dd7303f67ca84ed">DVD::getTitulo</a></div><div class="ttdeci">string getTitulo()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:91</div></div>
-<div class="ttc" id="classDoce_html"><div class="ttname"><a href="classDoce.html">Doce</a></div><div class="ttdoc">Classe derivada que representa um Doce. </div><div class="ttdef"><b>Definition:</b> subproduto.h:67</div></div>
+<div class="ttc" id="classDoce_html"><div class="ttname"><a href="classDoce.html">Doce</a></div><div class="ttdoc">Classe derivada que representa um Doce. </div><div class="ttdef"><b>Definition:</b> subproduto.h:68</div></div>
 <div class="ttc" id="classCD_html_acf47d423b3a2c3e4dc75b23aa27473bd"><div class="ttname"><a href="classCD.html#acf47d423b3a2c3e4dc75b23aa27473bd">CD::setArtista</a></div><div class="ttdeci">void setArtista(string a)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:54</div></div>
 <div class="ttc" id="classSalgado_html_a32d5f846dd2c714ca43299db1c84bdae"><div class="ttname"><a href="classSalgado.html#a32d5f846dd2c714ca43299db1c84bdae">Salgado::setLactose</a></div><div class="ttdeci">void setLactose(bool l)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:204</div></div>
 <div class="ttc" id="classDoce_html_a519fb447f293cd8ca93a6bbb8ce594eb"><div class="ttname"><a href="classDoce.html#a519fb447f293cd8ca93a6bbb8ce594eb">Doce::setAcucar</a></div><div class="ttdeci">void setAcucar(int a)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:129</div></div>
 <div class="ttc" id="classDoce_html_aeb4d78641a64eeddb9703e772a9b4d59"><div class="ttname"><a href="classDoce.html#aeb4d78641a64eeddb9703e772a9b4d59">Doce::setGlicose</a></div><div class="ttdeci">void setGlicose(bool l)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:144</div></div>
 <div class="ttc" id="classFruta_html_a634920474b757127cb86443d402f84dd"><div class="ttname"><a href="classFruta.html#a634920474b757127cb86443d402f84dd">Fruta::~Fruta</a></div><div class="ttdeci">~Fruta()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:68</div></div>
 <div class="ttc" id="classCD_html_ac3a0b10582d97aef34a81d247dbb3a06"><div class="ttname"><a href="classCD.html#ac3a0b10582d97aef34a81d247dbb3a06">CD::getArtista</a></div><div class="ttdeci">string getArtista()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:46</div></div>
-<div class="ttc" id="classProduto_html"><div class="ttname"><a href="classProduto.html">Produto</a></div><div class="ttdoc">Classe que representa um Produto. </div><div class="ttdef"><b>Definition:</b> produto.h:44</div></div>
+<div class="ttc" id="classProduto_html"><div class="ttname"><a href="classProduto.html">Produto</a></div><div class="ttdoc">Classe que representa um Produto. </div><div class="ttdef"><b>Definition:</b> produto.h:26</div></div>
 <div class="ttc" id="classFruta_html_a4b662c42674b7ab5e620ec0835c3debc"><div class="ttname"><a href="classFruta.html#a4b662c42674b7ab5e620ec0835c3debc">Fruta::setNum</a></div><div class="ttdeci">void setNum(int n)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:83</div></div>
 <div class="ttc" id="classCD_html_a42728f0dd399d7fdeafaef8ffdcf48e6"><div class="ttname"><a href="classCD.html#a42728f0dd399d7fdeafaef8ffdcf48e6">CD::CD</a></div><div class="ttdeci">CD()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:16</div></div>
 <div class="ttc" id="classDVD_html_ad14568c518ee50ace90c953951801254"><div class="ttname"><a href="classDVD.html#ad14568c518ee50ace90c953951801254">DVD::setGenero</a></div><div class="ttdeci">void setGenero(string g)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:113</div></div>
@@ -249,17 +250,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="ttc" id="classDVD_html_a1c689ad539595e63f9e3b89e60c794bf"><div class="ttname"><a href="classDVD.html#a1c689ad539595e63f9e3b89e60c794bf">DVD::getGenero</a></div><div class="ttdeci">string getGenero()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:105</div></div>
 <div class="ttc" id="classLivro_html_a32373fd0322ed546352681bf1ac2d8c4"><div class="ttname"><a href="classLivro.html#a32373fd0322ed546352681bf1ac2d8c4">Livro::setEditora</a></div><div class="ttdeci">void setEditora(string e)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:187</div></div>
 <div class="ttc" id="classFruta_html_ae1b52e5f60e121e940e9523e71b38e2d"><div class="ttname"><a href="classFruta.html#ae1b52e5f60e121e940e9523e71b38e2d">Fruta::Fruta</a></div><div class="ttdeci">Fruta()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:60</div></div>
-<div class="ttc" id="classFruta_html"><div class="ttname"><a href="classFruta.html">Fruta</a></div><div class="ttdoc">Classe derivada que representa uma Fruta. </div><div class="ttdef"><b>Definition:</b> subproduto.h:47</div></div>
+<div class="ttc" id="classFruta_html"><div class="ttname"><a href="classFruta.html">Fruta</a></div><div class="ttdoc">Classe derivada que representa uma Fruta. </div><div class="ttdef"><b>Definition:</b> subproduto.h:48</div></div>
 <div class="ttc" id="classCD_html_a5e0f6f328b8ffc033250e0670757fb77"><div class="ttname"><a href="classCD.html#a5e0f6f328b8ffc033250e0670757fb77">CD::~CD</a></div><div class="ttdeci">~CD()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:25</div></div>
 <div class="ttc" id="classSalgado_html_a4071a6743c5edf6ebed4a92cbad9fd08"><div class="ttname"><a href="classSalgado.html#a4071a6743c5edf6ebed4a92cbad9fd08">Salgado::~Salgado</a></div><div class="ttdeci">~Salgado()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:174</div></div>
 <div class="ttc" id="classSalgado_html_a5dcd6ae9d790fc5b18518c82d5292e47"><div class="ttname"><a href="classSalgado.html#a5dcd6ae9d790fc5b18518c82d5292e47">Salgado::getSodio</a></div><div class="ttdeci">int getSodio()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:181</div></div>
 <div class="ttc" id="classBebida_html_a6ca387d10c5b489aa677ddb0a0987232"><div class="ttname"><a href="classBebida.html#a6ca387d10c5b489aa677ddb0a0987232">Bebida::setAlcool</a></div><div class="ttdeci">void setAlcool(float al)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:53</div></div>
-<div class="ttc" id="classBebida_html"><div class="ttname"><a href="classBebida.html">Bebida</a></div><div class="ttdoc">Classe derivada que representa uma bebida. </div><div class="ttdef"><b>Definition:</b> subproduto.h:27</div></div>
+<div class="ttc" id="classBebida_html"><div class="ttname"><a href="classBebida.html">Bebida</a></div><div class="ttdoc">Classe derivada que representa uma bebida. </div><div class="ttdef"><b>Definition:</b> subproduto.h:28</div></div>
 <div class="ttc" id="classSalgado_html_a10f39575129a96a1a97e02b8247d7222"><div class="ttname"><a href="classSalgado.html#a10f39575129a96a1a97e02b8247d7222">Salgado::setSodio</a></div><div class="ttdeci">void setSodio(int s)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:189</div></div>
 <div class="ttc" id="classDoce_html_ae3e0ba9ac76ff3e480fa8decaf883791"><div class="ttname"><a href="classDoce.html#ae3e0ba9ac76ff3e480fa8decaf883791">Doce::getAcucar</a></div><div class="ttdeci">int getAcucar()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:121</div></div>
 <div class="ttc" id="classLivro_html_a1f3b49a5fbaf89727b0d0317e128655f"><div class="ttname"><a href="classLivro.html#a1f3b49a5fbaf89727b0d0317e128655f">Livro::~Livro</a></div><div class="ttdeci">~Livro()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:144</div></div>
 <div class="ttc" id="classLivro_html_a3807fba9854efee335f22fbc59a4ca0b"><div class="ttname"><a href="classLivro.html#a3807fba9854efee335f22fbc59a4ca0b">Livro::getAnopub</a></div><div class="ttdeci">string getAnopub()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:194</div></div>
-<div class="ttc" id="classCD_html"><div class="ttname"><a href="classCD.html">CD</a></div><div class="ttdoc">Classe derivada que representa um CD. </div><div class="ttdef"><b>Definition:</b> subproduto.h:113</div></div>
+<div class="ttc" id="classCD_html"><div class="ttname"><a href="classCD.html">CD</a></div><div class="ttdoc">Classe derivada que representa um CD. </div><div class="ttdef"><b>Definition:</b> subproduto.h:114</div></div>
 <div class="ttc" id="classSalgado_html_aa38fe5d62f755f09c700378f5ca4b6e5"><div class="ttname"><a href="classSalgado.html#aa38fe5d62f755f09c700378f5ca4b6e5">Salgado::setGluten</a></div><div class="ttdeci">void setGluten(bool g)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:218</div></div>
 <div class="ttc" id="classBebida_html_aa76927fe467e36ac64c6ea675cb0782a"><div class="ttname"><a href="classBebida.html#aa76927fe467e36ac64c6ea675cb0782a">Bebida::getAcucar</a></div><div class="ttdeci">int getAcucar()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:31</div></div>
 <div class="ttc" id="classLivro_html_af9521ac8f161bc215f50b0a626163105"><div class="ttname"><a href="classLivro.html#af9521ac8f161bc215f50b0a626163105">Livro::getTitulo</a></div><div class="ttdeci">string getTitulo()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:151</div></div>
@@ -268,13 +269,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="ttc" id="classDoce_html_a3de54c02c733aefaa7d4fddaebde2b0e"><div class="ttname"><a href="classDoce.html#a3de54c02c733aefaa7d4fddaebde2b0e">Doce::setGluten</a></div><div class="ttdeci">void setGluten(bool g)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:158</div></div>
 <div class="ttc" id="classSalgado_html_a0b6e0ad1df4b10f77396a5b10f7eca7c"><div class="ttname"><a href="classSalgado.html#a0b6e0ad1df4b10f77396a5b10f7eca7c">Salgado::Salgado</a></div><div class="ttdeci">Salgado()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:165</div></div>
 <div class="ttc" id="classLivro_html_ae575086862269d15a4edeb45986c02d3"><div class="ttname"><a href="classLivro.html#ae575086862269d15a4edeb45986c02d3">Livro::getEditora</a></div><div class="ttdeci">string getEditora()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:179</div></div>
-<div class="ttc" id="classLivro_html"><div class="ttname"><a href="classLivro.html">Livro</a></div><div class="ttdoc">Classe derivada que representa um Livro. </div><div class="ttdef"><b>Definition:</b> subproduto.h:159</div></div>
+<div class="ttc" id="classLivro_html"><div class="ttname"><a href="classLivro.html">Livro</a></div><div class="ttdoc">Classe derivada que representa um Livro. </div><div class="ttdef"><b>Definition:</b> subproduto.h:160</div></div>
 <div class="ttc" id="classCD_html_ad29e19048a604dda77b3100dde77d3e8"><div class="ttname"><a href="classCD.html#ad29e19048a604dda77b3100dde77d3e8">CD::getEstilo</a></div><div class="ttdeci">string getEstilo()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:32</div></div>
 <div class="ttc" id="classDoce_html_aa74b3588ab7636309b3591a677b2e619"><div class="ttname"><a href="classDoce.html#aa74b3588ab7636309b3591a677b2e619">Doce::getGlicose</a></div><div class="ttdeci">bool getGlicose()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:136</div></div>
 <div class="ttc" id="classFruta_html_a3b40f23831895895bc8e4c269185970b"><div class="ttname"><a href="classFruta.html#a3b40f23831895895bc8e4c269185970b">Fruta::setDp</a></div><div class="ttdeci">void setDp(string d)</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:98</div></div>
 <div class="ttc" id="classDVD_html_aba13aab50e905a00ce00cf354f067a90"><div class="ttname"><a href="classDVD.html#aba13aab50e905a00ce00cf354f067a90">DVD::setTitulo</a></div><div class="ttdeci">void setTitulo(string t)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:99</div></div>
 <div class="ttc" id="classBebida_html_a4ed0a8b2b0b464f2b39ef81a01e297ad"><div class="ttname"><a href="classBebida.html#a4ed0a8b2b0b464f2b39ef81a01e297ad">Bebida::~Bebida</a></div><div class="ttdeci">~Bebida()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:24</div></div>
-<div class="ttc" id="classSalgado_html"><div class="ttname"><a href="classSalgado.html">Salgado</a></div><div class="ttdoc">Classe derivada que representa um Salgado. </div><div class="ttdef"><b>Definition:</b> subproduto.h:90</div></div>
+<div class="ttc" id="classSalgado_html"><div class="ttname"><a href="classSalgado.html">Salgado</a></div><div class="ttdoc">Classe derivada que representa um Salgado. </div><div class="ttdef"><b>Definition:</b> subproduto.h:91</div></div>
 <div class="ttc" id="classFruta_html_aa1728d5931c6e086389f83ce1f357485"><div class="ttname"><a href="classFruta.html#aa1728d5931c6e086389f83ce1f357485">Fruta::getNum</a></div><div class="ttdeci">int getNum()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:75</div></div>
 <div class="ttc" id="classCD_html_a7792e4ad4f4859f8f13cb7349483a595"><div class="ttname"><a href="classCD.html#a7792e4ad4f4859f8f13cb7349483a595">CD::getNomeAlbum</a></div><div class="ttdeci">string getNomeAlbum()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:60</div></div>
 <div class="ttc" id="classBebida_html_afab3bc3b54a7e55049ed36fae3479dfb"><div class="ttname"><a href="classBebida.html#afab3bc3b54a7e55049ed36fae3479dfb">Bebida::Bebida</a></div><div class="ttdeci">Bebida()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:16</div></div>
@@ -286,13 +287,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="ttc" id="classBebida_html_adf06b068c24180509f37c0b90f682a3a"><div class="ttname"><a href="classBebida.html#adf06b068c24180509f37c0b90f682a3a">Bebida::getAlcool</a></div><div class="ttdeci">float getAlcool()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:45</div></div>
 <div class="ttc" id="classDVD_html_a9dd9ea53f77c2a8ed8809271d6d02cc2"><div class="ttname"><a href="classDVD.html#a9dd9ea53f77c2a8ed8809271d6d02cc2">DVD::DVD</a></div><div class="ttdeci">DVD()</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:75</div></div>
 <div class="ttc" id="classSalgado_html_a351d22f4c65a544757a76fbd91e02545"><div class="ttname"><a href="classSalgado.html#a351d22f4c65a544757a76fbd91e02545">Salgado::getLactose</a></div><div class="ttdeci">bool getLactose()</div><div class="ttdef"><b>Definition:</b> pereciveis.cpp:196</div></div>
-<div class="ttc" id="classDVD_html"><div class="ttname"><a href="classDVD.html">DVD</a></div><div class="ttdoc">Classe derivada que representa um DVD. </div><div class="ttdef"><b>Definition:</b> subproduto.h:136</div></div>
-<div class="ttc" id="classPerecivel_html"><div class="ttname"><a href="classPerecivel.html">Perecivel</a></div><div class="ttdoc">Classe que representa um produto perecivel. </div><div class="ttdef"><b>Definition:</b> produto.h:27</div></div>
+<div class="ttc" id="perecivel_8h_html"><div class="ttname"><a href="perecivel_8h.html">perecivel.h</a></div><div class="ttdoc">Definição da classe Perecivel. </div></div>
+<div class="ttc" id="classDVD_html"><div class="ttname"><a href="classDVD.html">DVD</a></div><div class="ttdoc">Classe derivada que representa um DVD. </div><div class="ttdef"><b>Definition:</b> subproduto.h:137</div></div>
+<div class="ttc" id="classPerecivel_html"><div class="ttname"><a href="classPerecivel.html">Perecivel</a></div><div class="ttdoc">Classe que representa um produto perecivel. </div><div class="ttdef"><b>Definition:</b> perecivel.h:18</div></div>
 <div class="ttc" id="classLivro_html_aa5d357eef32a785227610c2c5c09c6bd"><div class="ttname"><a href="classLivro.html#aa5d357eef32a785227610c2c5c09c6bd">Livro::setAutor</a></div><div class="ttdeci">void setAutor(string a)</div><div class="ttdef"><b>Definition:</b> npereciveis.cpp:173</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 3 de Junho de 2017 13:03:15 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 3 de Junho de 2017 14:55:33 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

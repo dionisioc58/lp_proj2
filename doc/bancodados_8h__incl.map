@@ -1,6 +1,8 @@
 <map id="include/bancodados.h" name="include/bancodados.h">
-<area shape="rect" id="node5" href="$fornecedor_8h.html" title="Definição da classe Fornecedor. " alt="" coords="232,80,327,107"/>
-<area shape="rect" id="node7" href="$produto_8h.html" title="Definição da classe Produto. " alt="" coords="71,155,147,181"/>
-<area shape="rect" id="node10" href="$funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="355,155,433,181"/>
-<area shape="rect" id="node9" href="$lista_8h.html" title="Definição da classe Lista. " alt="" coords="273,155,331,181"/>
+<area shape="rect" id="node5" href="$fornecedor_8h.html" title="Definição da classe Fornecedor. " alt="" coords="274,80,368,107"/>
+<area shape="rect" id="node7" href="$produto_8h.html" title="Definição da classe Produto. " alt="" coords="443,155,519,181"/>
+<area shape="rect" id="node10" href="$subproduto_8h.html" title="Definição das classe derivadas de Produto. " alt="" coords="582,80,679,107"/>
+<area shape="rect" id="node12" href="$funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="26,155,104,181"/>
+<area shape="rect" id="node9" href="$lista_8h.html" title="Definição da classe Lista. " alt="" coords="259,155,316,181"/>
+<area shape="rect" id="node11" href="$perecivel_8h.html" title="Definição da classe Perecivel. " alt="" coords="696,155,781,181"/>
 </map>

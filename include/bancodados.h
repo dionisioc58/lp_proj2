@@ -24,6 +24,7 @@
 
     #include "fornecedor.h"
     #include "produto.h"
+    #include "subproduto.h"
     #include "funcoes.h"
 
     /**
@@ -36,7 +37,7 @@
     * @brief        Função que coleta os dados para cadastro de um aluno
     * @return       Aluno coletado
     */
-    Produto inputProduto();
+    Produto *inputProduto();
 
     /**
     * @brief        Função que realiza o cadastro um Fornecedor

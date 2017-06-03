@@ -17,24 +17,6 @@ using std::string;
 using std::ostream;
 using std::istream;
 using std::stringstream;
-#include <ctime>
-    
-    /**
-    * @class   Perecivel produto.h
-    * @brief   Classe que representa um produto perecivel
-    * @details Os atributos de um perecivel são: validade
-    */  
-    class Perecivel {
-    protected:
-        std::time_t validade;
-    public:
-        std::time_t getValidade() {
-            return validade;
-        }
-        void setValidade(std::time_t v) {
-            validade = v;
-        }
-    };
 
     /**
     * @class   Produto Produto.h
@@ -64,10 +46,10 @@ using std::stringstream;
         void setpreco(double p);                                 /**< Modifica o preco */
                 
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
-        
-        bool operator>(Produto &p);                               /** @brief Sobrecarga do operador de comparação > */
-        friend ostream& operator<<(ostream& os, Produto &p);      /** @brief Sobrecarga do operador de inserção em stream */
-        friend istream& operator>>(istream& is, Produto &p);      /** @brief Sobrecarga do operador de extração de stream */
+        bool operator>(Produto &p);                             /** @brief Sobrecarga do operador de comparação > */
+        bool operator!=(Produto &p);                            /** @brief Sobrecarga do operador de comparação > */
+        friend ostream& operator<<(ostream& os, Produto &p);    /** @brief Sobrecarga do operador de inserção em stream */
+        friend istream& operator>>(istream& is, Produto &p);    /** @brief Sobrecarga do operador de extração de stream */
     };
 
 #endif
