@@ -118,9 +118,9 @@ Funções</h2></td></tr>
 <tr class="memitem:ad50ffdcfecc6907b77dfd91f5bdb8955"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8h.html#ad50ffdcfecc6907b77dfd91f5bdb8955">recebeFloat</a> (string msg, int min)</td></tr>
 <tr class="memdesc:ad50ffdcfecc6907b77dfd91f5bdb8955"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta um valor float maior que zero pela entrada validando-o.  <a href="#ad50ffdcfecc6907b77dfd91f5bdb8955">Mais...</a><br /></td></tr>
 <tr class="separator:ad50ffdcfecc6907b77dfd91f5bdb8955"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2086a7c3272ac3b2a64478893d4b790e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8h.html#a2086a7c3272ac3b2a64478893d4b790e">recebeInt</a> (string msg, int min)</td></tr>
-<tr class="memdesc:a2086a7c3272ac3b2a64478893d4b790e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta um valor inteiro maior ou igual à zero pela entrada validando-o.  <a href="#a2086a7c3272ac3b2a64478893d4b790e">Mais...</a><br /></td></tr>
-<tr class="separator:a2086a7c3272ac3b2a64478893d4b790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3806e8dd87cc6749d8b5538dc9d3314"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8h.html#aa3806e8dd87cc6749d8b5538dc9d3314">recebeInt</a> (string msg, int min, int max=0)</td></tr>
+<tr class="memdesc:aa3806e8dd87cc6749d8b5538dc9d3314"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que coleta um valor inteiro maior ou igual à zero pela entrada validando-o.  <a href="#aa3806e8dd87cc6749d8b5538dc9d3314">Mais...</a><br /></td></tr>
+<tr class="separator:aa3806e8dd87cc6749d8b5538dc9d3314"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae43cf6b49fec4f2227f8a73cca5b2080"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="funcoes_8h.html#ae43cf6b49fec4f2227f8a73cca5b2080">minusculas</a> (string &amp;s)</td></tr>
 <tr class="memdesc:ae43cf6b49fec4f2227f8a73cca5b2080"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funcao que converte todos os caracteres para letra minuscula.  <a href="#ae43cf6b49fec4f2227f8a73cca5b2080">Mais...</a><br /></td></tr>
 <tr class="separator:ae43cf6b49fec4f2227f8a73cca5b2080"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -195,7 +195,7 @@ Eduardo Rique (<a href="#" onclick="location.href='mai'+'lto:'+'lui'+'se'+'dua'+
 
 </div>
 </div>
-<a class="anchor" id="a2086a7c3272ac3b2a64478893d4b790e"></a>
+<a class="anchor" id="aa3806e8dd87cc6749d8b5538dc9d3314"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -209,7 +209,13 @@ Eduardo Rique (<a href="#" onclick="location.href='mai'+'lto:'+'lui'+'se'+'dua'+
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>min</em>&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,6 +230,7 @@ Eduardo Rique (<a href="#" onclick="location.href='mai'+'lto:'+'lui'+'se'+'dua'+
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>String com a mensagem à exibir </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>Int com o valor mínimo aceitável </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>Int com o valor máximo aceitável </td></tr>
   </table>
   </dd>
 </dl>
@@ -236,7 +243,7 @@ Eduardo Rique (<a href="#" onclick="location.href='mai'+'lto:'+'lui'+'se'+'dua'+
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 3 de Junho de 2017 14:55:33 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 5 de Junho de 2017 14:44:58 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

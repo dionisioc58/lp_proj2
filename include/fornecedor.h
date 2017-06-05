@@ -13,6 +13,7 @@
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <sstream>
 using std::string;
 using std::endl;
 

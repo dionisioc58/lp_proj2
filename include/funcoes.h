@@ -30,9 +30,10 @@
     * @brief        Função que coleta um valor inteiro maior ou igual à zero pela entrada validando-o
     * @param[in]    msg String com a mensagem à exibir
     * @param[in]	min Int com o valor mínimo aceitável
+    * @param[in]	max Int com o valor máximo aceitável
     * @return       Int capturado
     */
-    int recebeInt(string msg, int min);
+    int recebeInt(string msg, int min, int max = 0);
 
     /**
     * @brief Funcao que converte todos os caracteres para letra minuscula

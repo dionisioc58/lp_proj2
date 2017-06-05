@@ -1,8 +1,6 @@
 <map id="include/fornecedor.h" name="include/fornecedor.h">
 <area shape="rect" id="node2" href="$bancodados_8h.html" title="Arquivo de cabeçalho com a definição de funções para o controle dos dados. " alt="" coords="31,80,179,107"/>
 <area shape="rect" id="node4" href="$main_8cpp.html" title="Arquivo fonte para execução do projeto. " alt="" coords="169,155,266,181"/>
-<area shape="rect" id="node5" href="$item_8h.html" title="Definição da classe Item. " alt="" coords="255,80,358,107"/>
-<area shape="rect" id="node7" href="$fornecedor_8cpp.html" title="Implementação da classe Fornecedor. " alt="" coords="383,80,513,107"/>
+<area shape="rect" id="node5" href="$fornecedor_8cpp.html" title="Implementação da classe Fornecedor. " alt="" coords="255,80,385,107"/>
 <area shape="rect" id="node3" href="$bancodados_8cpp.html" title="Arquivo de corpo com a definição de funções para o controle dos dados. " alt="" coords="5,155,144,181"/>
-<area shape="rect" id="node6" href="$item_8cpp.html" title="Implementacao dos métodos da classe Item. " alt="" coords="290,155,385,181"/>
 </map>

@@ -164,9 +164,11 @@ Produto *inputProduto() {
     getline(cin, input);
     novo->setdescricao(input);
     
-    float preco = recebeFloat("Digite o preço: ", 0);
-    novo->setpreco(preco);
+    floats = recebeFloat("Digite o preço: ", 0);
+    novo->setpreco(floats);
 
+    ints = recebeInt("Digite a quantidade: ", 0);
+    novo->setQtde(ints);
     
     return novo;
 }
@@ -239,27 +241,34 @@ void editPr(Lista<Fornecedor> *e) {
         
         string input;
         
-        cout << "O código é: " << p->getcb() << " (ENTER para continuar)";
+        cout << "O código é: " << p->getcb() << " (ENTER para manter): ";
         getline(cin, input);
         if(input != "")
             p->setcb(input);
 
-        cout << "A descrição é: " << p->getdescricao() << " (ENTER para continuar)";
+        cout << "A descrição é: " << p->getdescricao() << " (ENTER para manter): ";
         getline(cin, input);
         if(input != "")
             p->setdescricao(input);
 
-        cout << "O tipo é: " << p->gettipo() << " (ENTER para continuar)";
+        cout << "O tipo é: " << p->gettipo() << " (ENTER para manter): ";
         getline(cin, input);
         if(input != "")
             p->settipo(input);
 
         stringstream ss;
-        ss << "O preço é: " << p->getpreco() << "(0 para continuar)";
-        ss >> input;
+        ss << "O preço é: " << p->getpreco() << " (0 para manter): ";
+        input = ss.str();
         float preco = recebeFloat(input, 0);
         if(preco > 0)
             p->setpreco(preco);
+
+        ss.clear();
+        ss << "A quantidade é: " << p->getQtde() << " (0 para manter): ";
+        input = ss.str();
+        float qtde = recebeInt(input, 0);
+        if(qtde > 0)
+            p->setQtde(qtde);
     }
 }
 
@@ -335,7 +344,7 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
 * @param[inout] *e Lista de Fornecedores do cadastro
 * @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
-* @return       -1 ou o número do fornecedor selecionada
+* @return       Número máximo na lista
 */
 int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
     string ftipo = "", fcod = "";
@@ -349,23 +358,25 @@ int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
     }
     
     Lista<Fornecedor> *tmp = e;
+    int j = 0;
     while(tmp) {
         Lista<Produto> *f = tmp->getValor().getProdutos();
         Produto produt;
         for(int i = 0; i < tmp->getValor().getQtde(); i++) {
+            j++;
             f = f->getProximo();
             produt = f->getValor();
             switch(filtro) {
                 case 1:
                     if(produt.gettipo() == ftipo)
-                        cout << "   (" << (i + 1) << ") " << produt << endl;
+                        cout << "   (" << j << ") " << produt << endl;
                     break;
                 case 2:
                     if(produt.getcb() == fcod)
-                        cout << "   (" << (i + 1) << ") " << produt << endl;
+                        cout << "   (" << j << ") " << produt << endl;
                     break;
                 default:
-                    cout << "   (" << (i + 1) << ") " << produt << endl;
+                    cout << "   (" << j << ") " << produt << endl;
             }
         }
         tmp = tmp->getProximo();
@@ -373,7 +384,7 @@ int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
         
     if(pausa)
         parar();
-    return -1;
+    return j;
 
 }
 
@@ -471,4 +482,77 @@ int selecionaObjeto(Lista<T> *e, string msg) {
         return -1;
     }
     return selecao;
+}
+
+/**
+* @brief        Função que retorna um produto, dada uma determinada posicao na lista numerada
+* @param[in]    *e Lista de fornecedores e seus produtos
+* @param[in]    pos Posição do produto na lista numerada
+* @return       Produto selecionado
+*/
+Produto capturaProduto(Lista<Fornecedor> *e, int pos) {
+    Lista<Fornecedor> *tmp = e;
+    Lista<Produto> *p;
+    Produto *retorno;
+    int j = 1;
+    while(tmp && j <= pos) {
+        p = tmp->getValor().getProdutos();
+        if((j + tmp->getValor().getQtde()) > pos)
+            break;
+        j += tmp->getValor().getQtde();
+        tmp = tmp->getProximo();
+    }
+    retorno = p->Posiciona(pos - j);
+
+    return *retorno;
+}
+
+/**
+* @brief        Função que realiza uma venda
+* @param[in]    *e Lista de fornecedores com seus produtos
+* @param[in]    *v Lista de venda com seus itens
+*/
+void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
+    //Lista todos os itens do cadastro
+    int maximo = impPrLista(e, 0, false);
+    //Seleciona um deles
+    int selecao = recebeInt("Digite o número do produto (0 para cancelar): ", 0, maximo);
+    if(selecao == 0)
+        return;
+    Venda nova;
+    nova.setProduto(capturaProduto(e, selecao));
+
+    int qtd = recebeInt("Digite a quantidade: ", 1, 0);
+    nova.setQtde(qtd);
+    
+    v->Insere(nova);
+    
+    //Para testes
+    v->Exibe();
+    parar();
+}
+
+/**
+* @brief        Função que imprime a lista de estoque
+* @param[inout] *e Lista de Fornecedores do cadastro
+* @param[in]    pausa True para apresentar uma pausa após a impressão
+* @return       -1 ou o número do fornecedor selecionada
+*/
+int impPrListaEstoque(Lista<Fornecedor> *e, bool pausa) {
+    Lista<Fornecedor> *tmp = e;
+    while(tmp) {
+        Lista<Produto> *f = tmp->getValor().getProdutos();
+        Produto produt;
+        for(int i = 0; i < tmp->getValor().getQtde(); i++) {
+            f = f->getProximo();
+            produt = f->getValor();
+            cout << "   (" << (i + 1) << ") " << produt.getEstoque() << endl;
+        }
+        tmp = tmp->getProximo();
+    }
+        
+    if(pausa)
+        parar();
+    return -1;
+
 }

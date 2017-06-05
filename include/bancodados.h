@@ -22,9 +22,12 @@
     #include <string>
     using std::string;
 
+    #include <sstream>
+    
     #include "fornecedor.h"
     #include "produto.h"
     #include "subproduto.h"
+    #include "venda.h"
     #include "funcoes.h"
 
     /**
@@ -123,5 +126,28 @@
     */
     template<typename T>
     int selecionaObjeto(Lista<T> *e, string msg);
+
+    /**
+    * @brief        Função que retorna um produto, dada uma determinada posicao na lista numerada
+    * @param[in]    *e Lista de fornecedores e seus produtos
+    * @param[in]    pos Posição do produto na lista numerada
+    * @return       Produto selecionado
+    */
+    Produto capturaProduto(Lista<Fornecedor> *e, int pos);
+
+    /**
+    * @brief        Função que realiza uma venda
+    * @param[in]    *e Lista de fornecedores com seus produtos
+    * @param[in]    *v Lista de venda com seus itens
+    */
+    void venda(Lista<Fornecedor> *e, Lista<Venda> *v);
+
+    /**
+    * @brief        Função que imprime a lista de estoque
+    * @param[inout] *e Lista de Fornecedores do cadastro
+    * @param[in]    pausa True para apresentar uma pausa após a impressão
+    * @return       -1 ou o número do fornecedor selecionada
+    */
+    int impPrListaEstoque(Lista<Fornecedor> *e, bool pausa = true);
 
 #endif

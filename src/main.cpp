@@ -16,7 +16,7 @@ using std::endl;
 #include "fornecedor.h"
 #include "menu.h"
 #include "bancodados.h"
-#include "item.h"
+#include "venda.h"
 
 /**
 * @brief        Função principal do programa
@@ -25,10 +25,8 @@ using std::endl;
 * @return		Retorno
 */
 int main(int argc, char* argv[]) {
-    //int qtd_est = 0, qtd_forn = 0, qtd_prods = 0;       /**< Quantidades */
-    //int qtd_forn = 0;
-    //Lista<Item> *estoque = NULL;                        /**< Lista de itens que conterá todo o estoque */
-    Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro de fornecedores */
+    Lista<Fornecedor> *fornecs = new Lista<Fornecedor>(); /**< Cadastro */
+    Lista<Venda> *itens = new Lista<Venda>();             /**< Lista de itens da venda */
     
     abrirBD("./data/banco.dat", fornecs); /**< Recuperar o cadastro a partir de um arquivo */
     while(1) {
@@ -36,9 +34,6 @@ int main(int argc, char* argv[]) {
             case 0:             //Sair
                 cout << endl;
                 salvarBD("./data/banco.dat", fornecs); 
-      //          delete[] estoque;
-                //delete fornecs;
-                //delete prods;
                 return 0;
 
             case 1:              //Cadastrar um fornecedor
@@ -74,8 +69,11 @@ int main(int argc, char* argv[]) {
                 impPrLista(fornecs, 2);
                 break;
             
-            case 11:            //Salvar o banco de dados
-                
+            case 11:            //Realizar uma venda
+                venda(fornecs, itens);              
+                break;
+            case 12:            //Controle de estoque
+                impPrListaEstoque(fornecs);
                 break;
         }
     }

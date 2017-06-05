@@ -35,20 +35,24 @@ float recebeFloat(string msg, int min) {
 * @brief        Função que coleta um valor inteiro maior ou igual à zero pela entrada validando-o
 * @param[in]    msg String com a mensagem à exibir
 * @param[in]	min Int com o valor mínimo aceitável
+* @param[in]	max Int com o valor máximo aceitável
 * @return       Int capturado
 */
-int recebeInt(string msg, int min) {
+int recebeInt(string msg, int min, int max) {
 	int valor = -1;
-	while(valor < min) {
+	int max2 = max;
+	while((valor < min) || (valor > max)) {
 		cout << msg;
 		cin >> valor;
+		if(max2 == 0) max = valor; //Para desconsiderar o max
+
 		if (cin.fail() || cin.get() != '\n') {
 			cout << "Valor inválido!" << endl;
 			cin.clear(); /**< impar o bit de falha do cin */
 			while (cin.get() != '\n') ; /**< receber todos dados digitados até o fim da linha para esvaziar */
 			valor = -1;
-		} else if(valor < min)
-				cout << "Valor inválido!" << endl;
+		} else if((valor < min) || (valor > max))
+			cout << "Valor inválido!" << endl;
 	}
 	return valor;
 }

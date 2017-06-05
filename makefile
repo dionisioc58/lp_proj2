@@ -30,7 +30,7 @@ debug: clean loja
 
 # Alvo (target) para a construcao do executavel main
 # Define os arquivos fornecedor.o, produto.o, funcoes.o, menu.o e main.o como dependencias
-loja: $(OBJ_DIR)/fornecedor.o $(OBJ_DIR)/produto.o $(OBJ_DIR)/pereciveis.o $(OBJ_DIR)/npereciveis.o $(OBJ_DIR)/item.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/main.o
+loja: $(OBJ_DIR)/fornecedor.o $(OBJ_DIR)/produto.o $(OBJ_DIR)/pereciveis.o $(OBJ_DIR)/npereciveis.o $(OBJ_DIR)/venda.o $(OBJ_DIR)/bancodados.o $(OBJ_DIR)/funcoes.o $(OBJ_DIR)/menu.o $(OBJ_DIR)/main.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
@@ -58,9 +58,9 @@ $(OBJ_DIR)/pereciveis.o: $(SRC_DIR)/pereciveis.cpp $(INC_DIR)/subproduto.h
 $(OBJ_DIR)/npereciveis.o: $(SRC_DIR)/npereciveis.cpp $(INC_DIR)/subproduto.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-# Alvo (target) para a construcao do objeto item.o
-# Define os arquivos item.cpp e item.h como dependencias.
-$(OBJ_DIR)/item.o: $(SRC_DIR)/item.cpp $(INC_DIR)/item.h
+# Alvo (target) para a construcao do objeto venda.o
+# Define os arquivos venda.cpp e venda.h como dependencias.
+$(OBJ_DIR)/venda.o: $(SRC_DIR)/venda.cpp $(INC_DIR)/venda.h
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 # Alvo (target) para a construcao do objeto menu.o
