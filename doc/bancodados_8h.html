@@ -167,6 +167,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="banc
 <tr class="memitem:a03d10b770c72c7c536c63f975a2bcbdd"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a03d10b770c72c7c536c63f975a2bcbdd">selecionaObjeto</a> (<a class="el" href="classLista.html">Lista</a>&lt; T &gt; *e, string msg)</td></tr>
 <tr class="memdesc:a03d10b770c72c7c536c63f975a2bcbdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que exibe uma mensagem e uma lista numerada para a escolha de um objeto.  <a href="#a03d10b770c72c7c536c63f975a2bcbdd">Mais...</a><br /></td></tr>
 <tr class="separator:a03d10b770c72c7c536c63f975a2bcbdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32be34136ee7a0e3df1a9ddabd54a8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classProduto.html">Produto</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#af32be34136ee7a0e3df1a9ddabd54a8b">capturaProduto</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, int pos)</td></tr>
+<tr class="memdesc:af32be34136ee7a0e3df1a9ddabd54a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna um produto, dada uma determinada posicao na lista numerada.  <a href="#af32be34136ee7a0e3df1a9ddabd54a8b">Mais...</a><br /></td></tr>
+<tr class="separator:af32be34136ee7a0e3df1a9ddabd54a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a2f5e6fbd88a1178100e2cdf8b2d8ddf8">venda</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, <a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v)</td></tr>
 <tr class="memdesc:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que realiza uma venda.  <a href="#a2f5e6fbd88a1178100e2cdf8b2d8ddf8">Mais...</a><br /></td></tr>
 <tr class="separator:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,6 +279,42 @@ Eduardo Rique (<a href="#" onclick="location.href='mai'+'lto:'+'lui'+'se'+'dua'+
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="af32be34136ee7a0e3df1a9ddabd54a8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classProduto.html">Produto</a> capturaProduto </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *&#160;</td>
+          <td class="paramname"><em>e</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que retorna um produto, dada uma determinada posicao na lista numerada. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">*e</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de fornecedores e seus produtos </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>Posição do produto na lista numerada </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> selecionado </dd></dl>
 
 </div>
 </div>
@@ -497,7 +536,16 @@ template&lt;typename T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>-1 ou o número do fornecedor selecionada </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>-1 ou o número do fornecedor selecionada</dd></dl>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*e</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de Fornecedores do cadastro </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filtro</td><td>Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>Número máximo na lista </dd></dl>
 
 </div>
 </div>
@@ -687,7 +735,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 3 de Junho de 2017 20:28:54 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Segunda, 5 de Junho de 2017 14:44:58 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

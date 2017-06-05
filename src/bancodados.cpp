@@ -344,7 +344,7 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
 * @param[inout] *e Lista de Fornecedores do cadastro
 * @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
-* @return       -1 ou o número do fornecedor selecionada
+* @return       Número máximo na lista
 */
 int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
     string ftipo = "", fcod = "";
@@ -358,23 +358,25 @@ int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
     }
     
     Lista<Fornecedor> *tmp = e;
+    int j = 0;
     while(tmp) {
         Lista<Produto> *f = tmp->getValor().getProdutos();
         Produto produt;
         for(int i = 0; i < tmp->getValor().getQtde(); i++) {
+            j++;
             f = f->getProximo();
             produt = f->getValor();
             switch(filtro) {
                 case 1:
                     if(produt.gettipo() == ftipo)
-                        cout << "   (" << (i + 1) << ") " << produt << endl;
+                        cout << "   (" << j << ") " << produt << endl;
                     break;
                 case 2:
                     if(produt.getcb() == fcod)
-                        cout << "   (" << (i + 1) << ") " << produt << endl;
+                        cout << "   (" << j << ") " << produt << endl;
                     break;
                 default:
-                    cout << "   (" << (i + 1) << ") " << produt << endl;
+                    cout << "   (" << j << ") " << produt << endl;
             }
         }
         tmp = tmp->getProximo();
@@ -382,7 +384,7 @@ int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
         
     if(pausa)
         parar();
-    return -1;
+    return j;
 
 }
 
@@ -483,18 +485,51 @@ int selecionaObjeto(Lista<T> *e, string msg) {
 }
 
 /**
+* @brief        Função que retorna um produto, dada uma determinada posicao na lista numerada
+* @param[in]    *e Lista de fornecedores e seus produtos
+* @param[in]    pos Posição do produto na lista numerada
+* @return       Produto selecionado
+*/
+Produto capturaProduto(Lista<Fornecedor> *e, int pos) {
+    Lista<Fornecedor> *tmp = e;
+    Lista<Produto> *p;
+    Produto *retorno;
+    int j = 1;
+    while(tmp && j <= pos) {
+        p = tmp->getValor().getProdutos();
+        if((j + tmp->getValor().getQtde()) > pos)
+            break;
+        j += tmp->getValor().getQtde();
+        tmp = tmp->getProximo();
+    }
+    retorno = p->Posiciona(pos - j);
+
+    return *retorno;
+}
+
+/**
 * @brief        Função que realiza uma venda
 * @param[in]    *e Lista de fornecedores com seus produtos
 * @param[in]    *v Lista de venda com seus itens
 */
 void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
     //Lista todos os itens do cadastro
-    impPrLista(e);
+    int maximo = impPrLista(e, 0, false);
     //Seleciona um deles
-    int selecao = selecionaObjeto(e, "Digite o número do fornecedor (0 para cancelar): ");
-    if(selecao < 0)
+    int selecao = recebeInt("Digite o número do produto (0 para cancelar): ", 0, maximo);
+    if(selecao == 0)
         return;
-    //v.Insere(e)
+    Venda nova;
+    nova.setProduto(capturaProduto(e, selecao));
+
+    int qtd = recebeInt("Digite a quantidade: ", 1, 0);
+    nova.setQtde(qtd);
+    
+    v->Insere(nova);
+    
+    //Para testes
+    v->Exibe();
+    parar();
 }
 
 /**

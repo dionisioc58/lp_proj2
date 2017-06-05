@@ -128,6 +128,14 @@
     int selecionaObjeto(Lista<T> *e, string msg);
 
     /**
+    * @brief        Função que retorna um produto, dada uma determinada posicao na lista numerada
+    * @param[in]    *e Lista de fornecedores e seus produtos
+    * @param[in]    pos Posição do produto na lista numerada
+    * @return       Produto selecionado
+    */
+    Produto capturaProduto(Lista<Fornecedor> *e, int pos);
+
+    /**
     * @brief        Função que realiza uma venda
     * @param[in]    *e Lista de fornecedores com seus produtos
     * @param[in]    *v Lista de venda com seus itens

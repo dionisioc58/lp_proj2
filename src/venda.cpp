@@ -79,7 +79,8 @@ bool Venda::operator!=(Venda &v) {
 */
 ostream& operator<<(ostream& os, Venda &v) {
 	os <<  v.produto.getcb() << "\t| ";
-	os << "Desc.: " << v.qtde;
+	os << "Desc.: " << v.produto.getdescricao() << "\t|";
+    os << "Qtde.: " << v.qtde;
     
     return os;
 }
