@@ -95,22 +95,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classPerecivel.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPerecivel.html">Perecivel</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> validade;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPerecivel.html#a3674f656a1ddd9566c33011d9316e2f8">   20</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPerecivel.html#a3674f656a1ddd9566c33011d9316e2f8">validade</a>;                                        </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> getValidade() {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> validade;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classPerecivel.html#a2bb67a2b63f36aecb8b50b3594d80b01">   22</a></span>&#160;    <span class="keywordtype">string</span> <a class="code" href="classPerecivel.html#a2bb67a2b63f36aecb8b50b3594d80b01">getValidade</a>() {                                  </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classPerecivel.html#a3674f656a1ddd9566c33011d9316e2f8">validade</a>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> setValidade(<span class="keywordtype">string</span> v) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classPerecivel.html#a4db8b0d4f9dcdaa11ac13dfd1da85354">   25</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classPerecivel.html#a4db8b0d4f9dcdaa11ac13dfd1da85354">setValidade</a>(<span class="keywordtype">string</span> v) {                            </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        validade = v;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classPerecivel.html#ad0fa6a3c6d01b09b468444006fb4e0ed">   28</a></span>&#160;    <span class="keyword">friend</span> istream&amp; <a class="code" href="classPerecivel.html#ad0fa6a3c6d01b09b468444006fb4e0ed">operator&gt;&gt;</a>(istream&amp; is, <a class="code" href="classPerecivel.html">Perecivel</a> &amp;p){  </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        getline(is, p.<a class="code" href="classPerecivel.html#a3674f656a1ddd9566c33011d9316e2f8">validade</a>, <span class="charliteral">&#39;;&#39;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classPerecivel_html_a2bb67a2b63f36aecb8b50b3594d80b01"><div class="ttname"><a href="classPerecivel.html#a2bb67a2b63f36aecb8b50b3594d80b01">Perecivel::getValidade</a></div><div class="ttdeci">string getValidade()</div><div class="ttdef"><b>Definition:</b> perecivel.h:22</div></div>
+<div class="ttc" id="classPerecivel_html_ad0fa6a3c6d01b09b468444006fb4e0ed"><div class="ttname"><a href="classPerecivel.html#ad0fa6a3c6d01b09b468444006fb4e0ed">Perecivel::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Perecivel &amp;p)</div><div class="ttdef"><b>Definition:</b> perecivel.h:28</div></div>
+<div class="ttc" id="classPerecivel_html_a3674f656a1ddd9566c33011d9316e2f8"><div class="ttname"><a href="classPerecivel.html#a3674f656a1ddd9566c33011d9316e2f8">Perecivel::validade</a></div><div class="ttdeci">string validade</div><div class="ttdef"><b>Definition:</b> perecivel.h:20</div></div>
+<div class="ttc" id="classPerecivel_html_a4db8b0d4f9dcdaa11ac13dfd1da85354"><div class="ttname"><a href="classPerecivel.html#a4db8b0d4f9dcdaa11ac13dfd1da85354">Perecivel::setValidade</a></div><div class="ttdeci">void setValidade(string v)</div><div class="ttdef"><b>Definition:</b> perecivel.h:25</div></div>
 <div class="ttc" id="classPerecivel_html"><div class="ttname"><a href="classPerecivel.html">Perecivel</a></div><div class="ttdoc">Classe que representa um produto perecivel. </div><div class="ttdef"><b>Definition:</b> perecivel.h:18</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 5 de Junho de 2017 14:44:58 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 11 de Junho de 2017 17:42:16 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

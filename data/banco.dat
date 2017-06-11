@@ -1,5 +1,6 @@
 fornec;Dio;123
-produt;1234;Goiabada;Doce;1.34
-produt;5241;Marrom Glacê;Doce;3.45
-produt;347387834;Disco de aniversário 100 anos;CD;35.99
+produt;Salgado;74147;Pastel de frango;1.81;8;30/06/2017;120;1;1
+produt;Fruta;789123;Goiaba;1.1;5;15/07/2017;1;15/06/2017
+produt;Salgado;789456;Pastel de carne;1.2;997;15/07/2017;150;1;0
+produt;Bebida;123456789;Whisky;150.23;10;15/05/2017;20;45.6
 

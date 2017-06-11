@@ -26,27 +26,27 @@ Venda::~Venda() {
 /**
 * @return Produto
 */
-Produto Venda::getProduto() {
+Produto *Venda::getProduto() {
     return produto;
 }
 
 /**
 * @details O método modifica o produto
-* @param   q Produto
+* @param   *p Produto
 */
-void Venda::setProduto(Produto p) {
+void Venda::setProduto(Produto *p) {
     produto = p;
 }
 
 /**
-* @return Quantidade da Venda
+* @return Quantidade
 */
 int Venda::getQtde() {
     return qtde;
 }
 
 /**
-* @details O método modifica a quantidade da Venda
+* @details O método modifica a quantidade
 * @param   q Quantidade
 */
 void Venda::setQtde(int q) {
@@ -55,32 +55,37 @@ void Venda::setQtde(int q) {
 
 /** 
 * @details O operador é sobrecarregado para representar a Venda
-* @param	a Referência para o objeto Venda a ser comparado
-* @return	True se > que 'a'
+* @param	v Referência para o objeto Venda a ser comparado
+* @return	True se > que 'v'
 */
 bool Venda::operator>(Venda &v) {
-    if(produto.getcb() > v.getProduto().getcb())
+    if(produto->getCb() > v.getProduto()->getCb())
         return true;
     return false;
 }
 
-/** @brief Sobrecarga do operador de comparação > */
+/** 
+* @details  O operador é sobrecarregado para representar a venda
+* @param	v Referência para o objeto venda a ser comparado
+* @return	True se != de 'v'
+*/
 bool Venda::operator!=(Venda &v) {
-    if(produto.getcb() == v.getProduto().getcb())
+    if(produto->getCb() == v.getProduto()->getCb())
         return false;
     return true;
 }
 
 /** 
-* @details O operador é sobrecarregado para representar o Produto
+* @details O operador é sobrecarregado para representar a venda
 * @param	os Referência para stream de saída
-* @param	f Referência para o objeto Produto a ser impresso
+* @param	v Referência para o objeto venda a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Venda &v) {
-	os <<  v.produto.getcb() << "\t| ";
-	os << "Desc.: " << v.produto.getdescricao() << "\t|";
-    os << "Qtde.: " << v.qtde;
+	os << v.produto->getCb() << string(10-v.produto->getCb().length(), ' ') << "\t| ";
+	os << v.produto->getDescricao() << string(30-v.produto->getDescricao().length(), ' ') << "\t|";
+    os << v.qtde << "\t|";
+    os << v.produto->getPreco() * v.qtde;
     
     return os;
 }

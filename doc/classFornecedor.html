@@ -94,6 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <p>Classe que representa um <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a>.  
  <a href="classFornecedor.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="fornecedor_8h_source.html">fornecedor.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos Públicos</h2></td></tr>
@@ -111,12 +113,12 @@ Métodos Públicos</h2></td></tr>
 <tr class="separator:a786cfff0743cd955c6e033d0cb8be986"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e725256294debcd9b75337ce0f9e21"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a69e725256294debcd9b75337ce0f9e21">getQtde</a> ()</td></tr>
 <tr class="separator:a69e725256294debcd9b75337ce0f9e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f97fec38029b79f2212ca6c335a2c80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a3f97fec38029b79f2212ca6c335a2c80">getProdutos</a> ()</td></tr>
-<tr class="separator:a3f97fec38029b79f2212ca6c335a2c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68995f51f1f3be50ea68ba0e7a0bf1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#af68995f51f1f3be50ea68ba0e7a0bf1c">setProdutos</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> &gt; *p)</td></tr>
-<tr class="separator:af68995f51f1f3be50ea68ba0e7a0bf1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcaf79e7631ac39aafabe7b810cd067b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#abcaf79e7631ac39aafabe7b810cd067b">addProduto</a> (<a class="el" href="classProduto.html">Produto</a> p)</td></tr>
-<tr class="separator:abcaf79e7631ac39aafabe7b810cd067b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa04da1ee81d954677a63718b0492c66a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#aa04da1ee81d954677a63718b0492c66a">getProdutos</a> ()</td></tr>
+<tr class="separator:aa04da1ee81d954677a63718b0492c66a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c1986e48ad51b51ce87d74639a06a50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a5c1986e48ad51b51ce87d74639a06a50">setProdutos</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> * &gt; *p)</td></tr>
+<tr class="separator:a5c1986e48ad51b51ce87d74639a06a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99de1dc9bba31e1ba02cabfa5e6b7e36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a99de1dc9bba31e1ba02cabfa5e6b7e36">addProduto</a> (<a class="el" href="classProduto.html">Produto</a> *p)</td></tr>
+<tr class="separator:a99de1dc9bba31e1ba02cabfa5e6b7e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34c4d6e6537c22b745740f9fb1a830cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a34c4d6e6537c22b745740f9fb1a830cd">delProduto</a> (int p)</td></tr>
 <tr class="separator:a34c4d6e6537c22b745740f9fb1a830cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b762b874aa1c6dbff37a2a64644041c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a3b762b874aa1c6dbff37a2a64644041c">pertenceFornecedor</a> (string n)</td></tr>
@@ -125,18 +127,17 @@ Métodos Públicos</h2></td></tr>
 <tr class="separator:ace508c29d93a600c96344c7874353446"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f28418e8e7e824858b2abb0268d8d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a93f28418e8e7e824858b2abb0268d8d7">operator&gt;</a> (<a class="el" href="classFornecedor.html">Fornecedor</a> &amp;p)</td></tr>
 <tr class="separator:a93f28418e8e7e824858b2abb0268d8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99464812ed7c926f069375b87fa03cd5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a99464812ed7c926f069375b87fa03cd5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a99464812ed7c926f069375b87fa03cd5">operator!=</a> (<a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
-<tr class="memdesc:a99464812ed7c926f069375b87fa03cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt; <br /></td></tr>
+<tr class="memitem:a99464812ed7c926f069375b87fa03cd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a99464812ed7c926f069375b87fa03cd5">operator!=</a> (<a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
+<tr class="memdesc:a99464812ed7c926f069375b87fa03cd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt;  <a href="#a99464812ed7c926f069375b87fa03cd5">Mais...</a><br /></td></tr>
 <tr class="separator:a99464812ed7c926f069375b87fa03cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
 <tr class="memitem:a51cace47ee37359be96b60de1a42ab62"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a51cace47ee37359be96b60de1a42ab62">operator&lt;&lt;</a> (ostream &amp;os, <a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
-<tr class="memdesc:a51cace47ee37359be96b60de1a42ab62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt;  <a href="#a51cace47ee37359be96b60de1a42ab62">Mais...</a><br /></td></tr>
+<tr class="memdesc:a51cace47ee37359be96b60de1a42ab62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação !=.  <a href="#a51cace47ee37359be96b60de1a42ab62">Mais...</a><br /></td></tr>
 <tr class="separator:a51cace47ee37359be96b60de1a42ab62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d29f886a9d6f994795537b23211008f"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFornecedor.html#a8d29f886a9d6f994795537b23211008f">operator&gt;&gt;</a> (istream &amp;is, <a class="el" href="classFornecedor.html">Fornecedor</a> &amp;f)</td></tr>
-<tr class="memdesc:a8d29f886a9d6f994795537b23211008f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de inserção em stream.  <a href="#a8d29f886a9d6f994795537b23211008f">Mais...</a><br /></td></tr>
+<tr class="memdesc:a8d29f886a9d6f994795537b23211008f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de extração em stream.  <a href="#a8d29f886a9d6f994795537b23211008f">Mais...</a><br /></td></tr>
 <tr class="separator:a8d29f886a9d6f994795537b23211008f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
@@ -156,7 +157,7 @@ Amigas</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Construtor padrão</p>
-<p>O valor de RSocial e CNPJ são inicializados com vazio </p>
+<p>O valor de RSocial e CNPJ são inicializados com vazio e a lista de produtos é inicializada </p>
 
 </div>
 </div>
@@ -177,21 +178,21 @@ Amigas</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Métodos</h2>
-<a class="anchor" id="abcaf79e7631ac39aafabe7b810cd067b"></a>
+<a class="anchor" id="a99de1dc9bba31e1ba02cabfa5e6b7e36"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool Fornecedor::addProduto </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classProduto.html">Produto</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classProduto.html">Produto</a> *&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Adiciona um <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a></p>
-<p>O método modifica adiciona um produto </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>O método adiciona um produto </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">f</td><td><a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> à incluir </td></tr>
   </table>
@@ -259,12 +260,12 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3f97fec38029b79f2212ca6c335a2c80"></a>
+<a class="anchor" id="aa04da1ee81d954677a63718b0492c66a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> &gt; * Fornecedor::getProdutos </td>
+          <td class="memname"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> * &gt; * Fornecedor::getProdutos </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -289,7 +290,7 @@ Amigas</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Retorna a quantidade de Produtos</p>
-<dl class="section return"><dt>Retorna</dt><dd>Quantidade de alunos </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Quantidade de produtos </dd></dl>
 
 </div>
 </div>
@@ -310,6 +311,31 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a99464812ed7c926f069375b87fa03cd5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Fornecedor::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classFornecedor.html">Fornecedor</a> &amp;&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do operador de comparação &gt; </p>
+<p>O operador é sobrecarregado para representar o <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser comparado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>True se != que 'f' </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a93f28418e8e7e824858b2abb0268d8d7"></a>
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +351,7 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 <p>O operador é sobrecarregado para representar o <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser comparado </td></tr>
+    <tr><td class="paramname">p</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser comparado </td></tr>
   </table>
   </dd>
 </dl>
@@ -380,21 +406,21 @@ Amigas</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af68995f51f1f3be50ea68ba0e7a0bf1c"></a>
+<a class="anchor" id="a5c1986e48ad51b51ce87d74639a06a50"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void Fornecedor::setProdutos </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> &gt; *&#160;</td>
+          <td class="paramtype"><a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classProduto.html">Produto</a> * &gt; *&#160;</td>
           <td class="paramname"><em>f</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Modifica a lista de Produtos</p>
-<p>O método modifica todos os produtos da <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>O método modifica todos os produtos do <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">*f</td><td>Ponteiro para a lista de produtos </td></tr>
   </table>
@@ -459,11 +485,11 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sobrecarga do operador de comparação &gt; </p>
-<p>O operador é sobrecarregado para representar a <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> e seus produtos </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Sobrecarga do operador de comparação !=. </p>
+<p>O operador é sobrecarregado para representar o <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> e a quantidade de seus produtos </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>Referência para stream de saída </td></tr>
-    <tr><td class="paramname">e</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser impresso </td></tr>
+    <tr><td class="paramname">f</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser impresso </td></tr>
   </table>
   </dd>
 </dl>
@@ -503,11 +529,11 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sobrecarga do operador de inserção em stream. </p>
-<dl class="params"><dt>Parâmetros</dt><dd>
+<p>Sobrecarga do operador de extração em stream. </p>
+<p>O operador é sobrecarregado para representar o <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">is</td><td>Referência para stream de entrada </td></tr>
-    <tr><td class="paramname">e</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser criado com base nos valores fornecidos </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is</td><td>Referência para stream de entrada </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>Referência para o objeto <a class="el" href="classFornecedor.html" title="Classe que representa um Fornecedor. ">Fornecedor</a> a ser criado com base nos valores fornecidos </td></tr>
   </table>
   </dd>
 </dl>
@@ -522,7 +548,7 @@ Amigas</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 5 de Junho de 2017 14:44:58 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 11 de Junho de 2017 17:42:16 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

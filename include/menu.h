@@ -25,7 +25,7 @@
     * @brief        Função que exibe o menu principal
     * @return       Retorna a opção escolhida
     */
-    int showMenu();
+    int showMenu(string titulo, string *op, int qtd);
 
     /**
     * @brief     Função que configura a entrada padrão para as funções do menu

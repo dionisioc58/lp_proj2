@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tipo',['tipo',['../classProduto.html#ade697672604cf3bb1cb325423d7c0d6b',1,'Produto']]]
+  ['lactose',['lactose',['../classSalgado.html#a3da0d97e798773084b58f33a35384e07',1,'Salgado']]]
 ];

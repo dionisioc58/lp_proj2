@@ -3,8 +3,8 @@
  * @brief	Definição da classe Lista
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
  * @author	Eduardo Rique (luiseduardorique@gmail.com)
- * @since	06/05/2017
- * @date	14/05/2017
+ * @since	30/05/2017
+ * @date	11/06/2017
  */
 
 #ifndef LISTA_H
@@ -19,35 +19,42 @@
     /**
     * @class   Lista lista.h
     * @brief   Classe que representa uma lista duplamente encadeada
-    * @details Os atributos de uma lista são: dado, ant e prox
+    * @details Os atributos de uma lista são: dado e prox
     */  
     template<typename T>
     class Lista {
     private:
-        T dado;                                             /**< Dado */
-        Lista *ant;                                         /**< Anterior */
+        T *dado;                                            /**< Dado */
         Lista *prox;                                        /**< Próximo */
     public:
         Lista();                                            /**< Construtor padrão */
+        Lista(T valor);                                     /**< Construtor especifico */
         ~Lista();                                           /**< Destrutor padrão */
-        T getValor();                                       /**< Retorna o valor */
+        T *getValor();                                      /**< Retorna o valor */
         int getTamanho();                                   /**< Retorna a quantidade de itens na lista */
         void Insere(T valor);                               /**< Insere um valor na lista */
         void RemovePos(int pos);                            /**< Remove um valor na posição informada */
-        void RemoveVal(T valor);                            /**< Remove um valor específico */
-        Lista *Busca(T valor);                              /**< Procura um valor e retorna o nó */
+        void RemoveVal(T *valor);                           /**< Remove um valor específico */
+        Lista *Busca(T *valor);                             /**< Procura um valor e retorna o nó */
         T *Posiciona(int pos);                              /**< Retorna o elemento na posição dada */
-        Lista *getAnterior();                               /**< Retorna o nó anterior */
         Lista *getProximo();                                /**< Retorna o próximo nó */
         void Exibe(bool comNumeros = false);                /**< Imprime a lista */
     };
 
     /**
-    * @details Os valores de ant e prox são inicializados com NULL
+    * @details Os valores prox são inicializados com NULL
     */
     template<typename T>
     Lista<T>::Lista() {
-        ant = NULL;
+        prox = NULL;
+    }
+
+    /**
+    * @details O valor prox é inicializado com NULL e dado é criado
+    */
+    template<typename T>
+    Lista<T>::Lista(T valor) {
+        dado = new T(valor);
         prox = NULL;
     }
 
@@ -57,14 +64,14 @@
     template<typename T>
     Lista<T>::~Lista() {
         if(prox)
-            delete prox;    //Deleta todos os próximos recursivamente
+            delete prox;
     }
 
     /**
     * @details Retorna o valor
     */
     template<typename T>
-    T Lista<T>::getValor() {
+    T *Lista<T>::getValor() {
         return dado;
     }
 
@@ -87,13 +94,13 @@
     */
     template<typename T>
     void Lista<T>::Insere(T valor) {
-        Lista *novo = new Lista();
+        Lista<T> *novo = new Lista<T>(valor);
         if(!novo) {
             cout << "Sem memoria disponivel!\n";
             exit(1);
         }
 
-        novo->dado = valor;
+        //novo->dado = valor;
         //BUSCAR A POSIÇÃO PARA INSERIR
         Lista *tmp = this;
         while(tmp->prox) {
@@ -103,7 +110,6 @@
                 break;
         }
 
-        novo->ant = tmp;
         novo->prox = tmp->prox ? tmp->prox : NULL;
         tmp->prox = novo;
     }
@@ -134,7 +140,7 @@
     * @details Remove um valor específico
     */
     template<typename T>
-    void Lista<T>::RemoveVal(T valor) {
+    void Lista<T>::RemoveVal(T *valor) {
         Lista *atual = this;
         Lista *remove = prox;
         while(remove && remove->dado != valor) {
@@ -143,8 +149,6 @@
         }
         if(remove) {
             atual->prox = remove->prox;     //Relink o anterior ao próximo
-            if(remove->prox)                //Se houve próximo, relink o anterior dele com o anterior
-                remove->prox->ant = atual;  
             remove->prox = NULL;            //Para não remover todos os próximos através do destrutor padrão
             delete remove;				
         }
@@ -154,7 +158,7 @@
     * @details Procura um valor e retorna o nó
     */
     template<typename T>
-    Lista<T> *Lista<T>::Busca(T valor) {
+    Lista<T> *Lista<T>::Busca(T *valor) {
         Lista *retorna = prox;
         while(retorna && retorna->dado != valor)
             retorna = retorna->prox;
@@ -168,23 +172,16 @@
     template<typename T>
     T *Lista<T>::Posiciona(int pos) {
         Lista *retorna = prox;
-        for(int i = 0; i < pos; i++) {
+        for(int i = 0; i < pos && retorna; i++) {
             if(retorna)
                 retorna = retorna->prox;
             else
                 return NULL;
         }
-        return &retorna->dado;
-    }
-
-    /**
-    * @details Retorna o nó anterior
-    */
-    template<typename T>
-    Lista<T> *Lista<T>::getAnterior() {
-        if(!ant->ant)   //Se o anterior do anterior for null, é o primeiro
+        if(retorna)
+            return retorna->dado;
+        else
             return NULL;
-        return ant;
     }
 
     /**
@@ -196,7 +193,8 @@
     }
 
     /**
-    * @details Imprime a lista completa
+    * @details      Imprime a lista completa
+    * @param[in]    comNumeros True para exibir uma lista numerada
     */
     template<typename T>
     void Lista<T>::Exibe(bool comNumeros) {
@@ -209,14 +207,14 @@
         
         if(!comNumeros) {
             while( tmp != NULL){
-                cout << tmp->dado << endl;
+                cout << *tmp->dado << endl;
                 tmp = tmp->prox;
             }
             cout << ("\n\n");
         } else {
             int i = 1;
             while( tmp != NULL){
-                cout << "(" << i << ") " << tmp->dado << endl;
+                cout << "(" << i << ") " << *tmp->dado << endl;
                 tmp = tmp->prox;
                 i++;
             }

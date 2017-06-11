@@ -11,18 +11,19 @@
 
 /**
 * @details O valor de RSocial e CNPJ são inicializados com vazio
+*          e a lista de produtos é inicializada
 */
 Fornecedor::Fornecedor() {
     RSocial = "";
     CNPJ = "";
-    produtos = new Lista<Produto>();
+    produtos = new Lista<Produto*>();
 }
 /**
 * @details Destrutor padrão
 */
 Fornecedor::~Fornecedor() {
-    //if(produtos->getProximo())
-//        delete produtos;
+    while(getQtde() > 0)
+        delProduto(0);
 }
 
 /**
@@ -56,7 +57,7 @@ void Fornecedor::setCNPJ(string n) {
 }
 
 /**
-* @return Quantidade de alunos
+* @return Quantidade de produtos
 */
 int Fornecedor::getQtde() {
     return produtos->getTamanho();
@@ -65,32 +66,32 @@ int Fornecedor::getQtde() {
 /**
 * @return A lista com os produtos da Fornecedor
 */
-Lista<Produto> *Fornecedor::getProdutos() {
+Lista<Produto*> *Fornecedor::getProdutos() {
     return produtos;
 }
 
 /**
-* @details O método modifica todos os produtos da Fornecedor
+* @details O método modifica todos os produtos do Fornecedor
 * @param   *f Ponteiro para a lista de produtos
 */
-void Fornecedor::setProdutos(Lista<Produto> *f) {
+void Fornecedor::setProdutos(Lista<Produto*> *f) {
     while(produtos->getTamanho() > 0)
         produtos->RemovePos(0);
 
     int qtde = f->getTamanho();
     for(int i = 0; i < qtde; i++) {
         f = f->getProximo();
-        produtos->Insere((Produto)f->getValor());
+        produtos->Insere(*f->getValor());
     }
 }
 
 /**
-* @details O método modifica adiciona um produto
+* @details O método adiciona um produto
 * @param   f Produto à incluir
 * @return  True se adicionou
 */
-bool Fornecedor::addProduto(Produto f) {
-    if(pertenceFornecedor(f.getcb())) 
+bool Fornecedor::addProduto(Produto *f) {
+    if(pertenceFornecedor(f->getCb())) 
         return false;
 
     produtos->Insere(f);
@@ -118,10 +119,11 @@ bool Fornecedor::delProduto(int f) {
 * @return  True se pertence ao quadro de produtos
 */
 bool Fornecedor::pertenceFornecedor(string n) {
-    Lista<Produto> *tmp = produtos->getProximo();
+    Lista<Produto*> *tmp = produtos->getProximo();
     int qtde = produtos->getTamanho();
     for(int i = 0; i < qtde; i++) {
-        if(produtos->getValor().getcb() == n)
+        Produto *p = *tmp->getValor();
+        if(p->getCb() == n)
             return true;
         tmp = tmp->getProximo();
     }
@@ -132,22 +134,37 @@ bool Fornecedor::pertenceFornecedor(string n) {
 * @return String com os dados para exportação CSV
 */
 string Fornecedor::exportar() {
-    //return "fornec;" + RSocial + ";" + CNPJ;
-
     string ret = "fornec;" + RSocial + ";" + CNPJ + "\n";
 
-    Lista<Produto> *aa = produtos;
+    Lista<Produto*> *aa = produtos;
     int tam = aa->getTamanho();
     for(int j = 0; j < tam; j++) {            
-        aa = aa->getProximo();
-        ret += aa->getValor().exportar() + "\n";
+        Produto *p = dynamic_cast<Produto*>(*aa->Posiciona(j));
+        string tipo_m = p->getTipo();
+        minusculas(tipo_m);
+        if(tipo_m == "bebida")
+            ret += dynamic_cast<Bebida*>(p)->exportar() + "\n";
+        else if(tipo_m == "fruta")
+            ret += dynamic_cast<Fruta*>(p)->exportar() + "\n";
+        else if(tipo_m == "doce")
+            ret += dynamic_cast<Doce*>(p)->exportar() + "\n";
+        else if(tipo_m == "salgado")
+            ret += dynamic_cast<Salgado*>(p)->exportar() + "\n";
+        else if(tipo_m == "cd")
+            ret += dynamic_cast<CD*>(p)->exportar() + "\n";
+        else if(tipo_m == "dvd")
+            ret += dynamic_cast<DVD*>(p)->exportar() + "\n";
+        else if(tipo_m == "livro")
+            ret += dynamic_cast<Livro*>(p)->exportar() + "\n";
+        else
+            ret += p->exportar() + "\n";
     }
     return ret;
 }
 
 /** 
 * @details O operador é sobrecarregado para representar o Fornecedor
-* @param	a Referência para o objeto Fornecedor a ser comparado
+* @param	p Referência para o objeto Fornecedor a ser comparado
 * @return	True se > que 'p'
 */
 bool Fornecedor::operator>(Fornecedor &p) {
@@ -156,7 +173,11 @@ bool Fornecedor::operator>(Fornecedor &p) {
     return false;
 }
 
-/** @brief Sobrecarga do operador de comparação > */
+/** 
+* @details  O operador é sobrecarregado para representar o Fornecedor
+* @param	f Referência para o objeto Fornecedor a ser comparado
+* @return	True se != que 'f'
+*/
 bool Fornecedor::operator!=(Fornecedor &f) {
     if(CNPJ == f.getCNPJ())
         return false;
@@ -164,28 +185,30 @@ bool Fornecedor::operator!=(Fornecedor &f) {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details  O operador é sobrecarregado para representar o Fornecedor e 
+*           a quantidade de seus produtos
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	f Referência para o objeto Fornecedor a ser impresso
 * @return	Referência para stream de saída
 */
-ostream& operator<<(ostream& os, Fornecedor &e) {
-	os << "R. Social: " << e.RSocial << "\t | produtos: " << e.produtos->getTamanho();
+ostream& operator<<(ostream& os, Fornecedor &f) {
+	os << "R. Social: " << f.RSocial << "\t | produtos: " << f.produtos->getTamanho();
 	return os;
 }
 
 /** 
-* @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
-*			valores fornecidos
-* @return	Referência para stream de entrada
+* @details  O operador é sobrecarregado para representar o Fornecedor
+* @param[in]	    is Referência para stream de entrada
+* @param[in]    f Referência para o objeto Fornecedor a ser criado com base nos 
+*			    valores fornecidos
+* @return	    Referência para stream de entrada
 */
-istream& operator>>(istream& is, Fornecedor &e) {
+istream& operator>>(istream& is, Fornecedor &f) {
 	string lido;
-    getline(is, e.RSocial, ';');
-    if(e.RSocial == "\n")
+    getline(is, f.RSocial, ';');
+    if(f.RSocial == "\n")
         return is;
-    getline(is, e.CNPJ);
+    getline(is, f.CNPJ);
 
     return is;
 }
