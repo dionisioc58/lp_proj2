@@ -26,7 +26,7 @@ Venda::~Venda() {
 /**
 * @return Produto
 */
-Produto Venda::getProduto() {
+Produto *Venda::getProduto() {
     return produto;
 }
 
@@ -34,7 +34,7 @@ Produto Venda::getProduto() {
 * @details O método modifica o produto
 * @param   q Produto
 */
-void Venda::setProduto(Produto p) {
+void Venda::setProduto(Produto *p) {
     produto = p;
 }
 
@@ -59,14 +59,14 @@ void Venda::setQtde(int q) {
 * @return	True se > que 'a'
 */
 bool Venda::operator>(Venda &v) {
-    if(produto.getcb() > v.getProduto().getcb())
+    if(produto->getcb() > v.getProduto()->getcb())
         return true;
     return false;
 }
 
 /** @brief Sobrecarga do operador de comparação > */
 bool Venda::operator!=(Venda &v) {
-    if(produto.getcb() == v.getProduto().getcb())
+    if(produto->getcb() == v.getProduto()->getcb())
         return false;
     return true;
 }
@@ -78,9 +78,10 @@ bool Venda::operator!=(Venda &v) {
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Venda &v) {
-	os <<  v.produto.getcb() << "\t| ";
-	os << "Desc.: " << v.produto.getdescricao() << "\t|";
-    os << "Qtde.: " << v.qtde;
+	os << v.produto->getcb() << "\t| ";
+	os << v.produto->getdescricao() << "\t|";
+    os << v.qtde << "\t|";
+    os << v.produto->getpreco() * v.qtde;
     
     return os;
 }

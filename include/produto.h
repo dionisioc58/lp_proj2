@@ -17,6 +17,7 @@ using std::string;
 using std::ostream;
 using std::istream;
 using std::stringstream;
+#include "funcoes.h"
 
     /**
     * @class   Produto Produto.h
@@ -32,7 +33,7 @@ using std::stringstream;
         int qtde;                                               /**< Quantidade */
     public:
         Produto();                                              /**< Construtor padrão */
-        ~Produto();                                             /**< Destrutor padrão */
+        virtual ~Produto();                                     /**< Destrutor padrão */
         
         string getcb();                                         /**< Retorna o codigo de barras */
         void setcb(string r);                                   /**< Modifica o codigo de barras */
@@ -50,7 +51,7 @@ using std::stringstream;
         void setQtde(int q);                                    /**< Modifica a quantidade */
 
         string getEstoque();                                    /**< Retorna o código, a descrição e a quantidade */
-                
+        void capturar();                                        /**< Coleta os dados a partir da entrada padrão */
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
         bool operator>(Produto &p);                             /** @brief Sobrecarga do operador de comparação > */
         bool operator!=(Produto &p);                            /** @brief Sobrecarga do operador de comparação > */

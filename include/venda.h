@@ -27,17 +27,17 @@ using std::stringstream;
     */  
     class Venda {
     protected:
-        Produto produto;                                        /**< codigo de barras */
-        int qtde;                                               /**< Quantidade */
+        Produto *produto;                                     /**< codigo de barras */
+        int qtde;                                             /**< Quantidade */
     public:
         Venda();                                              /**< Construtor padrão */
         ~Venda();                                             /**< Destrutor padrão */
         
-        Produto getProduto();                                   /**< Retorna o produto */
-        void setProduto(Produto p);                             /**< Modifica o produto */
+        Produto *getProduto();                                /**< Retorna o produto */
+        void setProduto(Produto *p);                          /**< Modifica o produto */
 
-        int getQtde();                                          /**< Retorna a quantidade */
-        void setQtde(int q);                                    /**< Modifica a quantidade */
+        int getQtde();                                        /**< Retorna a quantidade */
+        void setQtde(int q);                                  /**< Modifica a quantidade */
                 
         bool operator>(Venda &v);                             /** @brief Sobrecarga do operador de comparação > */
         bool operator!=(Venda &v);                            /** @brief Sobrecarga do operador de comparação > */

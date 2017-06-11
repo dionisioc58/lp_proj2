@@ -25,6 +25,10 @@ public:
     void setValidade(string v) {
         validade = v;
     }
+    friend istream& operator>>(istream& is, Perecivel &p){    /** @brief Sobrecarga do operador de extração de stream */
+        getline(is, p.validade, ';');
+        return is;
+    }
 };
 
 #endif

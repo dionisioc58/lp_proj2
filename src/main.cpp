@@ -34,6 +34,8 @@ int main(int argc, char* argv[]) {
             case 0:             //Sair
                 cout << endl;
                 salvarBD("./data/banco.dat", fornecs); 
+                delete fornecs;
+                delete itens;
                 return 0;
 
             case 1:              //Cadastrar um fornecedor
@@ -79,5 +81,7 @@ int main(int argc, char* argv[]) {
     }
     cout << endl;
     salvarBD("./data/banco.dat", fornecs); 
+    delete fornecs;
+    delete itens;
     return 0;
 }

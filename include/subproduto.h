@@ -12,13 +12,11 @@
 
 #include <iostream>
 #include <string>
-#include <sstream>
 #include "produto.h"
 #include "perecivel.h"
 using std::string;
-using std::ostream;
-using std::istream;
-using std::stringstream;
+using std::cin;
+using std::cout;
 
 /**
     * @class   Bebida subproduto.h
@@ -37,7 +35,9 @@ using std::stringstream;
         int getAcucar();
         void setAlcool(float al);
         float getAlcool();
-        
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, Bebida &p);    /** @brief Sobrecarga do operador de inserção em stream */
+        friend istream& operator>>(istream& is, Bebida &b);     /** @brief Sobrecarga do operador de extração de stream */
     };
 
     /**
@@ -57,7 +57,9 @@ using std::stringstream;
         int getNum();
         void setDp(string d);
         string getDp();
-    
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, Fruta &p);    /** @brief Sobrecarga do operador de inserção em stream */
+        friend istream& operator>>(istream& is, Fruta &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
 
     /**
@@ -80,7 +82,9 @@ using std::stringstream;
         bool getGluten();
         void setGlicose(bool l);
         bool getGlicose();
-    
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, Doce &p);    /** @brief Sobrecarga do operador de inserção em stream */
+        friend istream& operator>>(istream& is, Doce &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
 
     /**
@@ -103,19 +107,21 @@ using std::stringstream;
         bool getGluten();
         void setLactose(bool l);
         bool getLactose();
-    
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, Salgado &p);    /** @brief Sobrecarga do operador de inserção em stream */        
+        friend istream& operator>>(istream& is, Salgado &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
 
     /**
     * @class   CD subproduto.h
     * @brief   Classe derivada que representa um CD
-    * @details Os atributos de um CD são: estilo, arista e nome do album
+    * @details Os atributos de um CD são: estilo, arista e album
     */  
     class CD : public Produto {
     protected:
         string estilo;
         string artista;
-        string NomeAlbum;
+        string album;
     public:
         CD();
         ~CD();
@@ -124,9 +130,11 @@ using std::stringstream;
         string getEstilo();
         void setArtista(string a);
         string getArtista();
-        void setNomeAlbum(string n);
-        string getNomeAlbum();
-    
+        void setAlbum(string n);
+        string getAlbum();
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, CD &p);    /** @brief Sobrecarga do operador de inserção em stream */        
+        friend istream& operator>>(istream& is, CD &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
 
     /**
@@ -149,7 +157,9 @@ using std::stringstream;
         string getGenero();
         void setDuracao(string d);
         string getDuracao();
-    
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, DVD &p);    /** @brief Sobrecarga do operador de inserção em stream */        
+        friend istream& operator>>(istream& is, DVD &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
 
     /**
@@ -175,6 +185,8 @@ using std::stringstream;
         string getEditora();
         void setAnopub(string ap);
         string getAnopub();
-    
+        string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        friend ostream& operator<<(ostream& os, Livro &p);    /** @brief Sobrecarga do operador de inserção em stream */        
+        friend istream& operator>>(istream& is, Livro &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
 #endif

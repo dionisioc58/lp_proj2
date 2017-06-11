@@ -34,13 +34,13 @@
     * @brief        Função que coleta os dados para o cadastro de um fornecedor
     * @return       Fornecedor coletado
     */
-    Fornecedor inputFornecedor();
+    Fornecedor *inputFornecedor();
 
     /**
     * @brief        Função que coleta os dados para cadastro de um aluno
     * @return       Aluno coletado
     */
-    Produto *inputProduto();
+    void inputProduto(Fornecedor *f);
 
     /**
     * @brief        Função que realiza o cadastro um Fornecedor
@@ -91,6 +91,8 @@
     */
     int impPr(Lista<Fornecedor> *e, bool all = true, bool pausa = true);
 
+    void imprimir(Produto *p);
+
     /**
     * @brief        Função que imprime a lista de produtos
     * @param[inout] *e Lista de Fornecedores do cadastro
@@ -133,7 +135,7 @@
     * @param[in]    pos Posição do produto na lista numerada
     * @return       Produto selecionado
     */
-    Produto capturaProduto(Lista<Fornecedor> *e, int pos);
+    Produto *capturaProduto(Lista<Fornecedor> *e, int pos);
 
     /**
     * @brief        Função que realiza uma venda

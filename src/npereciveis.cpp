@@ -11,12 +11,13 @@
 #include "subproduto.h"
 
 /**
-* @details Os valores de estilo, artista e nome album são inicializados com vazio
+* @details Os valores de estilo, artista e album são inicializados com vazio
 */
 CD::CD() {
+    tipo = "CD";
     estilo = "";
     artista = "";
-    NomeAlbum = "";
+    album = "";
 }
 
 /**
@@ -55,24 +56,64 @@ void CD::setArtista(string a) {
     artista = a;
 }
 /**
-* @return NomeAlbum do Produto
+* @return Album do Produto
 */
-string CD::getNomeAlbum() {
-    return NomeAlbum;
+string CD::getAlbum() {
+    return album;
 }
 
 /**
-* @details O método modifica o NomeAlbum do Produto
-* @param   n NomeAlbum
+* @details O método modifica o Album do Produto
+* @param   n Album
 */
-void CD::setNomeAlbum(string n) {
-    NomeAlbum = n;
+void CD::setAlbum(string n) {
+    album = n;
+}
+
+string CD::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+    stringstream ss;
+    ss << dynamic_cast<Produto*>(this)->exportar();
+    ss << ";" << estilo << ";" << artista << ";" << album;
+    string retorno;
+    getline(ss, retorno);
+    return retorno;
+}
+
+/** 
+* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @param	os Referência para stream de saída
+* @param	e Referência para o objeto Fornecedor a ser impresso
+* @return	Referência para stream de saída
+*/
+ostream& operator<<(ostream& os, CD &p) {
+    os << *dynamic_cast<Produto*>(&p);
+    os << "Est. : " << p.getEstilo() << " - ";
+    os << "Art. : " << p.getArtista() << " - ";
+    os << "Álb. : " << p.getAlbum();
+    return os;
+}
+
+/** 
+* @param	is Referência para stream de entrada
+* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+*			valores fornecidos
+* @return	Referência para stream de entrada
+*/
+istream& operator>>(istream& is, CD &b) {
+    is >> *dynamic_cast<Produto*>(&b);
+
+    getline(is, b.estilo, ';');
+    getline(is, b.artista, ';');
+    getline(is, b.album, ';');
+
+    return is;
 }
 
 /**
 * @details Os valores de titulo, genero e duracao são inicializados com vazio
 */
 DVD::DVD() {
+    tipo = "DVD";
     titulo = "";
     genero = "";
     duracao = "";
@@ -128,10 +169,50 @@ void DVD::setDuracao(string d) {
     duracao = d;
 }
 
+string DVD::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+    stringstream ss;
+    ss << dynamic_cast<Produto*>(this)->exportar();
+    ss << ";" << titulo << ";" << genero << ";" << duracao;
+    string retorno;
+    getline(ss, retorno);
+    return retorno;
+}
+
+/** 
+* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @param	os Referência para stream de saída
+* @param	e Referência para o objeto Fornecedor a ser impresso
+* @return	Referência para stream de saída
+*/
+ostream& operator<<(ostream& os, DVD &p) {
+    os << *dynamic_cast<Produto*>(&p);
+    os << "Tit. : " << p.getTitulo() << " - ";
+    os << "Gên. : " << p.getGenero() << " - ";
+    os << "Dur. : " << p.getDuracao();
+    return os;
+}
+
+/** 
+* @param	is Referência para stream de entrada
+* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+*			valores fornecidos
+* @return	Referência para stream de entrada
+*/
+istream& operator>>(istream& is, DVD &b) {
+    is >> *dynamic_cast<Produto*>(&b);
+
+    getline(is, b.titulo, ';');
+    getline(is, b.genero, ';');
+    getline(is, b.duracao, ';');
+
+    return is;
+}
+
 /**
 * @details Os valores de titulo, autor, editora e ano de publicacao são inicializados com vazio
 */
 Livro::Livro() {
+    tipo = "Livro";
     autor = "";
     titulo = "";
     editora = "";
@@ -201,4 +282,45 @@ string Livro::getAnopub() {
 */
 void Livro::setAnopub(string a) {
     anopub = a;
+}
+
+string Livro::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+    stringstream ss;
+    ss << dynamic_cast<Produto*>(this)->exportar();
+    ss << ";" << autor << ";" << titulo << ";" << editora << ";" << anopub;
+    string retorno;
+    getline(ss, retorno);
+    return retorno;
+}
+
+/** 
+* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @param	os Referência para stream de saída
+* @param	e Referência para o objeto Fornecedor a ser impresso
+* @return	Referência para stream de saída
+*/
+ostream& operator<<(ostream& os, Livro &p) {
+    os << *dynamic_cast<Produto*>(&p);
+    os << "Aut. : " << p.getAutor() << " - ";
+    os << "Tit. : " << p.getTitulo() << " - ";
+    os << "Edit.: " << p.getEditora() << " - ";
+    os << "Ano. : " << p.getAnopub();
+    return os;
+}
+
+/** 
+* @param	is Referência para stream de entrada
+* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+*			valores fornecidos
+* @return	Referência para stream de entrada
+*/
+istream& operator>>(istream& is, Livro &b) {
+    is >> *dynamic_cast<Produto*>(&b);
+
+    getline(is, b.autor, ';');
+    getline(is, b.titulo, ';');
+    getline(is, b.editora, ';');
+    getline(is, b.anopub, ';');
+
+    return is;
 }

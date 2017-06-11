@@ -19,42 +19,35 @@
     /**
     * @class   Lista lista.h
     * @brief   Classe que representa uma lista duplamente encadeada
-    * @details Os atributos de uma lista são: dado e prox
+    * @details Os atributos de uma lista são: dado, ant e prox
     */  
     template<typename T>
     class Lista {
     private:
         T *dado;                                             /**< Dado */
+        Lista *ant;                                         /**< Anterior */
         Lista *prox;                                        /**< Próximo */
     public:
         Lista();                                            /**< Construtor padrão */
-        Lista(T valor);                                     /**< Construtor especifico */
         ~Lista();                                           /**< Destrutor padrão */
         T *getValor();                                       /**< Retorna o valor */
         int getTamanho();                                   /**< Retorna a quantidade de itens na lista */
-        void Insere(T valor);                               /**< Insere um valor na lista */
+        void Insere(T *valor);                               /**< Insere um valor na lista */
         void RemovePos(int pos);                            /**< Remove um valor na posição informada */
         void RemoveVal(T *valor);                            /**< Remove um valor específico */
         Lista *Busca(T *valor);                              /**< Procura um valor e retorna o nó */
         T *Posiciona(int pos);                              /**< Retorna o elemento na posição dada */
+        Lista *getAnterior();                               /**< Retorna o nó anterior */
         Lista *getProximo();                                /**< Retorna o próximo nó */
         void Exibe(bool comNumeros = false);                /**< Imprime a lista */
     };
 
     /**
-    * @details Os valores prox são inicializados com NULL
+    * @details Os valores de ant e prox são inicializados com NULL
     */
     template<typename T>
     Lista<T>::Lista() {
-        prox = NULL;
-    }
-
-    /**
-    * @details Os valores prox são inicializados com NULL
-    */
-    template<typename T>
-    Lista<T>::Lista(T valor) {
-        dado = new T(valor);
+        ant = NULL;
         prox = NULL;
     }
 
@@ -64,7 +57,7 @@
     template<typename T>
     Lista<T>::~Lista() {
         if(prox)
-            delete prox;
+            delete prox;    //Deleta todos os próximos recursivamente
     }
 
     /**
@@ -93,14 +86,14 @@
     * @details Insere um valor na lista
     */
     template<typename T>
-    void Lista<T>::Insere(T valor) {
-        Lista<T> *novo = new Lista<T>(valor);
+    void Lista<T>::Insere(T *valor) {
+        Lista<T> *novo = new Lista<T>();
         if(!novo) {
             cout << "Sem memoria disponivel!\n";
             exit(1);
         }
 
-        //novo->dado = valor;
+        novo->dado = valor;
         //BUSCAR A POSIÇÃO PARA INSERIR
         Lista *tmp = this;
         while(tmp->prox) {
@@ -110,6 +103,7 @@
                 break;
         }
 
+        novo->ant = tmp;
         novo->prox = tmp->prox ? tmp->prox : NULL;
         tmp->prox = novo;
     }
@@ -149,6 +143,8 @@
         }
         if(remove) {
             atual->prox = remove->prox;     //Relink o anterior ao próximo
+            if(remove->prox)                //Se houve próximo, relink o anterior dele com o anterior
+                remove->prox->ant = atual;  
             remove->prox = NULL;            //Para não remover todos os próximos através do destrutor padrão
             delete remove;				
         }
@@ -172,16 +168,23 @@
     template<typename T>
     T *Lista<T>::Posiciona(int pos) {
         Lista *retorna = prox;
-        for(int i = 0; i < pos && retorna; i++) {
+        for(int i = 0; i < pos; i++) {
             if(retorna)
                 retorna = retorna->prox;
             else
                 return NULL;
         }
-        if(retorna)
-            return retorna->dado;
-        else
+        return retorna->dado;
+    }
+
+    /**
+    * @details Retorna o nó anterior
+    */
+    template<typename T>
+    Lista<T> *Lista<T>::getAnterior() {
+        if(!ant->ant)   //Se o anterior do anterior for null, é o primeiro
             return NULL;
+        return ant;
     }
 
     /**

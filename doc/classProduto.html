@@ -114,7 +114,7 @@ Diagrama de colaboração para Produto:</div>
 Métodos Públicos</h2></td></tr>
 <tr class="memitem:adcd5834a1f04cc42fef88bf60217b8f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#adcd5834a1f04cc42fef88bf60217b8f4">Produto</a> ()</td></tr>
 <tr class="separator:adcd5834a1f04cc42fef88bf60217b8f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84a8b28176b743e8c74bfd89aee9a9b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#a84a8b28176b743e8c74bfd89aee9a9b2">~Produto</a> ()</td></tr>
+<tr class="memitem:a84a8b28176b743e8c74bfd89aee9a9b2"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#a84a8b28176b743e8c74bfd89aee9a9b2">~Produto</a> ()</td></tr>
 <tr class="separator:a84a8b28176b743e8c74bfd89aee9a9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab242994bf7cce8b078358d944c80c4b1"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#ab242994bf7cce8b078358d944c80c4b1">getcb</a> ()</td></tr>
 <tr class="separator:ab242994bf7cce8b078358d944c80c4b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +138,8 @@ Métodos Públicos</h2></td></tr>
 <tr class="separator:afffd52a9f532cf165d6e9f30c3a7e68c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2c8510d94331d83f7edd7c9ebd7f3ef"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#ad2c8510d94331d83f7edd7c9ebd7f3ef">getEstoque</a> ()</td></tr>
 <tr class="separator:ad2c8510d94331d83f7edd7c9ebd7f3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ca9e697f49a47115da907b1201a601"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#a36ca9e697f49a47115da907b1201a601">capturar</a> ()</td></tr>
+<tr class="separator:a36ca9e697f49a47115da907b1201a601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaaf877acc9f6368c24f93b98a0e77841"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#aaaf877acc9f6368c24f93b98a0e77841">exportar</a> ()</td></tr>
 <tr class="separator:aaaf877acc9f6368c24f93b98a0e77841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3421f1b55f59b2ea5f58b9e6ffbc861"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#ab3421f1b55f59b2ea5f58b9e6ffbc861">operator&gt;</a> (<a class="el" href="classProduto.html">Produto</a> &amp;p)</td></tr>
@@ -193,6 +195,9 @@ Amigas</h2></td></tr>
 <a class="anchor" id="a84a8b28176b743e8c74bfd89aee9a9b2"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Produto::~Produto </td>
@@ -201,12 +206,34 @@ Amigas</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Destrutor padrão </p>
 
 </div>
 </div>
 <h2 class="groupheader">Métodos</h2>
+<a class="anchor" id="a36ca9e697f49a47115da907b1201a601"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Produto::capturar </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Coleta os dados a partir da entrada padrão</p>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> com os dados coletados </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aaaf877acc9f6368c24f93b98a0e77841"></a>
 <div class="memitem">
 <div class="memproto">
@@ -666,7 +693,7 @@ Amigas</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Segunda, 5 de Junho de 2017 14:44:58 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Sábado, 10 de Junho de 2017 21:03:04 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

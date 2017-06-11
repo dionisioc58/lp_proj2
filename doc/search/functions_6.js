@@ -1,6 +1,7 @@
 var searchData=
 [
   ['getacucar',['getAcucar',['../classBebida.html#aa76927fe467e36ac64c6ea675cb0782a',1,'Bebida::getAcucar()'],['../classDoce.html#ae3e0ba9ac76ff3e480fa8decaf883791',1,'Doce::getAcucar()']]],
+  ['getalbum',['getAlbum',['../classCD.html#a6299976d8a602c92afb0afffff691b52',1,'CD']]],
   ['getalcool',['getAlcool',['../classBebida.html#adf06b068c24180509f37c0b90f682a3a',1,'Bebida']]],
   ['getanopub',['getAnopub',['../classLivro.html#a3807fba9854efee335f22fbc59a4ca0b',1,'Livro']]],
   ['getanterior',['getAnterior',['../classLista.html#a3c02fab58168322983a94a3a6f85fa18',1,'Lista']]],
@@ -18,17 +19,16 @@ var searchData=
   ['getglicose',['getGlicose',['../classDoce.html#aa74b3588ab7636309b3591a677b2e619',1,'Doce']]],
   ['getgluten',['getGluten',['../classDoce.html#a2a7c785c1fcbb366eef272a34cfd3f38',1,'Doce::getGluten()'],['../classSalgado.html#ad17c651a248db07e48ddec719a792db9',1,'Salgado::getGluten()']]],
   ['getlactose',['getLactose',['../classSalgado.html#a351d22f4c65a544757a76fbd91e02545',1,'Salgado']]],
-  ['getnomealbum',['getNomeAlbum',['../classCD.html#a7792e4ad4f4859f8f13cb7349483a595',1,'CD']]],
   ['getnum',['getNum',['../classFruta.html#aa1728d5931c6e086389f83ce1f357485',1,'Fruta']]],
   ['getpreco',['getpreco',['../classProduto.html#a312b5742c68480f837b971255111bd2b',1,'Produto']]],
-  ['getproduto',['getProduto',['../classVenda.html#ac99a55c1aafd105ef354706f2fd3af4f',1,'Venda']]],
-  ['getprodutos',['getProdutos',['../classFornecedor.html#a3f97fec38029b79f2212ca6c335a2c80',1,'Fornecedor']]],
-  ['getproximo',['getProximo',['../classLista.html#a5360feacbcc0f09d813f49fcde15a6cc',1,'Lista']]],
+  ['getproduto',['getProduto',['../classVenda.html#a57fd97cc646b69f95d1efaeba7c2f1a6',1,'Venda']]],
+  ['getprodutos',['getProdutos',['../classFornecedor.html#aa04da1ee81d954677a63718b0492c66a',1,'Fornecedor']]],
+  ['getproximo',['getProximo',['../classLista.html#a5360feacbcc0f09d813f49fcde15a6cc',1,'Lista::getProximo()'],['../classLista.html#a661ebf4148263bc0a9778f54d9fc4259',1,'Lista::getProximo()']]],
   ['getqtde',['getQtde',['../classFornecedor.html#a69e725256294debcd9b75337ce0f9e21',1,'Fornecedor::getQtde()'],['../classProduto.html#a6946a9b51c9f90635df6aaa772c1bf9b',1,'Produto::getQtde()'],['../classVenda.html#a198b9538b70061ac5ff460711b7316da',1,'Venda::getQtde()']]],
   ['getrsocial',['getRSocial',['../classFornecedor.html#ae56ac8b42e36991fc20325facf754055',1,'Fornecedor']]],
   ['getsodio',['getSodio',['../classSalgado.html#a5dcd6ae9d790fc5b18518c82d5292e47',1,'Salgado']]],
-  ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista']]],
+  ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista::getTamanho()'],['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista::getTamanho()']]],
   ['gettipo',['gettipo',['../classProduto.html#ac2df433e55756f63627f17fe3aa61bba',1,'Produto']]],
   ['gettitulo',['getTitulo',['../classDVD.html#a1dd7bf7d8f0b27854dd7303f67ca84ed',1,'DVD::getTitulo()'],['../classLivro.html#af9521ac8f161bc215f50b0a626163105',1,'Livro::getTitulo()']]],
-  ['getvalor',['getValor',['../classLista.html#a94177c722231097e27a7ca950a689c1f',1,'Lista']]]
+  ['getvalor',['getValor',['../classLista.html#ad739ab06515c58648f04560f0fdfb1e3',1,'Lista::getValor()'],['../classLista.html#a27f09109aa77880d15fe38bd6637210f',1,'Lista::getValor()']]]
 ];

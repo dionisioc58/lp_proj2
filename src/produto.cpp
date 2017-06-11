@@ -112,11 +112,29 @@ string Produto::getEstoque() {
 }
 
 /**
+* @return Produto com os dados coletados
+*/
+void Produto::capturar() {
+    string input;
+    cout << "Digite o código do produto: ";
+    getline(cin, cb);
+
+    cout << "Digite a descrição do produto: ";
+    getline(cin, descricao);
+    
+    float floats = recebeFloat("Digite o preço: ", 0);
+    preco = floats;
+
+    int ints = recebeInt("Digite a quantidade: ", 0);
+    qtde = ints;
+}
+
+/**
 * @return String com os dados para exportação CSV
 */
 string Produto::exportar() {
     stringstream ss;
-    ss << "produt;" << cb << ";" << descricao << ";" << tipo << ";" << preco;
+    ss << "produt;" << tipo << ";" << cb << ";" << descricao << ";" << preco << ";" << qtde;
     string retorno;
     getline(ss, retorno);
     return retorno;
@@ -147,10 +165,11 @@ bool Produto::operator!=(Produto &p) {
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Produto &p) {
-	os <<  p.cb << "\t| ";
-	os << "Desc.: " << p.descricao << "\t| ";
-    os << "Tipo.: " << p.tipo << "\t| ";
-    os << "Prec.: " << p.preco;
+	os << "Cód. : " << p.getcb() << " - ";
+	os << "Desc.: " << p.getdescricao() << " - ";
+    os << "Tipo.: " << p.gettipo() << " - ";
+    os << "Prec.: " << p.getpreco() << " - ";
+    os << "Qtde.: " << p.getQtde() << " - ";
     
     return os;
 }
@@ -163,15 +182,20 @@ ostream& operator<<(ostream& os, Produto &p) {
 */
 istream& operator>>(istream& is, Produto &p) {
     string lido;
+    //getline(is, p.tipo, ';');
+
     getline(is, p.cb, ';');
     if(p.cb == "\n")
         return is;
     getline(is, p.descricao, ';');
 
-    getline(is, p.tipo, ';');
+    getline(is, lido, ';');
+    if(lido != "")
+        p.preco = stod(lido);
 
     getline(is, lido, ';');
-    p.preco = stod(lido);
+    if(lido != "")
+        p.qtde = stoi(lido);
 
     return is;
 }
