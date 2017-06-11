@@ -29,6 +29,7 @@
     #include "subproduto.h"
     #include "venda.h"
     #include "funcoes.h"
+    #include "menu.h"
 
     /**
     * @brief        Função que coleta os dados para o cadastro de um fornecedor
@@ -91,12 +92,12 @@
     */
     int impPr(Lista<Fornecedor> *e, bool all = true, bool pausa = true);
 
-    void imprimir(Produto *p);
+    void imprimir(Produto *p, bool detalhes = true);
 
     /**
     * @brief        Função que imprime a lista de produtos
     * @param[inout] *e Lista de Fornecedores do cadastro
-    * @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo)
+    * @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo, 3 = exibir menos detalhes)
     * @param[in]    pausa True para apresentar uma pausa após a impressão
     * @return       -1 ou o número do fornecedor selecionada
     */
@@ -143,6 +144,14 @@
     * @param[in]    *v Lista de venda com seus itens
     */
     void venda(Lista<Fornecedor> *e, Lista<Venda> *v);
+
+    void venda_add(Lista<Fornecedor> *e, Lista<Venda> *v);
+
+    void venda_del(Lista<Fornecedor> *e, Lista<Venda> *v);
+
+    void venda_lis(Lista<Venda> *v, bool pausa = true);
+
+    void venda_enc(Lista<Venda> *v);
 
     /**
     * @brief        Função que imprime a lista de estoque

@@ -6,5 +6,5 @@ var searchData=
   ['impprlistaestoque',['impPrListaEstoque',['../bancodados_8h.html#a20cbfadbdefb1c6e676a32cd4a600264',1,'impPrListaEstoque(Lista&lt; Fornecedor &gt; *e, bool pausa=true):&#160;bancodados.cpp'],['../bancodados_8cpp.html#a6fd2e1539cff6a1f9e4090964901e314',1,'impPrListaEstoque(Lista&lt; Fornecedor &gt; *e, bool pausa):&#160;bancodados.cpp']]],
   ['inputfornecedor',['inputFornecedor',['../bancodados_8h.html#ae6bf11d9d02746044b1834b1a8f589e9',1,'inputFornecedor():&#160;bancodados.cpp'],['../bancodados_8cpp.html#ae6bf11d9d02746044b1834b1a8f589e9',1,'inputFornecedor():&#160;bancodados.cpp']]],
   ['inputproduto',['inputProduto',['../bancodados_8h.html#ac23fc37b593e2bfce75d265383eedf3a',1,'inputProduto(Fornecedor *f):&#160;bancodados.cpp'],['../bancodados_8cpp.html#ac23fc37b593e2bfce75d265383eedf3a',1,'inputProduto(Fornecedor *f):&#160;bancodados.cpp']]],
-  ['insere',['Insere',['../classLista.html#ae26be7a19ebae8ee436f8472dd4a7c69',1,'Lista::Insere(T valor)'],['../classLista.html#addd1800a7227f44d392cd205dd7bd642',1,'Lista::Insere(T *valor)']]]
+  ['insere',['Insere',['../classLista.html#ae26be7a19ebae8ee436f8472dd4a7c69',1,'Lista']]]
 ];

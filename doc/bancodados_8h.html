@@ -103,12 +103,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <code>#include &quot;<a class="el" href="subproduto_8h_source.html">subproduto.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="venda_8h_source.html">venda.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="funcoes_8h_source.html">funcoes.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="menu_8h_source.html">menu.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para bancodados.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="bancodados_8h__incl.png" border="0" usemap="#include_2bancodados_8h" alt=""/></div>
 <map name="include_2bancodados_8h" id="include_2bancodados_8h">
-<area shape="rect" id="node6" href="fornecedor_8h.html" title="Definição da classe Fornecedor. " alt="" coords="371,80,466,107"/><area shape="rect" id="node8" href="produto_8h.html" title="Definição da classe Produto. " alt="" coords="409,229,485,256"/><area shape="rect" id="node9" href="funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="262,304,341,331"/><area shape="rect" id="node10" href="subproduto_8h.html" title="Definição das classe derivadas de Produto. " alt="" coords="185,155,282,181"/><area shape="rect" id="node13" href="venda_8h.html" title="Definição da classe Venda. " alt="" coords="590,155,658,181"/><area shape="rect" id="node12" href="lista_8h.html" title="Definição da classe Lista. " alt="" coords="181,304,238,331"/><area shape="rect" id="node11" href="perecivel_8h.html" title="Definição da classe Perecivel. " alt="" coords="195,229,280,256"/></map>
+<area shape="rect" id="node6" href="fornecedor_8h.html" title="Definição da classe Fornecedor. " alt="" coords="408,80,503,107"/><area shape="rect" id="node8" href="produto_8h.html" title="Definição da classe Produto. " alt="" coords="327,229,403,256"/><area shape="rect" id="node9" href="funcoes_8h.html" title="Arquivo de cabeçalho com a definição de funções auxiliares para a entrada de dados. " alt="" coords="710,304,788,331"/><area shape="rect" id="node10" href="subproduto_8h.html" title="Definição das classe derivadas de Produto. " alt="" coords="626,155,723,181"/><area shape="rect" id="node13" href="venda_8h.html" title="Definição da classe Venda. " alt="" coords="92,155,160,181"/><area shape="rect" id="node14" href="menu_8h.html" title="Arquivo de cabeçalho com a definição de funções para o menu. " alt="" coords="892,229,958,256"/><area shape="rect" id="node12" href="lista_8h.html" title="Definição da classe Lista. " alt="" coords="576,304,634,331"/><area shape="rect" id="node11" href="perecivel_8h.html" title="Definição da classe Perecivel. " alt="" coords="681,229,766,256"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com este arquivo:</div>
@@ -150,9 +151,9 @@ Funções</h2></td></tr>
 <tr class="memitem:a5fd814f8883f1c579d81e970c2726c0a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a5fd814f8883f1c579d81e970c2726c0a">impPr</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, bool all=true, bool pausa=true)</td></tr>
 <tr class="memdesc:a5fd814f8883f1c579d81e970c2726c0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que imprime a lista de alunos de uma ou todas as turmas do cadastro.  <a href="#a5fd814f8883f1c579d81e970c2726c0a">Mais...</a><br /></td></tr>
 <tr class="separator:a5fd814f8883f1c579d81e970c2726c0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb8418eaa838a894d74a3f1894ecab58"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aeb8418eaa838a894d74a3f1894ecab58"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>imprimir</b> (<a class="el" href="classProduto.html">Produto</a> *p)</td></tr>
-<tr class="separator:aeb8418eaa838a894d74a3f1894ecab58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbf6031b08a05b835287ffd6e5fd261"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aabbf6031b08a05b835287ffd6e5fd261"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>imprimir</b> (<a class="el" href="classProduto.html">Produto</a> *p, bool detalhes=true)</td></tr>
+<tr class="separator:aabbf6031b08a05b835287ffd6e5fd261"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d360984d13aa079dfa7e5cffc3e7246"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a6d360984d13aa079dfa7e5cffc3e7246">impPrLista</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, int filtro=0, bool pausa=true)</td></tr>
 <tr class="memdesc:a6d360984d13aa079dfa7e5cffc3e7246"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que imprime a lista de produtos.  <a href="#a6d360984d13aa079dfa7e5cffc3e7246">Mais...</a><br /></td></tr>
 <tr class="separator:a6d360984d13aa079dfa7e5cffc3e7246"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +177,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="banc
 <tr class="memitem:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a2f5e6fbd88a1178100e2cdf8b2d8ddf8">venda</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, <a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v)</td></tr>
 <tr class="memdesc:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que realiza uma venda.  <a href="#a2f5e6fbd88a1178100e2cdf8b2d8ddf8">Mais...</a><br /></td></tr>
 <tr class="separator:a2f5e6fbd88a1178100e2cdf8b2d8ddf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae19eb723e276ef394e23f0eaa567aac8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae19eb723e276ef394e23f0eaa567aac8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>venda_add</b> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, <a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v)</td></tr>
+<tr class="separator:ae19eb723e276ef394e23f0eaa567aac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295c6c74f338e2d5dba888603407a1d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a295c6c74f338e2d5dba888603407a1d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>venda_del</b> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, <a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v)</td></tr>
+<tr class="separator:a295c6c74f338e2d5dba888603407a1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f098b4fbdeee1dcf889cae1963d5475"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f098b4fbdeee1dcf889cae1963d5475"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>venda_lis</b> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v, bool pausa=true)</td></tr>
+<tr class="separator:a8f098b4fbdeee1dcf889cae1963d5475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2763c7a84114b48fa29f029ac3b789a0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2763c7a84114b48fa29f029ac3b789a0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>venda_enc</b> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classVenda.html">Venda</a> &gt; *v)</td></tr>
+<tr class="separator:a2763c7a84114b48fa29f029ac3b789a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20cbfadbdefb1c6e676a32cd4a600264"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bancodados_8h.html#a20cbfadbdefb1c6e676a32cd4a600264">impPrListaEstoque</a> (<a class="el" href="classLista.html">Lista</a>&lt; <a class="el" href="classFornecedor.html">Fornecedor</a> &gt; *e, bool pausa=true)</td></tr>
 <tr class="memdesc:a20cbfadbdefb1c6e676a32cd4a600264"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que imprime a lista de estoque.  <a href="#a20cbfadbdefb1c6e676a32cd4a600264">Mais...</a><br /></td></tr>
 <tr class="separator:a20cbfadbdefb1c6e676a32cd4a600264"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -534,7 +547,7 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">*e</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de Fornecedores do cadastro </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">filtro</td><td>Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filtro</td><td>Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo, 3 = exibir menos detalhes) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
   </table>
   </dd>
@@ -543,7 +556,7 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">*e</td><td><a class="el" href="classLista.html" title="Classe que representa uma lista duplamente encadeada. ">Lista</a> de Fornecedores do cadastro </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">filtro</td><td>Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filtro</td><td>Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo, 3 = exibir menos detalhes) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pausa</td><td>True para apresentar uma pausa após a impressão </td></tr>
   </table>
   </dd>
@@ -739,7 +752,7 @@ template&lt;typename T &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Sábado, 10 de Junho de 2017 21:03:04 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 11 de Junho de 2017 14:50:27 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

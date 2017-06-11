@@ -35,17 +35,17 @@ using std::stringstream;
         Produto();                                              /**< Construtor padrão */
         virtual ~Produto();                                     /**< Destrutor padrão */
         
-        string getcb();                                         /**< Retorna o codigo de barras */
-        void setcb(string r);                                   /**< Modifica o codigo de barras */
+        string getCb();                                         /**< Retorna o codigo de barras */
+        void setCb(string r);                                   /**< Modifica o codigo de barras */
         
-        string getdescricao();                                  /**< Retorna o descricao */
-        void setdescricao(string c);                            /**< Modifica o descricao */
+        string getDescricao();                                  /**< Retorna o descricao */
+        void setDescricao(string c);                            /**< Modifica o descricao */
         
-        string gettipo();                                       /**< Retorna o tipo */
-        void settipo(string t);                                 /**< Modifica o tipo */
+        string getTipo();                                       /**< Retorna o tipo */
+        void setTipo(string t);                                 /**< Modifica o tipo */
         
-        double getpreco();                                      /**< Retorna o preco */
-        void setpreco(double p);                                /**< Modifica o preco */
+        double getPreco();                                      /**< Retorna o preco */
+        void setPreco(double p);                                /**< Modifica o preco */
 
         int getQtde();                                          /**< Retorna a quantidade */
         void setQtde(int q);                                    /**< Modifica a quantidade */

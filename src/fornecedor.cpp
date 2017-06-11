@@ -90,7 +90,7 @@ void Fornecedor::setProdutos(Lista<Produto*> *f) {
 * @return  True se adicionou
 */
 bool Fornecedor::addProduto(Produto *f) {
-    if(pertenceFornecedor(f->getcb())) 
+    if(pertenceFornecedor(f->getCb())) 
         return false;
 
     produtos->Insere(f);
@@ -122,7 +122,7 @@ bool Fornecedor::pertenceFornecedor(string n) {
     int qtde = produtos->getTamanho();
     for(int i = 0; i < qtde; i++) {
         Produto *p = *tmp->getValor();
-        if(p->getcb() == n)
+        if(p->getCb() == n)
             return true;
         tmp = tmp->getProximo();
     }
@@ -141,7 +141,7 @@ string Fornecedor::exportar() {
     int tam = aa->getTamanho();
     for(int j = 0; j < tam; j++) {            
         Produto *p = dynamic_cast<Produto*>(*aa->Posiciona(j));
-        string tipo_m = p->gettipo();
+        string tipo_m = p->getTipo();
         minusculas(tipo_m);
         if(tipo_m == "bebida")
             ret += dynamic_cast<Bebida*>(p)->exportar() + "\n";

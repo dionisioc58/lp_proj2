@@ -59,14 +59,14 @@ void Venda::setQtde(int q) {
 * @return	True se > que 'a'
 */
 bool Venda::operator>(Venda &v) {
-    if(produto->getcb() > v.getProduto()->getcb())
+    if(produto->getCb() > v.getProduto()->getCb())
         return true;
     return false;
 }
 
 /** @brief Sobrecarga do operador de comparação > */
 bool Venda::operator!=(Venda &v) {
-    if(produto->getcb() == v.getProduto()->getcb())
+    if(produto->getCb() == v.getProduto()->getCb())
         return false;
     return true;
 }
@@ -78,10 +78,10 @@ bool Venda::operator!=(Venda &v) {
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Venda &v) {
-	os << v.produto->getcb() << "\t| ";
-	os << v.produto->getdescricao() << "\t|";
+	os << v.produto->getCb() << string(10-v.produto->getCb().length(), ' ') << "\t| ";
+	os << v.produto->getDescricao() << string(30-v.produto->getDescricao().length(), ' ') << "\t|";
     os << v.qtde << "\t|";
-    os << v.produto->getpreco() * v.qtde;
+    os << v.produto->getPreco() * v.qtde;
     
     return os;
 }

@@ -9,57 +9,47 @@
 
 #include "menu.h"
 
-#define itens 13                 /**< Quantidade de opções no menu */
-
-string opcoes[itens] = {
-    "Cadastrar um fornecedor                     ", //1  - ok
-    "Remover um fornecedor                       ", //2  - ok
-    "Listar os fornecedores                      ", //3  - ok
-    "Cadastrar um produto                        ", //4  - ok
-    "Remover um produto                          ", //5  - ok
-    "Alterar um produto                          ", //6  - ok
-    "Listar todos os produtos por fornecedor     ", //7  - ok
-    "Listar todos os produtos de um fornecedor   ", //8  - ok
-    "Listar produtos por tipo                    ", //9  - ok
-    "Listar produtos por codigo                  ", //10 - ok
-    "Realizar uma venda                          ", //11
-    "Controle de estoque                         ", //12
-    "Sair                                        "  //0  - ok
-};                /**< Opções do menu */
+#define largura 46
 
 /**
 * @brief        Função que exibe o menu principal
 * @return       Retorna a opção escolhida
 */
-int showMenu() {
+int showMenu(string titulo, string *op, int qtd) {
     configura(true);      // Configura a entrada padrão para ativar a seleção do menu
     int realce = 0;
     int a;
     while(true) {
+        string tit2 = titulo;
+        remove_acentos(tit2);
+        string preenche = string(largura - 2 - tit2.length(), ' ');
         cout << string(50, '\n'); //Limpa a tela
-        cout << "\t\t|**********************************************|" << endl;
-        cout << "\t\t|\x1b[43m       Q Leve Tudo - A Sua Conveniência       \x1b[0m|" << endl;
+        cout << "\t\t|" << string(largura, '*') << "|" << endl;
+        cout << "\t\t|\x1b[43m  " << titulo << preenche << "\x1b[0m|" << endl;
         cout << "\t\t|                                              |" << endl;
-        for(int i = 0; i < itens; i++) {        
+        for(int i = 0; i < qtd; i++) {        
+            string op2 = op[i];
+            remove_acentos(op2);
+            preenche = string(largura - 2 - op2.length(), ' ');
             if(realce == i)
-                cout << "\t\t|\x1b[42m  " << opcoes[i] << "\x1b[0m|" << endl;
+                cout << "\t\t|\x1b[42m  " << op[i] << preenche << "\x1b[0m|" << endl;
             else
-                cout << "\t\t|  " << opcoes[i] << "|" << endl;
+                cout << "\t\t|  " << op[i] << preenche << "|" << endl;
         }
-        cout << "\t\t|______________________________________________|" << endl;
+        cout << "\t\t|" << string(largura, '_') << "|" << endl;
         
         a = movimenta(); //Captura as teclas
         if(a == 65)      //Seta para cima
-            realce > 0 ? realce-- : realce = itens - 1;
+            realce > 0 ? realce-- : realce = qtd - 1;
         if(a == 66)      //Seta para baixo
-            realce < (itens - 1) ? realce++ : realce = 0;
+            realce < (qtd - 1) ? realce++ : realce = 0;
         if(a == 10)      //Enter
             break;
 
     }
     configura(false);      // Desconfigura a entrada padrão para ativar a seleção do menu
     realce++;
-    if(realce == itens)    //Última opção = sair
+    if(realce == qtd)    //Última opção = sair
         return 0;
     return realce;
 }

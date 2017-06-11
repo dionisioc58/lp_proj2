@@ -79,6 +79,15 @@ string CD::exportar() {                                      /**< Retorna uma st
     return retorno;
 }
 
+void CD::capturar() {
+    cout << "Digite o estilo: ";
+    getline(cin, estilo);
+    cout << "Digite o nome do artista: ";
+    getline(cin, artista);
+    cout << "Digite o nome do álbum: ";
+    getline(cin, album);
+}
+
 /** 
 * @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
 * @param	os Referência para stream de saída
@@ -176,6 +185,15 @@ string DVD::exportar() {                                      /**< Retorna uma s
     string retorno;
     getline(ss, retorno);
     return retorno;
+}
+
+void DVD::capturar() {
+    cout << "Digite o título: ";
+    getline(cin, titulo);
+    cout << "Digite o gênero: ";
+    getline(cin, genero);
+    cout << "Digite o nome do duração: ";
+    getline(cin, duracao);
 }
 
 /** 
@@ -291,6 +309,17 @@ string Livro::exportar() {                                      /**< Retorna uma
     string retorno;
     getline(ss, retorno);
     return retorno;
+}
+
+void Livro::capturar() {
+    cout << "Digite o autor: ";
+    getline(cin, autor);
+    cout << "Digite o título: ";
+    getline(cin, titulo);
+    cout << "Digite a editora: ";
+    getline(cin, editora);
+    cout << "Digite o ano de publicação: ";
+    getline(cin, anopub);
 }
 
 /** 

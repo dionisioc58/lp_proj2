@@ -14,6 +14,7 @@
 #include <string>
 #include "produto.h"
 #include "perecivel.h"
+#include "funcoes.h"
 using std::string;
 using std::cin;
 using std::cout;
@@ -36,6 +37,7 @@ using std::cout;
         void setAlcool(float al);
         float getAlcool();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, Bebida &p);    /** @brief Sobrecarga do operador de inserção em stream */
         friend istream& operator>>(istream& is, Bebida &b);     /** @brief Sobrecarga do operador de extração de stream */
     };
@@ -58,6 +60,7 @@ using std::cout;
         void setDp(string d);
         string getDp();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, Fruta &p);    /** @brief Sobrecarga do operador de inserção em stream */
         friend istream& operator>>(istream& is, Fruta &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
@@ -83,6 +86,7 @@ using std::cout;
         void setGlicose(bool l);
         bool getGlicose();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, Doce &p);    /** @brief Sobrecarga do operador de inserção em stream */
         friend istream& operator>>(istream& is, Doce &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
@@ -108,6 +112,7 @@ using std::cout;
         void setLactose(bool l);
         bool getLactose();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, Salgado &p);    /** @brief Sobrecarga do operador de inserção em stream */        
         friend istream& operator>>(istream& is, Salgado &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
@@ -133,6 +138,7 @@ using std::cout;
         void setAlbum(string n);
         string getAlbum();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, CD &p);    /** @brief Sobrecarga do operador de inserção em stream */        
         friend istream& operator>>(istream& is, CD &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
@@ -158,6 +164,7 @@ using std::cout;
         void setDuracao(string d);
         string getDuracao();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, DVD &p);    /** @brief Sobrecarga do operador de inserção em stream */        
         friend istream& operator>>(istream& is, DVD &b);    /** @brief Sobrecarga do operador de extração de stream */
     };
@@ -186,6 +193,7 @@ using std::cout;
         void setAnopub(string ap);
         string getAnopub();
         string exportar();                                      /**< Retorna uma string com os dados para exportação CSV */
+        void capturar();
         friend ostream& operator<<(ostream& os, Livro &p);    /** @brief Sobrecarga do operador de inserção em stream */        
         friend istream& operator>>(istream& is, Livro &b);    /** @brief Sobrecarga do operador de extração de stream */
     };

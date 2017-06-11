@@ -9,6 +9,19 @@
 
 #include "bancodados.h"
 
+#define qtde_tipos 8                 /**< Quantidade de opções de tipos no menu */
+
+string tipos_prods[qtde_tipos] = {
+    "Bebida",   //1  - ok
+    "Fruta",    //2  - ok
+    "Doce",     //3  - ok
+    "Salgado",  //4  - ok
+    "CD",       //5  - ok
+    "DVD",      //6  - ok
+    "Livro",    //7  - ok
+    "(Cancelar)"
+};                /**< Opções de tipos de produtos */
+
 /**
 * @brief        Função que coleta os dados para o cadastro de um fornecedor
 * @return       Fornecedor coletado
@@ -34,150 +47,55 @@ Fornecedor *inputFornecedor() {
 */
 void inputProduto(Fornecedor *f) {
     //Coleta dados do produto
-    string input;
-    int ints;
-    float floats;
-    cout << "Digite o tipo do produto: ";
-    getline(cin, input);
-    minusculas(input);
-    string tipo = input;
+    //cout << "Digite o tipo do produto: ";
+    //getline(cin, input);
+    int selecao = showMenu("Selecione um tipo de produto", tipos_prods, qtde_tipos);
+    if(selecao <= 0)
+        return;
+    string tipo = tipos_prods[--selecao];
+    minusculas(tipo);
     Produto *novo;
 
     if(tipo == "bebida") {
         novo = new Bebida();
-        /*novo->setcb("45454");
-        novo->setdescricao("Cerveja");
-        novo->setpreco(2.89);
-        novo->setQtde(150);
-        static_cast<Bebida*>(novo)->setValidade("12/12/2017");
-        static_cast<Bebida*>(novo)->setAcucar(15);
-        static_cast<Bebida*>(novo)->setAlcool(6.8);*/
         novo->capturar();
-        
-        cout << "Digite a data de validade (dd/mm/aaaa): ";
-        getline(cin, input);
-        static_cast<Bebida*>(novo)->setValidade(input);
-
-        ints = recebeInt("Digite a quantidade de açúcar: ", 0);
-        static_cast<Bebida*>(novo)->setAcucar(ints);
-
-        floats = recebeFloat("Digite o teor alcoólico: ", 0);
-        static_cast<Bebida*>(novo)->setAlcool(floats);
-        if(f->getProdutos()->Busca(&novo)) {
-            cout << "Produto já cadastrado" << endl;
-            parar();
-        }
+        dynamic_cast<Bebida*>(novo)->capturar();
     }
     if(tipo == "fruta") {
         novo = new Fruta();
         novo->capturar();
-
-        cout << "Digite a data de validade (dd/mm/aaaa): ";
-        getline(cin, input);
-        static_cast<Fruta*>(novo)->setValidade(input);
-        
-        ints = recebeInt("Digite o número de frutas: ", 0);
-        static_cast<Fruta*>(novo)->setNum(ints);
-
-        cout << "Digite a data de produção (dd/mm/aaaa): ";
-        getline(cin, input);
-        static_cast<Fruta*>(novo)->setDp(input);
+        dynamic_cast<Fruta*>(novo)->capturar();
     }
     if(tipo == "doce") {
         novo = new Doce();
         novo->capturar();
-
-        cout << "Digite a data de validade (dd/mm/aaaa): ";
-        getline(cin, input);
-        static_cast<Doce*>(novo)->setValidade(input);
-
-        ints = recebeInt("Digite a quantidade de açúcar: ", 0);
-        static_cast<Doce*>(novo)->setAcucar(ints);
-
-        ints = recebeInt("Tem gluten (1 para sim): ", 0);
-        static_cast<Doce*>(novo)->setGluten(false);
-        if(ints == 1)
-            static_cast<Doce*>(novo)->setGluten(true);
-
-        ints = recebeInt("Tem glicose (1 para sim): ", 0);
-        static_cast<Doce*>(novo)->setGlicose(false);
-        if(ints == 1)
-            static_cast<Doce*>(novo)->setGlicose(true);
+        dynamic_cast<Doce*>(novo)->capturar();
     }
     if(tipo == "salgado") {
         novo = new Salgado();
         novo->capturar();
-
-        cout << "Digite a data de validade (dd/mm/aaaa): ";
-        getline(cin, input);
-        static_cast<Salgado*>(novo)->setValidade(input);
-
-        ints = recebeInt("Digite a quantidade de sódio: ", 0);
-        static_cast<Salgado*>(novo)->setSodio(ints);
-
-        ints = recebeInt("Tem glúten (1 para sim): ", 0);
-        static_cast<Salgado*>(novo)->setGluten(false);
-        if(ints == 1)
-            static_cast<Salgado*>(novo)->setGluten(true);
-
-        ints = recebeInt("Tem lactose (1 para sim): ", 0);
-        static_cast<Salgado*>(novo)->setLactose(false);
-        if(ints == 1)
-            static_cast<Salgado*>(novo)->setLactose(true);
+        dynamic_cast<Salgado*>(novo)->capturar();
     }
     if(tipo == "cd") {
         novo = new CD();
         novo->capturar();
-
-        cout << "Digite o estilo: ";
-        getline(cin, input);
-        static_cast<CD*>(novo)->setEstilo(input);
-
-        cout << "Digite o nome do artista: ";
-        getline(cin, input);
-        static_cast<CD*>(novo)->setArtista(input);
-
-        cout << "Digite o nome do álbum: ";
-        getline(cin, input);
-        static_cast<CD*>(novo)->setAlbum(input);
+        dynamic_cast<CD*>(novo)->capturar();
     }
     if(tipo == "dvd") {
         novo = new DVD();
         novo->capturar();
-
-        cout << "Digite o título: ";
-        getline(cin, input);
-        static_cast<DVD*>(novo)->setTitulo(input);
-
-        cout << "Digite o gênero: ";
-        getline(cin, input);
-        static_cast<DVD*>(novo)->setGenero(input);
-
-        cout << "Digite a duracao: ";
-        getline(cin, input);
-        static_cast<DVD*>(novo)->setDuracao(input);
+        dynamic_cast<DVD*>(novo)->capturar();
     }
     if(tipo == "livro") {
         novo = new Livro();
         novo->capturar();
-
-        cout << "Digite o autor: ";
-        getline(cin, input);
-        static_cast<Livro*>(novo)->setAutor(input);
-
-        cout << "Digite o título: ";
-        getline(cin, input);
-        static_cast<Livro*>(novo)->setTitulo(input);
-
-        cout << "Digite a editora: ";
-        getline(cin, input);
-        static_cast<Livro*>(novo)->setEditora(input);
-
-        cout << "Digite o ano de publicação: ";
-        getline(cin, input);
-        static_cast<Livro*>(novo)->setAnopub(input);
+        dynamic_cast<Livro*>(novo)->capturar();
     }
-    f->addProduto(novo);
+    if(!f->addProduto(novo))
+        cout << "Produto já cadastrado" << endl;
+    else
+        cout << "Cadastro realizado com sucesso!" << endl;
+    parar();        
 }
 
 /**
@@ -224,9 +142,20 @@ void addPr(Lista<Fornecedor> *e) {
 void delPr(Lista<Fornecedor> *e) {
     int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a remoção do produto (0 para cancelar): ");
     if(selecao >= 0) {
-        Fornecedor *f = e->Posiciona(selecao);
-        selecao = selecionaObjeto(f->getProdutos(), "Selecione o número do produto para a remoção (0 para cancelar): ");
-        f->delProduto(selecao);
+        Fornecedor *tmp = e->Posiciona(selecao);
+        //selecao = selecionaObjeto(f->getProdutos(), "Selecione o número do produto para a remoção (0 para cancelar): ");
+        Lista<Produto*> f = *tmp->getProdutos();
+        Produto *produt;
+        for(int i = 0; i < tmp->getQtde(); i++) {
+            f = *f.getProximo();
+            produt = *f.getValor();
+            cout << "   (" << (i + 1) << ") ";
+            imprimir(produt);
+        }
+        selecao = recebeInt("Selecione o número do produto para a remoção (0 para cancelar): ", 0, tmp->getQtde());
+        selecao--;
+        if(selecao >= 0)
+            tmp->delProduto(selecao);
     }
 }
 
@@ -239,38 +168,40 @@ void editPr(Lista<Fornecedor> *e) {
     if(selecao >= 0) {
         Fornecedor *f = e->Posiciona(selecao);
         selecao = selecionaObjeto(f->getProdutos(), "Selecione o número do produto para a edição (0 para cancelar): ");
-        Produto *p = *(f->getProdutos())->Posiciona(selecao);
-        
-        string input;
-        
-        cout << "O código é: " << p->getcb() << " (ENTER para manter): ";
-        getline(cin, input);
-        if(input != "")
-            p->setcb(input);
+        if(selecao > 0) {
+            Produto *p = *(f->getProdutos())->Posiciona(selecao);
+            
+            string input;
+            
+            cout << "O código é: " << p->getCb() << " (ENTER para manter): ";
+            getline(cin, input);
+            if(input != "")
+                p->setCb(input);
 
-        cout << "A descrição é: " << p->getdescricao() << " (ENTER para manter): ";
-        getline(cin, input);
-        if(input != "")
-            p->setdescricao(input);
+            cout << "A descrição é: " << p->getDescricao() << " (ENTER para manter): ";
+            getline(cin, input);
+            if(input != "")
+                p->setDescricao(input);
 
-        cout << "O tipo é: " << p->gettipo() << " (ENTER para manter): ";
-        getline(cin, input);
-        if(input != "")
-            p->settipo(input);
+            cout << "O tipo é: " << p->getTipo() << " (ENTER para manter): ";
+            getline(cin, input);
+            if(input != "")
+                p->setTipo(input);
 
-        stringstream ss;
-        ss << "O preço é: " << p->getpreco() << " (0 para manter): ";
-        input = ss.str();
-        float preco = recebeFloat(input, 0);
-        if(preco > 0)
-            p->setpreco(preco);
+            stringstream ss;
+            ss << "O preço é: " << p->getPreco() << " (0 para manter): ";
+            input = ss.str();
+            float preco = recebeFloat(input, 0);
+            if(preco > 0)
+                p->setPreco(preco);
 
-        ss.clear();
-        ss << "A quantidade é: " << p->getQtde() << " (0 para manter): ";
-        input = ss.str();
-        float qtde = recebeInt(input, 0);
-        if(qtde > 0)
-            p->setQtde(qtde);
+            ss.clear();
+            ss << "A quantidade é: " << p->getQtde() << " (0 para manter): ";
+            input = ss.str();
+            float qtde = recebeInt(input, 0);
+            if(qtde > 0)
+                p->setQtde(qtde);
+        }
     }
 }
 
@@ -312,6 +243,8 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
                 produt = *f->getValor();
                 cout << "   (" << (i + 1) << ") ";
                 imprimir(produt);
+                cout << endl;
+                cout << "______________________________________________" << endl;
             }
 
         } else
@@ -332,6 +265,8 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
                 produt = *f.getValor();
                 cout << "   (" << (i + 1) << ") ";
                 imprimir(produt);
+                cout << endl;
+                cout << "______________________________________________" << endl;
             }
             tmp = tmp->getProximo();
         }
@@ -343,72 +278,89 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
 
 }
 
-void imprimir(Produto *p) {
-    string tipo = p->gettipo();
+void imprimir(Produto *p, bool detalhes) {
+    string tipo = p->getTipo();
     minusculas(tipo);
-    if(tipo == "bebida")
-        cout << *dynamic_cast<Bebida*>(p) << endl;
-    else if(tipo == "fruta")
-        cout << *dynamic_cast<Fruta*>(p) << endl;
-    else if(tipo == "doce")
-        cout << *dynamic_cast<Doce*>(p) << endl;
-    else if(tipo == "salgado")
-        cout << *dynamic_cast<Salgado*>(p) << endl;
-    else if(tipo == "cd")
-        cout << *dynamic_cast<CD*>(p) << endl;
-    else if(tipo == "dvd")
-        cout << *dynamic_cast<DVD*>(p) << endl;
-    else if(tipo == "livro")
-        cout << *dynamic_cast<Livro*>(p) << endl;
-    else
-        cout << *dynamic_cast<Produto*>(p) << endl;
+    if(detalhes) {
+        if(tipo == "bebida")
+            cout << *dynamic_cast<Bebida*>(p);
+        else if(tipo == "fruta")
+            cout << *dynamic_cast<Fruta*>(p);
+        else if(tipo == "doce")
+            cout << *dynamic_cast<Doce*>(p);
+        else if(tipo == "salgado")
+            cout << *dynamic_cast<Salgado*>(p);
+        else if(tipo == "cd")
+            cout << *dynamic_cast<CD*>(p);
+        else if(tipo == "dvd")
+            cout << *dynamic_cast<DVD*>(p);
+        else if(tipo == "livro")
+            cout << *dynamic_cast<Livro*>(p);
+        else
+            cout << *dynamic_cast<Produto*>(p);
+    } else
+        cout << *p;
 }
 
 /**
 * @brief        Função que imprime a lista de produtos
 * @param[inout] *e Lista de Fornecedores do cadastro
-* @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo)
+* @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo, 3 = exibir menos detalhes)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
 * @return       Número máximo na lista
 */
 int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
     string ftipo = "", fcod = "";
     if(filtro == 1) {
-        cout << "Digite o tipo que você quer listar: ";
-        getline(cin, ftipo);
+        int selecao = showMenu("Selecione um tipo de produto", tipos_prods, qtde_tipos);
+        if(selecao <= 0)
+            return -1;
+        ftipo = tipos_prods[--selecao];
+        minusculas(ftipo);
     }
     if(filtro == 2) {
         cout << "Digite o código que você quer procurar: ";
         getline(cin, fcod);
     }
     
-    Lista<Fornecedor> *tmp = e;
+    Lista<Fornecedor> *tmp = e->getProximo();
     int j = 0;
     while(tmp) {
         Lista<Produto*> *f = tmp->getValor()->getProdutos();
         Produto *produt;
         for(int i = 0; i < tmp->getValor()->getQtde(); i++) {
-            j++;
             f = f->getProximo();
             produt = *f->getValor();
-            string tip = produt->gettipo();
+            string tip = produt->getTipo();
             minusculas(tip);
             switch(filtro) {
                 case 1:
                     if(tip == ftipo) {
-                        cout << "   (" << j << ") ";
+                        cout << "   (" << ++j << ") ";
                         imprimir(produt);
+                        cout << endl;
+                        cout << "______________________________________________" << endl;
                     }
                     break;
                 case 2:
-                    if(produt->getcb() == fcod) {
-                        cout << "   (" << j << ") ";
+                    if(produt->getCb() == fcod) {
+                        cout << "   (" << ++j << ") ";
                         imprimir(produt);
+                        cout << endl;
+                        cout << "______________________________________________" << endl;
                     }
                     break;
+                case 3:
+                    cout << "   (" << ++j << ") ";
+                    imprimir(produt, false);
+                    cout << endl;
+                    cout << "______________________________________________" << endl;
+                    break;
                 default:
-                    cout << "   (" << j << ") ";
+                    cout << "   (" << ++j << ") ";
                     imprimir(produt);
+                    cout << endl;
+                    cout << "______________________________________________" << endl;
             }
         }
         tmp = tmp->getProximo();
@@ -487,17 +439,9 @@ void abrirBD(string nome, Lista<Fornecedor> *e) {
                     if(tipo == "bebida") {
                         pp = new Bebida();
                         info >> *dynamic_cast<Bebida*>(pp);
-                        //info >> *d;
-//                        parar();
-                        //tmp->addProduto(d);
-                        //conta2++;
                     } else if(tipo == "fruta") {
                         pp = new Fruta();
                         info >> *dynamic_cast<Fruta*>(pp);
-                        //info >> *b;
-//                        parar();
-                        //tmp->addProduto(b);
-                        //conta2++;
                     } else if(tipo == "doce") {
                         pp = new Doce();
                         info >> *dynamic_cast<Doce*>(pp);
@@ -524,7 +468,6 @@ void abrirBD(string nome, Lista<Fornecedor> *e) {
     entrada.close();
     cout << "Banco de dados aberto com sucesso!" << endl;
     cout << conta1 << " fornecedores e " << conta2 << " produtos encontrados." << endl;
-    parar();
 }
 
 /**
@@ -581,21 +524,55 @@ Produto *capturaProduto(Lista<Fornecedor> *e, int pos) {
     return retorno;
 }
 
+#define qtde_vendas 5                 /**< Quantidade de opções de tipos no menu */
+
+string opcoes_vendas[qtde_vendas] = {
+    "Adicionar um produto",   //1  - ok
+    "Remover um produto",    //2  - ok
+    "Listar os produtos",     //3  - ok
+    "Encerrar a venda",  //4  - ok
+    "(Voltar ao menu)"       //5  - ok
+};                /**< Opções de tipos de produtos */
+
 /**
 * @brief        Função que realiza uma venda
 * @param[in]    *e Lista de fornecedores com seus produtos
 * @param[in]    *v Lista de venda com seus itens
 */
 void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
+    while(1) {
+        switch(showMenu("Venda de Produtos", opcoes_vendas, qtde_vendas)) {
+            case 0: //Voltar ao menu
+                return;
+                break;
+            case 1: //Adicionar um produto
+                venda_add(e, v);
+                break;
+            case 2: //Remover um produto
+                venda_del(e, v);
+                break;
+            case 3: //Listar os produtos
+                venda_lis(v);
+                break;
+            case 4: //Encerrar a venda
+                venda_enc(v);
+                break;
+        }
+    }
+}
+
+void venda_add(Lista<Fornecedor> *e, Lista<Venda> *v) {
     //Lista todos os itens do cadastro
-    int maximo = impPrLista(e, 0, false);
+    int maximo = impPrLista(e, 3, false);
+    if(maximo == -1)
+        return;
     //Seleciona um deles
     int selecao = recebeInt("Digite o número do produto (0 para cancelar): ", 0, maximo);
     if(selecao == 0)
         return;
     Venda *nova = new Venda();
 
-    Lista<Fornecedor> *tmp = e;
+    Lista<Fornecedor> *tmp = e->getProximo();
     Lista<Produto*> *p;
     Produto *retorno;
     int j = 1;
@@ -610,15 +587,55 @@ void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
 
     nova->setProduto(retorno);
 
-    int qtd = recebeInt("Digite a quantidade: ", 1, 0);
+    int qtd = recebeInt("Digite a quantidade: ", 1, retorno->getQtde());
     nova->setQtde(qtd);
     
     v->Insere(*nova);
-    
-    //Para testes
-    cout << "Cód.\t|Desc.\t|Qtde\t|Total" << endl;
-    v->Exibe();
+}
+
+void venda_lis(Lista<Venda> *v, bool pausa) {
+    cout << "Nº  Código" << string(4, ' ') << "\t|Descrição" << string(22, ' ') << "\t|Qtde  " << "\t|Total" << endl;
+    v->Exibe(1);
+    if(pausa)
+        parar();
+}
+
+void venda_del(Lista<Fornecedor> *e, Lista<Venda> *v) {
+    v->Exibe(true);
+    int selecao = recebeInt("Digite o número do produto (0 para cancelar): ", 0, v->getTamanho());
+    if(selecao == 0)
+        return;
+    v->RemovePos(--selecao);
+}
+
+void venda_enc(Lista<Venda> *v) {
+    venda_lis(v, false);
+    if(!v->getProximo())
+        return;
+    Lista<Venda> *tmp = v->getProximo();
+    float total = 0;
+    for(int i = 0; i < v->getTamanho(); i++) {
+        Produto *p = tmp->getValor()->getProduto();
+        total += (p->getPreco() * tmp->getValor()->getQtde());
+        tmp = tmp->getProximo();
+    }
+    cout << "_____________________________________" << endl;
+    cout << "Total da compra: " << total << endl;
+    cout << "_____________________________________" << endl << endl;
     parar();
+    string sim_nao[2] = {"Sim", "Não"};
+    int ret = showMenu("Encerrar a venda?", sim_nao, 2);
+    if(ret == 0) //Escolheu 'não'
+        return;
+    
+    tmp = v->getProximo();
+    for(int i = 0; i < v->getTamanho(); i++) {
+        Produto *p = tmp->getValor()->getProduto();
+        p->setQtde(p->getQtde() - tmp->getValor()->getQtde());
+        tmp = tmp->getProximo();
+    }
+    while(v->getTamanho() > 0)
+        v->RemovePos(0);
 }
 
 /**
@@ -628,18 +645,27 @@ void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
 * @return       -1 ou o número do fornecedor selecionada
 */
 int impPrListaEstoque(Lista<Fornecedor> *e, bool pausa) {
-    Lista<Fornecedor> *tmp = e;
+    if(!e)
+        return -1;
+    Lista<Fornecedor> *tmp = e->getProximo();
+    bool primeiro = true;
     while(tmp) {
+        if(primeiro) {
+            cout << endl << "  Código" << string(4, ' ') << "\t|Descrição" << string(21, ' ') << "\t|Quantidade" << endl;
+            primeiro = false;
+        }
         Lista<Produto*> *f = tmp->getValor()->getProdutos();
         Produto *produt;
         for(int i = 0; i < tmp->getValor()->getQtde(); i++) {
             f = f->getProximo();
             produt = *f->getValor();
-            cout << "   (" << (i + 1) << ") " << produt->getEstoque() << endl;
+            cout << "  " << produt->getEstoque() << endl;
         }
         tmp = tmp->getProximo();
     }
-        
+    
+    cout << endl;
+    
     if(pausa)
         parar();
     return -1;

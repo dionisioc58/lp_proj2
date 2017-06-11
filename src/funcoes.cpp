@@ -73,8 +73,8 @@ string recebeString(string msg) {
 			cin.clear(); /**< impar o bit de falha do cin */
 			while (cin.get() != '\n') ; /**< receber todos dados digitados até o fim da linha para esvaziar */
 			teste = -1;
-		} else if(teste < 0)
-				cout << "Valor inválido!" << endl;
+		} else
+			teste = 1;
 	}
 	return valor;
 }
@@ -87,4 +87,26 @@ void minusculas(string& s) {
 	for (int i = 0; i < (int)s.length(); i++) {
 		s[i] = tolower(s[i]);
 	}
+}
+
+/**
+ * @brief Função que remove acentuações de uma string
+ * @param s String com acentuações a remover
+ */
+void remove_acentos (string &s) {
+    string com_acento = "âÂàÀáÁãÃêÊèÈéÉẽẼîÎìÌíÍõÕôÔòÒóÓüÜûÛúÚùÙçÇ";
+    string sem_acento = "aAaAaAaAeEeEeEeEiIiIiIoOoOoOoOuUuUuUuUcC";
+    int temp = com_acento.length();
+    for (int i = 0; s[i] != '\0'; i++) {
+        int k = 0;
+        for (int j = 0; j < temp; j += 2) {
+            if ((s[i] == com_acento[j]) && (s[i + 1] == com_acento[j + 1])) {   
+                s[i] = sem_acento[k];
+                s.erase((i + 1), 1);
+                i += 1;
+                break;
+            }
+            k++;
+        }
+    }
 }

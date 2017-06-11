@@ -64,6 +64,12 @@ string Bebida::exportar() {                                      /**< Retorna um
     return retorno;
 }
 
+void Bebida::capturar() {
+    validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
+    acucar = recebeInt("Digite a quantidade de açúcar: ", 0);
+    alcool = recebeFloat("Digite o teor alcóolico: ", 0);
+}
+
 /** 
 * @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
 * @param	os Referência para stream de saída
@@ -153,6 +159,12 @@ string Fruta::exportar() {                                      /**< Retorna uma
     string retorno;
     getline(ss, retorno);
     return retorno;
+}
+
+void Fruta::capturar() {
+    validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
+    num = recebeInt("Digite o número de frutas: ", 0);    
+    dp = recebeString("Digite a data de produção (dd/mm/aaaa): ");
 }
 
 /** 
@@ -259,6 +271,20 @@ string Doce::exportar() {                                      /**< Retorna uma 
     return retorno;
 }
 
+void Doce::capturar() {
+    validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
+    acucar = recebeInt("Digite a quantidade de açúcar: ", 0);
+    int ints = recebeInt("Tem glúten (1 = sim, 0 = não): ", 0, 1);
+    gluten = false;
+    if(ints == 1)
+        gluten = true;
+
+    ints = recebeInt("Tem glicose (1 = sim, 0 = não): ", 0, 1);
+    glicose = false;
+    if(ints == 1)
+        glicose = true;
+}
+
 /** 
 * @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
 * @param	os Referência para stream de saída
@@ -269,7 +295,7 @@ ostream& operator<<(ostream& os, Doce &p) {
     os << *dynamic_cast<Produto*>(&p);
     os << "Val. : " << p.getValidade() << " - ";
     os << "Açúc.: " << p.getAcucar() << " - ";
-    os << "Glut.: " << (p.getGluten() ? "Sim" : "Não") << " - ";
+    os << "Glút.: " << (p.getGluten() ? "Sim" : "Não") << " - ";
     os << "Glic.: " << (p.getGlicose() ? "Sim" : "Não");
     return os;
 }
@@ -373,6 +399,20 @@ string Salgado::exportar() {
     return retorno;
 }
 
+void Salgado::capturar() {
+    validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
+    sodio = recebeInt("Digite a quantidade de sódio: ", 0);
+    int ints = recebeInt("Tem glúten (1 = sim, 0 = não): ", 0, 1);
+    gluten = false;
+    if(ints == 1)
+        gluten = true;
+
+    ints = recebeInt("Tem lactose (1 = sim, 0 = não): ", 0, 1);
+    lactose = false;
+    if(ints == 1)
+        lactose = true;
+}
+
 /** 
 * @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
 * @param	os Referência para stream de saída
@@ -383,7 +423,7 @@ ostream& operator<<(ostream& os, Salgado &p) {
     os << *dynamic_cast<Produto*>(&p);
     os << "Val. : " << p.getValidade() << " - ";
     os << "Sód. : " << p.getSodio() << " - ";
-    os << "Glut.: " << (p.getGluten() ? "Sim" : "Não") << " - ";
+    os << "Glút.: " << (p.getGluten() ? "Sim" : "Não") << " - ";
     os << "Lact.: " << (p.getLactose() ? "Sim" : "Não");
     return os;
 }

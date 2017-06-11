@@ -36,9 +36,22 @@
     int recebeInt(string msg, int min, int max = 0);
 
     /**
+    * @brief        Função que coleta um valor string pela entrada validando-o
+    * @param[in]    msg String com a mensagem à exibir
+    * @return       String capturada
+    */
+    string recebeString(string msg);
+
+    /**
     * @brief Funcao que converte todos os caracteres para letra minuscula
     * @param s String a ser convertida
     */
     void minusculas(string& s);
+
+    /**
+    * @brief Função que remove acentuações de uma string
+    * @param s String com acentuações a remover
+    */
+    void remove_acentos (string &s);
 
 #endif
