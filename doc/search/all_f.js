@@ -29,6 +29,8 @@ var searchData=
   ['setsodio',['setSodio',['../classSalgado.html#a10f39575129a96a1a97e02b8247d7222',1,'Salgado']]],
   ['settipo',['setTipo',['../classProduto.html#a28a67a04d4678aefed9632e8271780fc',1,'Produto']]],
   ['settitulo',['setTitulo',['../classDVD.html#aba13aab50e905a00ce00cf354f067a90',1,'DVD::setTitulo()'],['../classLivro.html#a03525ef448ba52dac31402c4101a0bba',1,'Livro::setTitulo()']]],
+  ['setvalidade',['setValidade',['../classPerecivel.html#a4db8b0d4f9dcdaa11ac13dfd1da85354',1,'Perecivel']]],
   ['showmenu',['showMenu',['../menu_8h.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp'],['../menu_8cpp.html#af3d6da1f3c70e1d0651740183733c768',1,'showMenu(string titulo, string *op, int qtd):&#160;menu.cpp']]],
+  ['sodio',['sodio',['../classSalgado.html#ac38179a3597c5b364b5c83f67516f7ff',1,'Salgado']]],
   ['subproduto_2eh',['subproduto.h',['../subproduto_8h.html',1,'']]]
 ];

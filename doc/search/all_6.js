@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['genero',['genero',['../classDVD.html#ad225e9beb4e67049e80db465d1910026',1,'DVD']]],
   ['getacucar',['getAcucar',['../classBebida.html#aa76927fe467e36ac64c6ea675cb0782a',1,'Bebida::getAcucar()'],['../classDoce.html#ae3e0ba9ac76ff3e480fa8decaf883791',1,'Doce::getAcucar()']]],
   ['getalbum',['getAlbum',['../classCD.html#a6299976d8a602c92afb0afffff691b52',1,'CD']]],
   ['getalcool',['getAlcool',['../classBebida.html#adf06b068c24180509f37c0b90f682a3a',1,'Bebida']]],
@@ -29,5 +30,8 @@ var searchData=
   ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista']]],
   ['gettipo',['getTipo',['../classProduto.html#aa89735e598487c5e3f611e82273af13b',1,'Produto']]],
   ['gettitulo',['getTitulo',['../classDVD.html#a1dd7bf7d8f0b27854dd7303f67ca84ed',1,'DVD::getTitulo()'],['../classLivro.html#af9521ac8f161bc215f50b0a626163105',1,'Livro::getTitulo()']]],
-  ['getvalor',['getValor',['../classLista.html#ad739ab06515c58648f04560f0fdfb1e3',1,'Lista']]]
+  ['getvalidade',['getValidade',['../classPerecivel.html#a2bb67a2b63f36aecb8b50b3594d80b01',1,'Perecivel']]],
+  ['getvalor',['getValor',['../classLista.html#ad739ab06515c58648f04560f0fdfb1e3',1,'Lista']]],
+  ['glicose',['glicose',['../classDoce.html#aaec7340a045c73fec5ef50421d84383d',1,'Doce']]],
+  ['gluten',['gluten',['../classDoce.html#a4cb3a5ab63d45bd5ac19fb051a4cc570',1,'Doce::gluten()'],['../classSalgado.html#a64861eb6ff1c59e0550a7da2e8243f0c',1,'Salgado::gluten()']]]
 ];

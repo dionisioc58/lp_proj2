@@ -17,6 +17,7 @@ Produto::Produto() {
     descricao = "";
     tipo = "";
     preco = 0.00;
+    qtde = 0;
 }
 
 /**
@@ -27,60 +28,60 @@ Produto::~Produto() {
 }
 
 /**
-* @return cb do Produto
+* @return Código do Produto
 */
 string Produto::getCb() {
     return cb;
 }
 
 /**
-* @details O método modifica o cb do Produto
-* @param   n cb
+* @details O método modifica o código do Produto
+* @param   r cb
 */
 void Produto::setCb(string r) {
     cb = r;
 }
 
 /**
-* @return Matrícula do Produto
+* @return Descrição do Produto
 */
 string Produto::getDescricao() {
     return descricao;
 }
 
 /**
-* @details O método modifica a matrícula do Produto
-* @param   n descricao
+* @details O método modifica a descrição do Produto
+* @param   c Descrição
 */
 void Produto::setDescricao(string c) {
     descricao = c;
 }
 
 /**
-* @return Matrícula do Produto
+* @return Tipo do Produto
 */
 string Produto::getTipo() {
     return tipo;
 }
 
 /**
-* @details O método modifica a matrícula do Produto
-* @param   n descricao
+* @details O método modifica o tipo do Produto
+* @param   t descricao
 */
 void Produto::setTipo(string t) {
     tipo = t;
 }
 
 /**
-* @return Preco do Produto
+* @return Preço do Produto
 */
 double Produto::getPreco() {
     return preco;
 }
 
 /**
-* @details O método modifica o preco do Produto
-* @param   p preco
+* @details O método modifica o preço do Produto
+* @param   p Preço
 */
 void Produto::setPreco(double p) {
     preco = p;
@@ -112,7 +113,7 @@ string Produto::getEstoque() {
 }
 
 /**
-* @return Produto com os dados coletados
+* @return Produto coletado a partir da entrada padrão
 */
 void Produto::capturar() {
     cb = recebeString("Digite o código do produto: ");
@@ -134,9 +135,9 @@ string Produto::exportar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar o Produto
-* @param	a Referência para o objeto Produto a ser comparado
-* @return	True se > que 'a'
+* @details  O operador é sobrecarregado para representar o Produto
+* @param	p Referência para o objeto Produto a ser comparado
+* @return	True se > que 'p'
 */
 bool Produto::operator>(Produto &p) {
     if(preco > p.getPreco())
@@ -144,7 +145,11 @@ bool Produto::operator>(Produto &p) {
     return false;
 }
 
-/** @brief Sobrecarga do operador de comparação > */
+/** 
+* @details  O operador é sobrecarregado para representar o Produto
+* @param	p Referência para o objeto Produto a ser comparado
+* @return	True se != de 'p'
+*/
 bool Produto::operator!=(Produto &p) {
     if(cb == p.getCb())
         return false;
@@ -154,7 +159,7 @@ bool Produto::operator!=(Produto &p) {
 /** 
 * @details O operador é sobrecarregado para representar o Produto
 * @param	os Referência para stream de saída
-* @param	f Referência para o objeto Produto a ser impresso
+* @param	p Referência para o objeto Produto a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Produto &p) {
@@ -169,7 +174,7 @@ ostream& operator<<(ostream& os, Produto &p) {
 
 /** 
 * @param	is Referência para stream de entrada
-* @param	f Referência para o objeto Produto a ser criado com base nos 
+* @param	p Referência para o objeto Produto a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */

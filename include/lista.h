@@ -3,8 +3,8 @@
  * @brief	Definição da classe Lista
  * @author	Dionísio Carvalho (dionisio@naracosta.com.br)
  * @author	Eduardo Rique (luiseduardorique@gmail.com)
- * @since	06/05/2017
- * @date	14/05/2017
+ * @since	30/05/2017
+ * @date	11/06/2017
  */
 
 #ifndef LISTA_H
@@ -24,18 +24,18 @@
     template<typename T>
     class Lista {
     private:
-        T *dado;                                             /**< Dado */
+        T *dado;                                            /**< Dado */
         Lista *prox;                                        /**< Próximo */
     public:
         Lista();                                            /**< Construtor padrão */
         Lista(T valor);                                     /**< Construtor especifico */
         ~Lista();                                           /**< Destrutor padrão */
-        T *getValor();                                       /**< Retorna o valor */
+        T *getValor();                                      /**< Retorna o valor */
         int getTamanho();                                   /**< Retorna a quantidade de itens na lista */
         void Insere(T valor);                               /**< Insere um valor na lista */
         void RemovePos(int pos);                            /**< Remove um valor na posição informada */
-        void RemoveVal(T *valor);                            /**< Remove um valor específico */
-        Lista *Busca(T *valor);                              /**< Procura um valor e retorna o nó */
+        void RemoveVal(T *valor);                           /**< Remove um valor específico */
+        Lista *Busca(T *valor);                             /**< Procura um valor e retorna o nó */
         T *Posiciona(int pos);                              /**< Retorna o elemento na posição dada */
         Lista *getProximo();                                /**< Retorna o próximo nó */
         void Exibe(bool comNumeros = false);                /**< Imprime a lista */
@@ -50,7 +50,7 @@
     }
 
     /**
-    * @details Os valores prox são inicializados com NULL
+    * @details O valor prox é inicializado com NULL e dado é criado
     */
     template<typename T>
     Lista<T>::Lista(T valor) {
@@ -193,7 +193,8 @@
     }
 
     /**
-    * @details Imprime a lista completa
+    * @details      Imprime a lista completa
+    * @param[in]    comNumeros True para exibir uma lista numerada
     */
     template<typename T>
     void Lista<T>::Exibe(bool comNumeros) {

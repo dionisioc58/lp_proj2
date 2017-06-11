@@ -9,7 +9,7 @@
 
 #include "menu.h"
 
-#define largura 46
+#define largura 46      /**< Largura do menu */
 
 /**
 * @brief        Função que exibe o menu principal

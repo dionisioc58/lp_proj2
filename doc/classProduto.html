@@ -95,6 +95,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 
 <p>Classe que representa um <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a>.  
  <a href="classProduto.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="produto_8h_source.html">produto.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de Hierarquia para Produto:</div>
 <div class="dyncontent">
@@ -144,9 +146,8 @@ Métodos Públicos</h2></td></tr>
 <tr class="separator:aaaf877acc9f6368c24f93b98a0e77841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3421f1b55f59b2ea5f58b9e6ffbc861"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#ab3421f1b55f59b2ea5f58b9e6ffbc861">operator&gt;</a> (<a class="el" href="classProduto.html">Produto</a> &amp;p)</td></tr>
 <tr class="separator:ab3421f1b55f59b2ea5f58b9e6ffbc861"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d1ef8c64030cca62f7520c23fbc2ff5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0d1ef8c64030cca62f7520c23fbc2ff5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#a0d1ef8c64030cca62f7520c23fbc2ff5">operator!=</a> (<a class="el" href="classProduto.html">Produto</a> &amp;p)</td></tr>
-<tr class="memdesc:a0d1ef8c64030cca62f7520c23fbc2ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt; <br /></td></tr>
+<tr class="memitem:a0d1ef8c64030cca62f7520c23fbc2ff5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#a0d1ef8c64030cca62f7520c23fbc2ff5">operator!=</a> (<a class="el" href="classProduto.html">Produto</a> &amp;p)</td></tr>
+<tr class="memdesc:a0d1ef8c64030cca62f7520c23fbc2ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt;  <a href="#a0d1ef8c64030cca62f7520c23fbc2ff5">Mais...</a><br /></td></tr>
 <tr class="separator:a0d1ef8c64030cca62f7520c23fbc2ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -165,10 +166,10 @@ Atributos Protegidos</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amigas</h2></td></tr>
 <tr class="memitem:a82123cf97bbea8211914f014eb49952c"><td class="memItemLeft" align="right" valign="top">ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#a82123cf97bbea8211914f014eb49952c">operator&lt;&lt;</a> (ostream &amp;os, <a class="el" href="classProduto.html">Produto</a> &amp;p)</td></tr>
-<tr class="memdesc:a82123cf97bbea8211914f014eb49952c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação &gt;  <a href="#a82123cf97bbea8211914f014eb49952c">Mais...</a><br /></td></tr>
+<tr class="memdesc:a82123cf97bbea8211914f014eb49952c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de comparação !=.  <a href="#a82123cf97bbea8211914f014eb49952c">Mais...</a><br /></td></tr>
 <tr class="separator:a82123cf97bbea8211914f014eb49952c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab56e78b5f533529330c9956c47825bf3"><td class="memItemLeft" align="right" valign="top">istream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classProduto.html#ab56e78b5f533529330c9956c47825bf3">operator&gt;&gt;</a> (istream &amp;is, <a class="el" href="classProduto.html">Produto</a> &amp;p)</td></tr>
-<tr class="memdesc:ab56e78b5f533529330c9956c47825bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de inserção em stream.  <a href="#ab56e78b5f533529330c9956c47825bf3">Mais...</a><br /></td></tr>
+<tr class="memdesc:ab56e78b5f533529330c9956c47825bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga do operador de extração em stream.  <a href="#ab56e78b5f533529330c9956c47825bf3">Mais...</a><br /></td></tr>
 <tr class="separator:ab56e78b5f533529330c9956c47825bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
@@ -230,7 +231,7 @@ Amigas</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Coleta os dados a partir da entrada padrão</p>
-<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> com os dados coletados </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd><a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> coletado a partir da entrada padrão </dd></dl>
 
 </div>
 </div>
@@ -263,8 +264,8 @@ Amigas</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retorna o codigo de barras</p>
-<dl class="section return"><dt>Retorna</dt><dd>cb do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
+<p>Retorna o código de barras</p>
+<dl class="section return"><dt>Retorna</dt><dd>Código do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
 
 </div>
 </div>
@@ -280,8 +281,8 @@ Amigas</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retorna o descricao</p>
-<dl class="section return"><dt>Retorna</dt><dd>Matrícula do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
+<p>Retorna a descrição</p>
+<dl class="section return"><dt>Retorna</dt><dd>Descrição do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
 
 </div>
 </div>
@@ -314,8 +315,8 @@ Amigas</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Retorna o preco</p>
-<dl class="section return"><dt>Retorna</dt><dd>Preco do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
+<p>Retorna o preço</p>
+<dl class="section return"><dt>Retorna</dt><dd>Preço do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
 
 </div>
 </div>
@@ -349,7 +350,32 @@ Amigas</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Retorna o tipo</p>
-<dl class="section return"><dt>Retorna</dt><dd>Matrícula do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>Tipo do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a0d1ef8c64030cca62f7520c23fbc2ff5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Produto::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classProduto.html">Produto</a> &amp;&#160;</td>
+          <td class="paramname"><em>p</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sobrecarga do operador de comparação &gt; </p>
+<p>O operador é sobrecarregado para representar o <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser comparado </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>True se != de 'p' </dd></dl>
 
 </div>
 </div>
@@ -368,11 +394,11 @@ Amigas</h2></td></tr>
 </div><div class="memdoc">
 <p>O operador é sobrecarregado para representar o <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser comparado </td></tr>
+    <tr><td class="paramname">p</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser comparado </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Retorna</dt><dd>True se &gt; que 'a' </dd></dl>
+<dl class="section return"><dt>Retorna</dt><dd>True se &gt; que 'p' </dd></dl>
 
 </div>
 </div>
@@ -389,10 +415,10 @@ Amigas</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Modifica o codigo de barras</p>
-<p>O método modifica o cb do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Modifica o código de barras</p>
+<p>O método modifica o código do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>cb </td></tr>
+    <tr><td class="paramname">r</td><td>cb </td></tr>
   </table>
   </dd>
 </dl>
@@ -412,10 +438,10 @@ Amigas</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Modifica o descricao</p>
-<p>O método modifica a matrícula do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Modifica a descrição</p>
+<p>O método modifica a descrição do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>descricao </td></tr>
+    <tr><td class="paramname">c</td><td>Descrição </td></tr>
   </table>
   </dd>
 </dl>
@@ -435,10 +461,10 @@ Amigas</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Modifica o preco</p>
-<p>O método modifica o preco do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>Modifica o preço</p>
+<p>O método modifica o preço do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>preco </td></tr>
+    <tr><td class="paramname">p</td><td>Preço </td></tr>
   </table>
   </dd>
 </dl>
@@ -482,9 +508,9 @@ Amigas</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Modifica o tipo</p>
-<p>O método modifica a matrícula do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
+<p>O método modifica o tipo do <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">n</td><td>descricao </td></tr>
+    <tr><td class="paramname">t</td><td>descricao </td></tr>
   </table>
   </dd>
 </dl>
@@ -524,11 +550,11 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sobrecarga do operador de comparação &gt; </p>
+<p>Sobrecarga do operador de comparação !=. </p>
 <p>O operador é sobrecarregado para representar o <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> </p><dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>Referência para stream de saída </td></tr>
-    <tr><td class="paramname">f</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser impresso </td></tr>
+    <tr><td class="paramname">p</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser impresso </td></tr>
   </table>
   </dd>
 </dl>
@@ -568,11 +594,11 @@ Amigas</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Sobrecarga do operador de inserção em stream. </p>
+<p>Sobrecarga do operador de extração em stream. </p>
 <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">is</td><td>Referência para stream de entrada </td></tr>
-    <tr><td class="paramname">f</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser criado com base nos valores fornecidos </td></tr>
+    <tr><td class="paramname">p</td><td>Referência para o objeto <a class="el" href="classProduto.html" title="Classe que representa um Produto. ">Produto</a> a ser criado com base nos valores fornecidos </td></tr>
   </table>
   </dd>
 </dl>
@@ -598,7 +624,7 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>codigo de barras </p>
+<p>Código de barras </p>
 
 </div>
 </div>
@@ -619,7 +645,7 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>descricao </p>
+<p>Descrição </p>
 
 </div>
 </div>
@@ -640,7 +666,7 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>preco </p>
+<p>Preço </p>
 
 </div>
 </div>
@@ -682,7 +708,7 @@ Amigas</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>tipo do produto </p>
+<p>Tipo do produto </p>
 
 </div>
 </div>
@@ -693,7 +719,7 @@ Amigas</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 11 de Junho de 2017 14:50:27 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 11 de Junho de 2017 17:42:16 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

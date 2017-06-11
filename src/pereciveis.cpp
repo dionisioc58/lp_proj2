@@ -27,35 +27,38 @@ Bebida::~Bebida() {
 }
 
 /**
-* @return acucar do Produto
+* @return Açúcar
 */
 int Bebida::getAcucar() {
     return acucar;
 }
 
 /**
-* @details O método modifica o aucar do Produto
+* @details O método modifica o açúcar
 * @param   ac acucar
 */
 void Bebida::setAcucar(int ac) {
     acucar = ac;
 }
 /**
-* @return alcool do Produto
+* @return Álcool
 */
 float Bebida::getAlcool() {
     return alcool;
 }
 
 /**
-* @details O método modifica o alcool do Produto
+* @details O método modifica o álcool
 * @param   al alcool
 */
 void Bebida::setAlcool(float al) {
     alcool = al;
 }
 
-string Bebida::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+/**
+* @details Retorna uma string com os dados para exportação CSV 
+*/
+string Bebida::exportar() {
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
     ss << ";" << validade << ";" << acucar << ";" << alcool;
@@ -64,6 +67,9 @@ string Bebida::exportar() {                                      /**< Retorna um
     return retorno;
 }
 
+/**
+* @details Coleta os dados a partir da entrada padrão
+*/
 void Bebida::capturar() {
     validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
     acucar = recebeInt("Digite a quantidade de açúcar: ", 0);
@@ -71,9 +77,9 @@ void Bebida::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details  O operador é sobrecarregado para representar a bebida
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto bebida a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Bebida &p) {
@@ -85,8 +91,9 @@ ostream& operator<<(ostream& os, Bebida &p) {
 }
 
 /** 
+* @details  O operador é sobrecarregado para representar a bebida
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto bebida a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */
@@ -107,7 +114,7 @@ istream& operator>>(istream& is, Bebida &b) {
 }
 
 /**
-* @details Os valores de numeros e data de producao são inicializados com vazio
+* @details Os valores de numero e data de producao são inicializados com vazio
 */
 Fruta::Fruta() {
     tipo = "Fruta";
@@ -123,14 +130,14 @@ Fruta::~Fruta() {
 }
 
 /**
-* @return num do Produto
+* @return num
 */
 int Fruta::getNum() {
     return num;
 }
 
 /**
-* @details O método modifica o num do Produto
+* @details O método modifica o num
 * @param   n num
 */
 void Fruta::setNum(int n) {
@@ -138,20 +145,23 @@ void Fruta::setNum(int n) {
 }
 
 /**
-* @return dp do Produto
+* @return dp
 */
 string Fruta::getDp() {
     return dp;
 }
 
 /**
-* @details O método modifica o dp do Produto
+* @details O método modifica a dp
 * @param   d dp
 */
 void Fruta::setDp(string d) {
     dp = d;
 }
 
+/**
+* @details Retorna uma string com os dados para exportação CSV 
+*/
 string Fruta::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
@@ -160,7 +170,9 @@ string Fruta::exportar() {                                      /**< Retorna uma
     getline(ss, retorno);
     return retorno;
 }
-
+/**
+* @details Coleta os dados a partir da entrada padrãos
+*/
 void Fruta::capturar() {
     validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
     num = recebeInt("Digite o número de frutas: ", 0);    
@@ -168,9 +180,9 @@ void Fruta::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details  O operador é sobrecarregado para representar a fruta
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto fruta a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Fruta &p) {
@@ -182,8 +194,9 @@ ostream& operator<<(ostream& os, Fruta &p) {
 }
 
 /** 
+* @details  O operador é sobrecarregado para representar a fruta
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto fruta a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */
@@ -219,14 +232,14 @@ Doce::~Doce() {
 }
 
 /**
-* @return acucar do Produto
+* @return Açúcar
 */
 int Doce::getAcucar() {
     return acucar;
 }
 
 /**
-* @details O método modifica o aucar do Produto
+* @details O método modifica o açúcar
 * @param   a acucar
 */
 void Doce::setAcucar(int a) {
@@ -234,35 +247,38 @@ void Doce::setAcucar(int a) {
 }
 
 /**
-* @return glicose do Produto
+* @return Glicose
 */
 bool Doce::getGlicose() {
     return glicose;
 }
 
 /**
-* @details O método modifica a glicose do Produto
+* @details O método modifica a glicose
 * @param   gc glicose
 */
-void Doce::setGlicose(bool l) {
-    glicose = l;
+void Doce::setGlicose(bool gc) {
+    glicose = gc;
 }
 /**
-* @return gluten do Produto
+* @return Glúten
 */
 bool Doce::getGluten() {
     return gluten;
 }
 
 /**
-* @details O método modifica o gluten do Produto
+* @details O método modifica o glúten
 * @param   gt gluten
 */
-void Doce::setGluten(bool g) {
-    gluten = g;
+void Doce::setGluten(bool gt) {
+    gluten = gt;
 }
 
-string Doce::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+/**
+* @details Retorna uma string com os dados para exportação CSV
+*/
+string Doce::exportar() {
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
     ss << ";" << validade << ";" << acucar << ";" << (gluten ? 1 : 0) << ";" << (glicose ? 1 : 0);
@@ -271,6 +287,9 @@ string Doce::exportar() {                                      /**< Retorna uma 
     return retorno;
 }
 
+/**
+* @details Coleta os dados a partir da entrada padrão
+*/
 void Doce::capturar() {
     validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
     acucar = recebeInt("Digite a quantidade de açúcar: ", 0);
@@ -286,9 +305,9 @@ void Doce::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details O operador é sobrecarregado para representar o doce
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto doce a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Doce &p) {
@@ -301,8 +320,9 @@ ostream& operator<<(ostream& os, Doce &p) {
 }
 
 /** 
+* @details O operador é sobrecarregado para representar o doce
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto doce a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */
@@ -330,7 +350,7 @@ istream& operator>>(istream& is, Doce &b) {
 }
 
 /**
-* @details Os valores de sodio, gluten e lactose são inicializados com vazio
+* @details Os valores de sódio, glúten e lactose são inicializados
 */
 Salgado::Salgado() {
     tipo = "Salgado";
@@ -347,49 +367,53 @@ Salgado::~Salgado() {
 }
 
 /**
-* @return sodio do Produto
+* @return Sódio
 */
 int Salgado::getSodio() {
     return sodio;
 }
 
 /**
-* @details O método modifica o aucar do Produto
-* @param   s sodio
+* @details O método modifica o sódio
+* @param   s Sódio
 */
 void Salgado::setSodio(int s) {
     sodio = s;
 }
 
 /**
-* @return glicose do Produto
-*/
-bool Salgado::getLactose() {
-    return lactose;
-}
-
-/**
-* @details O método modifica a lactose do Produto
-* @param   l lactose
-*/
-void Salgado::setLactose(bool l) {
-    lactose = l;
-}
-/**
-* @return gluten do Produto
+* @return Glúten
 */
 bool Salgado::getGluten() {
     return gluten;
 }
 
 /**
-* @details O método modifica o gluten do Produto
-* @param   g gluten
+* @details O método modifica o glúten
+* @param   g Glúten
 */
 void Salgado::setGluten(bool g) {
     gluten = g;
 }
 
+/**
+* @return Lactose
+*/
+bool Salgado::getLactose() {
+    return lactose;
+}
+
+/**
+* @details O método modifica a lactose
+* @param   l Lactose
+*/
+void Salgado::setLactose(bool l) {
+    lactose = l;
+}
+
+/**
+* @details Retorna uma string com os dados para exportação CSV
+*/
 string Salgado::exportar() {
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
@@ -399,6 +423,9 @@ string Salgado::exportar() {
     return retorno;
 }
 
+/**
+* @details Coleta os dados a partir da entrada padrão
+*/
 void Salgado::capturar() {
     validade = recebeString("Digite a data de validade (dd/mm/aaaa): ");
     sodio = recebeInt("Digite a quantidade de sódio: ", 0);
@@ -414,9 +441,9 @@ void Salgado::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details O operador é sobrecarregado para representar o salgado
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto salgado a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Salgado &p) {
@@ -429,8 +456,9 @@ ostream& operator<<(ostream& os, Salgado &p) {
 }
 
 /** 
+* @details O operador é sobrecarregado para representar o salgado
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto salgado a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */

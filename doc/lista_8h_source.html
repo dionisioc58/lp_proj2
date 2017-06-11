@@ -102,18 +102,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classLista.html">   25</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classLista.html">Lista</a> {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        T *dado;                                             </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        T *dado;                                            </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classLista.html">Lista</a> *prox;                                        </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classLista.html#adce924e21607848663132290be1a959d">Lista</a>();                                            </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classLista.html#adce924e21607848663132290be1a959d">Lista</a>(T valor);                                     </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classLista.html#af297975e278b0c92cbf67d14b2f08366">~Lista</a>();                                           </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        T *<a class="code" href="classLista.html#ad739ab06515c58648f04560f0fdfb1e3">getValor</a>();                                       </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        T *<a class="code" href="classLista.html#ad739ab06515c58648f04560f0fdfb1e3">getValor</a>();                                      </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classLista.html#a231a8fdac9a2c3de448032277ad90cb0">getTamanho</a>();                                   </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLista.html#ae26be7a19ebae8ee436f8472dd4a7c69">Insere</a>(T valor);                               </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLista.html#a1bc429b7bd3b0094cdcb67b4196daf21">RemovePos</a>(<span class="keywordtype">int</span> pos);                            </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLista.html#ad9c3b251429f5a65c82300ab570373fb">RemoveVal</a>(T *valor);                            </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classLista.html">Lista</a> *<a class="code" href="classLista.html#a6f48ef461b53ecad34d1ef2cd67ab44d">Busca</a>(T *valor);                              </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLista.html#ad9c3b251429f5a65c82300ab570373fb">RemoveVal</a>(T *valor);                           </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classLista.html">Lista</a> *<a class="code" href="classLista.html#a6f48ef461b53ecad34d1ef2cd67ab44d">Busca</a>(T *valor);                             </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        T *<a class="code" href="classLista.html#a6a47d07d79eeb397ba26d51262cf140c">Posiciona</a>(<span class="keywordtype">int</span> pos);                              </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classLista.html">Lista</a> *<a class="code" href="classLista.html#a5360feacbcc0f09d813f49fcde15a6cc">getProximo</a>();                                </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classLista.html#a73b062f716dc70715c578854fd2bda3f">Exibe</a>(<span class="keywordtype">bool</span> comNumeros = <span class="keyword">false</span>);                </div>
@@ -237,39 +237,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> prox;</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00199"></a><span class="lineno"><a class="line" href="classLista.html#a73b062f716dc70715c578854fd2bda3f">  199</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a73b062f716dc70715c578854fd2bda3f">Lista&lt;T&gt;::Exibe</a>(<span class="keywordtype">bool</span> comNumeros) {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">if</span>(!prox){</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Lista vazia!\n\n&quot;</span>;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="classLista.html">Lista</a> *tmp;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        tmp = prox;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keywordflow">if</span>(!comNumeros) {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <span class="keywordflow">while</span>( tmp != NULL){</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                cout &lt;&lt; *tmp-&gt;dado &lt;&lt; endl;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                tmp = tmp-&gt;prox;</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            cout &lt;&lt; (<span class="stringliteral">&quot;\n\n&quot;</span>);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="keywordtype">int</span> i = 1;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordflow">while</span>( tmp != NULL){</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;) &quot;</span> &lt;&lt; *tmp-&gt;dado &lt;&lt; endl;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                tmp = tmp-&gt;prox;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                i++;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            }</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classLista.html#a73b062f716dc70715c578854fd2bda3f">  200</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLista.html#a73b062f716dc70715c578854fd2bda3f">Lista&lt;T&gt;::Exibe</a>(<span class="keywordtype">bool</span> comNumeros) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">if</span>(!prox){</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot;Lista vazia!\n\n&quot;</span>;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        }</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <a class="code" href="classLista.html">Lista</a> *tmp;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        tmp = prox;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span>(!comNumeros) {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordflow">while</span>( tmp != NULL){</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                cout &lt;&lt; *tmp-&gt;dado &lt;&lt; endl;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                tmp = tmp-&gt;prox;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            cout &lt;&lt; (<span class="stringliteral">&quot;\n\n&quot;</span>);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">while</span>( tmp != NULL){</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                cout &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; i &lt;&lt; <span class="stringliteral">&quot;) &quot;</span> &lt;&lt; *tmp-&gt;dado &lt;&lt; endl;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                tmp = tmp-&gt;prox;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                i++;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="classLista_html_adce924e21607848663132290be1a959d"><div class="ttname"><a href="classLista.html#adce924e21607848663132290be1a959d">Lista::Lista</a></div><div class="ttdeci">Lista()</div><div class="ttdef"><b>Definition:</b> lista.h:48</div></div>
 <div class="ttc" id="classLista_html_a6f48ef461b53ecad34d1ef2cd67ab44d"><div class="ttname"><a href="classLista.html#a6f48ef461b53ecad34d1ef2cd67ab44d">Lista::Busca</a></div><div class="ttdeci">Lista * Busca(T *valor)</div><div class="ttdef"><b>Definition:</b> lista.h:161</div></div>
 <div class="ttc" id="classLista_html_a231a8fdac9a2c3de448032277ad90cb0"><div class="ttname"><a href="classLista.html#a231a8fdac9a2c3de448032277ad90cb0">Lista::getTamanho</a></div><div class="ttdeci">int getTamanho()</div><div class="ttdef"><b>Definition:</b> lista.h:82</div></div>
 <div class="ttc" id="classLista_html_a5360feacbcc0f09d813f49fcde15a6cc"><div class="ttname"><a href="classLista.html#a5360feacbcc0f09d813f49fcde15a6cc">Lista::getProximo</a></div><div class="ttdeci">Lista * getProximo()</div><div class="ttdef"><b>Definition:</b> lista.h:191</div></div>
 <div class="ttc" id="classLista_html_ad739ab06515c58648f04560f0fdfb1e3"><div class="ttname"><a href="classLista.html#ad739ab06515c58648f04560f0fdfb1e3">Lista::getValor</a></div><div class="ttdeci">T * getValor()</div><div class="ttdef"><b>Definition:</b> lista.h:74</div></div>
-<div class="ttc" id="classLista_html_a73b062f716dc70715c578854fd2bda3f"><div class="ttname"><a href="classLista.html#a73b062f716dc70715c578854fd2bda3f">Lista::Exibe</a></div><div class="ttdeci">void Exibe(bool comNumeros=false)</div><div class="ttdef"><b>Definition:</b> lista.h:199</div></div>
+<div class="ttc" id="classLista_html_a73b062f716dc70715c578854fd2bda3f"><div class="ttname"><a href="classLista.html#a73b062f716dc70715c578854fd2bda3f">Lista::Exibe</a></div><div class="ttdeci">void Exibe(bool comNumeros=false)</div><div class="ttdef"><b>Definition:</b> lista.h:200</div></div>
 <div class="ttc" id="classLista_html_a1bc429b7bd3b0094cdcb67b4196daf21"><div class="ttname"><a href="classLista.html#a1bc429b7bd3b0094cdcb67b4196daf21">Lista::RemovePos</a></div><div class="ttdeci">void RemovePos(int pos)</div><div class="ttdef"><b>Definition:</b> lista.h:121</div></div>
 <div class="ttc" id="classLista_html"><div class="ttname"><a href="classLista.html">Lista</a></div><div class="ttdoc">Classe que representa uma lista duplamente encadeada. </div><div class="ttdef"><b>Definition:</b> lista.h:25</div></div>
 <div class="ttc" id="classLista_html_af297975e278b0c92cbf67d14b2f08366"><div class="ttname"><a href="classLista.html#af297975e278b0c92cbf67d14b2f08366">Lista::~Lista</a></div><div class="ttdeci">~Lista()</div><div class="ttdef"><b>Definition:</b> lista.h:65</div></div>
@@ -279,7 +279,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Busca');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Gerado em Domingo, 11 de Junho de 2017 14:50:27 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
+Gerado em Domingo, 11 de Junho de 2017 17:42:16 para Laboratorio 6 por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

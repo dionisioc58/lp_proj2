@@ -29,5 +29,6 @@ var searchData=
   ['gettamanho',['getTamanho',['../classLista.html#a231a8fdac9a2c3de448032277ad90cb0',1,'Lista']]],
   ['gettipo',['getTipo',['../classProduto.html#aa89735e598487c5e3f611e82273af13b',1,'Produto']]],
   ['gettitulo',['getTitulo',['../classDVD.html#a1dd7bf7d8f0b27854dd7303f67ca84ed',1,'DVD::getTitulo()'],['../classLivro.html#af9521ac8f161bc215f50b0a626163105',1,'Livro::getTitulo()']]],
+  ['getvalidade',['getValidade',['../classPerecivel.html#a2bb67a2b63f36aecb8b50b3594d80b01',1,'Perecivel']]],
   ['getvalor',['getValor',['../classLista.html#ad739ab06515c58648f04560f0fdfb1e3',1,'Lista']]]
 ];

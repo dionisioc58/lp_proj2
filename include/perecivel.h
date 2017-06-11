@@ -17,15 +17,15 @@
 */  
 class Perecivel {
 protected:
-    string validade;
+    string validade;                                        /**< Data de validade */
 public:
-    string getValidade() {
+    string getValidade() {                                  /**< Retorna a data de validade */
         return validade;
     }
-    void setValidade(string v) {
+    void setValidade(string v) {                            /**< Modifica a data de validade */
         validade = v;
     }
-    friend istream& operator>>(istream& is, Perecivel &p){    /** @brief Sobrecarga do operador de extração de stream */
+    friend istream& operator>>(istream& is, Perecivel &p){  /** @brief Sobrecarga do operador de inserção de stream */
         getline(is, p.validade, ';');
         return is;
     }

@@ -11,7 +11,7 @@
 #include "subproduto.h"
 
 /**
-* @details Os valores de estilo, artista e album são inicializados com vazio
+* @details Os valores de estilo, artista e álbum são inicializados com vazio
 */
 CD::CD() {
     tipo = "CD";
@@ -28,49 +28,52 @@ CD::~CD() {
 }
 
 /**
-* @return estilo do Produto
+* @return Estilo
 */
 string CD::getEstilo() {
     return estilo;
 }
 
 /**
-* @details O método modifica o estilo do Produto
-* @param   e estilo
+* @details O método modifica o estilo
+* @param   e Estilo
 */
 void CD::setEstilo(string e) {
     estilo = e;
 }
 /**
-* @return artista do Produto
+* @return Artista
 */
 string CD::getArtista() {
     return artista;
 }
 
 /**
-* @details O método modifica o artista do Produto
-* @param   a artista
+* @details O método modifica o artista
+* @param   a Artista
 */
 void CD::setArtista(string a) {
     artista = a;
 }
 /**
-* @return Album do Produto
+* @return Álbum
 */
 string CD::getAlbum() {
     return album;
 }
 
 /**
-* @details O método modifica o Album do Produto
-* @param   n Album
+* @details O método modifica o álbum
+* @param   n Álbum
 */
 void CD::setAlbum(string n) {
     album = n;
 }
 
-string CD::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+/**
+* @details Retorna uma string com os dados para exportação CSV
+*/
+string CD::exportar() {
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
     ss << ";" << estilo << ";" << artista << ";" << album;
@@ -79,6 +82,9 @@ string CD::exportar() {                                      /**< Retorna uma st
     return retorno;
 }
 
+/**
+* @details Coleta os dados a partir da entrada padrão
+*/
 void CD::capturar() {
     cout << "Digite o estilo: ";
     getline(cin, estilo);
@@ -89,9 +95,9 @@ void CD::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details O operador é sobrecarregado para representar o CD
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto CD a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, CD &p) {
@@ -103,8 +109,9 @@ ostream& operator<<(ostream& os, CD &p) {
 }
 
 /** 
+* @details O operador é sobrecarregado para representar o CD
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto CD a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */
@@ -119,7 +126,7 @@ istream& operator>>(istream& is, CD &b) {
 }
 
 /**
-* @details Os valores de titulo, genero e duracao são inicializados com vazio
+* @details Os valores de título, gênero e duração são inicializados com vazio
 */
 DVD::DVD() {
     tipo = "DVD";
@@ -136,48 +143,51 @@ DVD::~DVD() {
 }
 
 /**
-* @return titulo do Produto
+* @return Título
 */
 string DVD::getTitulo() {
     return titulo;
 }
 
 /**
-* @details O método modifica o titulo do Produto
-* @param   t titulo
+* @details O método modifica o título
+* @param   t Tíitulo
 */
 void DVD::setTitulo(string t) {
     titulo = t;
 }
 /**
-* @return genero do Produto
+* @return Gênero
 */
 string DVD::getGenero() {
     return genero;
 }
 
 /**
-* @details O método modifica o genero do Produto
-* @param   g genero
+* @details O método modifica o gênero
+* @param   g Gênero
 */
 void DVD::setGenero(string g) {
     genero = g;
 }
 /**
-* @return duracao do Produto
+* @return Duração
 */
 string DVD::getDuracao() {
     return duracao;
 }
 
 /**
-* @details O método modifica o duracao do Produto
-* @param   d duracao
+* @details O método modifica a duração
+* @param   d Duração
 */
 void DVD::setDuracao(string d) {
     duracao = d;
 }
 
+/**
+* @details Retorna uma string com os dados para exportação CSV
+*/
 string DVD::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
@@ -187,6 +197,9 @@ string DVD::exportar() {                                      /**< Retorna uma s
     return retorno;
 }
 
+/**
+* @details Coleta os dados a partir da entrada padrão
+*/
 void DVD::capturar() {
     cout << "Digite o título: ";
     getline(cin, titulo);
@@ -197,9 +210,9 @@ void DVD::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details O operador é sobrecarregado para representar o DVD
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto DVD a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, DVD &p) {
@@ -211,8 +224,9 @@ ostream& operator<<(ostream& os, DVD &p) {
 }
 
 /** 
+* @details O operador é sobrecarregado para representar o DVD
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto DVD a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */
@@ -227,7 +241,7 @@ istream& operator>>(istream& is, DVD &b) {
 }
 
 /**
-* @details Os valores de titulo, autor, editora e ano de publicacao são inicializados com vazio
+* @details Os valores de título, autor, editora e ano de publicação são inicializados com vazio
 */
 Livro::Livro() {
     tipo = "Livro";
@@ -245,42 +259,42 @@ Livro::~Livro() {
 }
 
 /**
-* @return titulo do Produto
+* @return Título
 */
 string Livro::getTitulo() {
     return titulo;
 }
 
 /**
-* @details O método modifica o titulo do Produto
+* @details O método modifica o título
 * @param   t titulo
 */
 void Livro::setTitulo(string t) {
     titulo = t;
 }
 /**
-* @return autor do Produto
+* @return Autor
 */
 string Livro::getAutor() {
     return autor;
 }
 
 /**
-* @details O método modifica o autor do Produto
+* @details O método modifica o autor
 * @param   a autor
 */
 void Livro::setAutor(string a) {
     autor = a;
 }
 /**
-* @return editora do Produto
+* @return Editora
 */
 string Livro::getEditora() {
     return editora;
 }
 
 /**
-* @details O método modifica o editora do Produto
+* @details O método modifica a editora
 * @param   e editora
 */
 void Livro::setEditora(string e) {
@@ -288,21 +302,24 @@ void Livro::setEditora(string e) {
 }
 
 /**
-* @return anopub do Produto
+* @return Ano de publicação
 */
 string Livro::getAnopub() {
     return anopub;
 }
 
 /**
-* @details O método modifica o anopub do Produto
-* @param   a anopub
+* @details O método modifica o ano de publicação
+* @param   a Ano de publicação
 */
 void Livro::setAnopub(string a) {
     anopub = a;
 }
 
-string Livro::exportar() {                                      /**< Retorna uma string com os dados para exportação CSV */
+/**
+* @details Retorna uma string com os dados para exportação CSV
+*/
+string Livro::exportar() {
     stringstream ss;
     ss << dynamic_cast<Produto*>(this)->exportar();
     ss << ";" << autor << ";" << titulo << ";" << editora << ";" << anopub;
@@ -311,6 +328,9 @@ string Livro::exportar() {                                      /**< Retorna uma
     return retorno;
 }
 
+/**
+* @details Coleta os dados a partir da entrada padrão
+*/
 void Livro::capturar() {
     cout << "Digite o autor: ";
     getline(cin, autor);
@@ -323,9 +343,9 @@ void Livro::capturar() {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details O operador é sobrecarregado para representar o livro
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	p Referência para o objeto livro a ser impresso
 * @return	Referência para stream de saída
 */
 ostream& operator<<(ostream& os, Livro &p) {
@@ -338,8 +358,9 @@ ostream& operator<<(ostream& os, Livro &p) {
 }
 
 /** 
+* @details O operador é sobrecarregado para representar o livro
 * @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
+* @param	b Referência para o objeto livro a ser criado com base nos 
 *			valores fornecidos
 * @return	Referência para stream de entrada
 */

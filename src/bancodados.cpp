@@ -43,6 +43,7 @@ Fornecedor *inputFornecedor() {
 
 /**
 * @brief        Função que coleta os dados para cadastro de um produto
+* @param[in]    *f Fornecedor que vai receber o produto
 * @return       Produto coletado
 */
 void inputProduto(Fornecedor *f) {
@@ -99,8 +100,8 @@ void inputProduto(Fornecedor *f) {
 }
 
 /**
-* @brief        Função que realiza o cadastro de um fornecedor
-* @param[in]    *e Vetor de fornecedores do cadastro
+* @brief        Função que realiza o cadastro um Fornecedor
+* @param[in]    *e Lista de Fornecedores do cadastro
 */
 void cadFornecedor(Lista<Fornecedor> *e) {
     Fornecedor *novo = inputFornecedor();
@@ -113,8 +114,8 @@ void cadFornecedor(Lista<Fornecedor> *e) {
 }
 
 /**
-* @brief        Função que remove um fornecedor do cadastro
-* @param[in]    *e Vetor de fornecedores do cadastro
+* @brief        Função que remove uma Fornecedor do cadastro
+* @param[in]    *e Lista de Fornecedores do cadastro
 */
 void delFornecedor(Lista<Fornecedor> *e) {
     int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a remoção (0 para cancelar): ");
@@ -124,7 +125,7 @@ void delFornecedor(Lista<Fornecedor> *e) {
 
 /**
 * @brief        Função que adiciona um produto à um fornecedor (apresenta escolha)
-* @param[in]    *e Vetor de fornecedores do cadastro
+* @param[in]    *e Lista de fornecedores do cadastro
 */
 void addPr(Lista<Fornecedor> *e) {
     int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a adição (0 para cancelar): ");
@@ -136,8 +137,8 @@ void addPr(Lista<Fornecedor> *e) {
 }
 
 /**
-* @brief        Função que remove um produto de um Fornecedor (apresenta escolha)
-* @param[in]    *e Lista de Fornecedores do cadastro
+* @brief        Função que remove um produto de um fornecedor (apresenta escolha)
+* @param[in]    *e Lista de fornecedores do cadastro
 */
 void delPr(Lista<Fornecedor> *e) {
     int selecao = selecionaObjeto(e, "Digite o número do fornecedor para a remoção do produto (0 para cancelar): ");
@@ -207,8 +208,7 @@ void editPr(Lista<Fornecedor> *e) {
 
 /**
 * @brief        Função que imprime os objetos na lista
-* @param[in]    *e Vetor de fornecedores do cadastro
-* @param[in]    n Número de fornecedores no cadastro
+* @param[in]    *e Lista de objetos
 * @param[in]    pausa True para apresentar uma pausa após a impressão
 */
 template<typename T>
@@ -219,13 +219,13 @@ void impLista(Lista<T> *e, bool pausa) {
 }
 
 /**
-* @brief        Função que imprime a lista de produtos de um ou todos 
+* @brief        Função que imprime a lista de produtos de um ou todos
                 os fornecedores do cadastro
-* @param[inout] *e Lista de Fornecedores do cadastro
+* @param[in]    *e Lista de fornecedores do cadastro
 * @param[in]    all "true" imprime todos os produtos de todos os fornecedores
                 "false" imprime apenas os produtos de um fornecedor (apresenta escolha)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
-* @return       -1 ou o número do fornecedor selecionada
+* @return       -1 ou o número do fornecedor selecionado
 */
 int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
     if(!all) {      //Imprime todos os produtos de um fornecedor
@@ -278,6 +278,11 @@ int impPr(Lista<Fornecedor> *e, bool all, bool pausa) {
 
 }
 
+/**
+* @brief        Função que imprime um produto
+* @param[in]    *p Produto
+* @param[in]    detalhes True para apresentar os detalhes do produto
+*/
 void imprimir(Produto *p, bool detalhes) {
     string tipo = p->getTipo();
     minusculas(tipo);
@@ -305,9 +310,10 @@ void imprimir(Produto *p, bool detalhes) {
 /**
 * @brief        Função que imprime a lista de produtos
 * @param[inout] *e Lista de Fornecedores do cadastro
-* @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 2 = filtrar por codigo, 3 = exibir menos detalhes)
+* @param[in]    filtro Filtro de listagem (0 = sem filtro, 1 = filtrar por tipo, 
+*               2 = filtrar por codigo, 3 = exibir menos detalhes)
 * @param[in]    pausa True para apresentar uma pausa após a impressão
-* @return       Número máximo na lista
+* @return       -1 ou o número do fornecedor selecionada
 */
 int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
     string ftipo = "", fcod = "";
@@ -375,7 +381,7 @@ int impPrLista(Lista<Fornecedor> *e, int filtro, bool pausa) {
 /**
 * @brief        Função que salva o cadastro completo em arquivo
 * @param[in]    nome Caminho/nome do arquivo de dados
-* @param[in]    *e Lista de Fornecedores do cadastro
+* @param[in]    *e Lista de fornecedores do cadastro
 */
 void salvarBD(string nome, Lista<Fornecedor> *e) {
     ofstream saida(nome);
@@ -535,7 +541,7 @@ string opcoes_vendas[qtde_vendas] = {
 };                /**< Opções de tipos de produtos */
 
 /**
-* @brief        Função que realiza uma venda
+* @brief        Função que exibe opções para realizar uma venda
 * @param[in]    *e Lista de fornecedores com seus produtos
 * @param[in]    *v Lista de venda com seus itens
 */
@@ -549,7 +555,7 @@ void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
                 venda_add(e, v);
                 break;
             case 2: //Remover um produto
-                venda_del(e, v);
+                venda_del(v);
                 break;
             case 3: //Listar os produtos
                 venda_lis(v);
@@ -561,6 +567,11 @@ void venda(Lista<Fornecedor> *e, Lista<Venda> *v) {
     }
 }
 
+/**
+* @brief        Função que adiciona um produto à venda
+* @param[in]    *e Lista de fornecedores com seus produtos
+* @param[in]    *v Lista de venda com seus itens
+*/
 void venda_add(Lista<Fornecedor> *e, Lista<Venda> *v) {
     //Lista todos os itens do cadastro
     int maximo = impPrLista(e, 3, false);
@@ -593,6 +604,11 @@ void venda_add(Lista<Fornecedor> *e, Lista<Venda> *v) {
     v->Insere(*nova);
 }
 
+/**
+* @brief        Função que exibe os produtos adicionados à venda
+* @param[in]    pausa True para manter a tela congelada após a impressão
+* @param[in]    *v Lista de venda com seus itens
+*/
 void venda_lis(Lista<Venda> *v, bool pausa) {
     cout << "Nº  Código" << string(4, ' ') << "\t|Descrição" << string(22, ' ') << "\t|Qtde  " << "\t|Total" << endl;
     v->Exibe(1);
@@ -600,7 +616,11 @@ void venda_lis(Lista<Venda> *v, bool pausa) {
         parar();
 }
 
-void venda_del(Lista<Fornecedor> *e, Lista<Venda> *v) {
+/**
+* @brief        Função que remove um produto da venda
+* @param[in]    *v Lista de venda com seus itens
+*/
+void venda_del(Lista<Venda> *v) {
     v->Exibe(true);
     int selecao = recebeInt("Digite o número do produto (0 para cancelar): ", 0, v->getTamanho());
     if(selecao == 0)
@@ -608,6 +628,10 @@ void venda_del(Lista<Fornecedor> *e, Lista<Venda> *v) {
     v->RemovePos(--selecao);
 }
 
+/**
+* @brief        Função para encerrar a venda
+* @param[in]    *v Lista de venda com seus itens
+*/
 void venda_enc(Lista<Venda> *v) {
     venda_lis(v, false);
     if(!v->getProximo())
@@ -651,7 +675,8 @@ int impPrListaEstoque(Lista<Fornecedor> *e, bool pausa) {
     bool primeiro = true;
     while(tmp) {
         if(primeiro) {
-            cout << endl << "  Código" << string(4, ' ') << "\t|Descrição" << string(21, ' ') << "\t|Quantidade" << endl;
+            cout << endl;
+            cout << "  Código" << string(4, ' ') << "\t|Descrição" << string(21, ' ') << "\t|Quantidade" << endl;
             primeiro = false;
         }
         Lista<Produto*> *f = tmp->getValor()->getProdutos();

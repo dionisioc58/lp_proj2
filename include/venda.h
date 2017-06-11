@@ -27,7 +27,7 @@ using std::stringstream;
     */  
     class Venda {
     protected:
-        Produto *produto;                                     /**< codigo de barras */
+        Produto *produto;                                     /**< Produo */
         int qtde;                                             /**< Quantidade */
     public:
         Venda();                                              /**< Construtor padrão */
@@ -40,8 +40,8 @@ using std::stringstream;
         void setQtde(int q);                                  /**< Modifica a quantidade */
                 
         bool operator>(Venda &v);                             /** @brief Sobrecarga do operador de comparação > */
-        bool operator!=(Venda &v);                            /** @brief Sobrecarga do operador de comparação > */
-        friend ostream& operator<<(ostream& os, Venda &v);    /** @brief Sobrecarga do operador de inserção em stream */
+        bool operator!=(Venda &v);                            /** @brief Sobrecarga do operador de comparação != */
+        friend ostream& operator<<(ostream& os, Venda &v);    /** @brief Sobrecarga do operador de extração em stream */
     };
 
 #endif

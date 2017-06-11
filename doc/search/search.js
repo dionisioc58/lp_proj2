@@ -11,9 +11,9 @@ var indexSectionsWithContent =
   1: "bcdflpsv",
   2: "bflmnpsv",
   3: "abcdefgilmoprsv~",
-  4: "cdopqt",
+  4: "acdeglnopqstv",
   5: "o",
-  6: "q",
+  6: "lq",
   7: "p"
 };
 

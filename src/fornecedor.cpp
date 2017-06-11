@@ -11,6 +11,7 @@
 
 /**
 * @details O valor de RSocial e CNPJ são inicializados com vazio
+*          e a lista de produtos é inicializada
 */
 Fornecedor::Fornecedor() {
     RSocial = "";
@@ -56,7 +57,7 @@ void Fornecedor::setCNPJ(string n) {
 }
 
 /**
-* @return Quantidade de alunos
+* @return Quantidade de produtos
 */
 int Fornecedor::getQtde() {
     return produtos->getTamanho();
@@ -70,7 +71,7 @@ Lista<Produto*> *Fornecedor::getProdutos() {
 }
 
 /**
-* @details O método modifica todos os produtos da Fornecedor
+* @details O método modifica todos os produtos do Fornecedor
 * @param   *f Ponteiro para a lista de produtos
 */
 void Fornecedor::setProdutos(Lista<Produto*> *f) {
@@ -85,7 +86,7 @@ void Fornecedor::setProdutos(Lista<Produto*> *f) {
 }
 
 /**
-* @details O método modifica adiciona um produto
+* @details O método adiciona um produto
 * @param   f Produto à incluir
 * @return  True se adicionou
 */
@@ -133,8 +134,6 @@ bool Fornecedor::pertenceFornecedor(string n) {
 * @return String com os dados para exportação CSV
 */
 string Fornecedor::exportar() {
-    //return "fornec;" + RSocial + ";" + CNPJ;
-
     string ret = "fornec;" + RSocial + ";" + CNPJ + "\n";
 
     Lista<Produto*> *aa = produtos;
@@ -165,7 +164,7 @@ string Fornecedor::exportar() {
 
 /** 
 * @details O operador é sobrecarregado para representar o Fornecedor
-* @param	a Referência para o objeto Fornecedor a ser comparado
+* @param	p Referência para o objeto Fornecedor a ser comparado
 * @return	True se > que 'p'
 */
 bool Fornecedor::operator>(Fornecedor &p) {
@@ -174,7 +173,11 @@ bool Fornecedor::operator>(Fornecedor &p) {
     return false;
 }
 
-/** @brief Sobrecarga do operador de comparação > */
+/** 
+* @details  O operador é sobrecarregado para representar o Fornecedor
+* @param	f Referência para o objeto Fornecedor a ser comparado
+* @return	True se != que 'f'
+*/
 bool Fornecedor::operator!=(Fornecedor &f) {
     if(CNPJ == f.getCNPJ())
         return false;
@@ -182,28 +185,30 @@ bool Fornecedor::operator!=(Fornecedor &f) {
 }
 
 /** 
-* @details O operador é sobrecarregado para representar a Fornecedor e seus produtos
+* @details  O operador é sobrecarregado para representar o Fornecedor e 
+*           a quantidade de seus produtos
 * @param	os Referência para stream de saída
-* @param	e Referência para o objeto Fornecedor a ser impresso
+* @param	f Referência para o objeto Fornecedor a ser impresso
 * @return	Referência para stream de saída
 */
-ostream& operator<<(ostream& os, Fornecedor &e) {
-	os << "R. Social: " << e.RSocial << "\t | produtos: " << e.produtos->getTamanho();
+ostream& operator<<(ostream& os, Fornecedor &f) {
+	os << "R. Social: " << f.RSocial << "\t | produtos: " << f.produtos->getTamanho();
 	return os;
 }
 
 /** 
-* @param	is Referência para stream de entrada
-* @param	e Referência para o objeto Fornecedor a ser criado com base nos 
-*			valores fornecidos
-* @return	Referência para stream de entrada
+* @details  O operador é sobrecarregado para representar o Fornecedor
+* @param[in]	    is Referência para stream de entrada
+* @param[in]    f Referência para o objeto Fornecedor a ser criado com base nos 
+*			    valores fornecidos
+* @return	    Referência para stream de entrada
 */
-istream& operator>>(istream& is, Fornecedor &e) {
+istream& operator>>(istream& is, Fornecedor &f) {
 	string lido;
-    getline(is, e.RSocial, ';');
-    if(e.RSocial == "\n")
+    getline(is, f.RSocial, ';');
+    if(f.RSocial == "\n")
         return is;
-    getline(is, e.CNPJ);
+    getline(is, f.CNPJ);
 
     return is;
 }
